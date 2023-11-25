@@ -14,9 +14,9 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 lang: en-US
-title: St. Egbert Music Ministry
+title: Music Ministry
 email: oceanorganist@gmail.com
-description: "Musical notes and schedules for St. Egbert Catholic Church, Morehead City"
+description: "St. Egbert Catholic Church, Morehead City"
 baseurl: # the optional subpath of your site, e.g. "/blog"
 url: "https://musicministry.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 author:
