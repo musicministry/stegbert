@@ -16,7 +16,7 @@
 lang: en-US
 title: St. Egbert Music Ministry
 email: oceanorganist@gmail.com
-description: Musical notes and schedules for St. Egbert Catholic Church, Morehead City
+description: "Musical notes and schedules for St. Egbert Catholic Church, Morehead City"
 baseurl: # the optional subpath of your site, e.g. "/blog"
 url: "https://musicministry.github.io" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 author:
