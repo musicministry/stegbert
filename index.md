@@ -10,6 +10,7 @@ introduction: |
   - Information about our ministry
   - Weekly music lists
   - Music schedules extending several weeks in advance to help you practice and prepare
+actions:
   - label: "Get Started"
     icon: github
     url: "https://github.com/musicministry/stegbert"
