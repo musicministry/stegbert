@@ -1,7 +1,7 @@
 ---
 title: Weekly Lists
 layout: collection
-permalink: /lists/
+permalink: /posts/
 collection: posts
 entries_layout: list
 ---
