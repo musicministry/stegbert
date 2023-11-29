@@ -27,7 +27,7 @@ twitter_username:
 linkedin_username: matthewgrossi
 github_username: musicministry
 youtube_username: seaswellsnippets
-logo: # path of site logo, e.g. "/assets/images/logo.png"
+logo: /assets/images/trebleclef.jpg # path of site logo, e.g. "/assets/images/logo.png"
 search: true # true, false (default)
 search_full_content: false # true, false (default)
 search_provider: # lunr (default), algolia
