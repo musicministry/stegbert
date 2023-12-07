@@ -1,0 +1,263 @@
+% =========================================================== %
+% PREAMBLE
+
+\documentclass[12pt]{memoir}
+\usepackage{../musicschedule}
+
+% Set church name
+\church{Saint Egbert Church, Morehead City}
+
+% Set liturgical week number
+\setcounter{wk}{1}
+
+% Set liturgical season
+\liturgicalseason{Advent}
+
+% Set start date (first weekend on schedule: DD/MM/YYYY
+\SetDate[03/12/2023]
+
+% Set final date
+\lastdate{January 7, 2024}
+
+% Set final solemnity
+\lastliturgy{Epiphany of the Lord}
+
+% Set R&A page number
+\setcounter{ra}{4}
+
+% Preface instructions
+\preface{%
+All hymns are taken from the blue \textit{Gather} hymnal unless otherwise noted.
+Christmas season Mass parts will be provided as handouts.
+Click on any title to listen to a recording.
+}
+
+% =========================================================== %
+\begin{document}
+\begin{schedule}
+\myheader
+
+% Advent 1
+\hymns[%
+    thisweek = \today,
+    thislabel = \litweek,
+    processional = {562 -- \href{https://www.youtube.com/watch?v=mgzRB4gEPf4}{Come Now, Almighty King}},
+    psalm = {\RA},
+    gospelacc = {\RA},
+    offertory = {404 -- \href{https://www.youtube.com/watch?v=0YO0bCK_y_E}{When the King Shall Come Again}},
+    communion = {423 -- \href{https://www.youtube.com/watch?v=Op9Yyh_M4dk}{Awake! Awake, and Greet the New Morn}},
+%    communion = {728 -- \href{https://www.youtube.com/watch?v=wq6wAdmUuyU}{Eye Has Not Seen}},
+%    meditation = {423 -- \href{https://www.youtube.com/watch?v=Op9Yyh_M4dk}{Awake! Awake, and Greet the New Morn}},
+    recessional = {401 -- \href{https://www.youtube.com/watch?v=RT1qMElAzas}{O Come, Divine Messiah}},
+    %
+    greyout = {},
+    gloria = {\textit{Gloria is omitted during Advent}},
+    holy = {358 -- \href{https://www.youtube.com/watch?v=WfWjmrnMEeU}{Missa Emmanuel}},
+    memacc = {359 -- \href{https://www.youtube.com/watch?v=85vqMXdbkbM}{Missa Emmanuel, A  (\textit{``We proclaim...''})}},
+    amen = {360 -- \href{https://www.youtube.com/watch?v=oiqqBD4bqKo}{Missa Emmanuel}},
+    lambofgod = {NA -- \href{https://www.youtube.com/watch?v=iZw5bAd2YYA}{Missa Emmanuel}
+%                          388 -- \href{https://www.youtube.com/watch?v=sw4bDdFVhoo}{Mass of Angels and Saints}
+}]
+
+% Immaculate Conception
+\AdvanceDate[6]
+\hymns[%
+    thisweek = {\today},
+    thislabel = {Solemnity of the Immaculate Conception},
+    processional = {886 -- \href{https://www.youtube.com/watch?v=7fascMNAJCc}{Immaculate Mary}},
+    psalm = {\RA},
+    gospelacc = {\RA},
+    offertory = {100 -- \href{https://www.youtube.com/watch?v=k15r4MWpA5k}{Luke 1:46-53: My Soul Gives Glory}},
+    communion = {876 -- \href{https://www.youtube.com/watch?v=_4U8gIN944o}{No Wind at the Window}},
+%    communion = {876 -- \href{https://www.youtube.com/watch?v=_4U8gIN944o}{No Wind at the Window}},
+%    meditation = {889 -- \href{https://www.youtube.com/watch?v=iU3UIXEHdFc}{Hail Mary, Gentle Woman}},
+    recessional = {458 -- \href{https://www.youtube.com/watch?v=CIyxIu9Wkbk}{I Sing a Maid} (\textit{verse 1})},
+    %
+    greyout = {},
+    gloria = {207 -- \href{https://www.youtube.com/watch?v=vJjPFsepCRc}{Mass of Joy and Peace}},
+    holy = {211 -- \href{https://www.youtube.com/watch?v=QTrOh1eDE9E}{Mass of Joy and Peace}},
+    memacc = {212 -- \href{https://www.youtube.com/watch?v=zWHX-Wyauf0}{Mass of Joy and Peace (\textit{``We proclaim...''})}},
+    amen = {215 -- \href{https://www.youtube.com/watch?v=pDYVSZFUudA}{Mass of Joy and Peace}},
+    lambofgod = {216 -- \href{https://www.youtube.com/watch?v=qI61AEr8SHs}{Mass of Joy and Peace}}
+]
+
+% Advent 2
+\AdvanceDate[1] 
+\hymns[%
+    thisweek = {\today},
+    thislabel = \litweek,
+    processional = {418 -- \href{https://www.youtube.com/watch?v=YvvEQkspJxY}{On Jordan's Bank}},
+    psalm = {\RA},
+    gospelacc = {\RA},
+    offertory = {413 -- \href{https://www.youtube.com/watch?v=GGURM_EVT8M}{Comfort, Comfort, O My People}},
+    communion = {402 -- \href{https://www.youtube.com/watch?v=4cGCBehpN3o}{Like a Shepherd}},
+%    communion = {416 -- \href{https://www.youtube.com/watch?v=vqvpcQJQDYY}{A Voice Cries Out}},
+%    meditation = {402 -- \href{https://www.youtube.com/watch?v=4cGCBehpN3o}{Like a Shepherd}},
+    recessional = {863 -- \href{https://www.youtube.com/watch?v=z6qIvVjgY3s}{O Holy City, Seen of John}},
+    %
+    greyout = True,
+    gloria = {\textit{Gloria is omitted during Advent}},
+    holy = {358 -- \href{https://www.youtube.com/watch?v=WfWjmrnMEeU}{Missa Emmanuel}},
+    memacc = {359 -- \href{https://www.youtube.com/watch?v=85vqMXdbkbM}{Missa Emmanuel, A (\textit{``We proclaim...''})}},
+    amen = {360 -- \href{https://www.youtube.com/watch?v=oiqqBD4bqKo}{Missa Emmanuel}},
+    lambofgod = {NA -- \href{https://www.youtube.com/watch?v=iZw5bAd2YYA}{Missa Emmanuel}
+%                          388 -- \href{https://www.youtube.com/watch?v=sw4bDdFVhoo}{Mass of Angels and Saints}
+}]
+
+% Advent 3
+\AdvanceDate[7]
+\hymns[%
+    thisweek = \today,
+    thislabel = \litweek,
+    processional = {395 -- \href{https://www.youtube.com/watch?v=wZdPSU98tmQ}{O Come, O Come, Emmanuel}},
+    psalm = {\RA},
+    gospelacc = {\RA},
+    offertory = {100 -- \href{https://www.youtube.com/watch?v=k15r4MWpA5k}{Luke 1: My Soul Gives Glory}},
+    communion = {414 -- \href{https://www.youtube.com/watch?v=7ngF1C3FSfc}{The King Shall Come When Morning Dawns (\textsc{morning song})}},
+%    meditation = {397 -- \href{https://www.youtube.com/watch?v=YQQjF8pTBV4}{Maranatha, Lord Messiah}},
+    recessional = {409 -- \href{https://www.youtube.com/watch?v=YGjPQ5yitcM}{People, Look East}},
+    %
+    greyout = True,
+    gloria = {\textit{Gloria is omitted during Advent}},
+    holy = {358 -- \href{https://www.youtube.com/watch?v=WfWjmrnMEeU}{Missa Emmanuel}},
+    memacc = {359 -- \href{https://www.youtube.com/watch?v=85vqMXdbkbM}{Missa Emmanuel, A (\textit{``We proclaim...''})}},
+    amen = {360 -- \href{https://www.youtube.com/watch?v=oiqqBD4bqKo}{Missa Emmanuel}},
+    lambofgod = {NA -- \href{https://www.youtube.com/watch?v=iZw5bAd2YYA}{Missa Emmanuel}
+%                          388 -- \href{https://www.youtube.com/watch?v=sw4bDdFVhoo}{Mass of Angels and Saints}
+}]
+
+% Advent 4
+\AdvanceDate[7]
+\hymns[%
+    thisweek = \today,
+    thislabel = \litweek,
+    processional = {401 -- \href{https://www.youtube.com/watch?v=RT1qMElAzas}{O Come, Divine Messiah}},
+    psalm = {\RA},
+    gospelacc = {\RA},
+    offertory = {395 -- \href{https://www.youtube.com/watch?v=wZdPSU98tmQ}{O Come, O Come, Emmanuel}},
+    communion = {414 -- \href{https://www.youtube.com/watch?v=7ngF1C3FSfc}{The King Shall Come When Morning Dawns (\textsc{morning song})}},
+%    meditation = {876 -- \href{https://www.youtube.com/watch?v=_4U8gIN944o}{No Wind at the Window}},
+    recessional = {409 -- \href{https://www.youtube.com/watch?v=YGjPQ5yitcM}{People, Look East}},
+    %
+    greyout = True,
+    gloria = {\textit{Gloria is omitted during Advent}},
+    holy = {358 -- \href{https://www.youtube.com/watch?v=WfWjmrnMEeU}{Missa Emmanuel}},
+    memacc = {359 -- \href{https://www.youtube.com/watch?v=85vqMXdbkbM}{Missa Emmanuel, A (\textit{``We proclaim...''})}},
+    amen = {360 -- \href{https://www.youtube.com/watch?v=oiqqBD4bqKo}{Missa Emmanuel}},
+    lambofgod = {NA -- \href{https://www.youtube.com/watch?v=iZw5bAd2YYA}{Missa Emmanuel}
+%                          388 -- \href{https://www.youtube.com/watch?v=sw4bDdFVhoo}{Mass of Angels and Saints}
+}]
+
+% Christmas
+\AdvanceDate[1] 
+\hymns[%
+    thisweek = {\today},
+    thislabel = {Christmas: Mass During the Day},
+    processional = {439 -- \href{https://www.youtube.com/watch?v=epvG0Q2-D6E}{O Come, All Ye Faithful}},
+    psalm = {70 -- \href{https://www.youtube.com/watch?v=39WycYVWU4E}{Psalm 98: All the Ends of the Earth (Haas/Haugen)}},
+    gospelacc = {\RA[1]},
+    offertory = {440 -- \href{https://www.youtube.com/watch?v=1UAL2WUVAo0}{Good Christian Friends, Rejoice}},
+%    communion = {427 -- \href{https://www.youtube.com/watch?v=FxYF0KX3btU}{Of the Father's Love Begotten}},
+%    meditation = {442/441 -- \href{https://www.youtube.com/watch?v=4hy9j_mHjUw}{Night of Silence / Silent Night}},
+    communion = {436 -- \href{https://www.youtube.com/watch?v=j88dBFX0FDg}{Wood of the Cradle}},
+    meditation = {441 -- \href{https://www.youtube.com/watch?v=Jd2C3j8pRls}{Silent Night}},
+    recessional = {437 -- \href{https://www.youtube.com/watch?v=pzfCMZr9pZo}{Joy to the World}},
+    %
+    greyout = {},
+    gloria = {\href{https://www.youtube.com/watch?v=2AGv7AOh2bs}{A Christmas Gloria (Paul Gibson)}},
+    holy = {\href{https://youtu.be/iYYPSiyZO1I?t=423}{Christmas Carol Mass (Kevin Weed)}},
+    memacc = {\href{https://youtu.be/iYYPSiyZO1I?t=532}{Christmas Carol Mass, C (Kevin Weed) \newline (\textit{``Save us, Savior...''})}},
+    amen = {\href{https://youtu.be/iYYPSiyZO1I?t=557}{Christmas Carol Mass (Kevin Weed)}},
+    lambofgod = {\href{https://youtu.be/iYYPSiyZO1I?t=601}{Christmas Carol Mass (Kevin Weed)}}
+]
+
+% Holy Family
+\AdvanceDate[6]
+\hymns[%
+    thisweek = \today,
+    thislabel = {Holy Family of Jesus, Mary, and Joseph},
+    processional = {438 -- \href{https://www.youtube.com/watch?v=MQHKpSyWN78}{Angels, from the Realms of Glory}},
+    psalm = {\RA},
+    gospelacc = {\RA},
+    offertory = {445 -- \href{https://www.youtube.com/watch?v=IaqoeCl_jR0}{Infant Holy, Infant Lowly}},
+    communion = {455 -- \href{https://www.youtube.com/watch?v=TT3cfXd3Shk}{Once in Royal David's City}},
+%    meditation = {875 -- \href{https://www.youtube.com/watch?v=hvaDKdZ20bo}{Praise We the Lord This Day}},
+    recessional = {424 -- \href{https://www.youtube.com/watch?v=crzMO3MI-4s}{Hark! The Herald Angels Sing}},
+    %
+    greyout = True,
+    gloria = {\href{https://www.youtube.com/watch?v=2AGv7AOh2bs}{A Christmas Gloria (Paul Gibson)}},
+    holy = {\href{https://youtu.be/iYYPSiyZO1I?t=423}{Christmas Carol Mass (Kevin Weed)}},
+    memacc = {\href{https://youtu.be/iYYPSiyZO1I?t=532}{Christmas Carol Mass, C (Kevin Weed) \newline (\textit{``Save us, Savior...''})}},
+    amen = {\href{https://youtu.be/iYYPSiyZO1I?t=557}{Christmas Carol Mass (Kevin Weed)}},
+    lambofgod = {\href{https://youtu.be/iYYPSiyZO1I?t=601}{Christmas Carol Mass (Kevin Weed)}}
+]
+
+% Mary, Mother of God
+\AdvanceDate[1]
+\hymns[%
+    thisweek = \today,
+    thislabel = {Solemnity of Mary, Mother of God},
+    processional = {457 -- \href{https://www.youtube.com/watch?v=NedM6uN8TUA}{Sing of Mary}},
+    psalm = {\RA},
+    gospelacc = {\RA},
+    offertory = {448 -- \href{https://www.youtube.com/watch?v=0h1-vpX8790}{Away in a Manger (\textsc{mueller})}},
+    communion = {451 -- \href{https://www.youtube.com/watch?v=h_RRlNtAlKg}{Lo, How a Rose E'er Blooming}},
+%    communion = {466 -- \href{https://www.youtube.com/watch?v=Lxvi1TRZmv8}{What Child is This}},
+%    meditation = {451 -- \href{https://www.youtube.com/watch?v=h_RRlNtAlKg}{Lo, How a Rose E'er Blooming}},
+    recessional = {458 -- \href{https://www.youtube.com/watch?v=CIyxIu9Wkbk}{I Sing a Maid} (\textit{verse 1})},
+    %
+    greyout = True,
+    gloria = {\href{https://www.youtube.com/watch?v=2AGv7AOh2bs}{A Christmas Gloria (Paul Gibson)}},
+    holy = {\href{https://youtu.be/iYYPSiyZO1I?t=423}{Christmas Carol Mass (Kevin Weed)}},
+    memacc = {\href{https://youtu.be/iYYPSiyZO1I?t=532}{Christmas Carol Mass, C (Kevin Weed) \newline (\textit{``Save us, Savior...''})}},
+    amen = {\href{https://youtu.be/iYYPSiyZO1I?t=557}{Christmas Carol Mass (Kevin Weed)}},
+    lambofgod = {\href{https://youtu.be/iYYPSiyZO1I?t=601}{Christmas Carol Mass (Kevin Weed)}}
+]
+
+% Epiphany
+\AdvanceDate[6]
+\hymns[%
+    thisweek = \today,
+    thislabel = {Epiphany of the Lord},
+    processional = {459 -- \href{https://www.youtube.com/watch?v=I4cg0aOczWo}{Songs of Thankfulness and Praise}},
+    psalm = {\RA},
+    gospelacc = {\RA},
+    offertory = {463 -- \href{https://www.youtube.com/watch?v=_c1RfmfVBL8}{We Three Kings}},
+    communion = {460 -- \href{https://www.youtube.com/watch?v=2SUEHErhazk}{The First Nowell}},
+%    communion = {460 -- \href{https://www.youtube.com/watch?v=2SUEHErhazk}{The First Nowell}},
+%    meditation = {461 -- \href{https://www.youtube.com/watch?v=1_ifsk8loik}{What Star Is This}},
+%    recessional = {465 -- \href{https://www.youtube.com/watch?v=EESJPUYUUyo}{As With Gladness Men of Old}},
+    recessional = {461 -- \href{https://www.youtube.com/watch?v=1_ifsk8loik}{What Star Is This}},
+    %
+    greyout = True,
+    gloria = {\href{https://www.youtube.com/watch?v=2AGv7AOh2bs}{A Christmas Gloria (Paul Gibson)}},
+    holy = {\href{https://youtu.be/iYYPSiyZO1I?t=423}{Christmas Carol Mass (Kevin Weed)}},
+    memacc = {\href{https://youtu.be/iYYPSiyZO1I?t=532}{Christmas Carol Mass, C (Kevin Weed) \newline (\textit{``Save us, Savior...''})}},
+    amen = {\href{https://youtu.be/iYYPSiyZO1I?t=557}{Christmas Carol Mass (Kevin Weed)}},
+    lambofgod = {\href{https://youtu.be/iYYPSiyZO1I?t=601}{Christmas Carol Mass (Kevin Weed)}}
+]
+
+%% Baptism of the Lord -- celebrated on Monday this year
+%\AdvanceDate[1]
+%\hymns[%
+%    thisweek = \today,
+%    thislabel = {Baptism of the Lord},
+%    processional = {467 -- \href{https://www.youtube.com/watch?v=CUZwA0zgN9A}{When John Baptized by Jordan's River}},
+%    psalm = {\RA},
+%    gospelacc = {\RA},
+%    offertory = {432 -- \href{https://www.youtube.com/watch?v=Jtk_r62xLzU}{Nativity Carol}},
+%    communion = {13 -- \href{https://www.youtube.com/watch?v=hq-_otZmma0}{O Radiant Light}},
+%%    communion = {13 -- \href{https://www.youtube.com/watch?v=hq-_otZmma0}{O Radiant Light}},
+%%    meditation = {584 -- \href{https://www.youtube.com/watch?v=huERPUnO-bo}{Come to the Water}},
+%    recessional = {428 -- \href{https://www.youtube.com/watch?v=FmHd96ZA6gY}{Go, Tell It on the Mountain}},
+%    %
+%    greyout = True,
+%    gloria = {\href{https://www.youtube.com/watch?v=2AGv7AOh2bs}{A Christmas Gloria (Paul Gibson)}},
+%    holy = {\href{https://youtu.be/iYYPSiyZO1I?t=423}{Christmas Carol Mass (Kevin Weed)}},
+%    memacc = {\href{https://youtu.be/iYYPSiyZO1I?t=532}{Christmas Carol Mass, C (Kevin Weed) \newline (\textit{``Save us, Savior...''})}},
+%    amen = {\href{https://youtu.be/iYYPSiyZO1I?t=557}{Christmas Carol Mass (Kevin Weed)}},
+%    lambofgod = {\href{https://youtu.be/iYYPSiyZO1I?t=601}{Christmas Carol Mass (Kevin Weed)}}
+%]
+
+\end{schedule}
+\end{document}

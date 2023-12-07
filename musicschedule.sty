@@ -1,0 +1,231 @@
+% ========================================================== %
+%
+% Custom sty file to configure weekly music schedules.
+%
+% ========================================================== %
+
+% ========================================================== %
+% PACKAGES
+
+\usepackage{advdate}              % Ability to advance date
+\usepackage{bbding}                % Cross symbol
+\usepackage{hyperref}              % Hyperlink support
+\usepackage[none]{hyphenat}  % Prevents hyphenation
+\usepackage{pgfkeys}	        % Support for key-value dictionary-like pairs
+\usepackage{pdfpages}	        % For importing external pdf pages
+\usepackage[super]{nth}		% Numerical superscripts
+\usepackage[dayofweek]{datetime}		% Date support
+\usepackage[margin=0.99in]{geometry}	% Page configuration
+
+% ========================================================== %
+% COUNTERS
+
+\newcounter{dt}				% Date counter
+\newcounter{wk}			% Week number
+\newcounter{ra}				% Respond and Acclaim (RA) page
+
+% ========================================================== %
+% COMMANDS AND CONFIGURATIONS
+
+% Preface
+\let\prefacerow\@gobble
+\def\preface#1{%
+\ifx\prefacerow\@gobble\def\prefacerow{}\fi
+\expandafter\def\expandafter\prefacerow\expandafter{\prefacerow#1}}
+
+% Church
+\let\mychurch\@gobble
+\def\church#1{%
+\ifx\mychurch\@gobble\def\mychurch{}\fi
+\expandafter\def\expandafter\mychurch\expandafter{\mychurch#1}}
+
+% Liturgical season
+\let\litseason\@gobble
+\def\liturgicalseason#1{%
+\ifx\litseason\@gobble\def\litseason{}\fi
+\expandafter\def\expandafter\litseason\expandafter{\litseason#1}}
+
+% Last date in schedule
+\let\finaldate\@gobble
+\def\lastdate#1{%
+\ifx\finaldate\@gobble\def\finaldate{}\fi
+\expandafter\def\expandafter\finaldate\expandafter{\finaldate#1}}
+
+% Last liturgy in schedule
+\let\lastlit\@gobble
+\def\lastliturgy#1{%
+\ifx\lastlit\@gobble\def\lastlit{}\fi
+\expandafter\def\expandafter\lastlit\expandafter{\lastlit#1}}
+
+% Cross symbol
+\newcommand{\cross}{\textcolor{red}{\CrossMaltese}}
+
+% Schedule environment to format list and advance counters
+\newenvironment{schedule}
+  {\par\monthyeardate\renewcommand{\date}{\par%
+        \stepcounter{dt}\noindent\ifnum\value{dt}>2\relax%
+            \setcounter{dt}{0}\AdvanceDate[7]%
+        \else
+            \AdvanceDate[7]%
+        \fi\today}
+    }{\par}
+
+% Print RA page and advance
+\newcommand{\RA}[1][]{%
+  \ifthenelse{\equal{#1}{}}{%
+    \arabic{ra} (R\&A) \stepcounter{ra}}{%
+    \addtocounter{ra}{#1}%
+    \arabic{ra} (R\&A) \stepcounter{ra}}
+  }
+
+% Print week and advance counters
+\newcommand{\litweek}[1][]{%
+    \ifthenelse{\equal{#1}{}}{%
+    \textbf{\textcolor{red}{\Ordinalstringnum{\arabic{wk}} Sunday in \litseason}}%
+    \stepcounter{wk}}{%
+    \textbf{\textcolor{red}{\Ordinalstringnum{\arabic{wk}} Sunday in \litseason}}%
+    \addtocounter{wk}{#1}}%
+    }
+
+% Add multiple hymn suggestions in a table cell
+\newcommand\alt{\\ &}  
+
+% Custom table format: left-justified, ragged right
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% Grey color for Mass parts to avoid clutter
+\definecolor{gray}{gray}{0.7}
+\newcommand{\gr}[1]{\textcolor{gray}{#1}}
+
+% Set date format to Month DD, YYYY
+\newdateformat{monthyeardate}{%
+    \textbf{\textcolor{red}{\monthname[\THEMONTH] \THEDAY{}, \THEYEAR}}}
+
+% Remove indent
+\setlength\parindent{0pt}
+
+% Hymn schedule
+\pgfkeys{%
+    thisweek/.default = ,
+    thisweek/.store in = \thisweek,
+    thislabel/.default = ,
+    thislabel/.store in = \thislabel,
+    processional/.default = ,
+    processional/.store in = \processional,
+    psalm/.default = ,
+    psalm/.store in = \psalm,
+    gospelacc/.default = ,
+    gospelacc/.store in = \ga,
+    sequence/.default = ,
+    sequence/.store in = \sequence,
+    offertory/.default = ,
+    offertory/.store in = \offertory,
+    communion/.default = ,
+    communion/.store in = \communion,
+    meditation/.default = ,
+    meditation/.store in = \meditation,
+    recessional/.default = ,
+    recessional/.store in = \recessional,
+    setting/.default = ,
+    setting/.store in = \setting,
+    kyrie/.default = ,
+    kyrie/.store in = \kyrie,
+    gloria/.default = ,
+    gloria/.store in = \gloria,
+    holy/.default = ,
+    holy/.store in = \sanctus,
+    memacc/.default = ,
+    memacc/.store in = \ma,
+    amen/.default = ,
+    amen/.store in = \amen,
+    lambofgod/.default = ,
+    lambofgod/.store in = \log,
+    greyout/.default = ,
+    greyout/.store in = \greyout,
+    thisweek, thislabel, processional, psalm, gospelacc, sequence, offertory, 
+    communion, meditation, recessional, setting, kyrie, gloria, holy, memacc, amen, 
+    lambofgod, greyout}
+
+% ========================================================== %
+% HEADER IMPLEMENTATION
+
+% Set date in header
+\newcommand\myheader[2][]{
+\textbf{\centering
+    \Large HYMN SCHEDULE \\[0.2em]
+    \large \mychurch \\[0.6em]
+    \cross \\[0.5em]
+    \normalsize
+    \textcolor{red}{\today\ (\litweek[0])} \\[0.5em]
+    \textcolor{red}{\textit{through}} \\[0.5em]
+    \textcolor{red}{\finaldate\ (\lastlit)} \\
+    \rule{6.5in}{0.4pt} \\
+}
+\vspace{1em}
+\ifx\prefacerow\@empty
+    % Omit preface if empty
+\else
+    \begin{minipage}[t]{\textwidth}
+    \prefacerow \\[0.5em]
+    \rule{6.5in}{0.4pt} \\
+    \end{minipage}
+\fi}
+
+% ========================================================== %
+% HYMN SCHEDULE IMPLEMENTATION
+
+\newcommand\hymns[2][]{%
+\begin{minipage}[t]{\textwidth}
+\begingroup
+\pgfkeys{#1}
+\noindent \thisweek\ \cross\
+%\begingroup
+\textbf{\textcolor{red}{\thislabel}} \\
+\hspace*{0.75cm}
+    \begin{tabularx}{15cm}{lL}
+        \textbf{Processional:} & \processional \\
+        \ifx\kyrie\empty
+            % Omit Kyrie if empty
+        \else
+            \ifx\greyout\empty
+                \textbf{Kyrie} & \kyrie \\
+            \else
+                \gr{\textbf{Kyrie}} & \gr{\kyrie} \\
+            \fi
+        \fi
+        \ifx\greyout\empty
+            \textbf{Gloria:} & \gloria \\
+        \else
+            \gr{\textbf{Gloria:}} & \gr{\gloria} \\
+        \fi
+        \textbf{Responsorial Psalm:} & \psalm \\
+        \ifx\sequence\empty
+            % Omit Sequence if empty
+        \else
+            \textbf{Sequence} & \sequence \\
+        \fi
+        \textbf{Gospel Acclamation:} & \ga \\
+        \textbf{Preparation of Gifts:} & \offertory \\
+        \ifx\greyout\empty
+            \textbf{Holy, Holy, Holy:} & \sanctus \\
+            \textbf{Memorial Acclamation:} & \ma \\
+            \textbf{Great Amen:} & \amen \\
+            \textbf{Lamb of God:} & \log \\
+        \else
+            \gr{\textbf{Holy, Holy, Holy:}} & \gr{\sanctus} \\
+            \gr{\textbf{Memorial Acclamation:}} & \gr{\ma} \\
+            \gr{\textbf{Great Amen:}} & \gr{\amen} \\
+            \gr{\textbf{Lamb of God:}} & \gr{\log} \\
+        \fi
+        \textbf{Communion:} & \communion \\
+        \ifx\meditation\empty
+            % Omit Meditation if empty
+        \else
+            \textbf{Meditation} & \meditation \\
+        \fi
+        \textbf{Recessional:} & \recessional \\ \\
+    \end{tabularx} \\
+\endgroup
+\end{minipage}}
+
+% ========================================================== %

@@ -1,0 +1,157 @@
+% ------------------------------------------------------------------------------------------------------ %
+% PACKAGES
+\usepackage{bbding}      % Cross symbol
+\usepackage{datetime}   % Custom date format
+\usepackage{hyperref}   % Hyperlinke support
+\usepackage{pgfkeys}    % Support for key-value dictionary-like pairs 
+\usepackage{xcolor}       % Text color
+\usepackage[margin=1 in]{geometry}
+
+% ========================================================== %
+% COMMANDS AND CONFIGURATIONS
+
+% Increase line spacing
+\linespread{1.25}
+
+% Bold date
+\newdateformat{mydate}{\textbf{\date}}
+
+% Variables for liturgical season and week number
+\newcommand{\litweeknum}[1]{\Ordinalstringnum{#1}}
+
+% Weekly title
+\newcommand\mytitle[1]{%
+    \pgfkeys{#1}
+    \title{%
+    \textbf{\Large Organist, Cantor, Choir, Celebrant %\\[-0.5em]
+    \MAROON{\cross}
+    \large \MAROON{\litweeknum{\litweek}\ Sunday in \season}} \vspace{-2.8em}}
+}
+
+% Solemnity title
+\newcommand\solemnitytitle[1]{%
+    \title{%
+    \textbf{\Large Organist, Cantor, Choir, Celebrant %\\[-0.5em]
+    \MAROON{\cross}
+    \large \MAROON{#1}} \vspace{-2.8em}}
+}
+
+% Grey color for Mass parts to avoid clutter
+\definecolor{gray}{gray}{0.7}
+\newcommand{\gr}[1]{\textcolor{gray}{#1}}
+
+% Maroon font, as in the Roman Missal
+\definecolor{MAROON}{rgb}{0.7,0.13,0.13}  
+\newcommand{\MAROON}[1]{\textcolor{MAROON}{#1}}
+
+% Cross symbol
+\newcommand\cross{\item[\MAROON{\CrossMaltese}]}
+
+% Hymn schedule
+\pgfkeys{%
+    litweek/.default = ,
+    litweek/.store in = \litweek,
+    season/.default = ,
+    season/.store in = \season,
+    processional/.default = ,
+    processional/.store in = \processional,
+    psalm/.default = ,
+    psalm/.store in = \psalm,
+    gospelacc/.default = ,
+    gospelacc/.store in = \ga,
+    sequence/.default = ,
+    sequence/.store in = \sequence,
+    offertory/.default = ,
+    offertory/.store in = \offertory,
+    communion/.default = ,
+    communion/.store in = \communion,
+    meditation/.default = ,
+    meditation/.store in = \meditation,
+    recessional/.default = ,
+    recessional/.store in = \recessional,
+    setting/.default = ,
+    setting/.store in = \setting,
+    kyrie/.default = ,
+    kyrie/.store in = \kyrie,
+    gloria/.default = ,
+    gloria/.store in = \gloria,
+    holy/.default = ,
+    holy/.store in = \sanctus,
+    memacc/.default = ,
+    memacc/.store in = \ma,
+    amen/.default = ,
+    amen/.store in = \amen,
+    lambofgod/.default = ,
+    lambofgod/.store in = \log,
+    greyout/.default = ,
+    greyout/.store in = \greyout,
+    notes/.default = ,
+    notes/.store in = \notes,
+    litweek, season, processional, psalm, gospelacc, sequence, offertory, communion, 
+    meditation, recessional, setting, kyrie, gloria, holy, memacc, amen, lambofgod, 
+    greyout, notes}
+
+% ========================================================== %
+% Notes
+\newcommand\notesheader[1]{%
+    \vspace{-1em} \noindent \small{\MAROON{#1}} \\[-0.5em]}
+
+% Hymn list
+\newcommand\hymns[2][]{%
+\begingroup
+\pgfkeys{#1}
+\noindent\rule{\textwidth}{0.4pt} \\[1em]
+\noindent\begin{tabular}{ll}
+    
+        \textbf{Processional:} \hspace{3cm} & \processional \\[1em]
+        
+        \ifx\kyrie\empty
+            % Omit Kyrie if empty
+        \else
+            \ifx\greyout\empty
+                \textbf{Kyrie} & \kyrie \\
+            \else
+                \gr{\textbf{Kyrie}} & \gr{\kyrie} \\
+            \fi
+        \fi
+        \ifx\greyout\empty
+            \textbf{Gloria:} & \gloria \\[1em]
+        \else
+            \gr{\textbf{Gloria:}} & \gr{\gloria} \\[1em]
+        \fi
+
+        \textbf{Responsorial Psalm:} & \psalm \\
+        \ifx\sequence\empty
+            % Omit Sequence if empty
+        \else
+            \textbf{Sequence} & \sequence \\
+        \fi
+        \ifx\greyout\empty
+            \textbf{Gospel Acclamation:} & \ga \\[1em]
+        \else
+            \gr{\textbf{Gospel Acclamation:}} & \gr{\ga} \\[1em]
+        \fi
+        \textbf{Preparation of Gifts:} & \offertory \\[1em]
+
+        \ifx\greyout\empty
+            \textbf{Holy, Holy, Holy:} & \sanctus \\
+            \textbf{Memorial Acclamation:} & \ma \\
+            \textbf{Great Amen:} & \amen \\
+            \textbf{Lamb of God:} & \log \\[1em]
+        \else
+            \gr{\textbf{Holy, Holy, Holy:}} & \gr{\sanctus} \\
+            \gr{\textbf{Memorial Acclamation:}} & \gr{\ma} \\
+            \gr{\textbf{Great Amen:}} & \gr{\amen} \\
+            \gr{\textbf{Lamb of God:}} & \gr{\log} \\[1em]        
+        \fi
+        \ifx\meditation\empty
+            \textbf{Communion:} & \communion \\[1em]
+            % Omit Meditation if empty
+        \else
+            \textbf{Communion:} & \communion \\
+            \textbf{Meditation} & \meditation \\[1em]
+        \fi
+
+        \textbf{Recessional:} & \recessional \\ \\
+\end{tabular}
+\endgroup}
