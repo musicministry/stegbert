@@ -13,8 +13,8 @@ introduction: |
 actions:
   - label: "Upcoming Weekend"
     icon: download
-    url: "https://nbviewer.org/github/musicministry/stegbert/blob/main/YearB/Weekly/B-Advent02-2023.pdf"
+    url: "https://nbviewer.org/github/musicministry/stegbert/blob/main/YearB/Weekly/upcoming.pdf"
   - label: "Plan Ahead"
     icon: download
-    url: "https://nbviewer.org/github/musicministry/stegbert/blob/main/YearB/B_Advent-Christmas_2023.pdf"
+    url: "https://nbviewer.org/github/musicministry/stegbert/blob/main/YearB/outlook.pdf"
 ---
