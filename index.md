@@ -14,7 +14,7 @@ actions:
   - label: "Get Started"
     icon: github
     url: "https://github.com/musicministry/stegbert"
-  - label: "Download"
+  - label: "Plan Ahead"
     icon: download
-    url: "https://github.com/musicministry/stegbert/archive/master.zip"
+    url: "https://github.com/musicministry/stegbert/blob/main/YearB/B_Advent-Christmas_2023.pdf"
 ---
