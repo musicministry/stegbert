@@ -13,8 +13,9 @@ introduction: |
 actions:
   - label: "Upcoming Weekend"
     icon: download
-    url: "https://github.com/musicministry/stegbert/blob/6b7cef0b4c258cb0555155708d5e60a453d7982b/YearB/Weekly/upcoming.pdf"
+    url: "https://nbviewer.org/github/musicministry/stegbert/blob/main/YearB/Weekly/upcoming.pdf"
   - label: "Plan Ahead"
     icon: download
-    url: "https://nbviewer.org/github/musicministry/stegbert/blob/6b7cef0b4c258cb0555155708d5e60a453d7982b/YearB/outlook.pdf"
+    url: "https://nbviewer.org/github/musicministry/stegbert/blob/main/YearB/outlook.pdf"
+Tip\: If the schedule doesn't load the first time, please wait a minute and try again.
 ---
