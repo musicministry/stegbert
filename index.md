@@ -16,5 +16,5 @@ actions:
     url: "https://github.com/musicministry/stegbert"
   - label: "Plan Ahead"
     icon: download
-    url: "https://docs.google.com/viewer?url=${https://github.com/musicministry/stegbert/blob/YearB/B_Advent-Christmas_2023.pdf}"
+    url: "https://docs.google.com/viewer?url=https://github.com/musicministry/stegbert/blob/YearB/B_Advent-Christmas_2023.pdf"
 ---
