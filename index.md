@@ -10,6 +10,8 @@ introduction: |
   - Information about our ministry
   - Weekly music lists
   - Music schedules extending several weeks in advance to help you practice and prepare
+ 
+  Tip: If the schedule doesn't load the first time, please wait a minute and try again.
 actions:
   - label: "Upcoming Weekend"
     icon: download
@@ -17,5 +19,4 @@ actions:
   - label: "Plan Ahead"
     icon: download
     url: "https://nbviewer.org/github/musicministry/stegbert/blob/main/YearB/outlook.pdf"
-Tip\: If the schedule doesn't load the first time, please wait a minute and try again.
 ---
