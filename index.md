@@ -11,9 +11,9 @@ introduction: |
   - Weekly music lists
   - Music schedules extending several weeks in advance to help you practice and prepare
 actions:
-  - label: "Get Started"
-    icon: github
-    url: "https://github.com/musicministry/stegbert"
+  - label: "Upcoming Weekend"
+    icon: download
+    url: "https://nbviewer.org/github/musicministry/stegbert/blob/main/YearB/Weekly/B-Advent02-2023.pdf"
   - label: "Plan Ahead"
     icon: download
     url: "https://nbviewer.org/github/musicministry/stegbert/blob/main/YearB/B_Advent-Christmas_2023.pdf"
