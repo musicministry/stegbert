@@ -41,13 +41,14 @@ algolia:
 markdown: kramdown
 #theme: jekyll-theme-basically-basic
 remote_theme: "mmistakes/jekyll-theme-basically-basic@1.4.5"
-plugins: # previsously gems
+plugins: # previously gems
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-sitemap
   - jekyll-paginate
 feed:
   path: atom.xml
+future: true
 
 # Pagination - https://jekyllrb.com/docs/pagination/
 paginate: 10
