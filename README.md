@@ -1,6 +1,10 @@
-## [St. Egbert Music Ministry | Morehead City, NC][1]
+## [St. Egbert Music Ministry][1]
 
-<img align="left" src="assets/images/organ_keyboard.jpg"> <br><br>
+<img align="left" src="assets/images/organ_keyboard.jpg">
+
+<br/><br/>
+
+## Overview
 
 This is a repository serving the music ministry at [St. Egbert's Catholic Church](https://www.stegbertcatholicchurch.org/) in Morehead City, NC. It provides the backend for the [public webpage](https://musicministry.github.io/stegbert) available at [https://musicministry.github.io/stegbert](https://musicministry.github.io/stebert). Please visit the [public webpage](https://musicministry.github.io/stegbert) for:
 
@@ -11,10 +15,7 @@ This is a repository serving the music ministry at [St. Egbert's Catholic Church
 
 ## Disclaimer
 
-This music ministry repositry and the accompanying website are for general information purposes only. The website is intended to be a resource for parish musicians and may grow as needs arise.
-
-Neither this repository nor the accompanying website are official communication of St. Egbert Catholic Church nore the Catholic Diocese of Raleigh, North Carolina. All GitHub project code and resources are provided on an ‘as is’ basis and the user assumes responsibility for its use. Any claims against the Department of Commerce or Department of Commerce bureaus stemming from the use of this GitHub project will be governed by all applicable Federal law. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
-
+This repository and the accompanying website are for general information purposes only. The website is intended to be a resource for St. Egbert parish musicians and may grow as needs evolve. Neither this repository nor the accompanying website are official communication of St. Egbert Catholic Church or the Catholic Diocese of Raleigh, North Carolina. All GitHub project code and resources are provided on an "as is" basis and the user assumes responsibility for its use.
 
 ---
 
