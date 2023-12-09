@@ -1,5 +1,5 @@
 ---
-title: Weekly Lists
+title: Post Archive
 layout: posts
 permalink: /posts/
 entries_layout: list
