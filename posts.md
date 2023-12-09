@@ -1,8 +1,7 @@
 ---
 title: Weekly Lists
-layout: collection
+layout: posts
 permalink: /posts/
-collection: posts
 entries_layout: list
 ---
 
