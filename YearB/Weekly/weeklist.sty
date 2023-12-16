@@ -29,11 +29,12 @@
 }
 
 % Solemnity title
-\newcommand\solemnitytitle[1]{%
+\newcommand\customtitle[1]{%
+    \pgfkeys{#1{
     \title{%
     \textbf{\Large Organist, Cantor, Choir, Celebrant %\\[-0.5em]
     \MAROON{\cross}
-    \large \MAROON{#1}} \vspace{-2.8em}}
+    \large \MAROON{\solemnity}} \vspace{-2.8em}}
 }
 
 % Grey color for Mass parts to avoid clutter
@@ -53,6 +54,8 @@
     litweek/.store in = \litweek,
     season/.default = ,
     season/.store in = \season,
+    solemnity/.default = ,
+    solemnity/.store in = \solemnity,
     processional/.default = ,
     processional/.store in = \processional,
     psalm/.default = ,
@@ -87,9 +90,9 @@
     greyout/.store in = \greyout,
     notes/.default = ,
     notes/.store in = \notes,
-    litweek, season, processional, psalm, gospelacc, sequence, offertory, communion, 
-    meditation, recessional, setting, kyrie, gloria, holy, memacc, amen, lambofgod, 
-    greyout, notes}
+    litweek, season, solemnity, processional, psalm, gospelacc, sequence, offertory, 
+    communion, meditation, recessional, setting, kyrie, gloria, holy, memacc, amen, 
+    lambofgod, greyout, notes}
 
 % ========================================================== %
 % Notes
