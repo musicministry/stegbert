@@ -26,8 +26,8 @@ def get_hymns(latexdoc):
     """Extract hymn names, numbers, and video IDs from LaTex document 'doc'"""
     hymns = dict()
     for line in latexdoc:
-        if 'solemnity' in line:
-            hymns['litweek'] = re.sub('{|}', '', line.split('=')[-1].strip())
+        # if 'solemnity' in line:
+        #     hymns['litweek'] = re.sub('{|}', '', line.split('=')[-1].strip())
         if 'date' in line:
             hymns['date'] = re.sub('{|}|\\\date|\\\MAROON|\\\\textbf', '',
             line.strip())
