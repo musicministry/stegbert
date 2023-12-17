@@ -15,6 +15,9 @@ def parse_args():
     parser.add_argument('-f', '--file', metavar='file', type=str,
                         default=argparse.SUPPRESS,
                         help='Latex file to convert')
+    parser.add_argument('-d', '--date', metavar='date', type=str,
+                        default=argparse.SUPPRESS,
+                        help='Optional date YYYY-MM-DD to publish post')
     parser.add_argument('-u', '--upcoming', action='store_true',
                         help='Updates "upcoming.pdf" file')
     return parser.parse_args()
@@ -91,7 +94,8 @@ def main():
 
     # Name of celebration
     if 'season' in hymns.keys():
-        title = f'{ordDict[hymns["litweek"]].title()} Sunday in {hymns["season"]}'
+        title = f'{ordDict[hymns["litweek"]].title()} '\
+                 'Sunday in {hymns["season"]}'
     else:
         title = hymns['litweek']
 
@@ -166,7 +170,10 @@ def main():
     else:
         mdfname = glob.glob(f"_posts/*{hymns['litweek'].md}")
     if len(mdfname) == 0:
-        post_date = datetime.today().strftime('%Y-%m-%d')
+        if "date" in args:
+            post_date = args.date
+        else:
+            post_date = datetime.today().strftime('%Y-%m-%d')
         if 'season' in hymns.keys():
             mdfname = f'{post_date}-{hymns["season"]}{hymns["litweek"].zfill(2)}.md'
         else:
@@ -174,7 +181,11 @@ def main():
         print(f'No existing post found. Creating {mdfname}.')
     else:
         mdfname = os.path.basename(mdfname[0])
-        print(f'Updating {mdfname}.')
+        if "date" in args:
+            mdfname = args.date + mdfname[10:]
+            print(f'Renaming post to {mdfname} with new publish date.')
+        else:
+            print(f'Updating {mdfname}.')
     postfile = os.path.join("_posts", mdfname)
     with open(postfile, 'w') as mdout:
         mdout.write(md)
