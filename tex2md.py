@@ -45,9 +45,8 @@ def get_hymns(latexdoc):
                     'name': splits[4].split('}}')[0]
                     }
     # Fix Ordinary Time
-    if 'season' in hymns.keys():
-        if 'season' == 'ot':
-            hymns['season'] = 'Ordinary Time'
+    if 'season' == 'ot':
+        hymns['season'] = 'Ordinary Time'
     return hymns
 
 def main():
@@ -92,11 +91,11 @@ def main():
         mdtemp = mdtempfile.read()
 
     # Name of celebration
-    if 'season' in hymns.keys():
+    if 'litweek' in hymns.keys():
         title = f'{ordDict[hymns["litweek"]].title()} '\
                 f'Sunday in {hymns["season"]}'
     else:
-        title = hymns['litweek']
+        title = hymns['solemnity']
 
     # Fill in template
     md = mdtemp.replace(
