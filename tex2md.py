@@ -95,7 +95,7 @@ def main():
     # Name of celebration
     if 'season' in hymns.keys():
         title = f'{ordDict[hymns["litweek"]].title()} '\
-                 'Sunday in {hymns["season"]}'
+                f'Sunday in {hymns["season"]}'
     else:
         title = hymns['litweek']
 
@@ -182,8 +182,10 @@ def main():
     else:
         mdfname = os.path.basename(mdfname[0])
         if "date" in args:
-            mdfname = args.date + mdfname[10:]
+            mdfnameNew = args.date + mdfname[10:]
             print(f'Renaming post to {mdfname} with new publish date.')
+            os.system(f'cp /_posts/{mdfname} /_posts{mdfnameNew}')
+            mdfname = mdfnameNew
         else:
             print(f'Updating {mdfname}.')
     postfile = os.path.join("_posts", mdfname)
