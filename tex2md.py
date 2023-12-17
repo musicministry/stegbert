@@ -163,7 +163,7 @@ def main():
         mdfname = glob.glob(f"*{hymns['season']}{hymns['litweek'].zfill(2)}.md")
     else:
         mdfname = glob.glob(f"*{hymns['litweek'].md}")
-    if len(mdfrname) == 0:
+    if len(mdfname) == 0:
         post_date = datetime.today().strftime('%Y-%m-%d')
         if 'season' in hymns.keys():
             mdfname = f'{post_date}-{hymns["season"]}{hymns["litweek"].zfill(2)}.md'
