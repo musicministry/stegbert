@@ -102,7 +102,7 @@ def main():
     # Fill in template
     md = mdtemp.replace(
              'DATE', datetime.strptime(hymns['date'], '%A, %B %d, %Y')\
-                             .strftime('%A, %b %d, %Y')
+                             .strftime('%B %d, %Y')
          ).replace(
              'OCCASION', title
          ).replace(
