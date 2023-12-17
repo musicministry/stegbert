@@ -63,8 +63,6 @@ The parts of the Mass for Christmas will be taken from *Christmas Carol Mass*.
 
 #### Memorial Acclamation
 
-(We proclaim your Death, O Lord...)
-
 {% include youtube.html id="532" %} <br>
 
 
