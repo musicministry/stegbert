@@ -184,7 +184,7 @@ def main():
         if "date" in args:
             mdfnameNew = args.date + mdfname[10:]
             print(f'Renaming post to {mdfname} with new publish date.')
-            os.system(f'cp /_posts/{mdfname} /_posts{mdfnameNew}')
+            os.system(f'cp _posts/{mdfname} _posts{mdfnameNew}')
             mdfname = mdfnameNew
         else:
             print(f'Updating {mdfname}.')
