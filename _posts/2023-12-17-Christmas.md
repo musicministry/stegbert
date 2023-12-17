@@ -38,6 +38,7 @@ Handout from **Respond and Acclaim** ([OCP](https://www.ocp.org/en-us)). Video r
 ### Meditation Hymn: Silent Night (441)
 
 {% include youtube.html id="Jd2C3j8pRls" %} <br>
+
 ---
 
 ### Recessional: Joy to the World (437)
