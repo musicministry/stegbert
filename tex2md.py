@@ -195,7 +195,7 @@ def main():
     if 'meditation' in hymns.keys():
         md = md.replace(
             'MEDITATIONVIDEOID',
-            f'\n--\n\n### Meditation Hymn: {hymns["meditation"]["name"]} '\
+            f'\n---\n\n### Meditation Hymn: {hymns["meditation"]["name"]} '\
             f'({hymns["meditation"]["number"]})\n\n'\
             '{{% include youtube.html id="{}" %}} <br>'\
             .format(hymns['meditation']['video'])
@@ -209,7 +209,7 @@ def main():
     if 'sequence' in hymns.keys():
         md = md.replace(
             'SEQUENCEVIDEOID',
-            f'\n--\n\n### Sequence: {hymns["sequence"]["name"]} '\
+            f'\n---\n\n### Sequence: {hymns["sequence"]["name"]} '\
             f'({hymns["sequence"]["number"]})\n\n'\
             '{{% include youtube.html id="{}" %}} <br>'\
             .format(hymns['sequence']['video'])
