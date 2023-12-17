@@ -224,20 +224,20 @@ def main():
 
     # Write out post
     # Update existing post for the given weekend if it already exists
-    if 'season' in hymns.keys():
+    if 'litweek' in hymns.keys():
         mdfname = glob.glob(f"_posts/*{hymns['season']}"\
                             f"{hymns['litweek'].zfill(2)}.md")
     else:
-        mdfname = glob.glob(f"_posts/*{hymns['litweek'].md}")
+        mdfname = glob.glob(f"_posts/*{hymns['solemnity'].replace(' ', '')}.md")
     if len(mdfname) == 0:
         if "date" in args:
             post_date = args.date
         else:
             post_date = datetime.today().strftime('%Y-%m-%d')
-        if 'season' in hymns.keys():
+        if 'litweek' in hymns.keys():
             mdfname = f'{post_date}-{hymns["season"]}{hymns["litweek"].zfill(2)}.md'
         else:
-            mdfname = f'{post_date}-{hymns["litweek"].md}'
+            mdfname = f'{post_date}-{hymns["solemnity"].replace(" ", "")}.md'
         print(f'No existing post found. Creating {mdfname}.')
     else:
         mdfname = os.path.basename(mdfname[0])
