@@ -11,7 +11,7 @@ def parse_args():
     parser = argparse.ArgumentParser(prog='tex2md.py',
                 usage='%(prog)s [arguments]',
                 description='Convert weekly LaTeX music list to markdown blog.')
-    parser.add_argument('-f', '--file', metavar='file', type=int,
+    parser.add_argument('-f', '--file', metavar='file', type=str,
                         default=argparse.SUPPRESS,
                         help='Latex file to convert')
     parser.add_argument('-o', '--out', metavar='file', type=int,
@@ -19,26 +19,26 @@ def parse_args():
                         help='Out directory to write markdown file')
     return parser.parse_args()
 
-def get_hymns(doc):
+def get_hymns(latexdoc):
     """Extract hymn names, numbers, and video IDs from LaTex document 'doc'"""
     hymns = dict()
-    for line in tex:
+    for line in latexdoc:
         if 'solemnity' in line:
             hymns['litweek'] = re.sub('{|}', '', line.strip())
-            if 'date' in line:
-                hymns['date'] = re.sub('{|}|\\\date|\\\MAROON|\\\\textbf', '',
-                line.strip())
-            elif '=' in line:
-                splits = re.split('=|}{|--', line)
-                if len(splits) == 2:
-                    hymns[splits[0].strip()] = re.sub('{|}|,', '', splits[1].strip())
-                elif len(splits) == 5:
-                    splits = [s.strip() for s in splits]
-                    hymn = splits[0]
-                    hymns[hymn] = {
-                        'number': splits[1].replace('{',''),
-                        'video': splits[3],
-                        'name': splits[4].split('}}')[0]
+        if 'date' in line:
+            hymns['date'] = re.sub('{|}|\\\date|\\\MAROON|\\\\textbf', '',
+            line.strip())
+        elif '=' in line:
+            splits = re.split('=|}{|--', line)
+            if len(splits) == 2:
+                hymns[splits[0].strip()] = re.sub('{|}|,', '', splits[1].strip())
+            elif len(splits) == 5:
+                splits = [s.strip() for s in splits]
+                hymn = splits[0]
+                hymns[hymn] = {
+                    'number': splits[1].replace('{',''),
+                    'video': splits[3],
+                    'name': splits[4].split('}}')[0]
                     }
     # Fix Ordinary Time
     if 'season' in hymns.keys():
@@ -73,10 +73,9 @@ def main():
     })
 
     # Extract hymn list
-    hymns = get_hymns(doc=tex)
-
+    hymns = get_hymns(latexdoc=tex)
     # Read in markdown template
-    mdDir = 'Documents/Liturgy/Music Ministry/_Schedules_StEgbert'
+    mdDir = '.'
     with open(os.path.join(mdDir, 'post-template.md')) as mdtempfile:
         mdtemp = mdtempfile.read()
 
