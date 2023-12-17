@@ -54,7 +54,6 @@ def main():
     # texDir = 'Documents/Liturgy/Music Ministry/_Schedules_StEgbert/YearB/Weekly'
     # with open(os.path.join(texDir, 'B-Advent03-2023.tex'), 'r') as file:
     #     tex = file.readlines()
-    os.system('git checkout main')
     with open(args.file, 'r') as file:
         tex = file.readlines()
 
