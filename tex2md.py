@@ -15,8 +15,7 @@ def parse_args():
     parser.add_argument('-f', '--file', metavar='file', type=str,
                         default=argparse.SUPPRESS,
                         help='Latex file to convert')
-    parser.add_argument('-u', '--upcoming', metavar='upcoming',
-                        action='store_true',
+    parser.add_argument('-u', '--upcoming', action='store_true',
                         help='Updates "upcoming.pdf" file')
     return parser.parse_args()
 
