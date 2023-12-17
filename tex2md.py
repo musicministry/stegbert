@@ -169,6 +169,10 @@ def main():
             mdfname = f'{post_date}-{hymns["season"]}{hymns["litweek"].zfill(2)}.md'
         else:
             mdfname = f'{post_date}-{hymns["litweek"].md}'
+        print(f'No existing post found. Creating {mdfname}.')
+    else:
+        mdfname = mdfname[0]
+        print(f'Updating {mdfname}.')
     postfile = os.path.join("_posts", mdfname)
     with open(postfile, 'w') as mdout:
         mdout.write(md)
