@@ -33,7 +33,7 @@ Handout from **Respond and Acclaim** ([OCP](https://www.ocp.org/en-us)). Video r
 
 {% include youtube.html id="j88dBFX0FDg" %} <br>
 
---
+---
 
 ### Meditation Hymn: Silent Night (441)
 
