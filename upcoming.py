@@ -12,6 +12,7 @@ def parse_args():
     parser.add_argument('-f', '--file', metavar='file', type=str,
                         default=argparse.SUPPRESS,
                         help='Latex file to convert')
+    return parser.parse_args()
 
 def main():
     # Parse command line arguments
