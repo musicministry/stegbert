@@ -61,7 +61,7 @@ def main():
     if args.upcoming:
         texDir = os.path.dirname(args.file)
         pdfFile = os.path.abspath(args.file).replace('tex', 'pdf')
-        newPdfFile = os.path.join(texDir, 'upcoming.pdf')
+        newPdfFile = os.path.abspath(os.path.join(texDir, 'upcoming.pdf'))
         print(pdfFile)
         print(newPdfFile)
         os.system(f'cp {pdfFile} {newPdfFile}')
