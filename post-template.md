@@ -57,8 +57,6 @@ GLORIAVIDEOID
 
 #### Memorial Acclamation
 
-(We proclaim your Death, O Lord...)
-
 {% include youtube.html id="MEMACCVIDEOID" %} <br>
 
 
