@@ -155,14 +155,14 @@ def main():
     else:
         md = md.replace(
             'GLORIAVIDEOID',
-            '{% include youtube.html id="" %} <br>'.format(hymns['gloria']['video'])
+            '{% include youtube.html id="{}" %} <br>'.format(hymns['gloria']['video'])
         )
 
     # Conditionals for Responsorial Psalm and Gospel Acclamation
     if isinstance(hymns['psalm'], dict):
         md = md.replace(
             'PSALMVIDEOID',
-            '{% include youtube.html id="" %} <br>'.format(hymns['psalm']['video'])
+            '{% include youtube.html id="{}" %} <br>'.format(hymns['psalm']['video'])
         )
     else:
         md = md.replace(
@@ -177,7 +177,7 @@ def main():
     if isinstance(hymns['gospelacc'], dict):
         md = md.replace(
             'GOSPELACCVIDEOID',
-            '{% include youtube.html id="" %} <br>'\
+            '{% include youtube.html id="{}" %} <br>'\
             .format(hymns['gospelacc']['video'])
         )
     else:
@@ -197,7 +197,7 @@ def main():
             'MEDITATIONVIDEOID',
             f'\n--\n\n### Meditation Hymn: {hymns["meditation"]["name"]} '\
             f'({hymns["meditation"]["number"]})\n\n'\
-            '{% include youtube.html id="" %} <br>'\
+            '{% include youtube.html id="{}" %} <br>'\
             .format(hymns['meditation']['video'])
         )
     else:
@@ -211,7 +211,7 @@ def main():
             'SEQUENCEVIDEOID',
             f'\n--\n\n### Sequence: {hymns["sequence"]["name"]} '\
             f'({hymns["sequence"]["number"]})\n\n'\
-            '{% include youtube.html id="" %} <br>'\
+            '{% include youtube.html id="{}" %} <br>'\
             .format(hymns['sequence']['video'])
         )
     else:
