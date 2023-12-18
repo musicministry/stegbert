@@ -72,7 +72,7 @@ def main():
     })
 
     # Extract hymn list from LaTeX document
-    hymns = get_hymns(latexdoc=tex)
+    hymns = get_hymns(doc=tex)
     
     # Read in markdown template
     mdDir = '.'
