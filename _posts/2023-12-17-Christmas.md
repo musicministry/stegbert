@@ -1,6 +1,6 @@
 ---
 title: "December 25, 2023"
-date: POSTDecember 25, 2023
+date: 2023-12-17
 introduction: "Music for: Christmas"
 comments: false
 last_modified_at: 
