@@ -1,6 +1,6 @@
 ---
 title: "DATE"
-date: 
+date: POSTDATE
 introduction: "Music for: OCCASION"
 comments: false
 last_modified_at: 

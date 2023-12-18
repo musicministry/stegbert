@@ -53,6 +53,13 @@ def main():
     # Parse command line arguments
     args = parse_args()
     
+    # Use the date passed in command line for file name and post release,
+    # if provided. Otherwise, use today's date.
+    if "date" in args:
+        post_date = args.date
+    else:
+        post_date = datetime.today().strftime('%Y-%m-%d')
+    
     # Read in LaTeX file
     with open(args.file, 'r') as file:
         tex = file.readlines()
@@ -90,6 +97,8 @@ def main():
     md = mdtemp.replace(
              'DATE', datetime.strptime(hymns['date'], '%A, %B %d, %Y')\
                              .strftime('%B %d, %Y')
+         ).replace(
+             'POSTDATE', post_date
          ).replace(
              'OCCASION', title
          ).replace(
@@ -222,12 +231,6 @@ def main():
         mdfname = glob.glob(f"_posts/*{hymns['solemnity'].replace(' ', '')}.md")
     # If no post exist yet, create a new one
     if len(mdfname) == 0:
-        # Use the date passed in command line for file name and post release,
-        # if provided. Otherwise, use today's date.
-        if "date" in args:
-            post_date = args.date
-        else:
-            post_date = datetime.today().strftime('%Y-%m-%d')
         if 'litweek' in hymns.keys():
             mdfname = f'{post_date}-{hymns["season"]}{hymns["litweek"].zfill(2)}.md'
         else:
