@@ -1,4 +1,4 @@
-## St. Egbert Music Ministry
+# St. Egbert Music Ministry
 
 <img align="left" src="assets/images/organ_keyboard.jpg">
 
