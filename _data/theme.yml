@@ -50,6 +50,6 @@ google_fonts:
 
 navigation_pages:
   - about.md
+  - upcoming.md
   - posts.md
   - cv.md
-  - upcoming.md
