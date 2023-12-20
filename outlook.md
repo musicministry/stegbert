@@ -5,8 +5,8 @@ layout: blankpage
 <!-- <object data="{{ site.url }}{{ site.baseurl }}/pdfs/outlook.pdf" width="1000" height="1000" type="application/pdf"></object> -->
 
 <iframe src="https://drive.google.com/viewerng/viewer?
-url=https://musicministry.github.io/stegbert/pdf/outlook.pdf?
-pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="400px" height="300px"  />
+url=https://musicministry.github.io/stegbert/pdfs/outlook.pdf?
+pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="100%" height="100%"  />
 
 <div class='embed-responsive' style='padding-bottom:150%'>
     <object data='{{ site.url }}{{ site.baseurl }}/pdfs/outlook.pdf#pagemode=none&toolbar=0&navpanes=1&scrollbar=1' type='application/pdf' width='100%' height='100%'></object>
