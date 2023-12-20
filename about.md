@@ -1,7 +1,7 @@
 ---
 Title: "About"
 layout: about
-author_picture: /assets/images/choir_roles.jpeg
+image: /assets/images/choir_roles.jpeg
 ---
 
 # St. Egbert Music Ministry
