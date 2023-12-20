@@ -1,5 +1,6 @@
 ---
 layout: blankpage
+title: "Upcoming Liturgy"
 ---
 
 <div class='embed-responsive' style='padding-bottom:150%'>
