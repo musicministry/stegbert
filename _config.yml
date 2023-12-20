@@ -22,7 +22,7 @@ url: "https://musicministry.github.io" # the base hostname & protocol for your s
 author:
   name: Matt
   twitter:
-  picture:
+  picture: /assets/images/choir_roles.jpeg
 twitter_username:
 linkedin_username: matthewgrossi
 github_username: musicministry/stegbert
