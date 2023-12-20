@@ -5,7 +5,7 @@ layout: blankpage
 <!-- <object data="{{ site.url }}{{ site.baseurl }}/pdfs/outlook.pdf" width="1000" height="1000" type="application/pdf"></object> -->
 
 <iframe src="https://drive.google.com/viewerng/viewer?
-url=https://musicministry.github.io/stegbert/outlook?
+url=https://musicministry.github.io/stegbert/pdf/outlook.pdf?
 pid=explorer&efh=false&a=v&chrome=false&embedded=true" width="400px" height="300px"  />
 
 <div class='embed-responsive' style='padding-bottom:150%'>
