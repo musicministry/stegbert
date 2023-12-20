@@ -1,5 +1,5 @@
 ---
-title: Plan Ahead
+title: "Weekly Lineups"
 layout: posts
 permalink: /posts/
 entries_layout: list
