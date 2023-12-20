@@ -8,10 +8,10 @@ layout: blankpage
     <object data='{{ site.url }}{{ site.baseurl }}/pdfs/upcoming.pdf' type='application/pdf' width='100%' height='100%'></object>
 </div>
 
-.embed-responsive {
+<!-- .embed-responsive {
     position: relative;
     display: block;
     height: 0;
     padding: 0;
     overflow: hidden;
-}
+} -->
