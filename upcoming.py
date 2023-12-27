@@ -8,7 +8,7 @@ def parse_args():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(prog='tex2md.py',
                 usage='%(prog)s [arguments]',
-                description='Convert weekly LaTeX music list to markdown blog.')
+                description='Create upcoming.pdf file for website.')
     parser.add_argument('-f', '--file', metavar='file', type=str,
                         default=argparse.SUPPRESS,
                         help='Latex file to convert')
@@ -25,7 +25,7 @@ def main():
     pdfFile = args.file.replace('tex', 'pdf')
     
     # New pdf filename: upcoming.pdf
-    newPdfFile = os.path.join(texDir, 'upcoming.pdf')
+    newPdfFile = os.path.join('pdfs', 'upcoming.pdf')
     
     # Copy new file into upcoming.pdf
     os.system(f'cp {pdfFile} {newPdfFile}')
