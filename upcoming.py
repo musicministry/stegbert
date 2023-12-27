@@ -34,7 +34,7 @@ def main():
     os.system(f'touch {newPdfFile}')
     os.system(f'git add {newPdfFile}')
     os.system('git commit -m "Update with latest list"')
-    os.system('git push origin gh-pages')
+    os.system('git push origin main gh-pages')
 
 if __name__ == '__main__':
     main()
