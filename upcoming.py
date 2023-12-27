@@ -31,7 +31,7 @@ def main():
     os.system(f'cp {pdfFile} {newPdfFile}')
     
     # Commit to GitHub main branch for website
-    os.system(f'git add {newPdfFile}')
+    os.system(f'git add -f {newPdfFile}')
     os.system('git commit -m "Update with latest list"')
     os.system('git push origin gh-pages')
 
