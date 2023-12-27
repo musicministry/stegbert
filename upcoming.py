@@ -31,10 +31,14 @@ def main():
     os.system(f'cp {pdfFile} {newPdfFile}')
     
     # Commit to GitHub main branch for website
-    os.system(f'touch {newPdfFile}')
     os.system(f'git add {newPdfFile}')
     os.system('git commit -m "Update with latest list"')
-    os.system('git push origin main:gh-pages')
+    os.system('git push origin main')
+    os.system('git checkout gh-pages')
+    os.system(f'git checkout main -- {newPdfFile}')
+    os.system('git commit -m "Update with latest list"')
+    os.system('git push origin gh-pages')
+    os.system('git checkout main')
 
 if __name__ == '__main__':
     main()
