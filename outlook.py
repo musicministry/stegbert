@@ -24,10 +24,10 @@ def main():
     # Original pdf filename (derived from tex file, if passed)
     pdfFile = args.file.replace('tex', 'pdf')
     
-    # New pdf filename: upcoming.pdf
-    newPdfFile = os.path.join(texDir, 'outlook.pdf')
+    # New pdf filename: outlook.pdf
+    newPdfFile = os.path.join('pdfs', 'outlook.pdf')
     
-    # Copy new file into upcoming.pdf
+    # Copy new file into outlook.pdf
     os.system(f'cp {pdfFile} {newPdfFile}')
     
     # Commit to GitHub main branch for website
