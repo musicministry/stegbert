@@ -33,7 +33,12 @@ def main():
     # Commit to GitHub main branch for website
     os.system(f'git add -f {newPdfFile}')
     os.system('git commit -m "Update with latest schedule"')
+    os.system('git push origin main')
+    os.system('git checkout gh-pages')
+    os.system(f'git checkout main -- {newPdfFile}')
+    os.system('git commit -m "Update with latest schedule"')
     os.system('git push origin gh-pages')
+    os.system('git checkout main')
 
 if __name__ == '__main__':
     main()
