@@ -23,15 +23,15 @@ def main():
     
     # Original pdf filename (derived from tex file, if passed)
     pdfFile = args.file.replace('tex', 'pdf')
-    
+
     # New pdf filename: outlook.pdf
     newPdfFile = os.path.join('pdfs', 'outlook.pdf')
-    
+
     # Copy new file into outlook.pdf
     os.system(f'cp {pdfFile} {newPdfFile}')
     
     # Commit to GitHub main branch for website
-    os.system(f'git add {newPdfFile}')
+    os.system(f'git add -f {newPdfFile}')
     os.system('git commit -m "Update with latest schedule"')
     os.system('git push origin gh-pages')
 
