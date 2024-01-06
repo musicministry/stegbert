@@ -1,0 +1,10 @@
+*.tex
+*.pdf
+/YearA/*.tex
+/YearA/*.pdf
+/YearB/*.tex
+/YearB/*.pdf
+/YearA/Weekly/*.tex
+/YearA/Weekly/*.pdf
+/YearB/Weekly/*.tex
+/YearB/Weekly/*.pdf
