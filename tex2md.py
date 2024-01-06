@@ -228,7 +228,7 @@ def main():
         mdfname = glob.glob(f"_posts/*{hymns['season']}"\
                             f"{hymns['litweek'].zfill(2)}.md")
     else:
-        mdfname = glob.glob(f"_posts/*{hymns['solemnity'].replace(' ', '')}.md")
+        mdfname = glob.glob(f"_posts/*{hymns['solemnity'].title().replace(' ', '')}.md")
     # If no post exist yet, create a new one
     if len(mdfname) == 0:
         if 'litweek' in hymns.keys():
