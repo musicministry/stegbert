@@ -244,7 +244,7 @@ def main():
             # post release date.
             mdfnameNew = args.date + mdfname[10:]
             print(f'Renaming post to {mdfname} with new publish date.')
-            os.system(f'cp _posts/{mdfname} _posts/{mdfnameNew}')
+            os.system(f'mv _posts/{mdfname} _posts/{mdfnameNew}')
             mdfname = mdfnameNew
         else:
             # Otherwise, just update the post
