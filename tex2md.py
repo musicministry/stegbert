@@ -234,7 +234,7 @@ def main():
         if 'litweek' in hymns.keys():
             mdfname = f'{post_date}-{hymns["season"]}{hymns["litweek"].zfill(2)}.md'
         else:
-            mdfname = f'{post_date}-{hymns["solemnity"].replace(" ", "")}.md'
+            mdfname = f'{post_date}-{hymns["solemnity"].title().replace(" ", "")}.md'
         print(f'No existing post found. Creating {mdfname}.')
     else:
         mdfname = os.path.basename(mdfname[0])
