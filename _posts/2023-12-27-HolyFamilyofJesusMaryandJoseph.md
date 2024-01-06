@@ -1,6 +1,6 @@
 ---
 title: "December 31, 2023"
-date: 2024-01-05
+date: 2023-12-27
 introduction: "Music for: Holy Family of Jesus Mary and Joseph"
 comments: false
 last_modified_at: 
