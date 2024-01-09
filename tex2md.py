@@ -167,9 +167,9 @@ def main():
             'PSALMVIDEOID',
             "Handout from **Respond and Acclaim** "\
             "([OCP](https://www.ocp.org/en-us)). Video recordings for "\
-            "rehearsal purposes can usually be found on several private "\
-            "YouTube channels such as [Music Ministry 101]"\
-            "(https://www.youtube.com/@MusicMinistry101/videos) or "\
+            "rehearsal purposes can usually be found on YouTube channels "\
+            "such as [Music Ministry 101]"\
+            (https://www.youtube.com/@MusicMinistry101/videos) or "\
             "[Chris Brunelle](https://www.youtube.com/@ChrisBrunelle/videos)."
         )
     
