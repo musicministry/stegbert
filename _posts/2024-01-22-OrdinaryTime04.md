@@ -1,6 +1,6 @@
 ---
 title: "January 28, 2024"
-date: 2024-01-22
+date: 2024-01-23
 introduction: "Music for: Fourth Sunday in Ordinary Time"
 comments: false
 last_modified_at: 
@@ -16,7 +16,7 @@ last_modified_at:
 
 ### Responsorial Psalm
 
-Handout from **Respond and Acclaim** ([OCP](https://www.ocp.org/en-us)). Video recordings for rehearsal purposes can usually be found on several private YouTube channels such as [Music Ministry 101](https://www.youtube.com/@MusicMinistry101/videos) or [Chris Brunelle](https://www.youtube.com/@ChrisBrunelle/videos).
+Handout from **Respond and Acclaim** ([OCP](https://www.ocp.org/en-us)). Video recordings for rehearsal purposes can usually be found on YouTube channels such as [Music Ministry 101](https://www.youtube.com/@MusicMinistry101/videos) or [Chris Brunelle](https://www.youtube.com/@ChrisBrunelle/videos).
 
 ### Gospel Acclamation
 
@@ -24,15 +24,15 @@ Handout from **Respond and Acclaim** ([OCP](https://www.ocp.org/en-us)). Video r
 
 ---
 
-### Preparation of Gifts: When In Our Music God Is Glorified (612)
+### Preparation of Gifts: Healing River of the Spirit (665)
 
-{% include youtube.html id="VNI8CMv1sKk" %} <br>
+{% include youtube.html id="AMS3Gtf6HQw" %} <br>
 
 ---
 
-### Communion: Healing River of the Spirit (665)
+### Communion: Song of the Body of Christ (924)
 
-{% include youtube.html id="AMS3Gtf6HQw" %} <br>
+{% include youtube.html id="q3w6PDwFkwI" %} <br>
 
 ---
 
