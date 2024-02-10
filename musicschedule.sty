@@ -118,14 +118,22 @@
     gospelacc/.store in = \ga,
     sequence/.default = ,
     sequence/.store in = \sequence,
+    ashes/.default = ,
+    ashes/.store in = \ashes,
+    feet/.default = ,
+    feet/.store in = \feet,
     offertory/.default = ,
     offertory/.store in = \offertory,
+    veneration/.default = ,
+    veneration/.store in = \veneration,
     communion/.default = ,
     communion/.store in = \communion,
     meditation/.default = ,
     meditation/.store in = \meditation,
     recessional/.default = ,
     recessional/.store in = \recessional,
+    transfer/.default = ,
+    transfer/.store in = \transfer,
     setting/.default = ,
     setting/.store in = \setting,
     kyrie/.default = ,
@@ -142,9 +150,9 @@
     lambofgod/.store in = \log,
     greyout/.default = ,
     greyout/.store in = \greyout,
-    thisweek, thislabel, processional, psalm, gospelacc, sequence, offertory, 
-    communion, meditation, recessional, setting, kyrie, gloria, holy, memacc, amen, 
-    lambofgod, greyout}
+    thisweek, thislabel, processional, psalm, gospelacc, sequence, ashes, feet, 
+    offertory, veneration, communion, meditation, recessional, transfer, setting, kyrie, 
+    gloria, holy, memacc, amen, lambofgod, greyout}
 
 % ========================================================== %
 % HEADER IMPLEMENTATION
@@ -193,10 +201,14 @@
                 \gr{\textbf{Kyrie}} & \gr{\kyrie} \\
             \fi
         \fi
-        \ifx\greyout\empty
-            \textbf{Gloria:} & \gloria \\
+        \ifx\gloria\empty
+            % Omit Gloria if empty
         \else
-            \gr{\textbf{Gloria:}} & \gr{\gloria} \\
+            \ifx\greyout\empty
+                \textbf{Gloria:} & \gloria \\
+            \else
+                \gr{\textbf{Gloria:}} & \gr{\gloria} \\
+            \fi
         \fi
         \textbf{Responsorial Psalm:} & \psalm \\
         \ifx\sequence\empty
@@ -205,17 +217,68 @@
             \textbf{Sequence} & \sequence \\
         \fi
         \textbf{Gospel Acclamation:} & \ga \\
-        \textbf{Preparation of Gifts:} & \offertory \\
-        \ifx\greyout\empty
-            \textbf{Holy, Holy, Holy:} & \sanctus \\
-            \textbf{Memorial Acclamation:} & \ma \\
-            \textbf{Great Amen:} & \amen \\
-            \textbf{Lamb of God:} & \log \\
+        \ifx\ashes\empty
+            % Omit Ashes if empty
         \else
-            \gr{\textbf{Holy, Holy, Holy:}} & \gr{\sanctus} \\
-            \gr{\textbf{Memorial Acclamation:}} & \gr{\ma} \\
-            \gr{\textbf{Great Amen:}} & \gr{\amen} \\
-            \gr{\textbf{Lamb of God:}} & \gr{\log} \\
+            \textbf{Distribution of Ashes} & \ashes \\
+        \fi
+        \ifx\feet\empty
+            % Omit Feet if empty
+        \else
+            \textbf{Washing of Feet} & \feet \\
+        \fi
+        \ifx\offertory\empty
+            % Omit Offertory if empty
+        \else
+            \textbf{Preparation of Gifts:} & \offertory \\
+        \fi
+        \ifx\veneration\empty
+            % Omit Veneration if empty
+        \else
+            \textbf{Adoration of the Holy Cross:} & \veneration \\
+        \fi
+        \ifx\greyout\empty
+            \ifx\sanctus\empty
+                % Omit Holy, Holy, Holy if empty
+            \else
+                \textbf{Holy, Holy, Holy:} & \sanctus \\
+            \fi
+            \ifx\ma\empty
+                % Omit Memorial Acclamation if empty
+            \else
+                \textbf{Memorial Acclamation:} & \ma \\
+            \fi
+            \ifx\amen\empty
+                % Omit Great Amen if empty
+            \else
+                \textbf{Great Amen:} & \amen \\
+            \fi
+            \ifx\log\empty
+                % Omit Lamb of God if empty
+            \else
+                \textbf{Lamb of God:} & \log \\
+            \fi
+        \else
+            \ifx\sanctus\empty
+                % Omit Holy, Holy, Holy if empty
+            \else            
+                \gr{\textbf{Holy, Holy, Holy:}} & \gr{\sanctus} \\
+            \fi
+            \ifx\ma\empty
+                % Omit Memorial Acclamation if empty
+            \else
+                \gr{\textbf{Memorial Acclamation:}} & \gr{\ma} \\
+            \fi
+            \ifx\amen\empty
+                % Omit Great Amen if empty
+            \else
+                \gr{\textbf{Great Amen:}} & \gr{\amen} \\
+            \fi
+            \ifx\log\empty
+                % Omit Lamb of God if empty
+            \else
+                \gr{\textbf{Lamb of God:}} & \gr{\log} \\
+            \fi
         \fi
         \textbf{Communion:} & \communion \\
         \ifx\meditation\empty
@@ -223,7 +286,16 @@
         \else
             \textbf{Meditation} & \meditation \\
         \fi
-        \textbf{Recessional:} & \recessional \\ \\
+        \ifx\recessional\empty
+            % Omit Recessional if empty
+        \else
+            \textbf{Recessional:} & \recessional \\ \\
+        \fi
+        \ifx\transfer\empty
+            % Omit Transfer if empty
+        \else
+            \textbf{Transfer of the Blessed Sacrament:} & \transfer \\ \\
+        \fi
     \end{tabularx} \\
 \endgroup
 \end{minipage}}

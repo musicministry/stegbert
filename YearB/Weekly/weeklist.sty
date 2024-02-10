@@ -65,6 +65,8 @@
     gospelacc/.store in = \ga,
     sequence/.default = ,
     sequence/.store in = \sequence,
+    ashes/.default = ,
+    ashes/.store in = \ashes,
     offertory/.default = ,
     offertory/.store in = \offertory,
     communion/.default = ,
@@ -91,9 +93,9 @@
     greyout/.store in = \greyout,
     notes/.default = ,
     notes/.store in = \notes,
-    litweek, season, solemnity, processional, psalm, gospelacc, sequence, offertory, 
-    communion, meditation, recessional, setting, kyrie, gloria, holy, memacc, amen, 
-    lambofgod, greyout, notes}
+    litweek, season, solemnity, processional, psalm, gospelacc, sequence, ashes, 
+    offertory, communion, meditation, recessional, setting, kyrie, gloria, holy, memacc, 
+    amen, lambofgod, greyout, notes}
 
 % ========================================================== %
 % Notes
@@ -131,6 +133,11 @@
             \textbf{Sequence} & \sequence \\
         \fi
         \textbf{Gospel Acclamation:} & \ga \\[1em]
+        \ifx\ashes\empty
+            % Omit Ashes if empty
+        \else
+            \textbf{Ashes} & \ashes \\[1em]
+        \fi
         \textbf{Preparation of Gifts:} & \offertory \\[1em]
 
         \ifx\greyout\empty
