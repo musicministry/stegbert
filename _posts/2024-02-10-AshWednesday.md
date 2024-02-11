@@ -74,4 +74,4 @@ The parts of the Mass for Lent will be taken from *Mass of Charity and Love*.
 
 #### Lamb of God
 
-{% include youtube.html id="Gvyf7pfVHPY?t=195" %}
+{% include youtube.html id="Gvyf7pfVHPY" time="195" %}
