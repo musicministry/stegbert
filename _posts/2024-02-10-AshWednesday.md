@@ -1,6 +1,6 @@
 ---
 title: "February 14, 2024"
-date: 2024-02-10
+date: 2024-02-12
 introduction: "Music for: Ash Wednesday"
 comments: false
 last_modified_at: 
