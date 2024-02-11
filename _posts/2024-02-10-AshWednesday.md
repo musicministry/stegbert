@@ -24,6 +24,12 @@ Handout from **Respond and Acclaim** ([OCP](https://www.ocp.org/en-us)). Video r
 
 ---
 
+### Distribution of Ashes: Ashes (962)
+
+{% include youtube.html id="VLZmz-ukOWo" %} <br>
+
+---
+
 ### Preparation of Gifts: Hosea (484)
 
 {% include youtube.html id="W_v6VAB9BM4" %} <br>
