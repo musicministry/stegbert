@@ -67,6 +67,8 @@
     sequence/.store in = \sequence,
     ashes/.default = ,
     ashes/.store in = \ashes,
+    confirmation/.default = ,
+    confirmation/.store in = \confirmation,
     offertory/.default = ,
     offertory/.store in = \offertory,
     communion/.default = ,
@@ -79,6 +81,8 @@
     setting/.store in = \setting,
     kyrie/.default = ,
     kyrie/.store in = \kyrie,
+    sprinkling/.default = ,
+    sprinkling/.store in = \sprinkling,
     gloria/.default = ,
     gloria/.store in = \gloria,
     holy/.default = ,
@@ -94,8 +98,8 @@
     notes/.default = ,
     notes/.store in = \notes,
     litweek, season, solemnity, processional, psalm, gospelacc, sequence, ashes, 
-    offertory, communion, meditation, recessional, setting, kyrie, gloria, holy, memacc, 
-    amen, lambofgod, greyout, notes}
+    confirmation, offertory, communion, meditation, recessional, setting, kyrie, gloria,
+    sprinkling, holy, memacc, amen, lambofgod, greyout, notes}
 
 % ========================================================== %
 % Notes
@@ -120,6 +124,11 @@
                 \gr{\textbf{Kyrie}} & \gr{\kyrie} \\
             \fi
         \fi
+        \ifx\sprinkling\empty
+            % Omit Sprinkling Rite if empty
+        \else
+            \textbf{Sprinkling Rite:} & \sprinkling \\
+        \fi
         \ifx\greyout\empty
             \textbf{Gloria:} & \gloria \\[1em]
         \else
@@ -137,6 +146,11 @@
             % Omit Ashes if empty
         \else
             \textbf{Ashes} & \ashes \\[1em]
+        \fi
+        \ifx\confirmation\empty
+            % Omit Confirmation if empty
+        \else
+            \textbf{Confirmation:} & \confirmation \\
         \fi
         \textbf{Preparation of Gifts:} & \offertory \\[1em]
 

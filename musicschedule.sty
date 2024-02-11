@@ -122,6 +122,8 @@
     ashes/.store in = \ashes,
     feet/.default = ,
     feet/.store in = \feet,
+    confirmation/.default = ,
+    confirmation/.store in = \confirmation,
     offertory/.default = ,
     offertory/.store in = \offertory,
     veneration/.default = ,
@@ -140,6 +142,8 @@
     kyrie/.store in = \kyrie,
     gloria/.default = ,
     gloria/.store in = \gloria,
+    sprinkling/.default = ,
+    sprinkling/.store in = \sprinkling,
     holy/.default = ,
     holy/.store in = \sanctus,
     memacc/.default = ,
@@ -151,8 +155,8 @@
     greyout/.default = ,
     greyout/.store in = \greyout,
     thisweek, thislabel, processional, psalm, gospelacc, sequence, ashes, feet, 
-    offertory, veneration, communion, meditation, recessional, transfer, setting, kyrie, 
-    gloria, holy, memacc, amen, lambofgod, greyout}
+    confirmation, offertory, veneration, communion, meditation, recessional, transfer, 
+    setting, kyrie, gloria, sprinkling, holy, memacc, amen, lambofgod, greyout}
 
 % ========================================================== %
 % HEADER IMPLEMENTATION
@@ -196,10 +200,15 @@
             % Omit Kyrie if empty
         \else
             \ifx\greyout\empty
-                \textbf{Kyrie} & \kyrie \\
+                \textbf{Kyrie:} & \kyrie \\
             \else
-                \gr{\textbf{Kyrie}} & \gr{\kyrie} \\
+                \gr{\textbf{Kyrie:}} & \gr{\kyrie} \\
             \fi
+        \fi
+        \ifx\sprinkling\empty
+            % Omit Sprinkling Rite if empty
+        \else
+            \textbf{Sprinkling Rite:} & \sprinkling \\
         \fi
         \ifx\gloria\empty
             % Omit Gloria if empty
@@ -214,18 +223,23 @@
         \ifx\sequence\empty
             % Omit Sequence if empty
         \else
-            \textbf{Sequence} & \sequence \\
+            \textbf{Sequence:} & \sequence \\
         \fi
         \textbf{Gospel Acclamation:} & \ga \\
         \ifx\ashes\empty
             % Omit Ashes if empty
         \else
-            \textbf{Distribution of Ashes} & \ashes \\
+            \textbf{Distribution of Ashes:} & \ashes \\
         \fi
         \ifx\feet\empty
             % Omit Feet if empty
         \else
-            \textbf{Washing of Feet} & \feet \\
+            \textbf{Washing of Feet:} & \feet \\
+        \fi
+        \ifx\confirmation\empty
+            % Omit Confirmation if empty
+        \else
+            \textbf{Confirmation:} & \confirmation \\
         \fi
         \ifx\offertory\empty
             % Omit Offertory if empty
@@ -284,7 +298,7 @@
         \ifx\meditation\empty
             % Omit Meditation if empty
         \else
-            \textbf{Meditation} & \meditation \\
+            \textbf{Meditation:} & \meditation \\
         \fi
         \ifx\recessional\empty
             % Omit Recessional if empty
