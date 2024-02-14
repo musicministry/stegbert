@@ -10,7 +10,7 @@ last_modified_at:
 
 ### Processional: PROCESSIONALHYMN (N)
 
-{% include youtube.html id="PROCESSIONALVIDEOID" %} <br>
+{% include youtube.html id="PROCESSIONALVIDEOID" time="PROCESSIONALVIDEOSTART" %} <br>
 
 ---
 
@@ -26,19 +26,19 @@ GOSPELACCVIDEOID
 
 ### Preparation of Gifts: OFFERTORYHYMN (N)
 
-{% include youtube.html id="OFFERTORYVIDEOID" %} <br>
+{% include youtube.html id="OFFERTORYVIDEOID" time="OFFERTORYVIDEOSTART" %} <br>
 
 ---
 
 ### Communion: COMMUNIONHYMN (N)
 
-{% include youtube.html id="COMMUNIONVIDEOID" %} <br>
+{% include youtube.html id="COMMUNIONVIDEOID" time="COMMUNIONVIDEOSTART" %} <br>
 MEDITATIONVIDEOID
 ---
 
 ### Recessional: RECESSIONALHYMN (N)
 
-{% include youtube.html id="RECESSIONALVIDEOID" %} <br>
+{% include youtube.html id="RECESSIONALVIDEOID" time="RECESSIONALVIDEOSTART" %} <br>
 
 ---
 
@@ -53,19 +53,19 @@ GLORIAVIDEOID
 
 #### Holy, Holy, Holy
 
-{% include youtube.html id="HOLYVIDEOID" %} <br>
+{% include youtube.html id="HOLYVIDEOID" time="HOLYVIDESTART" %} <br>
 
 
 #### Memorial Acclamation
 
-{% include youtube.html id="MEMACCVIDEOID" %} <br>
+{% include youtube.html id="MEMACCVIDEOID" time="MEMACCVIDEOSTART" %} <br>
 
 
 #### Amen
 
-{% include youtube.html id="AMENVIDEOID" %} <br>
+{% include youtube.html id="AMENVIDEOID" time="AMENVIDEOSTART" %} <br>
 
 
 #### Lamb of God
 
-{% include youtube.html id="LAMBOFGODVIDEOID" %}
+{% include youtube.html id="LAMBOFGODVIDEOID" time="LAMBOFGODVIDEOSTART" %}
