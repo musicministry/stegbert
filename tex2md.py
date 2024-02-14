@@ -44,7 +44,7 @@ def get_hymns(doc):
                                        .replace('\\textit', '')\
                                        .replace('}', ''),
                     'name': splits[7].split('}}')[0]\
-                                     .replace('} (\textit{', '(')\
+                                     .replace('} (\\textit{', '(')\
                                      .replace('})}', ')')
                     }
                 # Check for "start at" indicator in URL
