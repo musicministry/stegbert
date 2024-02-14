@@ -30,20 +30,29 @@ def get_hymns(doc):
             line.strip())
         elif '=' in line:
             # Get keys:values
-            splits = re.split('=|}{|--', line)
+            splits = re.split('=|}{|--|/', line)
             if len(splits) == 2:
                 # Header info
                 hymns[splits[0].strip()] = re.sub('{|}|,', '',
                                                   splits[1].strip())
-            elif len(splits) == 5:
+            elif len(splits) == 8:
                 # Hymns
                 splits = [s.strip() for s in splits]
                 hymn = splits[0]
                 hymns[hymn] = {
-                    'number': splits[1].replace('{',''),
-                    'video': splits[3],
-                    'name': splits[4].split('}}')[0]
+                    'number': splits[1].replace('{','')\
+                                       .replace('\\textit', '')\
+                                       .replace('}', ''),
+                    'name': splits[7].split('}}')[0]
                     }
+                # Check for "start at" indicator in URL
+                try:
+                    videostart = int(splits[6])
+                    hymns[hymn]['video'] = splits[5].replace('?t', '')
+                    hymns[hymn]['startat'] = splits[6]
+                except ValueError:
+                    hymns[hymn]['video'] = splits[6]
+                    hymns[hymn]['startat'] = ''
     # Fix Ordinary Time, since this will show up in the title of the post
     if 'season' == 'ot':
         hymns['season'] = 'Ordinary Time'
@@ -110,11 +119,17 @@ def main():
              'PROCESSIONALVIDEOID',
              hymns["processional"]["video"]
          ).replace(
+             'PROCESSIONALVIDEOSTART',
+             hymns["processional"]["startat"]
+         ).replace(
              'OFFERTORYHYMN (N)',
              f'{hymns["offertory"]["name"]} ({hymns["offertory"]["number"]})'
          ).replace(
              'OFFERTORYVIDEOID',
              hymns["offertory"]["video"]
+         ).replace(
+             'OFFERTORYVIDEOSTART',
+             hymns["offertory"]["startat"]
          ).replace(
              'COMMUNIONHYMN (N)',
              f'{hymns["communion"]["name"]} ({hymns["communion"]["number"]})'
@@ -122,11 +137,17 @@ def main():
              'COMMUNIONVIDEOID',
              hymns["communion"]["video"]
          ).replace(
+             'COMMUNIONVIDEOSTART',
+             hymns["communion"]["startat"]
+         ).replace(
              'RECESSIONALHYMN (N)',
              f'{hymns["recessional"]["name"]} ({hymns["recessional"]["number"]})'
          ).replace(
              'RECESSIONALVIDEOID',
              hymns["recessional"]["video"]
+         ).replace(
+             'RECESSIONALVIDEOSTART',
+             hymns["recessional"]["startat"]
          ).replace(
              'MASSSETTING',
              hymns["holy"]["name"]
@@ -134,14 +155,26 @@ def main():
              'HOLYVIDEOID',
              hymns["holy"]["video"]
          ).replace(
+             'HOLYVIDEOSTART',
+             hymns["holy"]["startat"]
+         ).replace(
              'MEMACCVIDEOID',
              hymns["memacc"]["video"]
+         ).replace(
+             'MEMACCVIDEOSTART',
+             hymns["memacc"]["startat"]
          ).replace(
              'AMENVIDEOID',
              hymns["amen"]["video"]
          ).replace(
+             'AMENVIDEOSTART',
+             hymns["amen"]["startat"]
+         ).replace(
              'LAMBOFGODVIDEOID',
              hymns["lambofgod"]["video"]
+         ).replace(
+             'LAMBOFGODVIDEOSTART',
+             hymns["lambofgod"]["startat"]
          )
 
     # Conditional for Gloria
@@ -153,14 +186,16 @@ def main():
     else:
         md = md.replace(
             'GLORIAVIDEOID',
-            '{{% include youtube.html id="{}" %}} <br>'.format(hymns['gloria']['video'])
+            '{{% include youtube.html id="{}" time="{}" %}} <br>'\
+            .format(hymns['gloria']['video'], hymns['gloria']['startat'])
         )
 
     # Conditional for Responsorial Psalm
     if isinstance(hymns['psalm'], dict):
         md = md.replace(
             'PSALMVIDEOID',
-            '{{% include youtube.html id="{}" %}} <br>'.format(hymns['psalm']['video'])
+            '{{% include youtube.html id="{}" time="{}" %}} <br>'\
+            .format(hymns['psalm']['video'], hymns['psalm']['startat'])
         )
     else:
         md = md.replace(
@@ -177,8 +212,8 @@ def main():
     if isinstance(hymns['gospelacc'], dict):
         md = md.replace(
             'GOSPELACCVIDEOID',
-            '{{% include youtube.html id="{}" %}} <br>'\
-            .format(hymns['gospelacc']['video'])
+            '{{% include youtube.html id="{}" time="{}" %}} <br>'\
+            .format(hymns['gospelacc']['video'], hymns['gospelacc']['startat'])
         )
     else:
         md = md.replace(
@@ -197,8 +232,8 @@ def main():
             'MEDITATIONVIDEOID',
             f'\n---\n\n### Meditation Hymn: {hymns["meditation"]["name"]} '\
             f'({hymns["meditation"]["number"]})\n\n'\
-            '{{% include youtube.html id="{}" %}} <br>\n'\
-            .format(hymns['meditation']['video'])
+            '{{% include youtube.html id="{}" time="{}" %}} <br>\n'\
+            .format(hymns['meditation']['video'], hymns['meditation']['startat'])
         )
     else:
         md = md.replace(
@@ -211,8 +246,8 @@ def main():
             'SEQUENCEVIDEOID',
             f'\n---\n\n### Sequence: {hymns["sequence"]["name"]} '\
             f'({hymns["sequence"]["number"]})\n\n'\
-            '{{% include youtube.html id="{}" %}} <br>\n'\
-            .format(hymns['sequence']['video'])
+            '{{% include youtube.html id="{}" time="{}" %}} <br>\n'\
+            .format(hymns['sequence']['video'], hymns['sequence']['startat'])
         )
     else:
         md = md.replace(
