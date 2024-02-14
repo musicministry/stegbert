@@ -53,7 +53,7 @@ GLORIAVIDEOID
 
 #### Holy, Holy, Holy
 
-{% include youtube.html id="HOLYVIDEOID" time="HOLYVIDESTART" %} <br>
+{% include youtube.html id="HOLYVIDEOID" time="HOLYVIDEOSTART" %} <br>
 
 
 #### Memorial Acclamation
