@@ -67,7 +67,12 @@ def main():
     # Use the date passed in command line for file name and post release,
     # if provided. Otherwise, use today's date.
     if "date" in args:
-        post_date = args.date
+        if len(args.date) == 8:
+            post_date = args.date[:4]+'-'+args.date[4:6]+'-'+args.date[6:]
+        elif len(args.date) == 10:
+            post_date = args.date
+        else:
+            raise ValueError('Date, if provided, must be in the format "YYYY-MM-DD" or "YYYYMMDD"')
     else:
         post_date = datetime.today().strftime('%Y-%m-%d')
     
