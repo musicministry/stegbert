@@ -277,7 +277,7 @@ def main():
             mdfname = f'{post_date}-{hymns["season"].replace(" ","")}{hymns["litweek"].zfill(2)}.md'
         else:
             mdfname = f'{post_date}-{hymns["solemnity"].title().replace(" ", "")}.md'
-        print(f'No existing post found. Creating {mdfname}.')
+        print(f'Creating {mdfname}, since no existing post was found.')
     else:
         mdfname = os.path.basename(mdfname[0])
         if "date" in args:
