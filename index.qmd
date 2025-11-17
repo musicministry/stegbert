@@ -1,0 +1,19 @@
+---
+title: "St. Egbert Music Ministry"
+subtitle: Morehead City, North Carolina
+about:
+  template: marquee
+  image: _images/organ_keyboard.jpg
+  image-alt: Organ manual with pistons
+  image-title: "King of Instruments, the organ"
+text: Home
+icon: music-note-beamed
+---
+
+Welcome to St. Egbert’s music ministry! Whether you sing or play an instrument, we invite you to join us as we sing joyful songs to the Lord at weekly liturgies and other special occasions throughout the liturgical year.
+
+::: {.callout-important title=Disclaimer}
+
+This website is for general information purposes only and is intended to be a resource for St. Egbert parish musicians. It is not the official parish website, which can be found [here](https://www.stegbertcatholicchurch.org/), nor does it constitute official communication of St. Egbert Catholic Church or the Catholic Diocese of Raleigh, North Carolina.
+
+:::

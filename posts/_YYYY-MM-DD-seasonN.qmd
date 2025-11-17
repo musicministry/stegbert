@@ -1,0 +1,95 @@
+---
+title: NTH Sunday of SEASON
+# date: November 25, 2025
+description: MONTH, DD, YYYY
+categories:
+  - YYYY
+  - SEASON
+image: /_images/dates/MON/YYYY-MM-DD.png
+---
+
+::: {.titlered}
+### &nbsp; Processional
+:::
+
+#### HYMN (NUM)
+
+ENTRY <br>
+
+::: {.titlered}
+### &nbsp; Responsorial Psalm
+:::
+
+::: {.callout-tip}
+
+Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as [Chris Brunelle](https://www.youtube.com/@ChrisBrunelle/videos), [Liturgical Music](https://www.youtube.com/@LiturgicalMusic), or [Music Ministry 101](https://www.youtube.com/@MusicMinistry101/videos).
+
+:::
+
+#### *Respond & Acclaim* pg. NUM
+
+ENTRY <br>
+
+::: {.callout-important}
+We will always sing every verse at Mass, regardless of what is included in the video.
+:::
+
+<br>
+
+::: {.titlered}
+### &nbsp; Gospel Acclamation
+:::
+
+#### *Respond & Acclaim* pg. NUM
+
+ENTRY <br>
+
+::: {.titlered}
+### &nbsp; Preparation of Gifts
+:::
+
+#### HYMN (NUM)
+
+ENTRY <br>
+
+::: {.titlered}
+### &nbsp; Communion
+:::
+
+#### HYMN (NUM)
+
+ENTRY <br>
+
+::: {.titlered}
+### &nbsp; Recessional
+:::
+
+#### HYMN (NUM)
+
+ENTRY <br>
+
+::: {.titlered}
+## &nbsp; Mass Parts
+:::
+
+The parts of the Mass for Advent will be taken from *Missa Emmanuel*.
+
+#### Gloria
+
+ENTRY <br>
+
+#### Holy, Holy, Holy
+
+ENTRY <br>
+
+#### Memorial Acclamation
+
+ENTRY <br>
+
+#### Amen
+
+ENTRY <br>
+
+#### Lamb of God
+
+ENTRY <br>

@@ -1,0 +1,16 @@
+version: 2025.1.0
+
+symbols:
+  cross: "&nbsp; [ &#x2720; ]{.huge .red} &nbsp;"
+  crosses: "[&#x2720; &#x2720; &#x2720;]{.huge .red}"
+
+text:
+  yeara: "[2026 $\\bullet$ 2029 $\\bullet$ 2032 $\\bullet$ 2035 $\\bullet$ 2038 $\\bullet$ 2041 $\\bullet$ 2044 $\\bullet$ 2047 $\\bullet$ 2050]{.red .medium}"
+  yearb: "[2024 $\\bullet$ 2027 $\\bullet$ 2030 $\\bullet$ 2033 $\\bullet$ 2036 $\\bullet$ 2039 $\\bullet$ 2042 $\\bullet$ 2045 $\\bullet$ 2048]{.red .medium}"
+  yearc: "[2025 $\\bullet$ 2028 $\\bullet$ 2031 $\\bullet$ 2034 $\\bullet$ 2037 $\\bullet$ 2040 $\\bullet$ 2043 $\\bullet$ 2046 $\\bullet$ 2049]{.red .medium}"
+  yearabc: "[2024 $\\bullet$ 2025 $\\bullet$ 2026 $\\bullet$ 2027 $\\bullet$ 2028...2046 $\\bullet$ 2047 $\\bullet$ 2048 $\\bullet$ 2049 $\\bullet$ 2050]{.red .medium}"
+
+  yeara-advent: "[2025 $\\bullet$ 2028 $\\bullet$ 2031 $\\bullet$ 2034 $\\bullet$ 2037 $\\bullet$ 2040 $\\bullet$ 2043 $\\bullet$ 2046 $\\bullet$ 2049]{.red .medium}"
+  yearb-advent: "[2023 $\\bullet$ 2026 $\\bullet$ 2029 $\\bullet$ 2032 $\\bullet$ 2035 $\\bullet$ 2038 $\\bullet$ 2041 $\\bullet$ 2044 $\\bullet$ 2047]{.red .medium}"
+  yearc-advent: "[2024 $\\bullet$ 2027 $\\bullet$ 2030 $\\bullet$ 2033 $\\bullet$ 2036 $\\bullet$ 2039 $\\bullet$ 2042 $\\bullet$ 2045 $\\bullet$ 2048]{.red .medium}"
+  yearabc-advent: "[2023 $\\bullet$ 2024 $\\bullet$ 2025 $\\bullet$ 2026 $\\bullet$ 2027 $\\bullet$ 2028...2046 $\\bullet$ 2047 $\\bullet$ 2048 $\\bullet$ 2049]{.red .medium}"

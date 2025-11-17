@@ -1,0 +1,103 @@
+---
+title: First Sunday of Advent
+# date: November 25, 2025
+description: November 30, 2025
+categories:
+  - 2025
+  - Advent
+image: /_images/dates/nov/2024-11-30.png
+---
+
+::: {.callout-important}
+We will be singing the [*Missa Emmanual*](#mass-parts) for Advent starting this weekend.
+:::
+
+::: {.titlered}
+### &nbsp; Processional
+:::
+
+#### Sing Out, Earth and Skies! (577)
+
+{{< video https://www.youtube.com/watch?v=EBHr3p3xHCY >}} <br>
+
+::: {.titlered}
+### &nbsp; Responsorial Psalm
+:::
+
+::: {.callout-tip}
+
+Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as [Chris Brunelle](https://www.youtube.com/@ChrisBrunelle/videos), [Liturgical Music](https://www.youtube.com/@LiturgicalMusic), or [Music Ministry 101](https://www.youtube.com/@MusicMinistry101/videos).
+
+:::
+
+#### *Respond & Acclaim* pg. 4
+
+{{< video https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}}  <br>
+
+::: {.callout-important}
+We will always sing every verse at Mass, regardless of what is included in the video.
+:::
+
+<br>
+
+::: {.titlered}
+### &nbsp; Gospel Acclamation
+:::
+
+#### *Respond & Acclaim* pg. 5
+
+{{< video https://youtu.be/6JGogB_Mb-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}}  <br>
+
+::: {.titlered}
+### &nbsp; Preparation of Gifts
+:::
+
+#### Awake! Awake, and Greet the New Morn (423)
+
+{{< video https://youtu.be/Op9Yyh_M4dk >}} <br>
+
+::: {.titlered}
+### &nbsp; Communion
+:::
+
+#### Maranatha, Lord Messiah (397)
+
+{{< video https://youtu.be/YQQjF8pTBV4 >}} <br>
+
+::: {.titlered}
+### &nbsp; Recessional
+:::
+
+#### City of God (766)
+
+{{< video https://youtu.be/jLBQEUauY-I >}} <br>
+
+::: {.titlered}
+## &nbsp; Mass Parts
+:::
+
+The parts of the Mass for Advent will be taken from *Missa Emmanuel*.
+
+#### Gloria
+
+*Gloria is omitted during Advent.*
+
+
+#### Holy, Holy, Holy
+
+{{< video https://www.youtube.com/watch?v=WfWjmrnMEeU >}} <br>
+
+
+#### Memorial Acclamation
+
+{{< video https://youtu.be/85vqMXdbkbM >}} <br>
+
+
+#### Amen
+
+{{< video https://youtu.be/oiqqBD4bqKo >}} <br>
+
+
+#### Lamb of God
+
+{{< video https://youtu.be/iZw5bAd2YYA >}}

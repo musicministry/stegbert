@@ -1,0 +1,23 @@
+---
+title: Hymn Schedule
+subtitle: "**November 30, 2025** (First Sunday in Advent) through **January 11, 2026** (Baptism of the Lord)"
+---
+
+::: {.callout-note title="Preface"}
+All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. Christmas season Mass parts will be provided as handouts. Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.
+:::
+
+::: {.red}
+#### November 30, 2025 [First Sunday in Advent]{style="float:right"}
+:::
+
+|   |   |   |
+|---|---|---|
+|| **Processional:**         | [577 – Sing Out, Earth and Skies!](https://www.youtube.com/watch?v=EBHr3p3xHCY) 
+|| **Responsorial Psalm:**   | 
+|| **Gospel Acclamation:**   | [https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os](RA ) 
+|| **Preparation of Gifts:** | [443 - Awake! Awake, and Greet the New Morn](https://www.youtube.com/watch?v=Op9Yyh_M4dk) 
+|| **Communion:**            |  
+|| **Recessional:**          |  
+|| | 
+: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}

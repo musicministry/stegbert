@@ -1,0 +1,8 @@
+---
+title: Weekly Lineups
+subtitle: Stay sharp with weekly music lists and videos for practicing at home
+listing:
+  contents: posts
+  sort: date
+  categories: true
+---

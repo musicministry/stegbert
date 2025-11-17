@@ -1,0 +1,9 @@
+website:
+  title: Music Notes
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - posts.qmd
+    logo: _images/trebleclef.png
