@@ -11,6 +11,7 @@
 
 /.quarto/
 **/*.quarto_ipynb
+_freeze/
 
 .Rhistory
 .devcontainer/
