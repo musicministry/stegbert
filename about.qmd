@@ -25,7 +25,7 @@ Do you like to sing or play an instrument? Do you appreciate good liturgical mus
 :::
 :::
 
- Opportunities for involvement are listed below. Interested in joining? Scan the QR code to let us know your interest and contact info or speak to Matt, our music coordinator.
+ Opportunities for involvement are listed below. Interested in joining? Scan the QR code to [let us know your interest and contact info](https://docs.google.com/forms/d/11RL3KpFg7wW7Az953hjA0CmNK-pl8dILa3dnuBp3ocg/edit) or speak to Matt, our music coordinator.
 
 ::: {.red}
 ### Adult Choir
@@ -37,7 +37,7 @@ Anyone 18 and older is welcome to join. The ability to read music is helpful but
 
 As we grow in numbers, we will begin (re-)introducting choir anthems and four-part harmony to further enhance our music and liturgies.
 
-![](_images/choir_roles.jpeg){fig-alt="Cartoon of choir members"}
+![](_images/choir_roles.jpeg){fig-alt="Cartoon of choir members" .lightbox}
 
 ::: {.red}
 ### Cantors
