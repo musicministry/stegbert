@@ -5,5 +5,10 @@ website:
       - href: index.qmd
         text: Home
       - about.qmd
-      - posts.qmd
+      - schedules.qmd
     logo: _images/trebleclef.png
+  announcement:
+    icon: info-circle
+    content: "**Welcome!** This website is experimental and will be built out if or as needed. Please give feedback to Matt."
+    type: primary
+    position: below-navbar
