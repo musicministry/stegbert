@@ -10,7 +10,7 @@ text: Home
 icon: music-note-beamed
 ---
 
-Welcome to St. Egbert’s music ministry! Whether you sing or play an instrument, we invite you to join us as we sing joyful songs to the Lord at weekly liturgies and other special occasions throughout the liturgical year.
+Welcome to St. Egbert’s music ministry! Whether you sing or play an instrument, we invite you to [join us](about.qmd) as we sing joyful songs to the Lord at weekly liturgies and other special occasions throughout the liturgical year.
 
 ::: {.callout-important title=Disclaimer}
 

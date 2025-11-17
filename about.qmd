@@ -3,6 +3,9 @@ title: St. Egbert Music Ministry
 subtitle: '"When you sing, you pray twice." *(attributed to Saint Augustine)*'
 ---
 
+::: {.columns}
+::: {.column width="70%"}
+
 St. Egbert's prides itself on its vibrant music ministry that offers something for everyone. Music for weekend liturgies currently includes:
 
 - **Saturday 5:00 [pm]{.smallcaps}:** cantor with guitar
@@ -10,7 +13,19 @@ St. Egbert's prides itself on its vibrant music ministry that offers something f
 - **Sunday 9:30 [am]{.smallcaps}:** Spanish Mass with Hispanic choir and band
 - **Sunday 11:00 [am]{.smallcaps}:** cantor and choir with organ or piano
 
-Anyone interested in joining any of the musical groups below are invited to speak with Matt Grossi, music coordinator, or email him at mgrossi@stebert.org.
+Do you like to sing or play an instrument? Do you appreciate good liturgical music and want to help grow St. Egbert’s music ministry into the best in the region? Do you want to double your prayer without doubling your words?
+
+:::
+::: {.column width="5%"}
+:::
+::: {.column width="25%"}
+
+![Scan me to sign up!](_images/qr-music-ministry-survey.png){fig-alt="QR code for sign up form" .lightbox}
+
+:::
+:::
+
+ Opportunities for involvement are listed below. Interested in joining? Scan the QR code to let us know your interest and contact info or speak to Matt, our music coordinator.
 
 ::: {.red}
 ### Adult Choir
@@ -29,7 +44,6 @@ As we grow in numbers, we will begin (re-)introducting choir anthems and four-pa
 :::
 
 Cantors lead the congregation in song at all liturgies. Any strong and confident singer (or anyone interested in becoming a strong and confident singer, which happens organically with practice) is welcome to become a cantor. Training will be provided. Cantor rehearsals take place on the first Tuesday of the month from 7:00-8:00 [pm]{.smallcaps} year-round in the church
-
 
 ::: {.red}
 ### Liturgical Ensemble
