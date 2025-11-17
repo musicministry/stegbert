@@ -8,3 +8,12 @@
 /YearA/Weekly/*.pdf
 /YearB/Weekly/*.tex
 /YearB/Weekly/*.pdf
+
+/.quarto/
+**/*.quarto_ipynb
+
+.Rhistory
+.devcontainer/
+Dockerfile
+docker-compose.yml
+_site/
