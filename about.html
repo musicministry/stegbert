@@ -42,6 +42,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-0b37c64f34216b628666a8dac638b53b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -133,7 +136,7 @@ window.Quarto = {
 <span class="menu-text">St.&nbsp;Egbert Music Ministry</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html"> 
+    <a class="nav-link" href="./schedules.html"> 
 <span class="menu-text">Weekly Lineups</span></a>
   </li>  
 </ul>
@@ -142,6 +145,9 @@ window.Quarto = {
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <div id="quarto-announcement" data-announcement-id="3c60664eace58c2d0e50131a7010ddc3" class="alert alert-primary hidden"><i class="bi bi-info-circle quarto-announcement-icon"></i><div class="quarto-announcement-content">
+<p><strong>Welcome!</strong> This website is experimental and will be built out if or as needed. Please give feedback to Matt.</p>
+</div><i class="bi bi-x-lg quarto-announcement-action"></i></div>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
@@ -183,6 +189,8 @@ window.Quarto = {
 </header>
 
 
+<div class="columns">
+<div class="column" style="width:70%;">
 <p>St.&nbsp;Egbert’s prides itself on its vibrant music ministry that offers something for everyone. Music for weekend liturgies currently includes:</p>
 <ul>
 <li><strong>Saturday 5:00 <span class="smallcaps">pm</span>:</strong> cantor with guitar</li>
@@ -190,7 +198,19 @@ window.Quarto = {
 <li><strong>Sunday 9:30 <span class="smallcaps">am</span>:</strong> Spanish Mass with Hispanic choir and band</li>
 <li><strong>Sunday 11:00 <span class="smallcaps">am</span>:</strong> cantor and choir with organ or piano</li>
 </ul>
-<p>Anyone interested in joining any of the musical groups below are invited to speak with Matt Grossi, music coordinator, or email him at mgrossi@stebert.org.</p>
+<p>Do you like to sing or play an instrument? Do you appreciate good liturgical music and want to help grow St.&nbsp;Egbert’s music ministry into the best in the region? Do you want to double your prayer without doubling your words?</p>
+</div><div class="column" style="width:5%;">
+
+</div><div class="column" style="width:25%;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><a href="_images/qr-music-ministry-survey.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Scan me to sign up!"><img src="_images/qr-music-ministry-survey.png" class="img-fluid figure-img" alt="QR code for sign up form"></a></p>
+<figcaption>Scan me to sign up!</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Opportunities for involvement are listed below. Interested in joining? Scan the QR code to let us know your interest and contact info or speak to Matt, our music coordinator.</p>
 <section id="adult-choir" class="level3 red">
 <h3 class="anchored" data-anchor-id="adult-choir">Adult Choir</h3>
 </section>
@@ -636,6 +656,38 @@ for (let i = 0; i < custom_title.length; i++ ) {
   });
   </script>
 </div> <!-- /content -->
+<script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
 

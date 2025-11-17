@@ -1,9 +1,8 @@
 [
   {
-    "listing": "/posts.html",
+    "listing": "/schedules.html",
     "items": [
-      "/posts/2025-11-30-advent01.html",
-      "/posts/2025-11-30-advent01-alt.html"
+      "/posts/2025-11-30-advent01.html"
     ]
   }
 ]
