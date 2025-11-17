@@ -14,6 +14,7 @@
 
 .Rhistory
 .devcontainer/
+_images/.DS_Store
 Dockerfile
 docker-compose.yml
 _site/
