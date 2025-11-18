@@ -19,3 +19,5 @@ _images/.DS_Store
 Dockerfile
 docker-compose.yml
 _site/
+
+.DS_Store
