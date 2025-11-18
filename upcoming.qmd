@@ -84,7 +84,7 @@ The Mass setting changes for Advent, the Solemnity of the Immaculate Conception,
 || **Recessional:**          | 766 - `{python} get_url("City of God")`
 ||---------------------| 
 || **Mass Setting:**| [Missa Emmanuel](#missa-emmanuel) 
-: {.hover .borderless .responsive tbl-colwidths="[2, 25, 73]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 ```{python}
 RA = [i+2 for i in RA]
