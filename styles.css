@@ -240,7 +240,7 @@ li {
 }
 
 caption, .table-caption {
-  text-align: left;
+  text-align: right;
 }
 
 th, td { border-bottom: hidden; }
