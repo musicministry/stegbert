@@ -3,7 +3,10 @@ website:
   navbar:
     left:
       - about.qmd
-      - schedules.qmd
+      - text: "Music Schedules"
+        href: schedules.qmd
+      - text: "Looking Ahead"
+        href: upcoming.qmd
     logo: _images/trebleclef.png
   announcement:
     icon: info-circle
