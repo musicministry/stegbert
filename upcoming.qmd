@@ -1,23 +1,321 @@
 ---
-title: Hymn Schedule
+title: Hymn Schedules
 subtitle: "**November 30, 2025** (First Sunday in Advent) through **January 11, 2026** (Baptism of the Lord)"
+execute:
+  echo: false
 ---
+
+```{python}
+from IPython.display import Markdown
+from numbr import Cast as num
+import datetime as dt
+import yaml
+import re
+
+# Tools
+def week(i):
+    """Return integer `i` as ordinal word"""
+    return num(i, target="Ordinal Word").capitalize()
+
+def fmtdate(d):
+    """Print date d"""
+    return d.strftime("%B %-d, %Y")
+
+def ra(page):
+    """Print R&A with page"""
+    return f'R&A p. {page}'
+
+# Video links
+with open('../planning-book/_hymns.yml', 'r') as vf:
+    videos = yaml.safe_load(vf)
+
+def get_url(hymn, urls=videos):
+    """Get video URL for 'hymn' from `urls`. Returns 'No URL found' if the hymn is not found in the URL list."""
+    # Remove punctuation and special characters
+    hymn_key = re.sub('[^A-Za-z0-9 ]+', '', hymn.strip())
+    # Replace spaces and make lowercase
+    hymn_key = hymn_key.replace('  ', ' ').replace(' ', '-').lower()
+    # Add hyperlink
+    if hymn_key in urls.keys():
+        return Markdown(f'[{hymn}]({urls[hymn_key]})')
+    else:
+        return Markdown(hymn)
+
+# --------------------------------------------------------------------------- #
+
+# First date
+date = "2025-11-30"
+date = dt.datetime.strptime(date, "%Y-%m-%d")
+
+# First Respond & Acclaim page pairs (psalm and acclamation)
+RA = [4, 5]
+
+# Number of first liturgical week
+litweek = 1
+
+# Liturgical season
+season = 'Advent'
+```
 
 ::: {.callout-note title="Preface"}
 All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. Christmas season Mass parts will be provided as handouts. Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.
 :::
 
+::: {.callout-important title="Take note!"}
+The Mass setting changes for Advent, the Solemnity of the Immaculate Conception, and Christmas.
+:::
+
+::: {.titlered}
+### &nbsp; Hymn Schedules
+:::
+
 ::: {.red}
-#### November 30, 2025 [First Sunday in Advent]{style="float:right"}
+#### `{python} fmtdate(date)` [`{python} week(litweek)` Sunday in Advent]{style="float:right"}
 :::
 
 |   |   |   |
 |---|---|---|
-|| **Processional:**         | [577 – Sing Out, Earth and Skies!](https://www.youtube.com/watch?v=EBHr3p3xHCY) 
-|| **Responsorial Psalm:**   | 
-|| **Gospel Acclamation:**   | [https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os](RA ) 
-|| **Preparation of Gifts:** | [443 - Awake! Awake, and Greet the New Morn](https://www.youtube.com/watch?v=Op9Yyh_M4dk) 
-|| **Communion:**            |  
-|| **Recessional:**          |  
-|| | 
+|| **Processional:**         | 577 – `{python} get_url("Sing Out, Earth and Skies!")` 
+|| **Responsorial Psalm:**   | [`{python} ra(RA[0])`](https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)
+|| **Gospel Acclamation:**   | [`{python} ra(RA[1])`](https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) 
+|| **Preparation of Gifts:** | 443 - `{python} get_url("Awake! Awake, and Greet the New Morn")` 
+|| **Communion:**            | 397 - `{python} get_url("Maranatha, Lord Messiah")`
+|| **Recessional:**          | 766 - `{python} get_url("City of God")`
+||---------------------| 
+|| **Mass Setting:**| [Missa Emmanuel](#missa-emmanuel) 
 : {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+
+```{python}
+RA = [i+2 for i in RA]
+date += dt.timedelta(days=7)
+litweek += 1
+```
+
+::: {.red}
+#### `{python} fmtdate(date)` [`{python} week(litweek)` Sunday in Advent]{style="float:right"}
+:::
+
+|   |   |   |
+|---|---|---|
+|| **Processional:** | 418 – `{python} get_url("On Jordan's Bank")` |
+|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/KlaXFWpN7n4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/EFvpHsLDBOU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Offertory:** | 421 - `{python} get_url("Savior of the Nations, Come")` |
+|| **Communion:** | 397 – `{python} get_url("Maranatha, Lord Messiah")` |
+|| **Recessional:** | 409 – `{python} get_url("People, Look East")` |
+||---------------------| 
+|| **Mass Setting:**| [Missa Emmanuel](#missa-emmanuel) 
+: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+
+```{python}
+RA = [i+2 for i in RA]
+date += dt.timedelta(days=1)
+```
+
+::: {.red}
+#### `{python} fmtdate(date)` [Solemnity of the Immaculate Conception]{style="float:right"}
+:::
+
+|   |   |   |
+|---|---|---|
+|| **Processional:** | 886 – `{python} get_url("Immaculate Mary")` |
+|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/Bk_8VhRGweU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/F2YKiu3hbEY?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Offertory:** | 875 - `{python} get_url("Praise We the Lord This Day")` |
+|| **Communion:** | 100 – `{python} get_url("Luke 1:46-53: My Soul Gives Glory")` |
+|| **Recessional:** | 458 – `{python} get_url("I Sing a Maid")` |
+||---------------------| 
+|| **Mass Setting:**| [Heritage Mass](#heritage-mass) with Gloria
+: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+
+
+```{python}
+RA = [i+4 for i in RA]
+date += dt.timedelta(days=6)
+litweek += 1
+```
+
+::: {.red}
+#### `{python} fmtdate(date)` [`{python} week(litweek)` Sunday in Advent]{style="float:right"}
+:::
+
+|   |   |   |
+|---|---|---|
+|| **Processional:** | 404 – `{python} get_url("When the King Shall Come Again")` |
+|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/WOw1ZGgmceM?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/4rLyhdT6kMg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Offertory:** | 395 - `{python} get_url("O Come, O Come, Emmanuel")` |
+|| **Communion:** | 397 – `{python} get_url("Maranatha, Lord Messiah")` |
+|| **Recessional:** | 423 – `{python} get_url("Awake! Awake, and Greet the New Morn")` |
+||---------------------| 
+|| **Mass Setting:**| [Missa Emmanuel](#missa-emmanuel) 
+: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+
+
+```{python}
+RA = [i+2 for i in RA]
+date += dt.timedelta(days=7)
+litweek += 1
+```
+
+::: {.red}
+#### `{python} fmtdate(date)` [`{python} week(litweek)` Sunday in Advent]{style="float:right"}
+:::
+
+|   |   |   |
+|---|---|---|
+|| **Processional:** | 401 – `{python} get_url("O Come, Divine Messiah")` |
+|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/eTn_fK_16_4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/mDRuiP8oB8s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Offertory:** | 395 - `{python} get_url("O Come, O Come, Emmanuel}")` |
+|| **Communion:** | 414 – `{python} get_url("The King Shall Come When Morning Dawns (Morning Song)")` |
+|| **Recessional:** | 572 – `{python} get_url("The King of Glory")` |
+|| | |
+||---------------------| 
+|| **Mass Setting:**| [Missa Emmanuel](#missa-emmanuel) 
+: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+
+```{python}
+RA = [i+8 for i in RA]
+date += dt.timedelta(days=4)
+litweek += 1
+```
+
+::: {.red}
+#### `{python} fmtdate(date)` [Christmas]{style="float:right"}
+:::
+
+|   |   |   |
+|---|---|---|
+|| **Processional:** | 439 – `{python} get_url("O Come, All Ye Faithful")` |
+|| **Responsorial Psalm:** | 70 - `{python} get_url("Psalm 98: All the Ends of the Earth (Haas/Haugen")` |
+|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/KxUt7PyXNYk?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Offertory:** | 424 - `{python} get_url("Hark! The Herald Angels Sing")` |
+|| **Communion:** | 432 – `{python} get_url("Nativity Carol")` |
+|| **Meditation:** | 441 - `{python} get_url("Silent Night")` |
+|| **Recessional:** | 437 – `{python} get_url("Joy to the World")` |
+||---------------------| 
+|| **Mass Setting:**| [Christmas Carol Mass](#christmas-carol-mass) with [A Christmas Gloria (Gibson)](https://www.youtube.com/watch?v=ERmvcErugvs) 
+: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+
+```{python}
+RA = [i+2 for i in RA]
+date += dt.timedelta(days=3)
+litweek += 1
+```
+
+::: {.red}
+#### `{python} fmtdate(date)` [Holy Family of Jesus, Mary, and Joseph]{style="float:right"}
+:::
+
+|   |   |   |
+|---|---|---|
+|| **Processional:** | 438 – `{python} get_url("Angels, from the Realms of Glory")` |
+|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/4gjqxJ_eL-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/hzF6qrivXl8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Offertory:** | 436 - `{python} get_url("Wood of the Cradle")` |
+|| **Communion:** | 455 – `{python} get_url("Once in Royal David’s City")` |
+|| **Recessional:** | 430 – `{python} get_url("Angels We Have Heard on High")` |
+||---------------------| 
+|| **Mass Setting:**| [Christmas Carol Mass](#christmas-carol-mass) with [A Christmas Gloria (Gibson)](https://www.youtube.com/watch?v=ERmvcErugvs) 
+: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+
+```{python}
+RA = [i+2 for i in RA]
+date += dt.timedelta(days=4)
+litweek += 1
+```
+
+::: {.red}
+#### `{python} fmtdate(date)` [Solemnity of Mary, Mother of God]{style="float:right"}
+:::
+
+|   |   |   |
+|---|---|---|
+|| **Processional:** | 457 – `{python} get_url("Sing of Mary")` |
+|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/LcqkBimDhjs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/JuH7sw1sobE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Offertory:** | 448 - `{python} get_url("Away in a Manger (Mueller)")` |
+|| **Communion:** | 451 – `{python} get_url("Lo, How a Rose E’er Blooming")` |
+|| **Recessional:** | 458 – `{python} get_url("I Sing a Maid")` |
+||---------------------| 
+|| **Mass Setting:**| [Christmas Carol Mass](#christmas-carol-mass) with [A Christmas Gloria (Gibson)](https://www.youtube.com/watch?v=ERmvcErugvs) 
+: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+
+```{python}
+RA = [i+2 for i in RA]
+date += dt.timedelta(days=3)
+litweek += 1
+```
+
+::: {.red}
+#### `{python} fmtdate(date)` [Epiphany of the Lord]{style="float:right"}
+:::
+
+|   |   |   |
+|---|---|---|
+|| **Processional:** | 459 – `{python} get_url("Songs of Thankfulness and Praise")` |
+|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/5poRq9YtiIs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/HiKwEUIipX8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Offertory:** | 463 - `{python} get_url("We Three Kings")` |
+|| **Communion:** | 460 – `{python} get_url("The First Nowell")` |
+|| **Recessional:** | 461 – `{python} get_url("What Star Is This")` |
+||---------------------| 
+|| **Mass Setting:**| [Christmas Carol Mass](#christmas-carol-mass) with [A Christmas Gloria (Gibson)](https://www.youtube.com/watch?v=ERmvcErugvs) 
+: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+
+```{python}
+RA = [i+2 for i in RA]
+date += dt.timedelta(days=7)
+litweek += 1
+```
+
+::: {.red}
+#### `{python} fmtdate(date)` [Baptism of the Lord]{style="float:right"}
+:::
+
+|   |   |   |
+|---|---|---|
+|| **Processional:** | 467 – `{python} get_url("When John Baptized by Jordan’s River")` |
+|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/UaV7slHh658?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/D4l2yvw-2z4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
+|| **Offertory:** | 440 - `{python} get_url("Good Christian Friends, Rejoice")` |
+|| **Communion:** | 423 – `{python} get_url("Awake! Awake, and Greet the New Morn")` (*Christmas lyrics*) |
+|| **Recessional:** | 428 – `{python} get_url("Go, Tell It on the Mountain")` |
+||---------------------| 
+|| **Mass Setting:**| [Christmas Carol Mass](#christmas-carol-mass) with [A Christmas Gloria (Gibson)](https://www.youtube.com/watch?v=ERmvcErugvs) 
+: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+
+::: {.titlered}
+### &nbsp; Mass Settings
+:::
+
+::: {.red}
+### Missa Emmanuel
+:::
+
+- *Gloria is omitted during Advent.*
+- 358 - [Holy, Holy, Holy](https://www.youtube.com/watch?v=WfWjmrnMEeU)
+- 359 - [Memorial Acclamation, A](https://www.youtube.com/watch?v=85vqMXdbkbM) (*"We proclaim..."*)
+- 359 - [Great Amen](https://www.youtube.com/watch?v=oiqqBD4bqKo)
+- NA - [Lamb of God](https://www.youtube.com/watch?v=iZw5bAd2YYA)
+
+::: {.red}
+### Heritage Mass
+:::
+
+- Handout - [Gloria](https://youtu.be/tukrgUdjIWU?t=27)
+- Handout - [Holy, Holy, Holy](https://www.youtube.com/watch?v=h0gXURFOhyo)
+- Handout - [Memorial Acclamation, A](https://www.youtube.com/watch?v=g4alz7JVzWM) (*"We proclaim..."*)
+- Handout - [Great Amen](https://www.youtube.com/watch?v=XpEK_3j3GMY)
+- Handout - [Lamb of God](https://www.youtube.com/watch?v=LQzlBbf3TZo)
+
+::: {.red}
+### Christmas Carol Mass
+:::
+
+- Handout - [Gloria](https://www.youtube.com/watch?v=ERmvcErugvs) (*A Christmas Gloria* by Paul Gibson)
+- Handout - [Holy, Holy, Holy](https://youtu.be/iYYPSiyZO1I?t=423)
+- Handout - [Memorial Acclamation, C](https://youtu.be/iYYPSiyZO1I?t=532) (*"Save us, Savior..."*)
+- Handout - [Great Amen](https://youtu.be/iYYPSiyZO1I?t=557)
+- Handout - [Lamb of God](https://youtu.be/iYYPSiyZO1I?t=601)
