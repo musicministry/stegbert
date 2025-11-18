@@ -82,9 +82,7 @@ The Mass setting changes for Advent, the Solemnity of the Immaculate Conception,
 || **Preparation of Gifts:** | 443 - `{python} get_url("Awake! Awake, and Greet the New Morn")` 
 || **Communion:**            | 397 - `{python} get_url("Maranatha, Lord Messiah")`
 || **Recessional:**          | 766 - `{python} get_url("City of God")`
-||---------------------| 
-|| **Mass Setting:**| [Missa Emmanuel](#missa-emmanuel) 
-: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+: **Mass Setting:** [Missa Emmanuel](#missa-emmanuel) {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -106,7 +104,7 @@ litweek += 1
 || **Recessional:** | 409 – `{python} get_url("People, Look East")` |
 ||---------------------| 
 || **Mass Setting:**| [Missa Emmanuel](#missa-emmanuel) 
-: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -127,7 +125,7 @@ date += dt.timedelta(days=1)
 || **Recessional:** | 458 – `{python} get_url("I Sing a Maid")` |
 ||---------------------| 
 || **Mass Setting:**| [Heritage Mass](#heritage-mass) with Gloria
-: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 
 ```{python}
@@ -150,7 +148,7 @@ litweek += 1
 || **Recessional:** | 423 – `{python} get_url("Awake! Awake, and Greet the New Morn")` |
 ||---------------------| 
 || **Mass Setting:**| [Missa Emmanuel](#missa-emmanuel) 
-: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 
 ```{python}
@@ -174,7 +172,7 @@ litweek += 1
 || | |
 ||---------------------| 
 || **Mass Setting:**| [Missa Emmanuel](#missa-emmanuel) 
-: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 ```{python}
 RA = [i+8 for i in RA]
@@ -197,7 +195,7 @@ litweek += 1
 || **Recessional:** | 437 – `{python} get_url("Joy to the World")` |
 ||---------------------| 
 || **Mass Setting:**| [Christmas Carol Mass](#christmas-carol-mass) with [A Christmas Gloria (Gibson)](https://www.youtube.com/watch?v=ERmvcErugvs) 
-: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -219,7 +217,7 @@ litweek += 1
 || **Recessional:** | 430 – `{python} get_url("Angels We Have Heard on High")` |
 ||---------------------| 
 || **Mass Setting:**| [Christmas Carol Mass](#christmas-carol-mass) with [A Christmas Gloria (Gibson)](https://www.youtube.com/watch?v=ERmvcErugvs) 
-: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -241,7 +239,7 @@ litweek += 1
 || **Recessional:** | 458 – `{python} get_url("I Sing a Maid")` |
 ||---------------------| 
 || **Mass Setting:**| [Christmas Carol Mass](#christmas-carol-mass) with [A Christmas Gloria (Gibson)](https://www.youtube.com/watch?v=ERmvcErugvs) 
-: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -263,7 +261,7 @@ litweek += 1
 || **Recessional:** | 461 – `{python} get_url("What Star Is This")` |
 ||---------------------| 
 || **Mass Setting:**| [Christmas Carol Mass](#christmas-carol-mass) with [A Christmas Gloria (Gibson)](https://www.youtube.com/watch?v=ERmvcErugvs) 
-: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -285,7 +283,7 @@ litweek += 1
 || **Recessional:** | 428 – `{python} get_url("Go, Tell It on the Mountain")` |
 ||---------------------| 
 || **Mass Setting:**| [Christmas Carol Mass](#christmas-carol-mass) with [A Christmas Gloria (Gibson)](https://www.youtube.com/watch?v=ERmvcErugvs) 
-: {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 ::: {.titlered}
 ### &nbsp; Mass Settings
