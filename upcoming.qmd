@@ -26,7 +26,8 @@ def ra(page):
     return f'R&A p. {page}'
 
 # Video links
-with open('../planning-book/_hymns.yml', 'r') as vf:
+# with open('../planning-book/_hymns.yml', 'r') as vf:
+with open('./_hymns.yml', 'r') as vf:
     videos = yaml.safe_load(vf)
 
 def get_url(hymn, urls=videos):
