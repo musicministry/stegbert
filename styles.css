@@ -8,10 +8,16 @@
 
 .titlered {
     background-color: #B32121;
-    color: #FFFFFF
+    h1, h2, h3, h4, h5, h6 {
+      color: #FFFFFF
+    }
 }
 
-.title{
+.title {
+  color: #B32121;
+}
+
+h1, h2, h3, h4, h5, h6 {
   color: #B32121;
 }
 
@@ -243,4 +249,6 @@ caption, .table-caption {
   text-align: right;
 }
 
-th, td { border-bottom: hidden; }
+th, td {
+  border-bottom: hidden;
+}

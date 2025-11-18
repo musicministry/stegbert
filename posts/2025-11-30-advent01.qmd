@@ -21,9 +21,7 @@ RA = 4
 We will be singing the [*Missa Emmanual*](#mass-parts) for Advent starting this weekend.
 :::
 
-::: {.red}
 ### Hymns
-:::
 
 |   |   |   |
 |---|---:|---|
@@ -34,12 +32,10 @@ We will be singing the [*Missa Emmanual*](#mass-parts) for Advent starting this 
 || **Communion:**            | 397 - Maranatha, Lord Messiah <br><br> {{< video https://youtu.be/YQQjF8pTBV4 >}}
 || **Recessional:**          | 766 - City of God <br><br> {{< video https://youtu.be/jLBQEUauY-I >}}
 || | 
-: {.hover .borderless .responsive tbl-colwidths="[5, 25, 70]"}
+: {.hover .borderless tbl-colwidths="[2, 25, 73]"}
 
 
-::: {.red}
 ### Mass Parts
-:::
 
 |   |   |   |
 |---|---:|---|
@@ -49,4 +45,4 @@ We will be singing the [*Missa Emmanual*](#mass-parts) for Advent starting this 
 || **Amen:** | {{< video https://youtu.be/oiqqBD4bqKo >}}
 || **Lamb of God:** | {{< video https://youtu.be/iZw5bAd2YYA >}}
 || | 
-: The parts of the Mass for Advent will be taken from *Missa Emmanuel*. {.hover .borderless .responsive tbl-colwidths="[5, 25,70]"}
+: The parts of the Mass for Advent will be taken from *Missa Emmanuel*. {.hover .borderless tbl-colwidths="[2, 25, 73]"}
