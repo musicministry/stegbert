@@ -6,47 +6,16 @@ execute:
 ---
 
 ```{python}
-from IPython.display import Markdown
-from numbr import Cast as num
+#| label: Setup
+from IPython.display import Markdown, display
 import datetime as dt
-import yaml
-import re
-
-# Tools
-def week(i):
-    """Return integer `i` as ordinal word"""
-    return num(i, target="Ordinal Word").capitalize()
-
-def fmtdate(d):
-    """Print date d"""
-    return d.strftime("%B %-d, %Y")
-
-def ra(page):
-    """Print R&A with page"""
-    return f'R&A p. {page}'
-
-# Video links
-# with open('../planning-book/_hymns.yml', 'r') as vf:
-with open('./_hymns.yml', 'r') as vf:
-    videos = yaml.safe_load(vf)
-
-def get_url(hymn, urls=videos):
-    """Get video URL for 'hymn' from `urls`. Returns 'No URL found' if the hymn is not found in the URL list."""
-    # Remove punctuation and special characters
-    hymn_key = re.sub('[^A-Za-z0-9 ]+', '', hymn.strip())
-    # Replace spaces and make lowercase
-    hymn_key = hymn_key.replace('  ', ' ').replace(' ', '-').lower()
-    # Add hyperlink
-    if hymn_key in urls.keys():
-        return Markdown(f'[{hymn}]({urls[hymn_key]})')
-    else:
-        return Markdown(hymn)
+import utils as u
 
 # --------------------------------------------------------------------------- #
+# Update between these lines
 
 # First date
 date = "2025-11-30"
-date = dt.datetime.strptime(date, "%Y-%m-%d")
 
 # First Respond & Acclaim page pairs (psalm and acclamation)
 RA = [4, 5]
@@ -56,6 +25,9 @@ litweek = 1
 
 # Liturgical season
 season = 'Advent'
+
+# --------------------------------------------------------------------------- #
+date = dt.datetime.strptime(date, "%Y-%m-%d")
 ```
 
 All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. Christmas season Mass parts will be provided as handouts. Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.
@@ -65,56 +37,82 @@ The Mass setting changes for Advent, the Solemnity of the Immaculate Conception,
 :::
 
 ::: {.titlered}
-### &nbsp; Hymn Schedules
+### &nbsp;&#x2720; Hymn Schedules
 :::
 
-#### `{python} fmtdate(date)` [`{python} week(litweek)` Sunday in Advent]{style="float:right"}
-
-|   |   |   |
-|---|---|---|
-|| **Processional:**         | 577 – `{python} get_url("Sing Out, Earth and Skies!")` 
-|| **Responsorial Psalm:**   | [`{python} ra(RA[0])`](https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)
-|| **Gospel Acclamation:**   | [`{python} ra(RA[1])`](https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) 
-|| **Preparation of Gifts:** | 443 - `{python} get_url("Awake! Awake, and Greet the New Morn")` 
-|| **Communion:**            | 397 - `{python} get_url("Maranatha, Lord Messiah")`
-|| **Recessional:**          | 766 - `{python} get_url("City of God")`
-: **Mass Setting:** [Missa Emmanuel](#missa-emmanuel) {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+#### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
 
 ```{python}
-RA = [i+2 for i in RA]
-date += dt.timedelta(days=7)
-litweek += 1
+#| classes: no-stripe
+#| label: 2025-11-30
+
+psalm_ra_url = "https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+gaccl_ra_url = "https://youtu.be/6JGogB_Mb-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.simple_table(hymns={
+
+    "Processional":         "577 - Sing Out, Earth and Skies!",
+    "Responsorial Psalm":   psalm_ra_url,
+    "Gospel Acclamation":   gaccl_ra_url,
+    "Preparation of Gifts": "443 - Awake! Awake, and Greet the New Morn",
+    "Communion":            "397 - Maranatha, Lord Messiah",
+    "Recessional":          "766 - City of God"
+
+}, RA=RA, mass='[Missa Emmanuel](#missa-emmanuel)')
 ```
 
-#### `{python} fmtdate(date)` [`{python} week(litweek)` Sunday in Advent]{style="float:right"}
+```{python}
+date += dt.timedelta(days=7)
+litweek += 1
+RA = [i+2 for i in RA]
+```
 
-|   |   |   |
-|---|---|---|
-|| **Processional:** | 418 – `{python} get_url("On Jordan's Bank")`
-|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/KlaXFWpN7n4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)
-|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/EFvpHsLDBOU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)
-|| **Offertory:** | 421 - `{python} get_url("Savior of the Nations, Come")`
-|| **Communion:** | 397 – `{python} get_url("Maranatha, Lord Messiah")`
-|| **Recessional:** | 409 – `{python} get_url("People, Look East")`
-: **Mass Setting:** [Missa Emmanuel](#missa-emmanuel) {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+#### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
+
+```{python}
+#| classes: no-stripe
+#| label: 2025-12-07
+
+psalm_ra_url = "https://youtu.be/KlaXFWpN7n4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+gaccl_ra_url = "https://youtu.be/EFvpHsLDBOU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.simple_table(hymns={
+
+    "Processional":          "418 - On Jordan's Bank",
+    "Responsorial Psalm":    psalm_ra_url,
+    "Gospel Acclamation":    gaccl_ra_url,
+    "Preparation of Gifts": "421 - Savior of the Nations, Come",
+    "Communion":            "397 - Maranatha, Lord Messiah",
+    "Recessional":          "409 - People, Look East"
+
+}, RA=RA, mass='[Missa Emmanuel](#missa-emmanuel)')
+```
 
 ```{python}
 RA = [i+2 for i in RA]
 date += dt.timedelta(days=1)
 ```
 
-#### `{python} fmtdate(date)` [Solemnity of the Immaculate Conception]{style="float:right"}
+#### `{python} u.fmtdate(date)` [Solemnity of the Immaculate Conception]{style="float:right"}
 
-|   |   |   |
-|---|---|---|
-|| **Processional:** | 886 – `{python} get_url("Immaculate Mary")` |
-|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/Bk_8VhRGweU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/F2YKiu3hbEY?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Offertory:** | 875 - `{python} get_url("Praise We the Lord This Day")` |
-|| **Communion:** | 100 – `{python} get_url("Luke 1:46-53: My Soul Gives Glory")` |
-|| **Recessional:** | 458 – `{python} get_url("I Sing a Maid")` |
-: **Mass Setting:** [Heritage Mass](#heritage-mass) with Gloria {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+```{python}
+#| classes: no-stripe
+#| label: 2025-12-08
 
+psalm_ra_url = "https://youtu.be/Bk_8VhRGweU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+gaccl_ra_url = "https://youtu.be/F2YKiu3hbEY?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.simple_table(hymns={
+
+    "Processional":         "886 - Immaculate Mary",
+    "Responsorial Psalm":   psalm_ra_url,
+    "Gospel Acclamation":   gaccl_ra_url,
+    "Preparation of Gifts": "875 - Praise We the Lord This Day",
+    "Communion":            "100 - Luke 1:46-53: My Soul Gives Glory",
+    "Recessional":          "458 - I Sing a Maid"
+
+}, RA=RA, mass='[Heritage Mass](#heritage-mass)')
+```
 
 ```{python}
 RA = [i+4 for i in RA]
@@ -122,18 +120,26 @@ date += dt.timedelta(days=6)
 litweek += 1
 ```
 
-#### `{python} fmtdate(date)` [`{python} week(litweek)` Sunday in Advent]{style="float:right"}
+#### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
 
-|   |   |   |
-|---|---|---|
-|| **Processional:** | 404 – `{python} get_url("When the King Shall Come Again")`
-|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/WOw1ZGgmceM?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)
-|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/4rLyhdT6kMg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)
-|| **Offertory:** | 395 - `{python} get_url("O Come, O Come, Emmanuel")`
-|| **Communion:** | 397 – `{python} get_url("Maranatha, Lord Messiah")`
-|| **Recessional:** | 423 – `{python} get_url("Awake! Awake, and Greet the New Morn")`
-: **Mass Setting:** [Missa Emmanuel](#missa-emmanuel) {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+```{python}
+#| classes: no-stripe
+#| label: 2025-12-14
 
+psalm_ra_url = "https://youtu.be/WOw1ZGgmceM?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+gaccl_ra_url = "https://youtu.be/4rLyhdT6kMg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.simple_table(hymns={
+
+    "Processional":         "404 - When the King Shall Come Again",
+    "Responsorial Psalm":   psalm_ra_url,
+    "Gospel Acclamation":   gaccl_ra_url,
+    "Preparation of Gifts": "395 - O Come, O Come, Emmanuel",
+    "Communion":            "100 - Maranatha, Lord Messiah",
+    "Recessional":          "458 - Awake! Awake, and Greet the New Morn"
+
+}, RA=RA, mass='[Missa Emmanuel](#missa-emmanuel)')
+```
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -141,17 +147,26 @@ date += dt.timedelta(days=7)
 litweek += 1
 ```
 
-#### `{python} fmtdate(date)` [`{python} week(litweek)` Sunday in Advent]{style="float:right"}
+#### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
 
-|   |   |   |
-|---|---|---|
-|| **Processional:** | 401 – `{python} get_url("O Come, Divine Messiah")`
-|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/eTn_fK_16_4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)
-|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/mDRuiP8oB8s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)
-|| **Offertory:** | 395 - `{python} get_url("O Come, O Come, Emmanuel}")`
-|| **Communion:** | 414 – `{python} get_url("The King Shall Come When Morning Dawns (Morning Song)")`
-|| **Recessional:** | 572 – `{python} get_url("The King of Glory")`
-: **Mass Setting:** [Missa Emmanuel](#missa-emmanuel) {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+```{python}
+#| classes: no-stripe
+#| label: 2025-12-21
+
+psalm_ra_url = "https://youtu.be/eTn_fK_16_4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+gaccl_ra_url = "https://youtu.be/mDRuiP8oB8s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.simple_table(hymns={
+
+    "Processional":         "401 - O Come, Divine Messiah",
+    "Responsorial Psalm":   psalm_ra_url,
+    "Gospel Acclamation":   gaccl_ra_url,
+    "Preparation of Gifts": "395 - O Come, O Come, Emmanuel",
+    "Communion":            "414 - The King Shall Come When Morning Dawns (Morning Song)",
+    "Recessional":          "572 - The King of Glory"
+
+}, RA=RA, mass='[Missa Emmanuel](#missa-emmanuel)')
+```
 
 ```{python}
 RA = [i+8 for i in RA]
@@ -159,18 +174,26 @@ date += dt.timedelta(days=4)
 litweek += 1
 ```
 
-#### `{python} fmtdate(date)` [Christmas]{style="float:right"}
+#### `{python} u.fmtdate(date)` [Christmas]{style="float:right"}
 
-|   |   |   |
-|---|---|---|
-|| **Processional:** | 439 – `{python} get_url("O Come, All Ye Faithful")` |
-|| **Responsorial Psalm:** | 70 - `{python} get_url("Psalm 98: All the Ends of the Earth (Haas/Haugen")` |
-|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/KxUt7PyXNYk?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Offertory:** | 424 - `{python} get_url("Hark! The Herald Angels Sing")` |
-|| **Communion:** | 432 – `{python} get_url("Nativity Carol")` |
-|| **Meditation:** | 441 - `{python} get_url("Silent Night")` |
-|| **Recessional:** | 437 – `{python} get_url("Joy to the World")` |
-: **Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass) {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+```{python}
+#| classes: no-stripe
+#| label: 2025-12-25
+
+gaccl_ra_url = "https://youtu.be/4gjqxJ_eL-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.simple_table(hymns={
+
+    "Processional":         "439 - O Come, All Ye Faithful",
+    "Responsorial Psalm":   "70 - Psalm 98: All the Ends of the Earth (Haas/Haugen)",
+    "Gospel Acclamation":   gaccl_ra_url,
+    "Preparation of Gifts": "424 - Hark! The Herald Angels Sing",
+    "Communion":            "432 - Nativity Carol",
+    "Meditation":           "441 - Silent Night",
+    "Recessional":          "437 - Joy to the World"
+
+}, RA=RA, mass='[Christmas Carol Mass](#christmas-carol-mass)')
+```
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -178,17 +201,26 @@ date += dt.timedelta(days=3)
 litweek += 1
 ```
 
-#### `{python} fmtdate(date)` [Holy Family of Jesus, Mary, and Joseph]{style="float:right"}
+#### `{python} u.fmtdate(date)` [Holy Family of Jesus, Mary, and Joseph]{style="float:right"}
 
-|   |   |   |
-|---|---|---|
-|| **Processional:** | 438 – `{python} get_url("Angels, from the Realms of Glory")` |
-|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/4gjqxJ_eL-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/hzF6qrivXl8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Offertory:** | 436 - `{python} get_url("Wood of the Cradle")` |
-|| **Communion:** | 455 – `{python} get_url("Once in Royal David’s City")` |
-|| **Recessional:** | 430 – `{python} get_url("Angels We Have Heard on High")` |
-: **Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass) {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+```{python}
+#| classes: no-stripe
+#| label: 2025-12-28
+
+psalm_ra_url = "https://youtu.be/4gjqxJ_eL-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+gaccl_ra_url = "https://youtu.be/4gjqxJ_eL-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.simple_table(hymns={
+
+    "Processional":         "438 - Angels, from the Realms of Glory",
+    "Responsorial Psalm":   psalm_ra_url,
+    "Gospel Acclamation":   gaccl_ra_url,
+    "Preparation of Gifts": "436 - Wood of the Cradle",
+    "Communion":            "455 - Once in Royal David’s City",
+    "Recessional":          "430 - Angels We Have Heard on High"
+
+}, RA=RA, mass='[Christmas Carol Mass](#christmas-carol-mass)')
+```
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -196,17 +228,26 @@ date += dt.timedelta(days=4)
 litweek += 1
 ```
 
-#### `{python} fmtdate(date)` [Solemnity of Mary, Mother of God]{style="float:right"}
+#### `{python} u.fmtdate(date)` [Solemnity of Mary, Mother of God]{style="float:right"}
 
-|   |   |   |
-|---|---|---|
-|| **Processional:** | 457 – `{python} get_url("Sing of Mary")` |
-|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/LcqkBimDhjs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/JuH7sw1sobE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Offertory:** | 448 - `{python} get_url("Away in a Manger (Mueller)")` |
-|| **Communion:** | 451 – `{python} get_url("Lo, How a Rose E’er Blooming")` |
-|| **Recessional:** | 458 – `{python} get_url("I Sing a Maid")` |
-: **Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass) {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+```{python}
+#| classes: no-stripe
+#| label: 2025-01-01
+
+psalm_ra_url = "https://youtu.be/LcqkBimDhjs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+gaccl_ra_url = "https://youtu.be/JuH7sw1sobE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.simple_table(hymns={
+
+    "Processional":         "457 - Sing of Mary",
+    "Responsorial Psalm":   psalm_ra_url,
+    "Gospel Acclamation":   gaccl_ra_url,
+    "Preparation of Gifts": "448 - Away in a Manger (Mueller)",
+    "Communion":            "451 - Lo, How a Rose E’er Blooming",
+    "Recessional":          "458 - I Sing a Maid"
+
+}, RA=RA, mass='[Christmas Carol Mass](#christmas-carol-mass)')
+```
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -214,17 +255,26 @@ date += dt.timedelta(days=3)
 litweek += 1
 ```
 
-#### `{python} fmtdate(date)` [Epiphany of the Lord]{style="float:right"}
+#### `{python} u.fmtdate(date)` [Epiphany of the Lord]{style="float:right"}
 
-|   |   |   |
-|---|---|---|
-|| **Processional:** | 459 – `{python} get_url("Songs of Thankfulness and Praise")` |
-|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/5poRq9YtiIs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/HiKwEUIipX8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Offertory:** | 463 - `{python} get_url("We Three Kings")` |
-|| **Communion:** | 460 – `{python} get_url("The First Nowell")` |
-|| **Recessional:** | 461 – `{python} get_url("What Star Is This")` |
-: **Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass) {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+```{python}
+#| classes: no-stripe
+#| label: 2025-01-04
+
+psalm_ra_url = "https://youtu.be/5poRq9YtiIs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+gaccl_ra_url = "https://youtu.be/HiKwEUIipX8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.simple_table(hymns={
+
+    "Processional":         "459 - Songs of Thankfulness and Praise",
+    "Responsorial Psalm":   psalm_ra_url,
+    "Gospel Acclamation":   gaccl_ra_url,
+    "Preparation of Gifts": "463 - We Three Kings",
+    "Communion":            "460 - The First Nowell",
+    "Recessional":          "461 - What Star Is This"
+
+}, RA=RA, mass='[Christmas Carol Mass](#christmas-carol-mass)')
+```
 
 ```{python}
 RA = [i+2 for i in RA]
@@ -232,42 +282,50 @@ date += dt.timedelta(days=7)
 litweek += 1
 ```
 
-#### `{python} fmtdate(date)` [Baptism of the Lord]{style="float:right"}
+#### `{python} u.fmtdate(date)` [Baptism of the Lord]{style="float:right"}
 
-|   |   |   |
-|---|---|---|
-|| **Processional:** | 467 – `{python} get_url("When John Baptized by Jordan’s River")` |
-|| **Responsorial Psalm:** | [`{python} ra(RA[0])`](https://youtu.be/UaV7slHh658?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Gospel Acclamation:** | [`{python} ra(RA[1])`](https://youtu.be/D4l2yvw-2z4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-|| **Offertory:** | 440 - `{python} get_url("Good Christian Friends, Rejoice")` |
-|| **Communion:** | 423 – `{python} get_url("Awake! Awake, and Greet the New Morn")` (*Christmas lyrics*) |
-|| **Recessional:** | 428 – `{python} get_url("Go, Tell It on the Mountain")` |
-: **Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass) {.hover .borderless tbl-colwidths="[2, 25, 73]"}
+```{python}
+#| classes: no-stripe
+#| label: 2025-01-11
+
+psalm_ra_url = "https://youtu.be/UaV7slHh658?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+gaccl_ra_url = "https://youtu.be/D4l2yvw-2z4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.simple_table(hymns={
+
+    "Processional":         "467 - When John Baptized by Jordan’s River",
+    "Responsorial Psalm":   psalm_ra_url,
+    "Gospel Acclamation":   gaccl_ra_url,
+    "Preparation of Gifts": "440 - Good Christian Friends, Rejoice",
+    "Communion":            "423 - Awake! Awake, and Greet the New Morn | (*Christmas lyrics*)",
+    "Recessional":          "428 - Go, Tell It on the Mountain"
+
+}, RA=RA, mass='[Christmas Carol Mass](#christmas-carol-mass)')
+```
 
 ::: {.titlered}
-### &nbsp; Mass Settings
+### &nbsp;&#x2720; Mass Settings
 :::
 
 ### Missa Emmanuel
 
 - *Gloria is omitted during Advent.*
-- 358 - [Holy, Holy, Holy](https://www.youtube.com/watch?v=WfWjmrnMEeU)
-- 359 - [Memorial Acclamation, A](https://www.youtube.com/watch?v=85vqMXdbkbM) (*"We proclaim..."*)
-- 359 - [Great Amen](https://www.youtube.com/watch?v=oiqqBD4bqKo)
-- NA - [Lamb of God](https://www.youtube.com/watch?v=iZw5bAd2YYA)
+- 358 - `{python} u.md("Missa Emmanuel: Holy")`
+- 359 - `{python} u.md("Missa Emmanuel: Memorial Acclamation A")` (*"We proclaim..."*)
+- 360 - `{python} u.md("Missa Emmanuel: Amen")`
+- NA - `{python} u.md("Missa Emmanuel: Lamb of God")`
 
 ### Heritage Mass
 
-- Handout - [Gloria](https://youtu.be/tukrgUdjIWU?t=27)
-- Handout - [Holy, Holy, Holy](https://www.youtube.com/watch?v=h0gXURFOhyo)
-- Handout - [Memorial Acclamation, A](https://www.youtube.com/watch?v=g4alz7JVzWM) (*"We proclaim..."*)
-- Handout - [Great Amen](https://www.youtube.com/watch?v=XpEK_3j3GMY)
-- Handout - [Lamb of God](https://www.youtube.com/watch?v=LQzlBbf3TZo)
+- Handout - `{python} u.md("Heritage Mass: Holy")`
+- Handout - `{python} u.md("Heritage Mass: Memorial Acclamation A")` (*"We proclaim..."*)
+- Handout - `{python} u.md("Heritage Mass: Amen")`
+- Handout - `{python} u.md("Heritage Mass: Lamb of God")`
 
 ### Christmas Carol Mass
 
-- Handout - [Gloria](https://www.youtube.com/watch?v=ERmvcErugvs) (*A Christmas Gloria* by Paul Gibson)
-- Handout - [Holy, Holy, Holy](https://youtu.be/iYYPSiyZO1I?t=423)
-- Handout - [Memorial Acclamation, C](https://youtu.be/iYYPSiyZO1I?t=532) (*"Save us, Savior..."*)
-- Handout - [Great Amen](https://youtu.be/iYYPSiyZO1I?t=557)
-- Handout - [Lamb of God](https://youtu.be/iYYPSiyZO1I?t=601)
+- Handout - `{python} u.md("A Christmas Gloria")` (by Paul Gibson)
+- Handout - `{python} u.md("Christmas Carol Mass: Holy")`
+- Handout - `{python} u.md("Christmas Carol Mass: Memorial Acclamation C")` (*"Save us, Savior..."*)
+- Handout - `{python} u.md("Christmas Carol Mass: Amen")`
+- Handout - `{python} u.md("Christmas Carol Mass: Lamb of God")`
