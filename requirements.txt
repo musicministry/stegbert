@@ -1,4 +1,6 @@
+titlecase
+tabulate
 jupyter
+pyhere
 numpy
 numbr
-titlecase
