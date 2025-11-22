@@ -252,3 +252,6 @@ caption, .table-caption {
 th, td {
   border-bottom: hidden;
 }
+
+.no-stripe tr.odd {
+  --bs-table-striped-bg: transparent;
