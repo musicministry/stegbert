@@ -57,14 +57,8 @@ u.video_table(hymns={
 #| classes: no-stripe
 #| label: Ordinary
 
-u.massparts_table(parts={
-
-    "Gloria":               "Omitted",
-    "Holy, Holy, Holy":     "Missa Emmanuel: Holy",
-    "Memorial Acclamation": "Missa Emmanuel: Memorial Acclamation A",
-    "Amen":                 "Missa Emmanuel: Amen",
-    "Lamb of God":          "Missa Emmanuel: Lamb of God"
-
-}, season="Advent", setting="Missa Emmanuel")
+u.massparts_table(season="Advent", setting="Missa Emmanuel",
+                  include=["Gloria", "Holy", "Memorial Acclamation A", "Amen", "Lamb of God"]
+)
 
 ```
