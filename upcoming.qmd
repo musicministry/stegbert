@@ -32,7 +32,7 @@ date = dt.datetime.strptime(date, "%Y-%m-%d")
 
 All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. Christmas season Mass parts will be provided as handouts. Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.
 
-::: {.callout-important title="Take note!"}
+::: {.callout-important title="Take heed!"}
 The Mass setting changes for Advent, the Solemnity of the Immaculate Conception, and Christmas.
 :::
 
