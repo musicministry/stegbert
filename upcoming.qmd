@@ -1,8 +1,16 @@
 ---
 title: Hymn Schedules
-subtitle: "**November 30, 2025** (First Sunday in Advent) through **January 11, 2026** (Baptism of the Lord)"
+first-date: November 30, 2025
+first-feast: First Sunday in Advent
+last-date: January 11, 2026
+last-feast: Baptism of the Lord
+subtitle: "**{{< meta first-date >}}** ({{< meta first-feast >}}) through **{{< meta last-date >}}** ({{< meta last-feast >}})"
 execute:
   echo: false
+format:
+  pdf:
+    output-file: "upcoming"
+    output-ext: "pdf"
 ---
 
 ```{python}
