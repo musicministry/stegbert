@@ -108,7 +108,7 @@ def simple_table(hymns: dict, RA, mass):
             tablefmt='simple'
             
             # Add Mass setting and formatting
-            )+f'\n: **Mass Setting:** {mass} {{.hover .normal tbl-colwidths="[2, 25, 73]"}}'
+            )+f'\n: **Mass Setting:** {mass} {{.hover tbl-colwidths="[2, 25, 73]"}}'
         )
     return tbl
 

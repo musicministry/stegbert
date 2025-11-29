@@ -7,10 +7,10 @@ last-feast: Baptism of the Lord
 subtitle: "**{{< meta first-date >}}** ({{< meta first-feast >}}) through **{{< meta last-date >}}** ({{< meta last-feast >}})"
 execute:
   echo: false
-format:
-  pdf:
-    output-file: "upcoming"
-    output-ext: "pdf"
+# format:
+#   pdf:
+#     output-file: "upcoming"
+#     output-ext: "pdf"
 ---
 
 ```{python}
