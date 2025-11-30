@@ -80,6 +80,7 @@ RA = [i+2 for i in RA]
 ```
 
 #### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
+<br>
 
 ```{python}
 #| classes: no-stripe
