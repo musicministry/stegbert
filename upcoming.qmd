@@ -237,7 +237,7 @@ date += dt.timedelta(days=4)
 litweek += 1
 ```
 
-#### `{python} u.fmtdate(date) [Solemnity of Mary, Mother of God]{style="float:right"}  
+#### `{python} u.fmtdate(date)` [Solemnity of Mary, Mother of God]{style="float:right"}  
 
 ```{python}
 #| classes: no-stripe
