@@ -52,6 +52,8 @@ The Mass setting changes for Advent, the Solemnity of the Immaculate Conception,
 #### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
 :::
 
+Testing regular markdown text that normally will not be here but could help reveal what is actually going on with the margins after the header.
+
 ```{python}
 #| classes: no-stripe
 #| label: 2025-11-30
