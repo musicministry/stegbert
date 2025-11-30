@@ -101,7 +101,7 @@ def video_url(hymn, urls=hymn_videos):
 def simple_table(hymns: dict, RA, mass):
     """Create simple Markdown table from dictionary of hymns."""
     
-    Display(markdown(f'**Mass Setting:** {mass}{{style="float:right"}}'))
+    display(Markdown(f'**Mass Setting:** {mass}{{style="float:right"}}'))
     
     tbl = Markdown(
         tabulate(
