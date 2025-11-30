@@ -48,8 +48,8 @@ The Mass setting changes for Advent, the Solemnity of the Immaculate Conception,
 ### &nbsp;&#x2720; Hymn Schedules
 :::
 
-#### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}  
-
+#### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
+<br>
 
 ```{python}
 #| classes: no-stripe
@@ -104,7 +104,7 @@ date += dt.timedelta(days=1)
 ```
 
 #### `{python} u.fmtdate(date)` [Solemnity of the Immaculate Conception]{style="float:right"}
-
+<br>
 
 ```{python}
 #| classes: no-stripe
@@ -132,6 +132,7 @@ litweek += 1
 ```
 
 #### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
+<br>
 
 ```{python}
 #| classes: no-stripe
@@ -159,6 +160,7 @@ litweek += 1
 ```
 
 #### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
+<br>
 
 ```{python}
 #| classes: no-stripe
@@ -178,7 +180,7 @@ u.simple_table(hymns={
 
 }, RA=RA, mass='[Missa Emmanuel](#missa-emmanuel)')
 ```
-
+<br>
 ```{python}
 RA = [i+8 for i in RA]
 date += dt.timedelta(days=4)
@@ -186,6 +188,7 @@ litweek += 1
 ```
 
 #### `{python} u.fmtdate(date)` [Christmas]{style="float:right"}
+<br>
 
 ```{python}
 #| classes: no-stripe
@@ -213,6 +216,7 @@ litweek += 1
 ```
 
 #### `{python} u.fmtdate(date)` [Holy Family of Jesus, Mary, and Joseph]{style="float:right"}
+<br>
 
 ```{python}
 #| classes: no-stripe
@@ -240,6 +244,7 @@ litweek += 1
 ```
 
 #### `{python} u.fmtdate(date)` [Solemnity of Mary, Mother of God]{style="float:right"}
+<br>
 
 ```{python}
 #| classes: no-stripe
@@ -267,6 +272,7 @@ litweek += 1
 ```
 
 #### `{python} u.fmtdate(date)` [Epiphany of the Lord]{style="float:right"}
+<br>
 
 ```{python}
 #| classes: no-stripe
@@ -293,9 +299,8 @@ date += dt.timedelta(days=7)
 litweek += 1
 ```
 
-:::
 #### `{python} u.fmtdate(date)` [Baptism of the Lord]{style="float:right"}
-:::
+<br>
 
 ```{python}
 #| classes: no-stripe
