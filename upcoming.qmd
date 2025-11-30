@@ -48,11 +48,7 @@ The Mass setting changes for Advent, the Solemnity of the Immaculate Conception,
 ### &nbsp;&#x2720; Hymn Schedules
 :::
 
-::: {.red}
-#### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
-:::
-
-Testing regular markdown text that normally will not be here but could help reveal what is actually going on with the margins after the header.
+#### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}  
 
 ```{python}
 #| classes: no-stripe
@@ -79,7 +75,7 @@ litweek += 1
 RA = [i+2 for i in RA]
 ```
 
-#### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
+#### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}  
 <br>
 
 ```{python}
