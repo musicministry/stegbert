@@ -100,6 +100,9 @@ def video_url(hymn, urls=hymn_videos):
 
 def simple_table(hymns: dict, RA, mass):
     """Create simple Markdown table from dictionary of hymns."""
+    
+    Display(markdown(f'**Mass Setting:** {mass}{{style="float:right"}}'))
+    
     tbl = Markdown(
         tabulate(
             # Conditional for responsorial psalm
@@ -113,7 +116,7 @@ def simple_table(hymns: dict, RA, mass):
             tablefmt='simple'
             
             # Add Mass setting and formatting
-            )+f'\n: **Mass Setting:** {mass} {{.hover .normal tbl-colwidths="[2, 25, 73]"}}'
+            )+'\n: {.hover .normal tbl-colwidths="[2, 25, 73]"}'
         )
     return tbl
 

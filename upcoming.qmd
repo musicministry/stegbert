@@ -325,7 +325,7 @@ u.simple_table(hymns={
 ### &nbsp;&#x2720; Mass Settings
 :::
 
-### Missa Emmanuel
+#### Missa Emmanuel
 
 - *Gloria is omitted during Advent.*
 - 358 - `{python} u.md("Missa Emmanuel: Holy")`
@@ -333,14 +333,14 @@ u.simple_table(hymns={
 - 360 - `{python} u.md("Missa Emmanuel: Amen")`
 - NA - `{python} u.md("Missa Emmanuel: Lamb of God")`
 
-### Heritage Mass
+#### Heritage Mass
 
 - Handout - `{python} u.md("Heritage Mass: Holy")`
 - Handout - `{python} u.md("Heritage Mass: Memorial Acclamation A")` (*"We proclaim..."*)
 - Handout - `{python} u.md("Heritage Mass: Amen")`
 - Handout - `{python} u.md("Heritage Mass: Lamb of God")`
 
-### Christmas Carol Mass
+#### Christmas Carol Mass
 
 - Handout - `{python} u.md("A Christmas Gloria")` (by Paul Gibson)
 - Handout - `{python} u.md("Christmas Carol Mass: Holy")`
