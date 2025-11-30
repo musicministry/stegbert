@@ -48,7 +48,9 @@ The Mass setting changes for Advent, the Solemnity of the Immaculate Conception,
 ### &nbsp;&#x2720; Hymn Schedules
 :::
 
+:::
 #### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}
+:::
 
 ```{python}
 #| classes: no-stripe
@@ -290,7 +292,9 @@ date += dt.timedelta(days=7)
 litweek += 1
 ```
 
+:::
 #### `{python} u.fmtdate(date)` [Baptism of the Lord]{style="float:right"}
+:::
 
 ```{python}
 #| classes: no-stripe
