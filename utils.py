@@ -11,11 +11,16 @@ import re
 # =========================================================================== #
 # Load video YAMLs from GitHub
 
+# Hymns
 hymn_yaml_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/main/hymns.yml'
 hymn_videos = yaml.safe_load(requests.get(hymn_yaml_url).content)
 
+# Mass Settings
 mass_yaml_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/main/mass-settings.yml'
 mass_videos = yaml.safe_load(requests.get(mass_yaml_url).content)
+
+# Merge together
+hymn_videos = hymn_videos | mass_videos
 
 # =========================================================================== #
 # Tools
@@ -108,7 +113,7 @@ def simple_table(hymns: dict, RA, mass):
             tablefmt='simple'
             
             # Add Mass setting and formatting
-            )+f'\n: **Mass Setting:** {mass} {{.hover tbl-colwidths="[2, 25, 73]"}}'
+            )+f'\n: **Mass Setting:** {mass} {{.hover .normal tbl-colwidths="[2, 25, 73]"}}'
         )
     return tbl
 
