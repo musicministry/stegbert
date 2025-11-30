@@ -50,6 +50,7 @@ The Mass setting changes for Advent, the Solemnity of the Immaculate Conception,
 
 #### `{python} u.fmtdate(date)` [`{python} u.week(litweek)` Sunday in Advent]{style="float:right"}  
 
+
 ```{python}
 #| classes: no-stripe
 #| label: 2025-11-30
@@ -103,6 +104,7 @@ date += dt.timedelta(days=1)
 ```
 
 #### `{python} u.fmtdate(date)` [Solemnity of the Immaculate Conception]{style="float:right"}
+
 
 ```{python}
 #| classes: no-stripe
