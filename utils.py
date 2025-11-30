@@ -139,21 +139,20 @@ def video_table(hymns: dict, RA):
         )
     return tbl
 
-def massparts_table(season:str, setting:str, include:list):
+def massparts_table(season:str, setting:str, include:list, urls=hymn_videos):
     """Create simple Markdown table from dictionary of Mass parts."""
 
-    include_keys = [keyify(i) for i in include]
-    urls = mass_videos[keyify(setting)]
+    include_keys = [f'{keyify(setting)}-{keyify(i)}' for i in include]
 
     display(Markdown(f"The Mass parts for {season} will be taken from *{setting}*: <rb><br>"))
 
     tbl = Markdown(
         tabulate(
             # Conditional for omitting Gloria in Advent and Lent
-            [["&emsp;", f"**{unkey(k)}:**", f"*{unkey(k)} is omitted during {season}.* <br><br>"] if (k=='gloria' and (season.lower()=='advent' or season.lower()=="lent")) else
+            [["&emsp;", f"**{i}:**", f"*{i} is omitted during {season}.* <br><br>"] if (i.lower()=='gloria' and (season.lower()=='advent' or season.lower()=="lent")) else
             
             # Embed video, if available
-            ["&emsp;", f"**{unkey(k)}:**", f"{{{{< video {urls[k]} >}}}}"] for k in include_keys],
+            ["&emsp;", f"**{i}:**", f"{{{{< video {urls[k]} >}}}}"] for i, k in zip(include, include_keys)],
 
             # Add table formatting
             tablefmt='simple', colalign=('center', 'right', 'left')
