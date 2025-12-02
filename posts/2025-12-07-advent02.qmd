@@ -4,7 +4,7 @@ description: December 7, 2025
 categories:
   - 2025
   - Advent
-image: /_images/dates/dec/2025-12-07.png
+image: /_images/dates/dec/2024-12-07.png
 execute:
   echo: false
 ---
