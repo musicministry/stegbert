@@ -3,6 +3,6 @@ title: Weekly Lineups
 subtitle: Stay sharp with weekly music lists and videos for practicing at home
 listing:
   contents: posts
-  sort: "last-modified"
+  sort: "last-updated desc"
   categories: true
 ---
