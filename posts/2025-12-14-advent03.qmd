@@ -1,6 +1,7 @@
 ---
 title: Third Sunday of Advent
 description: December 14, 2025
+last-updated: "2025-12-14"
 categories:
   - 2025
   - Advent

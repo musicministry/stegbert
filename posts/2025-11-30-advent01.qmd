@@ -2,6 +2,7 @@
 title: First Sunday of Advent
 # date: November 25, 2025
 description: November 30, 2025
+last-updated: "2025-11-30"
 categories:
   - 2025
   - Advent
