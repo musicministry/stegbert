@@ -24,10 +24,6 @@ RA = [6, 7]
 # --------------------------------------------------------------------------- #
 ```
 
-::: {.callout-important}
-We will be singing the [*Missa Emmanual*](#mass-parts) for Advent starting this weekend.
-:::
-
 ### Hymns
 
 ```{python}
