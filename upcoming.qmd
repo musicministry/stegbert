@@ -9,6 +9,16 @@ format:
   pdf:
     output-file: "upcoming"
     output-ext: "pdf"
+    documentclass: article
+    filters:
+      - filters/tables.lua
+      - filters/titlered.lua
+      - filters/float-right.lua
+    template-partials:
+      - tex/before-body.tex
+    include-in-header:
+      - text: |
+          \usepackage{tex/musicschedule}
 ---
 
 ```{python}
