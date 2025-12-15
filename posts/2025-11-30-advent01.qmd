@@ -8,8 +8,6 @@ categories:
   - Advent
 image: 
   /_images/dates/nov/30.png
-execute:
-  echo: false
 ---
 
 ```{python}
@@ -44,7 +42,7 @@ u.video_table(hymns={
     "Processional":         "577 - Sing Out, Earth and Skies!",
     "Responsorial Psalm":   psalm_url,
     "Gospel Acclamation":   gaccl_url,
-    "Preparation of Gifts": "443 - Awake! Awake, and Greet the New Morn | (*Advent lyrics*)",
+    "Preparation of Gifts": "423 - Awake! Awake, and Greet the New Morn | (*Advent lyrics*)",
     "Communion":            "397 - Maranatha, Lord Messiah",
     "Recessional":          "766 - City of God"
 
