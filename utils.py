@@ -116,8 +116,9 @@ def simple_table(hymns: dict, RA, mass):
             tablefmt='simple'
             
             # Add Mass setting and formatting
-            )+'\n: {.hover .normal tbl-colwidths="[2, 25, 73]"}'
+            ) + '\n: {.hover .normal tbl-colwidths="[2, 25, 73]"}' + '\n\n\\needspace{3\\baselineskip}'
         )
+
     return tbl
 
 def video_table(hymns: dict, RA):
