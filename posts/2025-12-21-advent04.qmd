@@ -1,0 +1,57 @@
+---
+title: Fourth Sunday of Advent
+last-updated: "2025-12-21"
+description: December 21, 2025
+categories:
+  - 2025
+  - Advent
+image: /_images/dates/dec/21.png
+---
+
+```{python}
+#| label: Setup
+import sys
+sys.path.append('../')
+import utils as u
+
+# --------------------------------------------------------------------------- #
+# Update between these lines
+
+RA = [14, 15]
+
+# --------------------------------------------------------------------------- #
+```
+
+### Hymns
+
+```{python}
+#| classes: no-stripe 
+#| label: Hymns
+
+psalm_ra_url = "https://youtu.be/eTn_fK_16_4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+gaccl_ra_url = "https://youtu.be/mDRuiP8oB8s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
+
+u.video_table(hymns={
+
+    "Processional":         "401 - O Come, Divine Messiah",
+    "Responsorial Psalm":   psalm_ra_url,
+    "Gospel Acclamation":   gaccl_ra_url,
+    "Preparation of Gifts": "395 - O Come, O Come, Emmanuel",
+    "Communion":            "414 - The King Shall Come When Morning Dawns (Morning Song)",
+    "Recessional":          "572 - The King of Glory"
+
+}, RA=RA)
+
+```
+
+### Mass Parts
+
+```{python}
+#| classes: no-stripe
+#| label: Ordinary
+
+u.massparts_table(season="Advent", setting="Missa Emmanuel",
+                  include=["Gloria", "Holy", "Memorial Acclamation A", "Amen", "Lamb of God"]
+)
+
+```
