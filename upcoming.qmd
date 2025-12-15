@@ -6,6 +6,7 @@ last-date: January 11, 2026
 title: Hymn Schedules
 subtitle: "**{{< meta first-date >}}** ({{< meta first-feast >}}) through **{{< meta last-date >}}** ({{< meta last-feast >}})"
 format:
+  html: default
   pdf:
     output-file: "upcoming"
     output-ext: "pdf"
