@@ -1,95 +1,57 @@
 ---
-title: NTH Sunday of SEASON
-# date: November 25, 2025
-description: MONTH, DD, YYYY
+title: Nth Sunday of SEASON
+last-updated: "YYYY-MM-DD"
+description: November 30, 2025
 categories:
-  - YYYY
+  - YEAR
   - SEASON
-image: /_images/dates/MON/YYYY-MM-DD.png
+image: /_images/dates/mon/day.png
 ---
 
-::: {.titlered}
-### &nbsp; Processional
-:::
+```{python}
+#| label: Setup
+import sys
+sys.path.append('../')
+import utils as u
 
-#### HYMN (NUM)
+# --------------------------------------------------------------------------- #
+# Update between these lines
 
-ENTRY <br>
+RA = [4, 5]
 
-::: {.titlered}
-### &nbsp; Responsorial Psalm
-:::
+# --------------------------------------------------------------------------- #
+```
 
-::: {.callout-tip}
+### Hymns
 
-Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as [Chris Brunelle](https://www.youtube.com/@ChrisBrunelle/videos), [Liturgical Music](https://www.youtube.com/@LiturgicalMusic), or [Music Ministry 101](https://www.youtube.com/@MusicMinistry101/videos).
+```{python}
+#| classes: no-stripe 
+#| label: Hymns
 
-:::
+psalm_url = PSALM_URL
+gaccl_url = GACCL_URL
 
-#### *Respond & Acclaim* pg. NUM
+u.video_table(hymns={
 
-ENTRY <br>
+    "Processional":         "577 - Sing Out, Earth and Skies!",
+    "Responsorial Psalm":   psalm_url,
+    "Gospel Acclamation":   gaccl_url,
+    "Preparation of Gifts": "443 - Awake! Awake, and Greet the New Morn | (*Advent lyrics*)",
+    "Communion":            "397 - Maranatha, Lord Messiah",
+    "Recessional":          "766 - City of God"
 
-::: {.callout-important}
-We will always sing every verse at Mass, regardless of what is included in the video.
-:::
+}, RA=RA)
 
-<br>
+```
 
-::: {.titlered}
-### &nbsp; Gospel Acclamation
-:::
+### Mass Parts
 
-#### *Respond & Acclaim* pg. NUM
+```{python}
+#| classes: no-stripe
+#| label: Ordinary
 
-ENTRY <br>
+u.massparts_table(season="Advent", setting="MASS SETTING",
+                  include=["Gloria", "Holy", "Memorial Acclamation A", "Amen", "Lamb of God"]
+)
 
-::: {.titlered}
-### &nbsp; Preparation of Gifts
-:::
-
-#### HYMN (NUM)
-
-ENTRY <br>
-
-::: {.titlered}
-### &nbsp; Communion
-:::
-
-#### HYMN (NUM)
-
-ENTRY <br>
-
-::: {.titlered}
-### &nbsp; Recessional
-:::
-
-#### HYMN (NUM)
-
-ENTRY <br>
-
-::: {.titlered}
-## &nbsp; Mass Parts
-:::
-
-The parts of the Mass for Advent will be taken from *Missa Emmanuel*.
-
-#### Gloria
-
-ENTRY <br>
-
-#### Holy, Holy, Holy
-
-ENTRY <br>
-
-#### Memorial Acclamation
-
-ENTRY <br>
-
-#### Amen
-
-ENTRY <br>
-
-#### Lamb of God
-
-ENTRY <br>
+```
