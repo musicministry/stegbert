@@ -99,7 +99,7 @@ baptism = {
 
     "Processional":         "467 - When John Baptized by Jordan's River",
 
-    "RA": [28, 29],
+    "RA": [30, 31],
     "Responsorial Psalm":   "https://youtu.be/UaV7slHh658?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     "Gospel Acclamation":   "https://youtu.be/D4l2yvw-2z4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
