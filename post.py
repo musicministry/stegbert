@@ -86,7 +86,7 @@ hymns.pop('RA')
 
 # Add Gloria omission if needed
 if all('gloria' not in p.lower() and (season == 'advent' or season == 'lent') for p in parts):
-    parts.insert(0, f'*Gloria omitted during {titlecase(season)}*')
+    parts.insert(0, f'Gloria: *Gloria omitted during {titlecase(season)}*')
 
 with open(os.path.join('posts', outfile), 'w') as file:
     # Header
