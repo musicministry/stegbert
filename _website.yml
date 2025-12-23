@@ -13,5 +13,8 @@ website:
     content: "**Welcome!** This website is experimental and will be built out if or as needed. Please give feedback to Matt."
     type: primary
     position: below-navbar
+  page-footer:
+    left: "Powered by [Quarto](https://quarto.org/)
+    right: "© 2025 M.D. Grossi"
 
 church: "Saint Egbert Church, Morehead City"
