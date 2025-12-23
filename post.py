@@ -1,11 +1,42 @@
-# TODO:
-#   - Change --publish to default to None (or alternative) and automatically
-#     publish the next sunday from the time the script is run if nothing is
-#     passed to -p/--publish
-#   - Set up GitHub schedule to run this every Sun evening or Mon morning
-#   - Add script metadata
-
-
+# =============================================================================
+# author: mgrossi
+# date:   20 December 2025
+#
+# This script creates a Quarto markdown page containing the music lineup for a
+# single liturgy in calendar year `year`. (Note that for Advent and Christmas,
+# `year` should be the next calendar year.) A specific date or feast can be
+# processed by passing the date or feast to `-p, --process`; otherwise, the
+# next Sunday following script execution will be processed. The output file
+# name can optionally be set using the `-o, --output` flag and defaults to
+# `[pwd]/posts/YYYY-MM-DD-feast.qmd` if no argument is passed, where
+# "YYYY-MM-DD" is the date of the liturgy and "feast" is the celebration for
+# that date. An optional callout can be added to the top of the page using the
+# `-c, --callout` flag. The new file and/or any changes are automatically
+# committed and pushed to GitHub unless the `-nocommit` and/or `-nopush` flags
+# are passed.
+# 
+# The music list to populate the file are taken from `.py` files for each
+# season (e.g., `advent.py`, `christmas.py`) containing dictinaries (one per
+# liturgy) where the keys specify hymn in the Mass (e.g., "Professional") and
+# the value is the name of the hymn. Each dictionary should also contain URLs
+# for responsorial psalms and gospel acclamations, the name of the Mass
+# setting to be used, and a list of Mass parts to include.
+#
+# To execute in terminal:
+# python post.py --year 2026
+#
+#     or
+#
+# python upcoming.py --year 2026 --publish '2025-11-30'
+#
+#     or
+#
+# python upcoming.py --year 2026 --publish 'advent01'
+#
+# Feast names are taken from the name of the dictionaries containing the
+# music schedules and must be a name found in the `name` column of the
+# liturgical calendar dataframe.
+#
 # --------------------------------------------------------------------------- #
 # Packages
 from titlecase import titlecase
