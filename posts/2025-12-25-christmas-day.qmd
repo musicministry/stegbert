@@ -1,0 +1,41 @@
+---
+title: Christmas Day
+last-updated: 2025-12-20
+description: December 25, 2025
+categories:
+  - 2025
+  - Christmas
+image: /_images/dates/dec/25.png
+---
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">439 - O Come, All Ye Faithful<br><br> {{< video https://www.youtube.com/watch?v=epvG0Q2-D6E >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;">70 - Psalm 98: All the Ends of the Earth (Haas/Haugen)<br><br> {{< video https://www.youtube.com/watch?v=YUDFGKBAzUc >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 23 <br><br> {{< video https://youtu.be/KxUt7PyXNYk?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Preparation of Gifts:</strong></td><td style="width: 75%;">424 - Hark! The Herald Angels Sing<br><br> {{< video https://www.youtube.com/watch?v=crzMO3MI-4s >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">432 - Nativity Carol<br><br> {{< video https://www.youtube.com/watch?v=Jtk_r62xLzU >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Meditation:</strong></td><td style="width: 75%;">441 - Silent Night<br><br> {{< video https://www.youtube.com/watch?v=Jd2C3j8pRls >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">437 - Joy to the World<br><br> {{< video https://www.youtube.com/watch?v=pzfCMZr9pZo >}}</td></tr>
+</tbody>
+</table>
+
+### Mass Parts
+
+The Mass parts for Christmas will be taken from *Christmas Carol Mass*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;">{{< video https://www.youtube.com/watch?v=ERmvcErugvs >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;">{{< video https://youtu.be/iYYPSiyZO1I?t=423 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation C:</strong></td><td style="width: 75%;">{{< video https://youtu.be/iYYPSiyZO1I?t=532 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;">{{< video https://youtu.be/iYYPSiyZO1I?t=557 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;">{{< video https://youtu.be/iYYPSiyZO1I?t=601 >}}</td></tr>
+</tbody>
+</table>
+
+
