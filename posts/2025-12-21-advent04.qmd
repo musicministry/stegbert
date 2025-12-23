@@ -1,6 +1,6 @@
 ---
-title: Fourth Sunday of Advent
-last-updated: "2025-12-21"
+title: Fourth Sunday in Advent
+last-updated: 2025-12-16
 description: December 21, 2025
 categories:
   - 2025
@@ -8,50 +8,33 @@ categories:
 image: /_images/dates/dec/21.png
 ---
 
-```{python}
-#| label: Setup
-import sys
-sys.path.append('../')
-import utils as u
-
-# --------------------------------------------------------------------------- #
-# Update between these lines
-
-RA = [14, 15]
-
-# --------------------------------------------------------------------------- #
-```
-
 ### Hymns
 
-```{python}
-#| classes: no-stripe 
-#| label: Hymns
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
 
-psalm_ra_url = "https://youtu.be/eTn_fK_16_4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
-gaccl_ra_url = "https://youtu.be/mDRuiP8oB8s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
-
-u.video_table(hymns={
-
-    "Processional":         "401 - O Come, Divine Messiah",
-    "Responsorial Psalm":   psalm_ra_url,
-    "Gospel Acclamation":   gaccl_ra_url,
-    "Preparation of Gifts": "395 - O Come, O Come, Emmanuel",
-    "Communion":            "414 - The King Shall Come When Morning Dawns (Morning Song)",
-    "Recessional":          "572 - The King of Glory"
-
-}, RA=RA)
-
-```
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">401 - O Come, Divine Messiah<br><br> {{< video https://www.youtube.com/watch?v=RT1qMElAzas >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 14 <br><br> {{< video https://youtu.be/eTn_fK_16_4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 15 <br><br> {{< video https://youtu.be/mDRuiP8oB8s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Preparation of Gifts:</strong></td><td style="width: 75%;">395 - O Come, O Come, Emmanuel<br><br> {{< video https://www.youtube.com/watch?v=wZdPSU98tmQ >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">414 - The King Shall Come When Morning Dawns (Morning Song)<br><br> {{< video https://www.youtube.com/watch?v=7ngF1C3FSfc >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">572 - The King of Glory<br><br> {{< video https://www.youtube.com/watch?v=1VsQSlOtRVY >}}</td></tr>
+</tbody>
+</table>
 
 ### Mass Parts
 
-```{python}
-#| classes: no-stripe
-#| label: Ordinary
+The Mass parts for Advent will be taken from *Missa Emmanuel*:
 
-u.massparts_video_table(season="Advent", setting="Missa Emmanuel",
-                  include=["Gloria", "Holy", "Memorial Acclamation A", "Amen", "Lamb of God"]
-)
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;"><em>*Gloria omitted during Advent*</em> <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;">{{< video https://www.youtube.com/watch?v=WfWjmrnMEeU >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;">{{< video https://youtu.be/85vqMXdbkbM >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;">{{< video https://youtu.be/oiqqBD4bqKo >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;">{{< video https://youtu.be/iZw5bAd2YYA >}}</td></tr>
+</tbody>
+</table>
 
-```
+

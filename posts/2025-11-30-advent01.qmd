@@ -1,63 +1,40 @@
 ---
-title: First Sunday of Advent
-# date: November 25, 2025
+title: First Sunday in Advent
+last-updated: 2025-11-25
 description: November 30, 2025
-last-updated: "2025-11-30"
 categories:
   - 2025
   - Advent
-image: 
-  /_images/dates/nov/30.png
+image: /_images/dates/nov/30.png
 ---
-
-```{python}
-#| label: Setup
-import sys
-sys.path.append('../')
-import utils as u
-
-# --------------------------------------------------------------------------- #
-# Update between these lines
-
-RA = [4, 5]
-
-# --------------------------------------------------------------------------- #
-```
-
-::: {.callout-important}
-We will be singing the [*Missa Emmanual*](#mass-parts) for Advent starting this weekend.
-:::
 
 ### Hymns
 
-```{python}
-#| classes: no-stripe 
-#| label: Hymns
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
 
-psalm_url = "https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
-gaccl_url = "https://youtu.be/6JGogB_Mb-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
-
-u.video_table(hymns={
-
-    "Processional":         "577 - Sing Out, Earth and Skies!",
-    "Responsorial Psalm":   psalm_url,
-    "Gospel Acclamation":   gaccl_url,
-    "Preparation of Gifts": "423 - Awake! Awake, and Greet the New Morn | (*Advent lyrics*)",
-    "Communion":            "397 - Maranatha, Lord Messiah",
-    "Recessional":          "766 - City of God"
-
-}, RA=RA)
-
-```
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">577 - Sing Out, Earth and Skies!<br><br> {{< video https://www.youtube.com/watch?v=EBHr3p3xHCY >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 4 <br><br> {{< video https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 5 <br><br> {{< video https://youtu.be/6JGogB_Mb-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Preparation of Gifts:</strong></td><td style="width: 75%;">423 - Awake! Awake, and Greet the New Morn<br><br> {{< video https://www.youtube.com/watch?v=Op9Yyh_M4dk >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">397 - Maranatha, Lord Messiah<br><br> {{< video https://www.youtube.com/watch?v=YQQjF8pTBV4 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">766 - City of God<br><br> {{< video https://www.youtube.com/watch?v=jLBQEUauY-I >}}</td></tr>
+</tbody>
+</table>
 
 ### Mass Parts
 
-```{python}
-#| classes: no-stripe
-#| label: Ordinary
+The Mass parts for Advent will be taken from *Missa Emmanuel*:
 
-u.massparts_video_table(season="Advent", setting="Missa Emmanuel",
-                  include=["Gloria", "Holy", "Memorial Acclamation A", "Amen", "Lamb of God"]
-)
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;"><em>*Gloria omitted during Advent*</em> <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;">{{< video https://www.youtube.com/watch?v=WfWjmrnMEeU >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;">{{< video https://youtu.be/85vqMXdbkbM >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;">{{< video https://youtu.be/oiqqBD4bqKo >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;">{{< video https://youtu.be/iZw5bAd2YYA >}}</td></tr>
+</tbody>
+</table>
 
-```
+
