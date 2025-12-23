@@ -77,99 +77,109 @@ def parse_args():
 
 args = parse_args()
 
+# GitHub token
+try:
+    SOME_SECRET = os.environ["SOME_SECRET"]
+except KeyError:
+    SOME_SECRET = "Token not available!"
+
 # --------------------------------------------------------------------------- #
 # Main program
 
-# Load hymn lists
-cycle = u.lityear(args.year)
-process_dir = f'{args.year}-{cycle}'
-sys.path.append(os.path.join(process_dir))
+def main():
+    # Load hymn lists
+    cycle = u.lityear(args.year)
+    process_dir = f'{args.year}-{cycle}'
+    sys.path.append(os.path.join(process_dir))
 
-lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
-cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
-                  parse_dates=['date'], index_col='feast')
+    lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
+    cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
+                    parse_dates=['date'], index_col='feast')
 
-# Get next Sunday, if needed
-if args.publish.lower() == 'next':
-    today = dt.datetime.today()
-    next_sun = u.next_sunday(from_date=today)
-    publish = str(next_sun)
-    print(f'Publishing next Sunday {dt.datetime.strftime(next_sun, format="%B %d, %Y")}')
-else:
-    publish = args.publish
+    # Get next Sunday, if needed
+    if args.publish.lower() == 'next':
+        today = dt.datetime.today()
+        next_sun = u.next_sunday(from_date=today)
+        publish = str(next_sun)
+        print(f'Publishing next Sunday {dt.datetime.strftime(next_sun, format="%B %d, %Y")}')
+    else:
+        publish = args.publish
 
-# Date and feast
-try:
-    date = dt.datetime.strptime(publish, '%Y-%m-%d')
-    feast = cal[cal['date']==publish].index
-    if len(feast) > 1:
-        raise IndexError(f'More than one liturgy was found for {dt.datetime.strftime(date.date(), format="%B %d")}. Please specify a feast to publish instead of a date and try again.')
-    feast = feast[0]
-except ValueError:
-    feast = publish
-    date = cal.loc[feast]['date']
+    # Date and feast
+    try:
+        date = dt.datetime.strptime(publish, '%Y-%m-%d')
+        feast = cal[cal['date']==publish].index
+        if len(feast) > 1:
+            raise IndexError(f'More than one liturgy was found for {dt.datetime.strftime(date.date(), format="%B %d")}. Please specify a feast to publish instead of a date and try again.')
+        feast = feast[0]
+    except ValueError:
+        feast = publish
+        date = cal.loc[feast]['date']
 
-# File name
-if args.outfile.lower() == 'auto':
-    outfile = os.path.join('posts', f'{str(date.date())}-{feast}.qmd')
-else:
-    outfile = os.path.join('posts', args.outfile)
+    # File name
+    if args.outfile.lower() == 'auto':
+        outfile = os.path.join('posts', f'{str(date.date())}-{feast}.qmd')
+    else:
+        outfile = os.path.join('posts', args.outfile)
 
-# Subset calendar
-df = cal.loc[feast]
-season = df.season
+    # Subset calendar
+    df = cal.loc[feast]
+    season = df.season
 
-# Load the schedules and fix the keys
-hymn_lists = u.get_hymn_lists(season)
-hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
+    # Load the schedules and fix the keys
+    hymn_lists = u.get_hymn_lists(season)
+    hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
 
-# Parse the dictionary
-hymns = hymn_lists[feast]
-mass = hymns['Mass']
-parts = hymns['parts']
-RA = hymns['RA']
-hymns.pop('Mass')
-hymns.pop('parts')
-hymns.pop('RA')
+    # Parse the dictionary
+    hymns = hymn_lists[feast]
+    mass = hymns['Mass']
+    parts = hymns['parts']
+    RA = hymns['RA']
+    hymns.pop('Mass')
+    hymns.pop('parts')
+    hymns.pop('RA')
 
-# Add Gloria omission if needed
-if all('gloria' not in p.lower() and (season == 'advent' or season == 'lent') for p in parts):
-    parts.insert(0, f'Gloria: *Gloria omitted during {titlecase(season)}*')
+    # Add Gloria omission if needed
+    if all('gloria' not in p.lower() and (season == 'advent' or season == 'lent') for p in parts):
+        parts.insert(0, f'Gloria: *Gloria omitted during {titlecase(season)}*')
 
-with open(outfile, 'w') as file:
-    # Header
-    file.write('---\n')
-    file.write(f'title: {df["name"]}\n')
-    file.write(f'last-updated: {str(date.date()-dt.timedelta(days=5))}\n')
-    file.write(f'description: {dt.datetime.strftime(date, format="%B %d, %Y")}\n')
-    file.write('categories:\n')
-    file.write(f'  - {df.year}\n')
-    file.write(f'  - {titlecase(df.season)}\n')
-    file.write(f'image: /_images/dates/{dt.datetime.strftime(date, format="%b").lower()}/{int(df["day"])}.png\n')
-    file.write('---\n\n')
+    with open(outfile, 'w') as file:
+        # Header
+        file.write('---\n')
+        file.write(f'title: {df["name"]}\n')
+        file.write(f'last-updated: {str(date.date()-dt.timedelta(days=5))}\n')
+        file.write(f'description: {dt.datetime.strftime(date, format="%B %d, %Y")}\n')
+        file.write('categories:\n')
+        file.write(f'  - {df.year}\n')
+        file.write(f'  - {titlecase(df.season)}\n')
+        file.write(f'image: /_images/dates/{dt.datetime.strftime(date, format="%b").lower()}/{int(df["day"])}.png\n')
+        file.write('---\n\n')
 
-    # Callout
-    if args.callout is not None:
-        file.write(
-            f'::: {{.callout-important title="Take heed!"}}\n' \
-            f'{args.callout}\n' \
-            ':::\n\n'
-        )
+        # Callout
+        if args.callout is not None:
+            file.write(
+                f'::: {{.callout-important title="Take heed!"}}\n' \
+                f'{args.callout}\n' \
+                ':::\n\n'
+            )
 
-    # Lineup
-    file.write('### Hymns\n\n')
-    
-    file.write('All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.\n\n')
+        # Lineup
+        file.write('### Hymns\n\n')
+        
+        file.write('All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.\n\n')
 
-    file.write(u.video_table(hymns=hymns, RA=RA))
+        file.write(u.video_table(hymns=hymns, RA=RA))
 
-    # Mass parts
-    file.write('### Mass Parts\n\n')
+        # Mass parts
+        file.write('### Mass Parts\n\n')
 
-    file.write(f'The Mass parts for {titlecase(season)} will be taken from *{mass}*:\n\n')
+        file.write(f'The Mass parts for {titlecase(season)} will be taken from *{mass}*:\n\n')
 
-    file.write(u.massparts_video_table(season=season, setting=mass, include=parts))
+        file.write(u.massparts_video_table(season=season, setting=mass, include=parts))
 
-    file.write('\n')
+        file.write('\n')
 
-print(f'"{outfile}" file created.')
+    print(f'"{outfile}" file created.')
+
+if __name__ == "__main__":
+    main()
