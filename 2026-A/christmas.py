@@ -33,16 +33,16 @@
 
 christmas_day = {
     "Mass": "Christmas Carol Mass",
-    "parts": ["Holy: Christmas Carol Mass", "Memorial Acclamation C: Christmas Carol Mass", "Amen: Christmas Carol Mass", "Lamb of God: Christmas Carol Mass"],
+    "parts": ["Gloria: A Christmas Gloria", "Holy: Christmas Carol Mass", "Memorial Acclamation C: Christmas Carol Mass", "Amen: Christmas Carol Mass", "Lamb of God: Christmas Carol Mass"],
 
     "Processional":         "439 - O Come, All Ye Faithful",
 
     "RA": [22, 23],
     "Responsorial Psalm":   "70 - Psalm 98: All the Ends of the Earth (Haas/Haugen)",
-    "Gospel Acclamation":   "https://youtu.be/4gjqxJ_eL-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "https://youtu.be/KxUt7PyXNYk?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Preparation of Gifts": "424 - Hark! The Herald Angels Sing",
-    "Communion":            "397 - 432 - Nativity Carol",
+    "Communion":            "432 - Nativity Carol",
     "Meditation":           "441 - Silent Night",
     "Recessional":          "437 - Joy to the World"
 }
