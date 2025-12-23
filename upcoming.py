@@ -90,14 +90,14 @@ cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
 try:
     start_date = dt.datetime.strptime(start, '%Y-%m-%d')
     start = cal.loc[start_date,'feast']
-except ValueError as e:
+except ValueError:
     start_date = cal.loc[cal['feast']==start].index[0]
 
 # End date and feast
 try:
     end_date = dt.datetime.strptime(end, '%Y-%m-%d')
     end = cal.loc[end_date,'feast']
-except ValueError as e:
+except ValueError:
     end_date = cal.loc[cal['feast']==end].index[0]
 
 # Subset calendar
