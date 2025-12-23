@@ -34,7 +34,7 @@ class Args:
 
 args = Args(
     year = 2026,
-    publish = 'christmas-day'
+    publish = 'advent01'
 )
 
 args = parse_args()
