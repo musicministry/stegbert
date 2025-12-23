@@ -11,9 +11,7 @@
 # `[pwd]/posts/YYYY-MM-DD-feast.qmd` if no argument is passed, where
 # "YYYY-MM-DD" is the date of the liturgy and "feast" is the celebration for
 # that date. An optional callout can be added to the top of the page using the
-# `-c, --callout` flag. The new file and/or any changes are automatically
-# committed and pushed to GitHub unless the `-nocommit` and/or `-nopush` flags
-# are passed.
+# `-c, --callout` flag.
 # 
 # The music list to populate the file are taken from `.py` files for each
 # season (e.g., `advent.py`, `christmas.py`) containing dictinaries (one per
@@ -62,25 +60,20 @@ def parse_args():
                         help='Name and directory of csv file to write. Default to "posts/YYYY-MM-DD-feast.qmd"')
     parser.add_argument('-c', '--callout', nargs='?', type=str,
                         help='Optional text to include in a callout at the top of the page')
-    parser.add_argument('-nocommit', action='store_true', 
-                        help='Do not automatically commit to GitHub.')
-    parser.add_argument('-nopush', action='store_true', 
-                        help='Do not automatically push to GitHub.')
     return parser.parse_args()
 
-class Args:
-    def __init__(self, year, publish='next', outfile='auto', callout=None, nocommit=False, nopush=False):
-        self.year = year
-        self.publish = publish
-        self.outfile = outfile
-        self.callout = callout
-        self.nocommit = nocommit
-        self.nopush = nopush
+# # For testing
+# class Args:
+#     def __init__(self, year, publish='next', outfile='auto', callout=None):
+#         self.year = year
+#         self.publish = publish
+#         self.outfile = outfile
+#         self.callout = callout
 
-args = Args(
-    year = 2026,
-    # publish = 'advent01'
-)
+# args = Args(
+#     year = 2026,
+#     # publish = 'advent01'
+# )
 
 args = parse_args()
 
@@ -180,13 +173,3 @@ with open(outfile, 'w') as file:
     file.write('\n')
 
 print(f'"{outfile}" file created.')
-
-# Commit to Git: For clarity, get the inverse of the arg flags, since they are
-# used to supress the default behavior.
-commit = not args.nocommit
-push = not args.nopush
-if commit:
-    u.git_commit(
-        file=outfile,
-        message='Release next lineup',
-        push=push)
