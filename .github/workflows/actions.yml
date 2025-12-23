@@ -2,7 +2,7 @@ name: run post.py
 
 on:
   schedule:
-    - cron: '5 * * * *' # At 00:00 on Sunday
+    - cron: '*/5 * * * *' # At 00:00 on Sunday
 
 jobs:
   quarto-render-and-deploy:
@@ -32,9 +32,7 @@ jobs:
         # uncomment below and fill to pin a version
         # version: 0.9.600
     - name: Run post.py
-      env:
-        SOME_SECRET: ${{ secrets.SOME_SECRET }}
-      run: python posts.py --year 2026
+      run: python post.py --year 2026
     - name: Commit file
       run: |
         git config --local user.email "action@github.com"
