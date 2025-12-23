@@ -129,11 +129,14 @@ def lityear(year):
     # Return the cycle year that is evenly divisible by 3
     return years[ind][0][0]
 
-def git_commit(file, message):
-    """Commit file `file` to GitHub with message `message`"""
+def git_commit(file, message, push=True):
+    """Commit file `file` to GitHub with message `message`, push if `push` is
+    True.
+    """
     subprocess.run(['git', 'add', file])
     subprocess.run(['git', 'commit', '-m', message])
-    subprocess.run(['git', 'push', 'origin', 'quarto'])
+    if push:
+        subprocess.run(['git', 'push', 'origin', 'quarto'])
 
 # =========================================================================== #
 # Markdown tables

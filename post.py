@@ -23,14 +23,20 @@ def parse_args():
                         help='Name and directory of csv file to write. Default to "posts/YYYY-MM-DD-feast.qmd"')
     parser.add_argument('-c', '--callout', nargs='?', type=str,
                         help='Optional text to include in a callout at the top of the page')
+    parser.add_argument('-nocommit', metavar='nocommit', action='store_true', 
+                        help='Do not automatically commit to GitHub.')
+    parser.add_argument('-nopush', metavar='nopush', action='store_true', 
+                        help='Do not automatically push to GitHub.')
     return parser.parse_args()
 
 class Args:
-    def __init__(self, year, publish, outfile='auto', callout=None):
+    def __init__(self, year, publish, outfile='auto', callout=None, nocommit=False, nopush=False):
         self.year = year
         self.publish = publish
         self.outfile = outfile
         self.callout = callout
+        self.nocommit = nocommit
+        self.nopush = nopush
 
 args = Args(
     year = 2026,
@@ -126,8 +132,12 @@ with open(outfile, 'w') as file:
 
 print(f'"{outfile}" file created.')
 
-# Commit to Git
-u.git_commit(
-    file=outfile,
-    message='Release next lineup'
-    )
+# Commit to Git: For clarity, get the inverse of the arg flags, since they are
+# used to supress the default behavior.
+commit = not args.nocommit
+push = not args.nopush
+if commit:
+    u.git_commit(
+        file=outfile,
+        message='Release next lineup'
+        push=push)
