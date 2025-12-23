@@ -55,7 +55,7 @@ holy_family = {
 
     "RA": [24, 25],
     "Responsorial Psalm":   "https://youtu.be/4gjqxJ_eL-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation":   "https://youtu.be/4gjqxJ_eL-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "https://youtu.be/hzF6qrivXl8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Preparation of Gifts": "436 - Wood of the Cradle",
     "Communion":            "455 - Once in Royal David's City",
