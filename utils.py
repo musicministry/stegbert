@@ -5,6 +5,7 @@ from titlecase import titlecase
 from tabulate import tabulate
 from numbr import Cast as num
 import numpy as np
+import subprocess
 import importlib
 import requests
 import yaml
@@ -127,6 +128,12 @@ def lityear(year):
     ind = (year-np.array([A, B, C]))%3==0
     # Return the cycle year that is evenly divisible by 3
     return years[ind][0][0]
+
+def git_commit(file, message):
+    """Commit file `file` to GitHub with message `message`"""
+    subprocess.run(['git', 'add', file])
+    subprocess.run(['git', 'commit', '-m', message])
+    subprocess.run(['git', 'push', 'origin', 'quarto'])
 
 # =========================================================================== #
 # Markdown tables

@@ -63,9 +63,9 @@ except ValueError:
 
 # File name
 if args.outfile.lower() == 'auto':
-    outfile = f'{str(date.date())}-{feast}.qmd'
+    outfile = os.path.join('posts', f'{str(date.date())}-{feast}.qmd')
 else:
-    outfile = args.outfile
+    outfile = os.path.join('posts', args.outfile)
 
 # Subset calendar
 df = cal.loc[feast]
@@ -88,7 +88,7 @@ hymns.pop('RA')
 if all('gloria' not in p.lower() and (season == 'advent' or season == 'lent') for p in parts):
     parts.insert(0, f'Gloria: *Gloria omitted during {titlecase(season)}*')
 
-with open(os.path.join('posts', outfile), 'w') as file:
+with open(outfile, 'w') as file:
     # Header
     file.write('---\n')
     file.write(f'title: {df["name"]}\n')
@@ -125,3 +125,9 @@ with open(os.path.join('posts', outfile), 'w') as file:
     file.write('\n')
 
 print(f'"{outfile}" file created.')
+
+# Commit to Git
+u.git_commit(
+    file=outfile,
+    message='Release next lineup'
+    )
