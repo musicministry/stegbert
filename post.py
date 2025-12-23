@@ -1,3 +1,11 @@
+# TODO:
+#   - Change --publish to default to None (or alternative) and automatically
+#     publish the next sunday from the time the script is run if nothing is
+#     passed to -p/--publish
+#   - Set up GitHub schedule to run this every Sun evening or Mon morning
+#   - Add script metadata
+
+
 # --------------------------------------------------------------------------- #
 # Packages
 from titlecase import titlecase
@@ -16,21 +24,21 @@ def parse_args():
         usage='%(prog)s [arguments]')
     parser.add_argument('-y', '--year', metavar='year', type=int,
                         help='Four-digit year to process')
-    parser.add_argument('-p', '--publish', type=str,
-                        help='Date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to publish')
+    parser.add_argument('-p', '--publish', type=str, default='next',
+                        help='Date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to publish. Defaults to next Sunday.')
     parser.add_argument('-o', '--outfile', nargs='?', type=str, 
                         default='auto',
                         help='Name and directory of csv file to write. Default to "posts/YYYY-MM-DD-feast.qmd"')
     parser.add_argument('-c', '--callout', nargs='?', type=str,
                         help='Optional text to include in a callout at the top of the page')
-    parser.add_argument('-nocommit', metavar='nocommit', action='store_true', 
+    parser.add_argument('-nocommit', action='store_true', 
                         help='Do not automatically commit to GitHub.')
-    parser.add_argument('-nopush', metavar='nopush', action='store_true', 
+    parser.add_argument('-nopush', action='store_true', 
                         help='Do not automatically push to GitHub.')
     return parser.parse_args()
 
 class Args:
-    def __init__(self, year, publish, outfile='auto', callout=None, nocommit=False, nopush=False):
+    def __init__(self, year, publish='next', outfile='auto', callout=None, nocommit=False, nopush=False):
         self.year = year
         self.publish = publish
         self.outfile = outfile
@@ -40,7 +48,7 @@ class Args:
 
 args = Args(
     year = 2026,
-    publish = 'advent01'
+    # publish = 'advent01'
 )
 
 args = parse_args()
@@ -57,14 +65,24 @@ lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
 cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
                   parse_dates=['date'], index_col='feast')
 
+# Get next Sunday, if needed
+if args.publish.lower() == 'next':
+    today = dt.datetime.today()
+    next_sun = u.next_sunday(from_date=today)
+    publish = str(next_sun)
+    print(f'Publishing next Sunday {dt.datetime.strftime(next_sun, format="%B %d, %Y")}')
+else:
+    publish = args.publish
+
 # Date and feast
 try:
-    date = dt.datetime.strptime(args.publish, '%Y-%m-%d')
-    feast = cal[cal['date']==args.publish].index
+    date = dt.datetime.strptime(publish, '%Y-%m-%d')
+    feast = cal[cal['date']==publish].index
     if len(feast) > 1:
         raise IndexError(f'More than one liturgy was found for {dt.datetime.strftime(date.date(), format="%B %d")}. Please specify a feast to publish instead of a date and try again.')
+    feast = feast[0]
 except ValueError:
-    feast = args.publish
+    feast = publish
     date = cal.loc[feast]['date']
 
 # File name
@@ -139,5 +157,5 @@ push = not args.nopush
 if commit:
     u.git_commit(
         file=outfile,
-        message='Release next lineup'
+        message='Release next lineup',
         push=push)

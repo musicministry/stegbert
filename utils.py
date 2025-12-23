@@ -4,6 +4,7 @@ from IPython.display import Markdown, display
 from titlecase import titlecase
 from tabulate import tabulate
 from numbr import Cast as num
+import datetime as dt
 import numpy as np
 import subprocess
 import importlib
@@ -128,6 +129,33 @@ def lityear(year):
     ind = (year-np.array([A, B, C]))%3==0
     # Return the cycle year that is evenly divisible by 3
     return years[ind][0][0]
+
+def next_sunday(from_date):
+    """Return the next Sunday after `from_date`, not counting `from_date` if
+    `from_date` itself is a Sunday.
+    
+    Arguments
+    ---------
+    `from_date` : str or datetime object
+        Date from which to find the next Sunday. If str, must be of the format 
+        `YYYY-mm-dd`.
+    
+    Returns
+    -------
+        datetime object of the next Sunday
+    """
+    # Convert to datetime if `from_date` is a string
+    if isinstance(from_date, str):
+        start_date = dt.datetime.strptime(from_date, "%Y-%m-%d").date()
+    else:
+        start_date = from_date
+    
+    # Find the first Sunday after the start date
+    days_ahead = 6 - start_date.weekday()  # 6 is Sunday
+    if days_ahead == 0:  # If today is Sunday, get the next one
+        days_ahead += 7
+    next_sunday = start_date + dt.timedelta(days=days_ahead)
+    return next_sunday.date()
 
 def git_commit(file, message, push=True):
     """Commit file `file` to GitHub with message `message`, push if `push` is
