@@ -8,6 +8,10 @@ categories:
 image: /_images/dates/dec/28.png
 ---
 
+::: {.callout-important title="Take heed!"}
+The Mass setting for the Christmas season is the *Christmas Carol Mass* with *A Christmas Gloria*.
+:::
+
 ### Hymns
 
 All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
