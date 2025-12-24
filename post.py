@@ -62,6 +62,8 @@ def parse_args():
                         help='Optional text to include in a callout at the top of the page')
     return parser.parse_args()
 
+args = parse_args()
+
 # # For testing
 # class Args:
 #     def __init__(self, year, publish='next', outfile='auto', callout=None):
@@ -74,14 +76,6 @@ def parse_args():
 #     year = 2026,
 #     # publish = 'advent01'
 # )
-
-args = parse_args()
-
-# GitHub token
-try:
-    SOME_SECRET = os.environ["SOME_SECRET"]
-except KeyError:
-    SOME_SECRET = "Token not available!"
 
 # --------------------------------------------------------------------------- #
 # Main program
