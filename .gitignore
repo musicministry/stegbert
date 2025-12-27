@@ -1,4 +1,6 @@
-*.tex
+.venv
+
+tex
 *.pdf
 /YearA/*.tex
 /YearA/*.pdf
