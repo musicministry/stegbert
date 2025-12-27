@@ -67,7 +67,7 @@ args = parse_args()
 
 # # For testing
 # class Args:
-#     def __init__(self, year, start, end, priority=0, outfile='upcoming-staged.qmd'):
+#     def __init__(self, year, start, end, priority=0, outfile='next-lists.py'):
 #         self.year = year
 #         self.start = start
 #         self.end = end
@@ -77,8 +77,8 @@ args = parse_args()
 # args = Args(
 #     year = 2026,
 #     start = 'ot02',
+#     end='ot06',
 #     priority = 1,
-#     end='ot04'
 # )
 
 start = args.start
