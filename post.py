@@ -146,7 +146,7 @@ def main():
         file.write('categories:\n')
         file.write(f'  - {df.year}\n')
         file.write(f'  - {titlecase(df.season)}\n')
-        file.write(f'image: /_images/dates/{dt.datetime.strftime(date, format="%b").lower()}/{int(df["day"])}.png\n')
+        file.write(f'image: /_images/dates/{dt.datetime.strftime(date, format="%b").lower()}/{str(df["day"]).zfill(2)}.png\n')
         file.write('---\n\n')
 
         # Callout
