@@ -27,7 +27,7 @@ jobs:
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
     - name: Run post.py
-      run: python post.py --year 2026
+      run: python post.py 2026
     - name: Commit file
       run: |
         git config --local user.email "action@github.com"

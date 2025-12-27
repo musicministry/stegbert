@@ -21,15 +21,15 @@
 # setting to be used, and a list of Mass parts to include.
 #
 # To execute in terminal:
-# python post.py --year 2026
+# python post.py 2026
 #
 #     or
 #
-# python upcoming.py --year 2026 --publish '2025-11-30'
+# python upcoming.py 2026 --publish '2025-11-30'
 #
 #     or
 #
-# python upcoming.py --year 2026 --publish 'advent01'
+# python upcoming.py 2026 --publish 'advent01'
 #
 # Feast names are taken from the name of the dictionaries containing the
 # music schedules and must be a name found in the `name` column of the
@@ -51,7 +51,7 @@ def parse_args():
         description='Function control parameters.',
         prog='upcoming',
         usage='%(prog)s [arguments]')
-    parser.add_argument('-y', '--year', metavar='year', type=int,
+    parser.add_argument('year', metavar='year', type=int,
                         help='Four-digit year to process')
     parser.add_argument('-p', '--publish', type=str, default='next',
                         help='Date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to publish. Defaults to next Sunday.')

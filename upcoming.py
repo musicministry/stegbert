@@ -3,23 +3,22 @@
 # date:   20 December 2025
 #
 # This script creates a Quarto markdown page containing music schedules from
-# the date or feast passed to `-s, --start` through the date or feast passed to
-# `-e, --end` for the calendar year passed to `-y, --year`. The output file
-# name can optionally be set using the `-o, --output` flag and defaults to
-# `upcoming.qmd` if no argument is passed. The music lists to populate the
-# file are taken from `.py` files for each season (e.g., `advent.py`,
-# `christmas.py`) containing dictinaries (one per liturgy) where the keys
-# specify hymn in the Mass (e.g., "Professional") and the value is the name of
-# the hymn. Each dictionary should also contain URLs for responsorial psalms
-# and gospel acclamations, the name of the Mass setting to be used, and a list
-# of Mass parts to include.
+# the date or feast passed to `start` through the date or feast passed to `end`
+# for the calendar year passed to `year`. The output file name can optionally
+# be set using the `-o, --output` flag and defaults to `upcoming.qmd` if no
+# argument is passed. The music lists to populate the file are taken from `.py`
+# files for each season (e.g., `advent.py`, `christmas.py`) containing 
+# dictinaries (one per liturgy) where the keys specify the hymn in the Mass
+# (e.g., "Professional") and the value is the name of the hymn. Each dictionary
+# should also contain URLs for responsorial psalms and gospel acclamation, the
+# name of the Mass setting to be used, and a list of Mass parts to include.
 #
 # To execute in terminal:
-# python upcoming.py --year 2026 --start 'advent01' --end 'advent04'
+# python upcoming.py 2026 'advent01' 'advent04'
 #
 #     or
 #
-# python upcoming.py --year 2026 --start '2025-11-30' --end '2025-12-21'
+# python upcoming.py 2026 '2025-11-30' '2025-12-21'
 #
 # or a combination of date/feast.
 #
@@ -43,11 +42,11 @@ def parse_args():
         description='Function control parameters.',
         prog='upcoming',
         usage='%(prog)s [arguments]')
-    parser.add_argument('-y', '--year', metavar='year', type=int,
+    parser.add_argument('year', metavar='year', type=int,
                         help='Four-digit year to process')
-    parser.add_argument('-s', '--start', type=str,
+    parser.add_argument('start', type=str,
                         help='First date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to process')
-    parser.add_argument('-e', '--end', type=str,
+    parser.add_argument('end', type=str,
                         help='Last date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to process')
     parser.add_argument('-o', '--outfile', nargs='?', type=str, 
                         default='upcoming.qmd',
