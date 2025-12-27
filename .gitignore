@@ -18,6 +18,7 @@ _freeze/
 .Rhistory
 .devcontainer/
 _images/.DS_Store
+_images/dates/.DS_Store
 Dockerfile
 docker-compose.yml
 _site/
