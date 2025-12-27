@@ -4,6 +4,7 @@ from IPython.display import Markdown, display
 from titlecase import titlecase
 from tabulate import tabulate
 from numbr import Cast as num
+from pathlib import Path
 import datetime as dt
 import numpy as np
 import subprocess
@@ -12,6 +13,7 @@ import requests
 import yaml
 import sys
 import re
+import os
 
 # =========================================================================== #
 # Load video YAMLs from GitHub
@@ -165,6 +167,318 @@ def git_commit(file, message, push=True):
     subprocess.run(['git', 'commit', '-m', message])
     if push:
         subprocess.run(['git', 'push', 'origin', 'quarto'])
+
+# The following were created with the assistance of claude.ai
+
+def get_file_path(filename):
+    """Get full path to qmd file `filename` in source repo."""
+    # Set dir
+    try:
+        planning_book = Path(__file__).parent.parent / 'planning-book'
+    except NameError:
+        planning_book = Path.cwd().parent / 'planning-book'
+
+    # Filename includes subdirectory (e.g., 'ordinary-time/ot02.qmd')
+    qmd_file = planning_book / 'content' / filename
+    
+    # Return the file, if it exists.
+    if qmd_file.exists():
+        return qmd_file
+    
+    raise FileNotFoundError(f"Could not find {filename} in {planning_book}")
+
+def get_hymn_list(file_path, lit_year):
+    """Extract frontmatter dictionary for liturgical year `lit_year` from the appropriate qmd file `file_path`."""
+    with open(file_path, 'r') as f:
+        content = f.read()
+    
+    # Find the str block called "frontmatter" in the qmd file
+    pattern = r'frontmatter\s*=\s*"""(.*?)"""'
+    match = re.search(pattern, content, re.DOTALL)
+    
+    # Return the hymns for the desired liturgical year
+    if match:
+        results = yaml.safe_load(match.group(1))
+        key = list(results.keys())[0]
+        try:
+            return results[key][lit_year.lower()]
+        except KeyError:
+            return results[key]['abc']
+    return None
+
+def process_week_range(start, end, df, lit_year):
+    """
+    Process frontmatter for files between start and end filenames (inclusive).
+    
+    Args:
+        start: Starting feast (e.g., 'ot02')
+        end: Ending feast (e.g., 'ot04.qmd')
+        df: DataFrame with columns: weekday, feast, season, name, priority, year, 
+            month, day, dayofweek, filename, date
+        lit_year: liturgical year to extract, 'a', 'b', or 'c'
+    
+    Returns:
+        dict: Mapping of filename to dict containing frontmatter + metadata
+    """
+    # Get slice of dataframe between the two files
+    start_idx = df[df['feast'] == start].index[0]
+    end_idx = df[df['feast'] == end].index[0]
+    week_range = df.loc[start_idx:end_idx]
+    
+    # Extract frontmatter for each file
+    results = {}
+    for _, row in week_range.iterrows():
+        # Hymn list file name
+        filename = row['filename']
+        # Mass setting file name (season-dependent)
+        if row['season'] == 'ordinary-time':
+            if bool(row['date'] < df[df['feast']=='ash-wednesday']['date'].values):
+                mass_filename = os.path.join(row['season'], 'ot-winter.qmd')
+            else:
+                mass_filename = os.path.join(row['season'], 'ot-summer.qmd')
+        else:
+            mass_filename = os.path.join(row['season'], row['season'])
+        # Get the hymn and Mass parts lists
+        try:
+            file_path = get_file_path(filename)
+            mass_file_path = get_file_path(mass_filename)
+            params = get_hymn_list(file_path, lit_year)
+            masses = get_hymn_list(mass_file_path, lit_year)
+            
+            if params:
+                # Include dataframe metadata with frontmatter
+                results[filename] = {
+                    'lit_year': lit_year,
+                    'date': row['date'],
+                    'weekday': row['weekday'],
+                    'season': row['season'],
+                    'name': row['name'],
+                    'feast': row['feast'],
+                    'priority': row['priority'],
+                    'mass': masses,
+                    'frontmatter': params
+                }
+            else:
+                print(f"Warning: No frontmatter found in {filename}")
+                
+        except FileNotFoundError as e:
+            print(f"Error: {e}")
+    
+    return results
+
+def flatten_frontmatter_to_dict(frontmatter, feast_name, season, lit_year, mass_setting=None):
+    """
+    Convert nested frontmatter structure to flat dictionary format.
+    
+    Args:
+        frontmatter: Nested dict from QMD file
+        feast_name: Name for the dictionary variable (e.g., 'christmas_day')
+        mass_setting: Optional mass setting name
+    
+    Returns:
+        dict: Flat dictionary with priority placeholders in specific order
+    """
+    # Prioritization
+    priority_order = {'required': 0, 'preferred': 1, 'optional': 2}
+    
+    # Use ordered dict to preserve structure
+    result = {}
+    
+    # 1. Add mass setting if provided
+    if mass_setting:
+        result['Mass'] = mass_setting['holy-holy-holy']['list'][0]['name']
+    
+    # 2. Add mass parts
+    mass_parts = ['Gloria', 'Holy', f'Memorial Acclamation {lit_year.upper()}', 'Amen', 'Lamb of God']
+    if season.lower() == 'advent' or season.lower() == 'lent':
+        mass_parts.remove('Gloria')
+    result['parts'] = [f'{p}: {result["Mass"]}' for p in mass_parts]
+    
+    # 3. Processional
+    if 'processional' in frontmatter:
+        result['Processional'] = format_hymn_options(frontmatter['processional'], priority_order)
+    
+    # 4. RA placeholder
+    result['RA'] = ['[psalm_page]', '[gospel_page]']
+    
+    # 5. Responsorial Psalm
+    if 'psalm' in frontmatter:
+        result['Responsorial Psalm'] = format_hymn_options(frontmatter['psalm'], priority_order)
+    
+    # 6. Gospel Acclamation placeholder
+    result['Gospel Acclamation'] = '[required] -- URL'
+    
+    # 7. Preparation of Gifts
+    if 'offertory' in frontmatter:
+        result['Preparation of Gifts'] = format_hymn_options(frontmatter['offertory'], priority_order)
+    
+    # 8. Communion
+    if 'communion' in frontmatter:
+        result['Communion'] = format_hymn_options(frontmatter['communion'], priority_order)
+    
+    # 9. Meditation
+    if 'meditation' in frontmatter:
+        result['Meditation'] = format_hymn_options(frontmatter['meditation'], priority_order)
+    
+    # 10. Recessional
+    if 'recessional' in frontmatter:
+        result['Recessional'] = format_hymn_options(frontmatter['recessional'], priority_order)
+    
+    return result
+
+def format_hymn_options(moment_data, priority_order, is_gospel=False):
+    """
+    Format hymn options with priority labels.
+    
+    Args:
+        moment_data: Dict with 'list' of hymns
+        priority_order: Priority ranking dict
+        is_gospel: If True, format as URL placeholder
+    
+    Returns:
+        str or list: Formatted hymn(s)
+    """
+    # Sort hymn options by priority when applicable
+    sorted_hymns = sorted(moment_data['list'], 
+                         key=lambda h: priority_order.get(h.get('priority', 'optional'), 3))
+    
+    # If only one hymn, return as string
+    if len(sorted_hymns) == 1:
+        hymn = sorted_hymns[0]
+        name = hymn['name']
+        composer = f" ({hymn['composer']})" if 'composer' in hymn else ""
+        priority = hymn.get('priority', 'optional')
+        
+        if is_gospel:
+            return f"[{priority}] -- URL"
+        else:
+            return f"[{priority}] - {name}{composer}"
+    
+    # If multiple hymns, return as list
+    else:
+        options = []
+        for hymn in sorted_hymns:
+            name = hymn['name']
+            composer = f" ({hymn['composer']})" if 'composer' in hymn else ""
+            priority = hymn.get('priority', 'optional')
+            
+            if is_gospel:
+                options.append(f"[{priority}] -- URL")
+            else:
+                options.append(f"[{priority}] - {name}{composer}")
+        
+        return options
+
+def format_dict_as_python(dict_data, var_name):
+    """
+    Format dictionary as Python code string for writing to .py file.
+    
+    Argsuments
+    ----------
+        dict_data: Dictionary to format
+        var_name: Variable name for the dictionary
+    
+    Returns:
+        str: Formatted Python code
+    """
+    # Define the dictionary name in the .py file
+    lines = [f"{var_name} = {{"]
+    
+    # Loop through the dictionary items to build the new code string
+    for key, value in dict_data.items():
+        if key.lower() == 'processional' or key.lower() == 'gospel acclamation':
+            if isinstance(value, list):
+                # Format lists with proper indentation
+                lines.append(f'    "{key}": [')
+                for item in value:
+                    lines.append(f'        "{item}",')
+                # Remove trailing comma from last item
+                if lines[-1].endswith(','):
+                    lines[-1] = lines[-1][:-1]+'\n'
+                lines.append('    ],')
+            else:
+                lines.append(f'    "{key}": "{value}",\n')
+        else:
+            if isinstance(value, list):
+                # Format lists with proper indentation
+                lines.append(f'    "{key}": [')
+                for item in value:
+                    lines.append(f'        "{item}",')
+                # Remove trailing comma from last item
+                if lines[-1].endswith(','):
+                    lines[-1] = lines[-1][:-1]
+                lines.append('    ],')
+            else:
+                lines.append(f'    "{key}": "{value}",')
+
+    # Remove trailing comma from last item
+    if lines[-1].endswith(','):
+        lines[-1] = lines[-1][:-1]
+    
+    lines.append('}')
+    
+    return '\n'.join(lines)
+
+def process_and_export_to_py(results, output_file='hymn_data.py'):
+    """
+    Process all weeks and export to Python file with dictionary definitions.
+    
+    Args:
+        results: Dict from process_week_range()
+        output_file: Path to output .py file
+    """
+    with open(output_file, 'w') as f:
+        # File header and metadata
+        f.write('# =============================================================================\n')
+        f.write(f'# {unkey(results[list(results.keys())[0]]["season"])} {results[list(results.keys())[0]]["date"].year}\n')
+        f.write(f'# {results[list(results.keys())[0]]["name"]} through {results[list(results.keys())[-1]]["name"]}\n')
+        f.write(f'# Liturgical Year {results[list(results.keys())[0]]["lit_year"].upper()}\n')
+        f.write('#\n')
+        f.write(f'# Updated {dt.datetime.strftime(dt.datetime.today(), format="%B %Y")}\n')
+        f.write('#\n')
+        f.write('# Auto-generated hymn data dictionaries\n')
+        f.write('#\n')
+        f.write('# =============================================================================\n')
+        f.write('# Entry template:\n')
+        f.write('#\n')
+        f.write('#     seasonNN = {\n')
+        f.write('#         "Mass": "Mass setting",\n')
+        f.write('#         "parts": ["Gloria", "Holy", "Memorial Acclamation A", "Amen",\n')
+        f.write('#                   "Lamb of God"],\n')
+        f.write('#\n')
+        f.write('#         "Processional":         "NNN - Song Title",\n')
+        f.write('#\n')
+        f.write('#         "RA": [N, N],\n')
+        f.write('#         "Responsorial Psalm":   "YouTube video URL",\n')
+        f.write('#         "Gospel Acclamation":   "YouTube video URL",\n')
+        f.write('#\n')
+        f.write('#         "Preparation of Gifts": "NNN - Song Title",\n')
+        f.write('#         "Communion":            "NNN - Song Title",\n')
+        f.write('#         "Recessional":          "NNN - Song Title",\n')
+        f.write('#     }\n')
+        f.write('#\n')
+        f.write('# Repeat this YAML block for each liturgy -- but be sure to give each block a\n# unique name that matches a `feast` name in the liturgical calendar dataframe.\n# "Mass" (str) and "parts" (list of strings) are required. Other keys can be\n# anything or as many as desired. These will be rendered in the order in which\n# they appear here. Replace N and NNN with page or hymnal song numbers.\n')
+        f.write('#\n')
+        f.write('# =============================================================================\n\n')
+
+        # Build the file
+        for filename, data in results.items():
+            # Create variable name from feast code
+            var_name = data['feast']
+
+            # Flatten the frontmatter
+            flat_dict = flatten_frontmatter_to_dict(
+                data['frontmatter'],
+                var_name,
+                season=data['season'],
+                lit_year=data['lit_year'],
+                mass_setting=data['mass']
+            )
+            
+            # Format and write
+            py_code = format_dict_as_python(flat_dict, var_name)
+            f.write(py_code)
+            f.write('\n\n')
 
 # =========================================================================== #
 # Markdown tables
