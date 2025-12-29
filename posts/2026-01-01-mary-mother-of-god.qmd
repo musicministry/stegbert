@@ -1,0 +1,40 @@
+---
+title: Mary, Mother of God
+last-updated: 2025-12-27
+description: January 01, 2026
+categories:
+  - 2026
+  - Christmas
+image: /_images/dates/jan/01.png
+---
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">457 - Sing of Mary<br><br> {{< video https://www.youtube.com/watch?v=NedM6uN8TUA >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 26 <br><br> {{< video https://youtu.be/LcqkBimDhjs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 27 <br><br> {{< video https://youtu.be/JuH7sw1sobE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Preparation of Gifts:</strong></td><td style="width: 75%;">448 - Away in a Manger (Mueller)<br><br> {{< video https://www.youtube.com/watch?v=0h1-vpX8790 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">451 - Lo, How a Rose E'er Blooming<br><br> {{< video https://www.youtube.com/watch?v=h_RRlNtAlKg >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">458 - I Sing a Maid<br><br> {{< video https://www.youtube.com/watch?v=CIyxIu9Wkbk >}}</td></tr>
+</tbody>
+</table>
+
+### Mass Parts
+
+The Mass parts for Christmas will be taken from *Christmas Carol Mass*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;">{{< video https://www.youtube.com/watch?v=ERmvcErugvs >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;">{{< video https://youtu.be/iYYPSiyZO1I?t=423 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation C:</strong></td><td style="width: 75%;">{{< video https://youtu.be/iYYPSiyZO1I?t=532 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;">{{< video https://youtu.be/iYYPSiyZO1I?t=557 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;">{{< video https://youtu.be/iYYPSiyZO1I?t=601 >}}</td></tr>
+</tbody>
+</table>
+
+
