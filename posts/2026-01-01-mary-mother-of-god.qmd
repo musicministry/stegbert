@@ -3,8 +3,7 @@ title: Mary, Mother of God
 last-updated: 2025-12-27
 description: January 01, 2026
 categories:
-  - 2026
-  - Christmas
+  - Christmas 2026
 image: /_images/dates/jan/01.png
 ---
 

@@ -3,8 +3,7 @@ title: Epiphany of the Lord
 last-updated: 2025-12-30
 description: January 04, 2026
 categories:
-  - 2026
-  - Christmas
+  - Christmas 2026
 image: /_images/dates/jan/04.png
 ---
 
