@@ -17,10 +17,12 @@ _freeze/
 
 .Rhistory
 .devcontainer/
+.DS_Store
 _images/.DS_Store
 _images/dates/.DS_Store
 Dockerfile
 docker-compose.yml
 _site/
 
-.DS_Store
+__pycache__/*
+2026-A/__pycache__/*
