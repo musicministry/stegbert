@@ -32,6 +32,7 @@ def parse_args():
         usage='%(prog)s [arguments]')
     parser.add_argument('-y', '--year', metavar='year', type=int,
                         help='Four-digit year to process')
+    return parser.parse_args()
 
 args = parse_args()
 
