@@ -120,7 +120,7 @@ with open(args.outfile, 'w') as file:
     file.write('---\n\n')
 
     # Preface
-    file.write("""All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. Christmas season Mass parts will be provided as handouts. Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.\n\n""")
+    file.write("""All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. **Please note that the Mass setting is indicated for every week at the top of each list. Click its name to jump to links for Mass parts.** Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.\n\n""")
 
     # Callout
     if args.callout is not None:
