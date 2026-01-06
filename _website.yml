@@ -7,6 +7,7 @@ website:
         href: schedules.qmd
       - text: "Looking Ahead"
         href: upcoming.qmd
+      - stdymphna.qmd
     logo: _images/trebleclef.png
   announcement:
     icon: info-circle
