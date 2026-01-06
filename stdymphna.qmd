@@ -37,4 +37,7 @@ Coming soon.
 
 <audio controls="">
   <source src="./_audio/st-dymphna-lambofgod.mp3" type="audio/wav"/>
-</audio>  
+</audio>
+<br>
+
+*Recorded by members of the [Wilmington Choral Society](https://www.wilmingtonchoralsociety.com/), directed by Byron Marshall with accompanists Sheryl Tjon and Luis Barragan.*
