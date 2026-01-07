@@ -39,7 +39,6 @@
 import datetime as dt
 import pandas as pd
 import argparse
-import yaml
 import sys
 import os
 import utils as u
@@ -63,9 +62,9 @@ def parse_args():
                         help='Name and directory of csv file to write. Default to "[pwd]/[yearDir]/next_lists.py"')
     return parser.parse_args()
 
-args = parse_args()
-
-# # For testing
+# =========================================================================== #
+# Local development
+#
 # class Args:
 #     def __init__(self, year, start, end, priority=0, outfile='next-lists.py'):
 #         self.year = year
@@ -80,7 +79,10 @@ args = parse_args()
 #     end='ot06',
 #     priority = 1,
 # )
+# =========================================================================== #
 
+# Command line arguments
+args = parse_args()
 start = args.start
 end = args.end
 
