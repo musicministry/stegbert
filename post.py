@@ -62,9 +62,9 @@ def parse_args():
                         help='Optional text to include in a callout at the top of the page')
     return parser.parse_args()
 
-args = parse_args()
+# =========================================================================== #
+# Local development
 
-# # For testing
 # class Args:
 #     def __init__(self, year, publish='next', outfile='auto', callout=None):
 #         self.year = year
@@ -74,8 +74,17 @@ args = parse_args()
 
 # args = Args(
 #     year = 2026,
-#     # publish = 'advent01'
+#     publish = 'baptism'
 # )
+
+# =========================================================================== #
+
+# Command line arguments
+args = parse_args()
+
+# GitHub token
+u.load_env_file()
+token = os.environ.get('GITHUB_TOKEN')
 
 # --------------------------------------------------------------------------- #
 # Main program
@@ -123,9 +132,30 @@ def main():
     # Load the schedules and fix the keys
     hymn_lists = u.get_hymn_lists(season)
     hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
+    hymns = hymn_lists[feast]
+
+    # Check video availability
+    linkcheck = {}
+    ra_linkcheck = {}
+    for k,v in hymns.items():
+        # Ignore RA and Mass setting info
+        if (k.lower() == 'mass') or (k.lower() == 'ra'):
+            pass
+        # Handle Mass parts separately
+        elif k.lower() == 'parts':
+            names = [' '.join(i.split(': ')[::-1]) for i in v]
+            urls = [u.get_url(i) for i in names]
+            linkcheck.update({u.keyify(n):l for n,l in zip(names, urls)})
+        # Separate dict for R&A, since we don't need a repo issue for these
+        elif 'http' in v:
+            ra_linkcheck.update({' '.join([feast, k]): v})
+        # Otherwise, just keyify the hymn name and get the URL
+        else:
+            n = u.keyify(v.split('-')[-1].strip())
+            l = u.get_url(n)
+            linkcheck.update({n: l})
 
     # Parse the dictionary
-    hymns = hymn_lists[feast]
     mass = hymns['Mass']
     parts = hymns['parts']
     RA = hymns['RA']
@@ -173,6 +203,74 @@ def main():
         file.write('\n')
 
     print(f'"{outfile}" file created.')
+
+    # Check URLs for video availability
+    # Currently, no action is taken for R&A videos, since these are not
+    # contained in the `song-urls` repo and these videos will have been
+    # manually retrieved very recently.
+    print('Checking video availability...')
+    unavailable_videos = []
+    missing_videos = []
+    for k,v in linkcheck.items():
+        has_url, is_available, status, title = u.check_video_availability(v)
+        if not has_url:
+            # Missing URL - needs to be added
+            missing_videos.append({
+                'hymn': k,
+                'url': v,
+                'status': status
+            })
+        elif not is_available:
+            # URL exists but video unavailable
+            unavailable_videos.append({
+                'hymn': k,
+                'url': v,
+                'status': status
+            })
+
+    # Create GitHub issue for any unavailable video extracted from the
+    # `musicministry/song-urls` repo
+    if unavailable_videos or missing_videos:
+        success, unavail_url, missing_url, skip_unavail, skip_missing = create_github_issues(
+            unavailable_videos=unavailable_videos,
+            missing_videos=missing_videos,
+            token=token,
+            owner='musicministry',
+            target_repo='song-urls'
+        )
+
+    # Print summary
+    print("\n" + "="*60)
+    print("VIDEO CHECK SUMMARY")
+    print("-"*60)
+
+    # Unavailable videos (broken URLs)
+    if unavailable_videos:
+        new_unavail = len(unavailable_videos) - skip_unavail
+        if unavail_url:
+            print(f"✓ Created issue for {new_unavail} unavailable video(s)")
+            print(f"  Issue: {unavail_url}")
+        elif (skip_unavail != 0) and (skip_unavail == len(unavailable_videos)):
+            print(f"⚠ All {len(unavailable_videos)} unavailable video(s) already flagged")
+        else:
+            print(f"✗ Failed to create issue for unavailable videos")
+    else:
+        print("✓ No unavailable videos found")
+
+    # Missing videos (no URLs)
+    if missing_videos:
+        new_missing = len(missing_videos) - skip_missing
+        if missing_url:
+            print(f"✓ Created issue for {new_missing} missing video URL(s)")
+            print(f"  Issue: {missing_url}")
+        elif (skip_missing !=0) and (skip_missing == len(missing_videos)):
+            print(f"⚠ All {len(missing_videos)} missing video(s) already flagged")
+        else:
+            print(f"✗ Failed to create issue for missing videos")
+    else:
+        print("✓ No missing video URLs found")
+
+    print("="*60 + "\n")
 
 if __name__ == "__main__":
     main()

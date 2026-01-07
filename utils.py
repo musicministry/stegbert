@@ -10,6 +10,7 @@ import numpy as np
 import subprocess
 import importlib
 import requests
+import yt_dlp
 import yaml
 import sys
 import re
@@ -46,8 +47,12 @@ def ra(page):
 
 def keyify(string: str):
     """Convert human-readable titlecase to lowercase hyphen-separated string."""
-    string = re.sub(r'[^a-zA-Z0-9]', ' ', string)
-    return string.lower().replace('  ', ' ').replace(' ', '-')
+    # Remove notes, if any
+    if "|" in string:
+        string = string.split("|")[0].strip()
+    # Remove punctuation and special characters
+    string = re.sub(r'[^a-zA-Z0-9]', ' ', string).strip().lower()
+    return '-'.join(string.split())
 
 def unkey(string: str):
     """Convert lowercase hyphen-separated string to human-readably titlecase."""
@@ -59,14 +64,14 @@ def md(hymn: str):
 
 def get_url(hymn, urls=hymn_videos):
     """Get video URL for 'hymn' from `urls` if available. Otherwise, returns None."""
-    # Get notes, if any
-    if "|" in hymn:
-        hymn = hymn.split("|")[0].strip()
-    # Remove punctuation and special characters
-    hymn_key = re.sub('[^A-Za-z0-9 ]+', '', hymn.strip())
-    # Replace spaces and make lowercase
-    hymn_key = hymn_key.replace('  ', ' ').replace(' ', '-').lower()
-    # print(hymn_key)
+    # # Get notes, if any
+    # if "|" in hymn:
+    #     hymn = hymn.split("|")[0].strip()
+    # # Remove punctuation and special characters
+    # hymn_key = re.sub('[^A-Za-z0-9 ]+', ' ', hymn.strip())
+    # # Replace spaces and make lowercase
+    # hymn_key = hymn_key.replace('  ', ' ').replace(' ', '-').lower()
+    hymn_key = keyify(hymn)
     # Get hyperlink
     if hymn_key in urls.keys():
         return urls[hymn_key]
@@ -434,7 +439,7 @@ def process_and_export_to_py(results, output_file='hymn_data.py'):
         f.write(f'# {results[list(results.keys())[0]]["name"]} through {results[list(results.keys())[-1]]["name"]}\n')
         f.write(f'# Liturgical Year {results[list(results.keys())[0]]["lit_year"].upper()}\n')
         f.write('#\n')
-        f.write(f'# Updated {dt.datetime.strftime(dt.datetime.today(), format="%B %Y")}\n')
+        f.write(f'# Updated: {dt.datetime.strftime(dt.datetime.today(), format="%B %Y")}\n')
         f.write('#\n')
         f.write('# Auto-generated hymn data dictionaries\n')
         f.write('#\n')
@@ -666,3 +671,235 @@ def massparts_video_table(season:str, setting:str, include:list, urls=hymn_video
     html += '</tbody>\n</table>\n\n'
     
     return html
+
+# =========================================================================== #
+# Video availability checks (functions made with help from claude.ai)
+
+def load_env_file():
+    """Load environment variables from .ghenv file."""
+    # Get environment variable file
+    env_file = Path('.ghenv')
+    # If the file exists, load the variables
+    if env_file.exists():
+        with open(env_file) as f:
+            for line in f:
+                if '=' in line and not line.startswith('#'):
+                    key, value = line.strip().split('=', 1)
+                    os.environ[key] = value
+
+def create_github_issues(unavailable_videos, missing_videos, token, owner, target_repo):
+    """
+    Create separate GitHub issues for unavailable videos vs missing video URLs.
+    
+    Args:
+        unavailable_videos: List of videos with URLs that are unavailable
+        missing_videos: List of entries where video URL is None/missing
+        token: GitHub token
+        owner: Repository owner
+        target_repo: Target repository name
+    
+    Returns:
+        tuple: (success, unavailable_issue_url, missing_issue_url, skipped_unavailable, skipped_missing)
+    """
+    # Keep track of unavailable and missing videos
+    unavailable_issue_url = None
+    missing_issue_url = None
+    skipped_unavailable = 0
+    skipped_missing = 0
+    
+    # Get already flagged issues
+    print("Checking for open issues...")
+    flagged_unavailable = get_existing_flagged_videos(
+        token=token,
+        owner=owner,
+        repo=target_repo,
+        label="video-unavailable")
+    flagged_missing = get_existing_flagged_videos(
+        token=token,
+        owner=owner,
+        repo=target_repo,
+        label="video-missing")
+    
+    # ========== Handle Unavailable Videos ==========
+    if unavailable_videos:
+        # Filter out already flagged
+        new_unavailable = [
+            video for video in unavailable_videos 
+            if video['url'] not in flagged_unavailable
+        ]
+        skipped_unavailable = len(unavailable_videos) - len(new_unavailable)
+       
+        # Report out
+        if skipped_unavailable > 0:
+            print(f"Skipping {skipped_unavailable} unavailable video(s) already flagged")
+        
+        # Create issue for new unavailable videos
+        if new_unavailable:
+            title = f"⚠️ {len(new_unavailable)} Unavailable Videos Detected"
+            body = "The following videos are no longer available and need replacement:\n\n"
+            
+            for video in new_unavailable:
+                body += f"- [ ] **{video.get('hymn', 'Unknown')}**\n"
+                body += f"  - URL: {video['url']}\n"
+                body += f"  - Status: {video['status']}\n"
+                body += "\n"
+            
+            body += "\n---\n*Auto-generated: Video URLs exist but videos are unavailable*"
+            
+            unavailable_issue_url = create_issue(
+                token=token,
+                owner=owner,
+                target_repo=target_repo,
+                title=title,
+                body=body,
+                labels=["automated", "video-unavailable", "needs-replacement"]
+            )
+    
+    # ========== Handle Missing Video URLs ==========
+    if missing_videos:
+        # Filter out already flagged (use hymn name as identifier)
+        flagged_missing_names = flagged_missing
+        new_missing = [
+            video for video in missing_videos
+            if video.get('hymn') not in flagged_missing_names
+        ]
+        skipped_missing = len(missing_videos) - len(new_missing)
+        
+        # Report out
+        if skipped_missing > 0:
+            print(f"Skipping {skipped_missing} missing video(s) already flagged")
+        
+        # Create issue for new missing videos
+        if new_missing:
+            title = f"🔍 {len(new_missing)} Missing Video URLs"
+            body = "The following entries are missing video URLs and need to be added:\n\n"
+            
+            for video in new_missing:
+                body += f"- [ ] **{video.get('hymn', 'Unknown')}**\n"
+                body += "  - Status: No URL provided\n"
+                if video.get('feast'):
+                    body += f"  - Feast: {video['feast']}\n"
+                if video.get('moment'):
+                    body += f"  - Moment: {video['moment']}\n"
+                body += "\n"
+            
+            body += "\n---\n*Auto-generated: Video URLs are missing from YAML data*"
+            
+            missing_issue_url = create_issue(
+                token, owner, target_repo,
+                title, body,
+                ["automated", "video-missing", "needs-url"]
+            )
+    
+    # Summary
+    if not unavailable_issue_url and not missing_issue_url:
+        if unavailable_videos or missing_videos:
+            print("All issues already flagged in open issues")
+        else:
+            print("No unavailable or missing videos found")
+    
+    return True, unavailable_issue_url, missing_issue_url, skipped_unavailable, skipped_missing
+
+def create_issue(token, owner, target_repo, title, body, labels):
+    """Helper function to create a GitHub issue."""
+    # Repo issues URL
+    url = f"https://api.github.com/repos/{owner}/{target_repo}/issues"
+    
+    # Metadata
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    # Data
+    data = {
+        "title": title,
+        "body": body,
+        "labels": labels,
+        "assignees": [owner]
+    }
+    # Create the issue
+    try:
+        response = requests.post(url, headers=headers, json=data)
+        response.raise_for_status()
+        issue_url = response.json()['html_url']
+        print(f"✓ Issue created: {issue_url}")
+        return issue_url
+    except requests.exceptions.RequestException as e:
+        print(f"✗ Failed to create issue: {e}")
+        return None
+
+def get_existing_flagged_videos(token, owner, repo, label):
+    """Get videos already flagged with a specific label."""
+    # Repo issues URL
+    url = f"https://api.github.com/repos/{owner}/{repo}/issues"
+
+    # Metadata
+    headers = {
+        "Authorization": f"token {token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    params = {
+        "state": "open",
+        "labels": label
+    }
+    # Extract information from open issues
+    try:
+        response = requests.get(url, headers=headers, params=params)
+        response.raise_for_status()
+        issues = response.json()
+        
+        if label == "video-unavailable":
+            # Extract YouTube URLs
+            flagged = set()
+            for issue in issues:
+                body = issue.get('body', '')
+                urls = re.findall(r'https://(?:www\.)?youtube\.com/watch\?v=[\w-]+', body)
+                flagged.update(urls)
+            return flagged
+        
+        elif label == "video-missing":
+            # Extract hymn names from issue body
+            flagged = set()
+            for issue in issues:
+                body = issue.get('body', '')
+                # Extract hymn names between ** markers
+                hymn_names = re.findall(r'\*\*([^*]+)\*\*', body)
+                flagged.update(hymn_names)
+            return flagged
+        
+    except requests.exceptions.RequestException as e:
+        print(f"Warning: Could not fetch existing issues: {e}")
+        return set()
+
+def check_video_availability(url):
+    """
+    Check video availability, handling missing URLs, which would result from a
+    missing video in the YAML file or a bug creating an incorrect video key.
+    
+    Returns:
+        tuple: (is_valid_url, is_available, status, title)
+    """
+    # Missing URL
+    if url is None or url == '' or not isinstance(url, str):
+        return False, False, "Missing URL", None
+    # Not a YouTube video URL
+    if 'youtube.com' not in url and 'youtu.be' not in url:
+        return False, False, "Invalid YouTube URL format", None
+    
+    # Check actual video availability
+    ydl_opts = {'quiet': True, 'no_warnings': True, 'extract_flat': True}
+    
+    try:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url, download=False)
+            return True, True, "Available", info.get('title', 'Unknown')
+    except Exception as e:
+        error_msg = str(e)
+        if "Private video" in error_msg:
+            return True, False, "Private", None
+        elif "Video unavailable" in error_msg:
+            return True, False, "Unavailable", None
+        elif "removed" in error_msg.lower():
+            return True, False, "Removed", None
+        else:
+            return True, False, "Error", None

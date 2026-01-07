@@ -55,6 +55,9 @@ def parse_args():
                          help='Optional text to include in a callout at the top of the page')
     return parser.parse_args()
 
+# =========================================================================== #
+# Local development
+
 # class Args:
 #     def __init__(self, year, start, end, callout=None):
 #         self.year = year
@@ -64,129 +67,235 @@ def parse_args():
 
 # args = Args(
 #     year = 2026,
-#     start = 'christmas-day',
-#     end = 'baptism',
-#     callout = 'The Mass setting changes for Advent, the Solemnity of the Immaculate Conception, and Christmas.'
+#     start = 'baptism',
+#     end = 'ot06',
 # )
 
+# =========================================================================== #
+
+# Command line arguments
 args = parse_args()
-start = args.start
-end = args.end
 
 # --------------------------------------------------------------------------- #
 # Main program
 
-# Load hymn lists
-cycle = u.lityear(args.year)
-process_dir = f'{args.year}-{cycle}'
-sys.path.append(os.path.join(process_dir))
+def main():
+    # GitHub token
+    u.load_env_file()
+    token = os.environ.get('GITHUB_TOKEN')
 
-lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
-cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
-                  parse_dates=['date'], index_col='date')
+    # Load hymn lists
+    cycle = u.lityear(args.year)
+    process_dir = f'{args.year}-{cycle}'
+    sys.path.append(os.path.join(process_dir))
 
-# Start date and feast
-try:
-    start_date = dt.datetime.strptime(start, '%Y-%m-%d')
-    start = cal.loc[start_date,'feast']
-except ValueError:
-    start_date = cal.loc[cal['feast']==start].index[0]
+    lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
+    cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
+                    parse_dates=['date'], index_col='date')
 
-# End date and feast
-try:
-    end_date = dt.datetime.strptime(end, '%Y-%m-%d')
-    end = cal.loc[end_date,'feast']
-except ValueError:
-    end_date = cal.loc[cal['feast']==end].index[0]
+    # Start date and feast
+    start = args.start
+    end = args.end
+    try:
+        start_date = dt.datetime.strptime(start, '%Y-%m-%d')
+        start = cal.loc[start_date,'feast']
+    except ValueError:
+        start_date = cal.loc[cal['feast']==start].index[0]
 
-# Subset calendar
-df = cal[start_date:end_date]
+    # End date and feast
+    try:
+        end_date = dt.datetime.strptime(end, '%Y-%m-%d')
+        end = cal.loc[end_date,'feast']
+    except ValueError:
+        end_date = cal.loc[cal['feast']==end].index[0]
 
-# Create a qmd file
-first_feast = df.loc[df['feast']==start, "name"].iloc[0]
-last_feast = df.loc[df['feast']==end, "name"].iloc[0]
-first_date = dt.datetime.strftime(start_date, "%B %d, %Y")
-last_date = dt.datetime.strftime(end_date, "%B %d, %Y")
+    # Subset calendar
+    df = cal[start_date:end_date]
 
-with open(args.outfile, 'w') as file:
-    # Header
-    file.write('---\n')
-    file.write(f'first-feast: {first_feast}\n')
-    file.write(f'first-date: {first_date}\n')
-    file.write(f'last-feast: {last_feast}\n')
-    file.write(f'last-date: {last_date}\n')
-    file.write('title: Hymn Schedules\n')
-    file.write(f'subtitle: "**{first_date}** ({first_feast}) through **{last_date}** ({last_feast})"\n')
-    file.write('---\n\n')
+    # Create a qmd file
+    first_feast = df.loc[df['feast']==start, "name"].iloc[0]
+    last_feast = df.loc[df['feast']==end, "name"].iloc[0]
+    first_date = dt.datetime.strftime(start_date, "%B %d, %Y")
+    last_date = dt.datetime.strftime(end_date, "%B %d, %Y")
 
-    # Preface
-    file.write("""All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. **Please note that the Mass setting is indicated for every week at the top of each list. Click its name to jump to links for Mass parts.** Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.\n\n""")
+    with open(args.outfile, 'w') as file:
+        # Header
+        file.write('---\n')
+        file.write(f'first-feast: {first_feast}\n')
+        file.write(f'first-date: {first_date}\n')
+        file.write(f'last-feast: {last_feast}\n')
+        file.write(f'last-date: {last_date}\n')
+        file.write('title: Hymn Schedules\n')
+        file.write(f'subtitle: "**{first_date}** ({first_feast}) through **{last_date}** ({last_feast})"\n')
+        file.write('---\n\n')
 
-    # Callout
-    if args.callout is not None:
+        # Preface
+        file.write("""All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. **Please note that the Mass setting is indicated for every week at the top of each list. Click its name to jump to links for Mass parts.** Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.\n\n""")
+
+        # Callout
+        if args.callout is not None:
+            file.write(
+                f'::: {{.callout-important title="Take heed!"}}\n' \
+                f'{args.callout}\n' \
+                ':::\n\n'
+            )
+        
+        # Hymn schedules
         file.write(
-            f'::: {{.callout-important title="Take heed!"}}\n' \
-            f'{args.callout}\n' \
+            ':::: {.content-visible when-format="html"}\n' \
+            '::: {.titlered}\n' \
+            '### &nbsp;&#x2720; Hymn Schedules\n' \
+            ':::\n' \
+            '::::\n\n'
+        )
+
+        # Empty dictionaries to fill:
+        #   - mass_list -> compile all Mass settings used within the date range
+        #   - linkcheck -> compile all song URLs to check video availability
+        #   - ra_linkcheck -> compile all R&A URLs (not yet used)
+        mass_list = {}
+        linkcheck = {}
+        ra_linkcheck = {}
+
+        # Loop through the seasons that are encompassed in the `start`-`end` range
+        for season in list(df['season'].unique()):
+            # Subset the dataframe
+            ss = df[df['season']==season]
+
+            # Load the schedules and fix the keys
+            hymn_lists = u.get_hymn_lists(season)
+            hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
+
+            # Get the Mass settings and parts
+            masses = [hymn_lists[k]['Mass'] for k in hymn_lists.keys()]
+            parts = [hymn_lists[k]['parts'] for k in hymn_lists.keys()]
+
+            # Add Gloria omission if needed
+            for part in parts:
+                if all('gloria' not in p.lower() and (season == 'advent' or season == 'lent') for p in part):
+                    part.insert(0, f'*Gloria omitted during {titlecase(season)}*')
+
+            # Create a list of all unique Mass settings to include at the bottom of the
+            # page (duplicate key:value pairs are ignored when updating dictionaries)
+            mass_list.update({k:v for k,v in zip(masses, parts)})
+
+            # Loop through each week to check URLs and create the table
+            for r in ss.itertuples():
+                if r.feast in hymn_lists.keys():
+                    # Create the header
+                    file.write(f'#### {u.fmtdate(r.Index)} [{r.name}]{{style="float:right"}}\n\n')
+
+                    # Compile the hymns and URLs
+                    hymns = hymn_lists[r.feast]
+                    for k,v in hymns.items():
+                        # Ignore RA and Mass setting info
+                        if (k.lower() == 'mass') or (k.lower() == 'ra'):
+                            pass
+                        # Handle Mass parts separately
+                        elif k.lower() == 'parts':
+                            names = [' '.join(i.split(': ')[::-1]) for i in v]
+                            urls = [u.get_url(i) for i in names]
+                            linkcheck.update({u.keyify(n):l for n,l in zip(names, urls)})
+                        # Separate dict for R&A, since we don't need a repo issue for these
+                        elif 'http' in v:
+                            ra_linkcheck.update({' '.join([r.feast, k]): v})
+                        # Otherwise, just keyify the hymn name and get the URL
+                        else:
+                            n = u.keyify(v.split('-')[-1].strip())
+                            l = u.get_url(n)
+                            linkcheck.update({n: l})
+
+                    # Create the table
+                    file.write(u.simple_table(hymns, file=file))
+            file.write('\n')
+        
+        # Mass settings
+        file.write(
+            '::: {.titlered}\n' \
+            '### &nbsp;&#x2720; Mass Settings\n' \
             ':::\n\n'
         )
-    
-    # Hymn schedules
-    file.write(
-        ':::: {.content-visible when-format="html"}\n' \
-        '::: {.titlered}\n' \
-        '### &nbsp;&#x2720; Hymn Schedules\n' \
-        ':::\n' \
-        '::::\n\n'
-    )
+        for mass, parts in mass_list.items():
+            file.write(f'#### {mass}\n\n')
 
-    # Loop through the seasons that are encompassed in the `start`-`end` range
-    mass_list = {}
-    for season in list(df['season'].unique()):
-        # Subset the dataframe
-        ss = df[df['season']==season]
+            for part in parts:
+                try:
+                    p, m = part.split(':')
+                    file.write(f"- {u.md(f'{m.strip()}: {p.strip()}')}\n")
+                except ValueError:
+                    file.write(f"- {part}\n")
+                
+            file.write('\n')
 
-        # Load the schedules and fix the keys
-        hymn_lists = u.get_hymn_lists(season)
-        hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
+    print(f'"{args.outfile}" file created.')
 
-        # Get the Mass settings and parts
-        masses = [hymn_lists[k]['Mass'] for k in hymn_lists.keys()]
-        parts = [hymn_lists[k]['parts'] for k in hymn_lists.keys()]
+    # Check URLs for video availability
+    # Currently, no action is taken for R&A videos, since these are not
+    # contained in the `song-urls` repo and these videos will have been
+    # manually retrieved very recently.
+    print('Checking video availability...')
+    unavailable_videos = []
+    missing_videos = []
+    for k,v in linkcheck.items():
+        has_url, is_available, status, title = u.check_video_availability(v)
+        if not has_url:
+            # Missing URL - needs to be added
+            missing_videos.append({
+                'hymn': k,
+                'url': v,
+                'status': status
+            })
+        elif not is_available:
+            # URL exists but video unavailable
+            unavailable_videos.append({
+                'hymn': k,
+                'url': v,
+                'status': status
+            })
 
-        # Add Gloria omission if needed
-        for part in parts:
-            if all('gloria' not in p.lower() and (season == 'advent' or season == 'lent') for p in part):
-                part.insert(0, f'*Gloria omitted during {titlecase(season)}*')
+    # Create GitHub issue for any unavailable video extracted from the
+    # `musicministry/song-urls` repo
+    if unavailable_videos or missing_videos:
+        success, unavail_url, missing_url, skip_unavail, skip_missing = create_github_issues(
+            unavailable_videos=unavailable_videos,
+            missing_videos=missing_videos,
+            token=token,
+            owner='musicministry',
+            target_repo='song-urls'
+        )
 
-        # Create a list of all unique Mass settings to include at the bottom of the
-        # page (duplicate key:value pairs are ignored when updating dictionaries)
-        mass_list.update({k:v for k,v in zip(masses, parts)})
+    # Print summary
+    print("\n" + "="*60)
+    print("VIDEO CHECK SUMMARY")
+    print("-"*60)
 
-        # Loop through each week and create the header and table
-        for i, r in enumerate(ss.itertuples()):
-            if r.feast in hymn_lists.keys():
-                file.write(f'#### {u.fmtdate(r.Index)} [{r.name}]{{style="float:right"}}\n\n')
+    # Unavailable videos (broken URLs)
+    if unavailable_videos:
+        new_unavail = len(unavailable_videos) - skip_unavail
+        if unavail_url:
+            print(f"✓ Created issue for {new_unavail} unavailable video(s)")
+            print(f"  Issue: {unavail_url}")
+        elif (skip_unavail != 0) and (skip_unavail == len(unavailable_videos)):
+            print(f"⚠ All {len(unavailable_videos)} unavailable video(s) already flagged")
+        else:
+            print(f"✗ Failed to create issue for unavailable videos")
+    else:
+        print("✓ No unavailable videos found")
 
-                hymns = hymn_lists[r.feast]
-                file.write(u.simple_table(hymns, file=file))
-        file.write('\n')
-    
-    # Mass settings
-    file.write(
-        '::: {.titlered}\n' \
-        '### &nbsp;&#x2720; Mass Settings\n' \
-        ':::\n\n'
-    )
-    for mass, parts in mass_list.items():
-        file.write(f'#### {mass}\n\n')
+    # Missing videos (no URLs)
+    if missing_videos:
+        new_missing = len(missing_videos) - skip_missing
+        if missing_url:
+            print(f"✓ Created issue for {new_missing} missing video URL(s)")
+            print(f"  Issue: {missing_url}")
+        elif (skip_missing !=0) and (skip_missing == len(missing_videos)):
+            print(f"⚠ All {len(missing_videos)} missing video(s) already flagged")
+        else:
+            print(f"✗ Failed to create issue for missing videos")
+    else:
+        print("✓ No missing video URLs found")
 
-        for part in parts:
-            try:
-                p, m = part.split(':')
-                file.write(f"- {u.md(f'{m.strip()}: {p.strip()}')}\n")
-            except ValueError:
-                file.write(f"- {part}\n")
-            
-        file.write('\n')
+    print("="*60 + "\n")
 
-print(f'"{args.outfile}" file created.')
+if __name__ == "__main__":
+    main()
