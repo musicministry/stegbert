@@ -27,6 +27,10 @@ jobs:
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
     - name: Run post.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
+        TARGET_REPO: musicministry/song-urls
+        OWNER: musicministry
       run: python post.py 2026
     - name: Commit file
       run: |
