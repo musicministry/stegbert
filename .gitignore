@@ -1,4 +1,5 @@
 .venv
+.ghenv
 
 tex
 *.pdf
