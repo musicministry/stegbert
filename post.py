@@ -151,9 +151,9 @@ def main():
             ra_linkcheck.update({' '.join([feast, k]): v})
         # Otherwise, just keyify the hymn name and get the URL
         else:
-            n = u.keyify(v.split('-')[-1].strip())
-            l = u.get_url(n)
-            linkcheck.update({n: l})
+            name = u.keyify(v.split('-')[-1].strip())
+            url = u.get_url(name)
+            linkcheck.update({name: url})
 
     # Parse the dictionary
     mass = hymns['Mass']
