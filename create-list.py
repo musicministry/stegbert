@@ -55,6 +55,8 @@ def parse_args():
                         help='First date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to process')
     parser.add_argument('end', type=str,
                         help='Last date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to process')
+    parser.add_argument('hymnal', type=str, default='gather',
+                        help='Hymnal for indexing, either "gather" or "bb". Defaults to "gather".')
     parser.add_argument('-p', '--priority', type=int, default=0,
                         help='Interger [0,2] indicating the lowest priority celebration to extract. Default to 0 to extract everything.')
     parser.add_argument('-o', '--outfile', nargs='?', type=str, 
@@ -64,12 +66,13 @@ def parse_args():
 
 # =========================================================================== #
 # Local development
-#
+
 # class Args:
-#     def __init__(self, year, start, end, priority=0, outfile='next-lists.py'):
+#     def __init__(self, year, start, end, hymnal='gather', priority=0, outfile='next-lists.py'):
 #         self.year = year
 #         self.start = start
 #         self.end = end
+#         self.hymnal = hymnal
 #         self.priority = priority
 #         self.outfile = outfile
 
@@ -79,6 +82,7 @@ def parse_args():
 #     end='ot06',
 #     priority = 1,
 # )
+
 # =========================================================================== #
 
 # Command line arguments
@@ -116,11 +120,12 @@ except ValueError:
 def main():
     # Get hymns for desired range
     cal.reset_index(inplace=True)
-    results = u.process_week_range(start=start, end=end, df=cal, lit_year=cycle)
-
+    results = u.process_week_range(start=start, end=end, df=cal,
+                                   lit_year=cycle, hymnal=args.hymnal)
     # Write to file
     u.process_and_export_to_py(
         results=results,
+        hymnal=args.hymnal,
         output_file=os.path.join(process_dir, args.outfile)
         )
     print(f'{args.outfile} created.')
