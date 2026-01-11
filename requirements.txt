@@ -30,4 +30,4 @@ tzdata==2025.3
 urllib3==2.6.2
 wcwidth==0.2.14
 yt-dlp==2025.12.8
-git+https://github.com/musicministry/song-urls.git
+git+https://github.com/musicministry/song-urls.git@gather
