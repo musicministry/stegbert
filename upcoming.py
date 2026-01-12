@@ -212,7 +212,7 @@ def main():
         # Mass settings
         file.write(
             '::: {.titlered}\n' \
-            '### &nbsp;&#x2720; Mass Settings\n' \
+            '### &nbsp;&#x2720; Mass Parts\n' \
             ':::\n\n'
         )
         for mass, parts in mass_list.items():
