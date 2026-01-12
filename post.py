@@ -231,7 +231,7 @@ def main():
     # Create GitHub issue for any unavailable video extracted from the
     # `musicministry/song-urls` repo
     if unavailable_videos or missing_videos:
-        success, unavail_url, missing_url, skip_unavail, skip_missing = create_github_issues(
+        success, unavail_url, missing_url, skip_unavail, skip_missing = u.create_github_issues(
             unavailable_videos=unavailable_videos,
             missing_videos=missing_videos,
             token=token,
