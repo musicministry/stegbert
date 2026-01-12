@@ -25,5 +25,13 @@ Dockerfile
 docker-compose.yml
 _site/
 
-__pycache__/*
-2026-A/__pycache__/*
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+2026-A/__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
