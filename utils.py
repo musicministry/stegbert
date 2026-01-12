@@ -948,12 +948,27 @@ def extract_video_id(url):
 def check_video_availability(url, retry_delay=2):
     """
     Check video availability using multiple free methods.
-    Tries oembed first, then Invidious as fallback.
+    
+    Returns:
+        tuple: (is_valid_url, is_available, status, title)
+            - is_valid_url: True if URL format is valid
+            - is_available: True if video exists and is accessible
+            - status: Status message (e.g., "Available", "Private", "Invalid URL")
+            - title: Video title or None
     """
+    
+    # Check if URL is valid
+    if url is None or url == '' or not isinstance(url, str):
+        return False, False, "Missing URL", None
+    
+    if 'youtube.com' not in url and 'youtu.be' not in url:
+        return False, False, "Invalid URL format", None
+    
     video_id = extract_video_id(url)
     if not video_id:
-        return False, "Invalid URL", None
+        return False, False, "Invalid URL format", None
     
+    # URL is valid, now check availability
     # Method 1: YouTube oEmbed (fastest, most reliable)
     oembed_url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={video_id}&format=json"
     
@@ -962,9 +977,11 @@ def check_video_availability(url, retry_delay=2):
         
         if response.status_code == 200:
             data = response.json()
-            return True, "Available", data.get('title', 'Unknown')
-        elif response.status_code in [404, 401]:
-            return False, "Unavailable or private", None
+            return True, True, "Available", data.get('title', 'Unknown')
+        elif response.status_code == 404:
+            return True, False, "Unavailable or removed", None
+        elif response.status_code == 401:
+            return True, False, "Private", None
             
     except requests.RequestException:
         pass  # Fall through to next method
@@ -985,13 +1002,13 @@ def check_video_availability(url, retry_delay=2):
             if response.status_code == 200:
                 data = response.json()
                 if data.get('error'):
-                    return False, data['error'], None
-                return True, "Available", data.get('title', 'Unknown')
+                    return True, False, data['error'], None
+                return True, True, "Available", data.get('title', 'Unknown')
             elif response.status_code == 404:
-                return False, "Not found", None
+                return True, False, "Not found", None
                 
         except requests.RequestException:
             continue
     
-    # If all methods fail
-    return False, "Could not verify (all methods failed)", None
+    # If all methods fail - URL is valid but we couldn't verify
+    return True, False, "Could not verify (all methods failed)", None
