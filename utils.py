@@ -11,6 +11,7 @@ import subprocess
 import importlib
 import requests
 import yt_dlp
+import time
 import yaml
 import sys
 import re
@@ -29,6 +30,17 @@ mass_videos = yaml.safe_load(requests.get(mass_yaml_url).content)
 
 # Merge together
 hymn_videos = hymn_videos | mass_videos
+
+# Gather hymns
+gather_yaml_url = 'https://github.com/musicministry/song-urls/blob/gather/gather.yml'
+gather_videos = yaml.safe_load(requests.get(gather_yaml_url).content)
+
+# Gather Mass settings
+gather_mass_yaml_url = 'https://github.com/musicministry/song-urls/blob/gather/mass-settings.yml'
+gather_mass_videos = yaml.safe_load(requests.get(gather_mass_yaml_url).content)
+
+# Merge together
+gather_videos = gather_videos | gather_mass_videos
 
 # =========================================================================== #
 # Tools
@@ -895,35 +907,91 @@ def get_existing_flagged_videos(token, owner, repo, label):
         print(f"Warning: Could not fetch existing issues: {e}")
         return set()
 
-def check_video_availability(url):
-    """
-    Check video availability, handling missing URLs, which would result from a
-    missing video in the YAML file or a bug creating an incorrect video key.
+# def check_video_availability(url):
+#     """
+#     Check video availability, handling missing URLs, which would result from a
+#     missing video in the YAML file or a bug creating an incorrect video key.
     
-    Returns:
-        tuple: (is_valid_url, is_available, status, title)
-    """
-    # Missing URL
-    if url is None or url == '' or not isinstance(url, str):
-        return False, False, "Missing URL", None
-    # Not a YouTube video URL
-    if 'youtube.com' not in url and 'youtu.be' not in url:
-        return False, False, "Invalid YouTube URL format", None
+#     Returns:
+#         tuple: (is_valid_url, is_available, status, title)
+#     """
+#     # Missing URL
+#     if url is None or url == '' or not isinstance(url, str):
+#         return False, False, "Missing URL", None
+#     # Not a YouTube video URL
+#     if 'youtube.com' not in url and 'youtu.be' not in url:
+#         return False, False, "Invalid YouTube URL format", None
     
-    # Check actual video availability
-    ydl_opts = {'quiet': True, 'no_warnings': True, 'extract_flat': True}
+#     # Check actual video availability
+#     ydl_opts = {'quiet': True, 'no_warnings': True, 'extract_flat': True}
+    
+#     try:
+#         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+#             info = ydl.extract_info(url, download=False)
+#             return True, True, "Available", info.get('title', 'Unknown')
+#     except Exception as e:
+#         error_msg = str(e)
+#         if "Private video" in error_msg:
+#             return True, False, "Private", None
+#         elif "Video unavailable" in error_msg:
+#             return True, False, "Unavailable", None
+#         elif "removed" in error_msg.lower():
+#             return True, False, "Removed", None
+#         else:
+#             return True, False, "Error", None
+
+def extract_video_id(url):
+    """Extract video ID from YouTube URL."""
+    match = re.search(r'(?:v=|\/)([0-9A-Za-z_-]{11}).*', url)
+    return match.group(1) if match else None
+
+def check_video_availability(url, retry_delay=2):
+    """
+    Check video availability using multiple free methods.
+    Tries oembed first, then Invidious as fallback.
+    """
+    video_id = extract_video_id(url)
+    if not video_id:
+        return False, "Invalid URL", None
+    
+    # Method 1: YouTube oEmbed (fastest, most reliable)
+    oembed_url = f"https://www.youtube.com/oembed?url=https://www.youtube.com/watch?v={video_id}&format=json"
     
     try:
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info = ydl.extract_info(url, download=False)
-            return True, True, "Available", info.get('title', 'Unknown')
-    except Exception as e:
-        error_msg = str(e)
-        if "Private video" in error_msg:
-            return True, False, "Private", None
-        elif "Video unavailable" in error_msg:
-            return True, False, "Unavailable", None
-        elif "removed" in error_msg.lower():
-            return True, False, "Removed", None
-        else:
-            return True, False, "Error", None
+        response = requests.get(oembed_url, timeout=10)
+        
+        if response.status_code == 200:
+            data = response.json()
+            return True, "Available", data.get('title', 'Unknown')
+        elif response.status_code in [404, 401]:
+            return False, "Unavailable or private", None
+            
+    except requests.RequestException:
+        pass  # Fall through to next method
+    
+    # Method 2: Invidious API (fallback)
+    time.sleep(retry_delay)  # Be nice to public instances
+    
+    invidious_instances = [
+        "https://invidious.private.coffee",
+        "https://inv.nadeko.net",
+    ]
+    
+    for instance in invidious_instances:
+        try:
+            api_url = f"{instance}/api/v1/videos/{video_id}"
+            response = requests.get(api_url, timeout=10)
+            
+            if response.status_code == 200:
+                data = response.json()
+                if data.get('error'):
+                    return False, data['error'], None
+                return True, "Available", data.get('title', 'Unknown')
+            elif response.status_code == 404:
+                return False, "Not found", None
+                
+        except requests.RequestException:
+            continue
+    
+    # If all methods fail
+    return False, "Could not verify (all methods failed)", None
