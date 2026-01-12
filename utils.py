@@ -32,11 +32,11 @@ mass_videos = yaml.safe_load(requests.get(mass_yaml_url).content)
 hymn_videos = hymn_videos | mass_videos
 
 # Gather hymns
-gather_yaml_url = 'https://github.com/musicministry/song-urls/blob/gather/gather.yml'
+gather_yaml_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/gather/gather.yml'
 gather_videos = yaml.safe_load(requests.get(gather_yaml_url).content)
 
 # Gather Mass settings
-gather_mass_yaml_url = 'https://github.com/musicministry/song-urls/blob/gather/mass-settings.yml'
+gather_mass_yaml_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/gather/mass-settings.yml'
 gather_mass_videos = yaml.safe_load(requests.get(gather_mass_yaml_url).content)
 
 # Merge together
