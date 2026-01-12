@@ -3,6 +3,7 @@ name: run post.py
 on:
   schedule:
     - cron: '0 21 * * 0' # At 21:00 on Sunday
+  workflow_dispatch:  # Adds manual trigger button
 
 jobs:
   quarto-render-and-deploy:

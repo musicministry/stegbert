@@ -3,6 +3,7 @@ name: run check-for-feasts.py
 on:
   schedule:
     - cron: '0 20 * * 0' # At 20:00 on Sunday
+  workflow_dispatch:  # Adds manual trigger button
 
 jobs:
   quarto-render-and-deploy:
