@@ -1,4 +1,4 @@
-name: run post.py
+name: run post-sunday.py
 
 on:
   schedule:
