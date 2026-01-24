@@ -1,4 +1,4 @@
-name: run check-for-feasts.py
+name: run post-week.py
 
 on:
   schedule:
@@ -27,12 +27,12 @@ jobs:
         pip install -r requirements.txt
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
-    - name: Run check-for-feasts.py
+    - name: Run post-week.py
       env:
         GITHUB_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
         TARGET_REPO: musicministry/song-urls
         OWNER: musicministry
-      run: python check-for-feasts.py --year 2026
+      run: python post-week.py --year 2026
     - name: Commit file
       run: |
         git config --local user.email "action@github.com"
