@@ -59,11 +59,7 @@ def main():
     # Check for feasts this week including next Sunday
     today = dt.datetime.today()
     next_sun = u.next_sunday(from_date=today)
-    check = (cal.index > pd.to_datetime(today)) & \
-            (cal.index <= pd.to_datetime(next_sun))
-
-    # Extract any feasts this week (could be one or more)
-    ss = cal[check]
+    ss = cal.loc[today:next_sun]
     seasons = ss['season'].unique()
 
     # Load the hymn list(s) to see if music is scheduled
