@@ -11,7 +11,7 @@
 # will be no music for it), and a notification is printed for awareness.
 #
 # To execute in terminal:
-# python check-for-feasts.py --year 2026
+# python post-week.py --year 2026
 #
 # =========================================================================== #
 # Packages
@@ -73,7 +73,7 @@ def main():
         for feast in ss['feast']:
             if feast in hymn_lists.keys():
                 print(f"Posting for {ss[ss['feast']==feast]['name'].values[0]}")
-                subprocess.run(['python3', 'post.py', '--year', str(args.year),
+                subprocess.run(['python3', 'post.py', str(args.year),
                                 '--publish', feast])
             else:
                 print(f"{ss[ss['feast']==feast]['name'].values[0]} occurs this week but no music schedule was found. Nothing to process.")
