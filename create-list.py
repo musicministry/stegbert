@@ -61,7 +61,7 @@ def parse_args():
                         help='Interger [0,2] indicating the lowest priority celebration to extract. Default to 0 to extract everything.')
     parser.add_argument('-o', '--outfile', nargs='?', type=str, 
                         default='next-lists.py',
-                        help='Name and directory of csv file to write. Default to "[pwd]/[yearDir]/next_lists.py"')
+                        help='Name and directory of csv file to write. Default to "[pwd]/[yearDir]/next-lists.py"')
     return parser.parse_args()
 
 # =========================================================================== #
@@ -100,7 +100,7 @@ sys.path.append(os.path.join(process_dir))
 
 lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
 cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
-                parse_dates=['date'], index_col='date')
+                  parse_dates=['date'], index_col='date')
 cal = cal[cal['priority'] >= args.priority]
 
 # Start date and feast
