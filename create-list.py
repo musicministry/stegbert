@@ -78,8 +78,8 @@ def parse_args():
 
 # args = Args(
 #     year = 2026,
-#     start = 'ot02',
-#     end='ot06',
+#     start = 'ash-wednesday',
+#     end='lent05',
 #     priority = 1,
 # )
 
