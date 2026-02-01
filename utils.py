@@ -42,6 +42,14 @@ gather_mass_videos = yaml.safe_load(requests.get(gather_mass_yaml_url).content)
 # Merge together
 gather_videos = gather_videos | gather_mass_videos
 
+# Gather index
+gather_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/gather/gather.yml'
+gather_index = yaml.safe_load(requests.get(gather_index_url).content)
+
+# Respond and Acclaim index
+ra_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/ra-index.yml'
+ra_index = yaml.safe_load(requests.get(ra_index_url).content)
+
 # =========================================================================== #
 # Tools
 
@@ -256,7 +264,7 @@ def process_week_range(start, end, df, lit_year, hymnal):
             else:
                 mass_filename = os.path.join(row['season'], 'ot-summer.qmd')
         else:
-            mass_filename = os.path.join(row['season'], row['season'])
+            mass_filename = os.path.join(row['season'], f'{row['season']}.qmd')
         # Get the hymn and Mass parts lists
         try:
             file_path = get_file_path(filename=filename,
@@ -287,13 +295,14 @@ def process_week_range(start, end, df, lit_year, hymnal):
     
     return results
 
-def flatten_frontmatter_to_dict(frontmatter, feast_name, season, lit_year, hymnal, mass_setting=None):
+def flatten_frontmatter_to_dict(frontmatter, feast_name, date, season, lit_year, hymnal, mass_setting=None):
     """
     Convert nested frontmatter structure to flat dictionary format.
     
     Args:
         frontmatter: Nested dict from QMD file
         feast_name: Name for the dictionary variable (e.g., 'christmas_day')
+        date: Date of the feast, used for index lookup
         season: Liturgical season
         lit_year: Liturgical year from which to pull songs
         hymnal: Either 'gather' or 'bb' (Breaking Bread) to specify the hymnal
@@ -323,8 +332,9 @@ def flatten_frontmatter_to_dict(frontmatter, feast_name, season, lit_year, hymna
     if 'processional' in frontmatter:
         result['Processional'] = format_hymn_options(frontmatter['processional'], priority_order, hymnal)
     
-    # 4. RA placeholder
-    result['RA'] = ['[psalm_page]', '[gospel_page]']
+    # 4. Respond and Acclaim
+    psalm_page , _, _ = get_page_fuzzy(dt.datetime.date(date), feast_name)
+    result['RA'] = [psalm_page, psalm_page+1]
     
     # 5. Responsorial Psalm
     if 'psalm' in frontmatter:
@@ -510,6 +520,7 @@ def process_and_export_to_py(results, hymnal, output_file='hymn_data.py'):
             flat_dict = flatten_frontmatter_to_dict(
                 frontmatter=data['frontmatter'],
                 feast_name=var_name,
+                date=data['date'],
                 season=data['season'],
                 lit_year=data['lit_year'],
                 mass_setting=data['mass'],
@@ -1012,3 +1023,141 @@ def check_video_availability(url, retry_delay=2):
     
     # If all methods fail - URL is valid but we couldn't verify
     return True, False, "Could not verify (all methods failed)", None
+
+# =============================================================================
+# RA Lookup
+
+def get_page(date_celebration):
+    """Get page number by exact date and celebration."""
+    return ra_index.get(date_celebration)
+
+
+def search_celebration(search_term):
+    """Search for celebrations by partial name match."""
+    search_lower = search_term.lower()
+    return {k: v for k, v in ra_index.items()
+            if search_lower in k.lower()}
+
+
+def get_page_fuzzy(date_obj, celebration_name, threshold=70):
+    """
+    Get page number using fuzzy matching on celebration name.
+    
+    Args:
+        date_obj: datetime.date or datetime.datetime object
+        celebration_name: Name of the celebration (can be partial or slightly different)
+        threshold: Minimum similarity score (0-100, default 70)
+    
+    Returns:
+        tuple: (page_number, matched_key, score) or (None, None, 0) if no match
+    
+    Example:
+        >>> get_page_fuzzy(date(2026, 1, 4), "Epiphany")
+        (28, "January 04, 2026 - The Epiphany of the Lord", 100)
+    """
+    date_str = date_obj.strftime("%B %d, %Y")
+    
+    # Filter to only entries for this date
+    candidates = {k: v for k, v in ra_index.items() if k.startswith(date_str)}
+    
+    if not candidates:
+        return None, None, 0
+    
+    # If only one entry for this date, return it (common case)
+    if len(candidates) == 1:
+        key, page = list(candidates.items())[0]
+        return page, key, 100
+    
+    # Multiple entries for this date - use fuzzy matching on celebration part
+    # Extract just the celebration names (part after " - ")
+    candidate_celebrations = {k: k.split(" - ", 1)[1] for k in candidates.keys()}
+    
+    # Find best match
+    result = process.extractOne(
+        celebration_name,
+        candidate_celebrations.values(),
+        scorer=fuzz.ratio,
+        score_cutoff=threshold
+    )
+    
+    if result:
+        matched_celebration, score = result[0], result[1]
+        
+        # Find the original key
+        for key, celebration in candidate_celebrations.items():
+            if celebration == matched_celebration:
+                return candidates[key], key, score
+    
+    return None, None, 0
+
+
+def get_page_by_date(date_obj, celebration_substring="", fuzzy=False, threshold=70):
+    """
+    Get page number using a datetime object.
+    
+    Args:
+        date_obj: datetime.date or datetime.datetime object
+        celebration_substring: Substring or full name to match
+        fuzzy: If True, use fuzzy matching; if False, use exact substring match
+        threshold: Minimum similarity score for fuzzy matching (0-100)
+    
+    Returns:
+        int: Page number, or None if not found
+    
+    Examples:
+        >>> # Exact substring match
+        >>> get_page_by_date(date(2026, 1, 4), "Epiphany")
+        28
+        
+        >>> # Fuzzy match (handles typos, variations)
+        >>> get_page_by_date(date(2026, 1, 4), "Epifany", fuzzy=True)
+        28
+    """
+    if fuzzy and celebration_substring:
+        page, _, _ = get_page_fuzzy(date_obj, celebration_substring, threshold)
+        return page
+    
+    date_str = date_obj.strftime("%B %d, %Y")
+    
+    if celebration_substring:
+        # Search for entries matching this date and celebration
+        for key, page in ra_index.items():
+            if key.startswith(date_str) and celebration_substring.lower() in key.lower():
+                return page
+    else:
+        # Return first entry for this date
+        for key, page in ra_index.items():
+            if key.startswith(date_str):
+                return page
+    
+    return None
+
+
+def get_all_pages_for_date(date_obj):
+    """
+    Get all entries for a specific date.
+    Useful when you need to see all options.
+    
+    Args:
+        date_obj: datetime.date or datetime.datetime object
+    
+    Returns:
+        dict: {celebration_name: page_number}
+    
+    Example:
+        >>> get_all_pages_for_date(date(2025, 12, 25))
+        {
+            'The Nativity of the Lord (Christmas): At the Mass during the Night': 18,
+            'The Nativity of the Lord (Christmas): At the Mass at Dawn': 20,
+            'The Nativity of the Lord (Christmas): At the Mass during the Day': 22
+        }
+    """
+    date_str = date_obj.strftime("%B %d, %Y")
+    
+    results = {}
+    for key, page in ra_index.items():
+        if key.startswith(date_str):
+            celebration = key.split(" - ", 1)[1]
+            results[celebration] = page
+    
+    return results
