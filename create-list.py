@@ -55,7 +55,7 @@ def parse_args():
                         help='First date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to process')
     parser.add_argument('end', type=str,
                         help='Last date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to process')
-    parser.add_argument('hymnal', type=str, default='gather',
+    parser.add_argument('--hymnal', type=str, default='gather',
                         help='Hymnal for indexing, either "gather" or "bb". Defaults to "gather".')
     parser.add_argument('-p', '--priority', type=int, default=0,
                         help='Interger [0,2] indicating the lowest priority celebration to extract. Default to 0 to extract everything.')
