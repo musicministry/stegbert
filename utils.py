@@ -918,39 +918,6 @@ def get_existing_flagged_videos(token, owner, repo, label):
         print(f"Warning: Could not fetch existing issues: {e}")
         return set()
 
-# def check_video_availability(url):
-#     """
-#     Check video availability, handling missing URLs, which would result from a
-#     missing video in the YAML file or a bug creating an incorrect video key.
-    
-#     Returns:
-#         tuple: (is_valid_url, is_available, status, title)
-#     """
-#     # Missing URL
-#     if url is None or url == '' or not isinstance(url, str):
-#         return False, False, "Missing URL", None
-#     # Not a YouTube video URL
-#     if 'youtube.com' not in url and 'youtu.be' not in url:
-#         return False, False, "Invalid YouTube URL format", None
-    
-#     # Check actual video availability
-#     ydl_opts = {'quiet': True, 'no_warnings': True, 'extract_flat': True}
-    
-#     try:
-#         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-#             info = ydl.extract_info(url, download=False)
-#             return True, True, "Available", info.get('title', 'Unknown')
-#     except Exception as e:
-#         error_msg = str(e)
-#         if "Private video" in error_msg:
-#             return True, False, "Private", None
-#         elif "Video unavailable" in error_msg:
-#             return True, False, "Unavailable", None
-#         elif "removed" in error_msg.lower():
-#             return True, False, "Removed", None
-#         else:
-#             return True, False, "Error", None
-
 def extract_video_id(url):
     """Extract video ID from YouTube URL."""
     match = re.search(r'(?:v=|\/)([0-9A-Za-z_-]{11}).*', url)
@@ -967,11 +934,11 @@ def check_video_availability(url, retry_delay=2):
             - status: Status message (e.g., "Available", "Private", "Invalid URL")
             - title: Video title or None
     """
-    
-    # Check if URL is valid
+    # Check for missing URL
     if url is None or url == '' or not isinstance(url, str):
         return False, False, "Missing URL", None
     
+    # Check for valid YouTube URL
     if 'youtube.com' not in url and 'youtu.be' not in url:
         return False, False, "Invalid URL format", None
     
@@ -1021,14 +988,17 @@ def check_video_availability(url, retry_delay=2):
         except requests.RequestException:
             continue
     
-    # If all methods fail - URL is valid but we couldn't verify
+    # If all methods fail - URL is valid but couldn't be verified
     return True, False, "Could not verify (all methods failed)", None
 
 # =============================================================================
 # RA Lookup
 
 def get_page(date_celebration):
-    """Get page number by exact date and celebration."""
+    """Get page number by exact date and celebration. Must be formatted
+    'date - celebration'
+    For example, `November 30, 2025 - First Sunday of Advent'
+    """
     return ra_index.get(date_celebration)
 
 
@@ -1039,13 +1009,14 @@ def search_celebration(search_term):
             if search_lower in k.lower()}
 
 
-def get_page_fuzzy(date_obj, celebration_name, threshold=70):
+def get_page_fuzzy(date, celebration_name, threshold=70):
     """
     Get page number using fuzzy matching on celebration name.
     
     Args:
-        date_obj: datetime.date or datetime.datetime object
-        celebration_name: Name of the celebration (can be partial or slightly different)
+        date: datetime.date or datetime.datetime object
+        celebration_name: Name of the celebration (can be partial or slightly
+            different)
         threshold: Minimum similarity score (0-100, default 70)
     
     Returns:
@@ -1055,11 +1026,11 @@ def get_page_fuzzy(date_obj, celebration_name, threshold=70):
         >>> get_page_fuzzy(date(2026, 1, 4), "Epiphany")
         (28, "January 04, 2026 - The Epiphany of the Lord", 100)
     """
-    date_str = date_obj.strftime("%B %d, %Y")
+    # Format date to match the index
+    date_str = date.strftime("%B %d, %Y")
     
-    # Filter to only entries for this date
+    # Filter to only entries for this date (some dates have multiple entries)
     candidates = {k: v for k, v in ra_index.items() if k.startswith(date_str)}
-    
     if not candidates:
         return None, None, 0
     
@@ -1080,14 +1051,14 @@ def get_page_fuzzy(date_obj, celebration_name, threshold=70):
         score_cutoff=threshold
     )
     
+    # If a match is found, find the original key
     if result:
         matched_celebration, score = result[0], result[1]
-        
-        # Find the original key
         for key, celebration in candidate_celebrations.items():
             if celebration == matched_celebration:
                 return candidates[key], key, score
     
+    # Otherwise, return nothing
     return None, None, 0
 
 
@@ -1113,12 +1084,15 @@ def get_page_by_date(date_obj, celebration_substring="", fuzzy=False, threshold=
         >>> get_page_by_date(date(2026, 1, 4), "Epifany", fuzzy=True)
         28
     """
+    # Use fuzzy matching, if indicated
     if fuzzy and celebration_substring:
         page, _, _ = get_page_fuzzy(date_obj, celebration_substring, threshold)
         return page
     
+    # Format date to match the index
     date_str = date_obj.strftime("%B %d, %Y")
     
+    # Search the celebrations for one that contains the substring
     if celebration_substring:
         # Search for entries matching this date and celebration
         for key, page in ra_index.items():
@@ -1130,16 +1104,17 @@ def get_page_by_date(date_obj, celebration_substring="", fuzzy=False, threshold=
             if key.startswith(date_str):
                 return page
     
+    # Otherwise, return nothing
     return None
 
 
-def get_all_pages_for_date(date_obj):
+def get_all_pages_for_date(date):
     """
     Get all entries for a specific date.
     Useful when you need to see all options.
     
     Args:
-        date_obj: datetime.date or datetime.datetime object
+        date: datetime.date or datetime.datetime object
     
     Returns:
         dict: {celebration_name: page_number}
@@ -1152,8 +1127,10 @@ def get_all_pages_for_date(date_obj):
             'The Nativity of the Lord (Christmas): At the Mass during the Day': 22
         }
     """
-    date_str = date_obj.strftime("%B %d, %Y")
+    # Format date to match the index
+    date_str = date.strftime("%B %d, %Y")
     
+    # Get all the entries (e.g., Christmas options)
     results = {}
     for key, page in ra_index.items():
         if key.startswith(date_str):
