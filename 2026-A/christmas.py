@@ -14,9 +14,8 @@
 #
 #         "Processional":         "NNN - Song Title",
 #
-#         "RA": [N, N],
-#         "Responsorial Psalm":   "YouTube video URL",
-#         "Gospel Acclamation":   "YouTube video URL",
+#         "Responsorial Psalm":   "R&A p. n - YouTube video URL",
+#         "Gospel Acclamation":   "R&A p. n - YouTube video URL",
 #
 #         "Preparation of Gifts": "NNN - Song Title",
 #         "Communion":            "NNN - Song Title",
@@ -37,9 +36,8 @@ christmas_day = {
 
     "Processional":         "439 - O Come, All Ye Faithful",
 
-    "RA": [22, 23],
     "Responsorial Psalm":   "70 - Psalm 98: All the Ends of the Earth (Haas/Haugen)",
-    "Gospel Acclamation":   "https://youtu.be/KxUt7PyXNYk?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "R&A p. 23 - https://youtu.be/KxUt7PyXNYk?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Preparation of Gifts": "424 - Hark! The Herald Angels Sing",
     "Communion":            "432 - Nativity Carol",
@@ -53,9 +51,8 @@ holy_family = {
 
     "Processional":         "438 - Angels, from the Realms of Glory",
 
-    "RA": [24, 25],
-    "Responsorial Psalm":   "https://youtu.be/4gjqxJ_eL-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation":   "https://youtu.be/hzF6qrivXl8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm":   "R&A p. 24 - https://youtu.be/4gjqxJ_eL-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "R&A p. 25 - https://youtu.be/hzF6qrivXl8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Preparation of Gifts": "436 - Wood of the Cradle",
     "Communion":            "455 - Once in Royal David's City",
@@ -68,9 +65,8 @@ mary_mother_of_god = {
 
     "Processional":         "457 - Sing of Mary",
 
-    "RA": [26, 27],
-    "Responsorial Psalm":   "https://youtu.be/LcqkBimDhjs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation":   "https://youtu.be/JuH7sw1sobE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm":   "R&A p. 26 - https://youtu.be/LcqkBimDhjs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "R&A p.  27 - https://youtu.be/JuH7sw1sobE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Preparation of Gifts": "448 - Away in a Manger (Mueller)",
     "Communion":            "451 - Lo, How a Rose E'er Blooming",
@@ -84,9 +80,8 @@ epiphany = {
 
     "Processional":         "459 - Songs of Thankfulness and Praise",
 
-    "RA": [28, 29],
-    "Responsorial Psalm":   "https://youtu.be/5poRq9YtiIs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation":   "https://youtu.be/HiKwEUIipX8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm":   "R&A p. 28 - https://youtu.be/5poRq9YtiIs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "R&A p. 29 - https://youtu.be/HiKwEUIipX8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Preparation of Gifts": "463 - We Three Kings",
     "Communion":            "460 - The First Nowell",
@@ -99,9 +94,8 @@ baptism = {
 
     "Processional":         "467 - When John Baptized by Jordan's River",
 
-    "RA": [30, 31],
-    "Responsorial Psalm":   "https://youtu.be/UaV7slHh658?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation":   "https://youtu.be/D4l2yvw-2z4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm":   "R&A p. 30 - https://youtu.be/UaV7slHh658?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "R&A p. 31 - https://youtu.be/D4l2yvw-2z4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Preparation of Gifts": "440 - Good Christian Friends, Rejoice",
     "Communion":            "423 - Awake! Awake, and Greet the New Morn | (*Christmas lyrics*)",

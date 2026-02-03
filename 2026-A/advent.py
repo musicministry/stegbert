@@ -14,9 +14,8 @@
 #
 #         "Processional":         "NNN - Song Title",
 #
-#         "RA": [N, N],
-#         "Responsorial Psalm":   "YouTube video URL",
-#         "Gospel Acclamation":   "YouTube video URL",
+#         "Responsorial Psalm":   "R&A p. n - YouTube video URL",
+#         "Gospel Acclamation":   "R&A p. n - YouTube video URL",
 #
 #         "Preparation of Gifts": "NNN - Song Title",
 #         "Communion":            "NNN - Song Title",
@@ -37,9 +36,8 @@ advent01 = {
 
     "Processional":         "577 - Sing Out, Earth and Skies!",
 
-    "RA": [4, 5],
-    "Responsorial Psalm":   "https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation":   "https://youtu.be/6JGogB_Mb-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm":   "R&A p. 4 - https://youtu.be/4yPHj2DFoC4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "R&A p. 5 - https://youtu.be/6JGogB_Mb-I?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Preparation of Gifts": "423 - Awake! Awake, and Greet the New Morn",
     "Communion":            "397 - Maranatha, Lord Messiah",
@@ -54,9 +52,8 @@ advent02 = {
 
     "Processional":          "418 - On Jordan's Bank",
 
-    "RA": [6, 7],
-    "Responsorial Psalm":    "https://youtu.be/KlaXFWpN7n4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation":    "https://youtu.be/EFvpHsLDBOU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm":    "R&A p. 6 - https://youtu.be/KlaXFWpN7n4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":    "R&A p. 7 - https://youtu.be/EFvpHsLDBOU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     
     "Preparation of Gifts": "421 - Savior of the Nations, Come",
     "Communion":            "397 - Maranatha, Lord Messiah",
@@ -71,9 +68,8 @@ advent03 = {
 
     "Processional":         "404 - When the King Shall Come Again",
 
-    "RA": [12, 13],
-    "Responsorial Psalm":   "https://youtu.be/WOw1ZGgmceM?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation":   "https://youtu.be/4rLyhdT6kMg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm":   "R&A p. 12 - https://youtu.be/WOw1ZGgmceM?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "R&A p. 13 - https://youtu.be/4rLyhdT6kMg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     
     "Preparation of Gifts": "395 - O Come, O Come, Emmanuel",
     "Communion":            "397 - Maranatha, Lord Messiah",
@@ -88,9 +84,8 @@ advent04 = {
 
     "Processional":         "401 - O Come, Divine Messiah",
 
-    "RA": [14, 15],
-    "Responsorial Psalm":   "https://youtu.be/eTn_fK_16_4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation":   "https://youtu.be/mDRuiP8oB8s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm":   "R&A p. 14 - https://youtu.be/eTn_fK_16_4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "R&A p. 15 - https://youtu.be/mDRuiP8oB8s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     
     "Preparation of Gifts": "395 - O Come, O Come, Emmanuel",
     "Communion":            "414 - The King Shall Come When Morning Dawns (Morning Song)",
@@ -108,9 +103,8 @@ immaculate_conception = {
 
     "Processional":         "886 - Immaculate Mary",
     
-    "RA": [8, 9],
-    "Responsorial Psalm":   "https://youtu.be/Bk_8VhRGweU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation":   "https://youtu.be/F2YKiu3hbEY?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm":   "R&A p. 8 - https://youtu.be/Bk_8VhRGweU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation":   "R&A p. 9 - https://youtu.be/F2YKiu3hbEY?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Preparation of Gifts": "875 - Praise We the Lord This Day",
     "Communion":            "100 - Luke 1:46-53: My Soul Gives Glory",
