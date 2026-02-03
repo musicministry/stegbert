@@ -13,7 +13,7 @@
 # To execute in terminal:
 # python post-week.py --year 2026
 #
-# =========================================================================== #
+# -----------------------------------------------------------------------------
 # Packages
 import datetime as dt
 import pandas as pd
@@ -35,7 +35,9 @@ def parse_args():
 
 args = parse_args()
 
-# # For testing
+# =============================================================================
+# Local development
+
 # class Args:
 #     def __init__(self, year):
 #         self.year = year
@@ -43,7 +45,7 @@ args = parse_args()
 #     year = 2026
 # )
 
-# --------------------------------------------------------------------------- #
+# =============================================================================
 # Main program
 
 def main():
@@ -64,7 +66,7 @@ def main():
 
     # Load the hymn list(s) to see if music is scheduled
     for season in seasons:
-        hymn_lists = u.get_hymn_lists(season)
+        hymn_lists = u.load_hymn_schedules(season)
         hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
 
         # There may be more than one feast (e.g., Christmas Eve, Christmas Day)

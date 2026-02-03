@@ -26,7 +26,7 @@
 # music schedules and must be a name found in the `name` column of the
 # liturgical calendar dataframe.
 #
-# --------------------------------------------------------------------------- #
+# -----------------------------------------------------------------------------
 # Packages
 from titlecase import titlecase
 import datetime as dt
@@ -55,7 +55,9 @@ def parse_args():
                          help='Optional text to include in a callout at the top of the page')
     return parser.parse_args()
 
-# =========================================================================== #
+args = parse_args()
+
+# =============================================================================
 # Local development
 
 # class Args:
@@ -71,12 +73,7 @@ def parse_args():
 #     end = 'ot06',
 # )
 
-# =========================================================================== #
-
-# Command line arguments
-args = parse_args()
-
-# --------------------------------------------------------------------------- #
+# =============================================================================
 # Main program
 
 def main():
@@ -115,8 +112,10 @@ def main():
     # Create a qmd file
     first_feast = df.loc[df['feast']==start, "name"].iloc[0]
     last_feast = df.loc[df['feast']==end, "name"].iloc[0]
-    first_date = dt.datetime.strftime(start_date, "%B %d, %Y")
-    last_date = dt.datetime.strftime(end_date, "%B %d, %Y")
+    # first_date = dt.datetime.strftime(start_date, "%B %d, %Y")
+    # last_date = dt.datetime.strftime(end_date, "%B %d, %Y")
+    first_date = u.fmtdate(start_date)
+    last_date = u.fmtdate(end_date)
 
     with open(args.outfile, 'w') as file:
         # Header
@@ -163,7 +162,7 @@ def main():
             ss = df[df['season']==season]
 
             # Load the schedules and fix the keys
-            hymn_lists = u.get_hymn_lists(season)
+            hymn_lists = u.load_hymn_schedules(season)
             hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
 
             # Get the Mass settings and parts
@@ -175,8 +174,9 @@ def main():
                 if all('gloria' not in p.lower() and (season == 'advent' or season == 'lent') for p in part):
                     part.insert(0, f'*Gloria omitted during {titlecase(season)}*')
 
-            # Create a list of all unique Mass settings to include at the bottom of the
-            # page (duplicate key:value pairs are ignored when updating dictionaries)
+            # Create a list of all unique Mass settings to include at the
+            # bottom of the page (duplicate key:value pairs are ignored when
+            # updating dictionaries)
             mass_list.update({k:v for k,v in zip(masses, parts)})
 
             # Loop through each week to check URLs and create the table
@@ -193,17 +193,16 @@ def main():
                             pass
                         # Handle Mass parts separately
                         elif k.lower() == 'parts':
-                            names = [' '.join(i.split(': ')[::-1]) for i in v]
-                            urls = [u.get_url(i) for i in names]
-                            linkcheck.update({u.keyify(n):l for n,l in zip(names, urls)})
+                            urls = [u.get_mass_url(i, swap=True) for i in names]
+                            linkcheck.update({u.keyify(name):link for name, link in zip(names, urls)})
                         # Separate dict for R&A, since we don't need a repo issue for these
                         elif 'http' in v:
                             ra_linkcheck.update({' '.join([r.feast, k]): v})
                         # Otherwise, just keyify the hymn name and get the URL
                         else:
-                            n = u.keyify(v.split('-')[-1].strip())
-                            l = u.get_url(n)
-                            linkcheck.update({n: l})
+                            name = u.keyify(v.split('-')[-1].strip())
+                            link = u.get_hymn_url(name)
+                            linkcheck.update({name: link})
 
                     # Create the table
                     file.write(u.simple_table(hymns, file=file))
@@ -221,7 +220,7 @@ def main():
             for part in parts:
                 try:
                     p, m = part.split(':')
-                    file.write(f"- {u.md(f'{m.strip()}: {p.strip()}')}\n")
+                    file.write(f"- [{titlecase(p)}]({u.get_mass_url(f'{m.strip()}: {p.strip()}')})\n")
                 except ValueError:
                     file.write(f"- {part}\n")
                 
@@ -278,7 +277,7 @@ def main():
         elif (skip_unavail != 0) and (skip_unavail == len(unavailable_videos)):
             print(f"⚠ All {len(unavailable_videos)} unavailable video(s) already flagged")
         else:
-            print(f"✗ Failed to create issue for unavailable videos")
+            print("✗ Failed to create issue for unavailable videos")
     else:
         print("✓ No unavailable videos found")
 
@@ -291,7 +290,7 @@ def main():
         elif (skip_missing !=0) and (skip_missing == len(missing_videos)):
             print(f"⚠ All {len(missing_videos)} missing video(s) already flagged")
         else:
-            print(f"✗ Failed to create issue for missing videos")
+            print("✗ Failed to create issue for missing videos")
     else:
         print("✓ No missing video URLs found")
 

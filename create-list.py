@@ -34,7 +34,7 @@
 # dictionaries containing the music schedules and must be a name found in the
 # `name` column of the liturgical calendar dataframe.
 #
-# --------------------------------------------------------------------------- #
+# -----------------------------------------------------------------------------
 # Packages
 import datetime as dt
 import pandas as pd
@@ -64,7 +64,9 @@ def parse_args():
                         help='Name and directory of csv file to write. Default to "[pwd]/[yearDir]/next-lists.py"')
     return parser.parse_args()
 
-# =========================================================================== #
+args = parse_args()
+
+# =============================================================================
 # Local development
 
 # class Args:
@@ -83,15 +85,12 @@ def parse_args():
 #     priority = 1,
 # )
 
-# =========================================================================== #
+# =============================================================================
+# Main program
 
 # Command line arguments
-args = parse_args()
 start = args.start
 end = args.end
-
-# --------------------------------------------------------------------------- #
-# Main program
 
 # Load hymn lists
 cycle = u.lityear(args.year)
@@ -123,7 +122,7 @@ def main():
     results = u.process_week_range(start=start, end=end, df=cal,
                                    lit_year=cycle, hymnal=args.hymnal)
     # Write to file
-    u.process_and_export_to_py(
+    u.process_and_export(
         results=results,
         hymnal=args.hymnal,
         output_file=os.path.join(process_dir, args.outfile)

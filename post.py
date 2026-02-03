@@ -25,11 +25,11 @@
 #
 #     or
 #
-# python upcoming.py 2026 --publish '2025-11-30'
+# python post.py 2026 --publish '2025-11-30'
 #
 #     or
 #
-# python upcoming.py 2026 --publish 'advent01'
+# python post.py 2026 --publish 'advent01'
 #
 # Feast names are taken from the name of the dictionaries containing the
 # music schedules and must be a name found in the `name` column of the
@@ -62,6 +62,8 @@ def parse_args():
                         help='Optional text to include in a callout at the top of the page')
     return parser.parse_args()
 
+args = parse_args()
+
 # =========================================================================== #
 # Local development
 
@@ -78,18 +80,13 @@ def parse_args():
 # )
 
 # =========================================================================== #
-
-# Command line arguments
-args = parse_args()
-
-# GitHub token
-u.load_env_file()
-token = os.environ.get('GITHUB_TOKEN')
-
-# --------------------------------------------------------------------------- #
 # Main program
 
 def main():
+    # GitHub token
+    u.load_env_file()
+    token = os.environ.get('GITHUB_TOKEN')
+
     # Load hymn lists
     cycle = u.lityear(args.year)
     process_dir = f'{args.year}-{cycle}'
@@ -97,14 +94,14 @@ def main():
 
     lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
     cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
-                    parse_dates=['date'], index_col='feast')
+                      parse_dates=['date'], index_col='feast')
 
     # Get next Sunday, if needed
     if args.publish.lower() == 'next':
         today = dt.datetime.today()
         next_sun = u.next_sunday(from_date=today)
         publish = str(next_sun)
-        print(f'Publishing next Sunday {dt.datetime.strftime(next_sun, format="%B %d, %Y")}')
+        print(f'Publishing next Sunday {u.fmtdate(next_sun)}')
     else:
         publish = args.publish
 
@@ -130,7 +127,7 @@ def main():
     season = df.season
 
     # Load the schedules and fix the keys
-    hymn_lists = u.get_hymn_lists(season)
+    hymn_lists = u.load_hymn_schedules(season)
     hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
     hymns = hymn_lists[feast]
 
@@ -144,24 +141,22 @@ def main():
         # Handle Mass parts separately
         elif k.lower() == 'parts':
             names = [' '.join(i.split(': ')[::-1]) for i in v]
-            urls = [u.get_url(i) for i in names]
-            linkcheck.update({u.keyify(n):l for n,l in zip(names, urls)})
+            urls = [u.get_mass_url(i) for i in names]
+            linkcheck.update({u.keyify(name):link for name, link in zip(names, urls)})
         # Separate dict for R&A, since we don't need a repo issue for these
         elif 'http' in v:
             ra_linkcheck.update({' '.join([feast, k]): v})
         # Otherwise, just keyify the hymn name and get the URL
         else:
             name = u.keyify(v.split('-')[-1].strip())
-            url = u.get_url(name)
-            linkcheck.update({name: url})
+            link = u.get_hymn_url(name)
+            linkcheck.update({name: link})
 
     # Parse the dictionary
     mass = hymns['Mass']
     parts = hymns['parts']
-    RA = hymns['RA']
     hymns.pop('Mass')
     hymns.pop('parts')
-    hymns.pop('RA')
 
     # Add Gloria omission if needed
     if all('gloria' not in p.lower() and (season == 'advent' or season == 'lent') for p in parts):
@@ -172,7 +167,7 @@ def main():
         file.write('---\n')
         file.write(f'title: {df["name"]}\n')
         file.write(f'last-updated: {str(date.date()-dt.timedelta(days=5))}\n')
-        file.write(f'description: {dt.datetime.strftime(date, format="%B %d, %Y")}\n')
+        file.write(f'description: {u.fmtdate(date)}\n')
         file.write('categories:\n')
         file.write(f'  - {titlecase(df.season)} {df.year}\n')
         file.write(f'image: /_images/dates/{dt.datetime.strftime(date, format="%b").lower()}/{str(df["day"]).zfill(2)}.png\n')
@@ -191,12 +186,12 @@ def main():
         
         file.write('All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.\n\n')
 
-        file.write(u.video_table(hymns=hymns, RA=RA))
+        file.write(u.video_table(hymns=hymns))
 
         # Mass parts
         file.write('### Mass Parts\n\n')
 
-        file.write(f'The Mass parts for {titlecase(season)} will be taken from *{mass}*:\n\n')
+        file.write(f'The Mass parts for {u.unkey(season)} will be taken from *{mass}*:\n\n')
 
         file.write(u.massparts_video_table(season=season, setting=mass, include=parts))
 
@@ -253,7 +248,7 @@ def main():
         elif (skip_unavail != 0) and (skip_unavail == len(unavailable_videos)):
             print(f"⚠ All {len(unavailable_videos)} unavailable video(s) already flagged")
         else:
-            print(f"✗ Failed to create issue for unavailable videos")
+            print("✗ Failed to create issue for unavailable videos")
     else:
         print("✓ No unavailable videos found")
 
@@ -266,7 +261,7 @@ def main():
         elif (skip_missing !=0) and (skip_missing == len(missing_videos)):
             print(f"⚠ All {len(missing_videos)} missing video(s) already flagged")
         else:
-            print(f"✗ Failed to create issue for missing videos")
+            print("✗ Failed to create issue for missing videos")
     else:
         print("✓ No missing video URLs found")
 
