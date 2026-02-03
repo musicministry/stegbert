@@ -65,6 +65,13 @@ def keyify(string: str):
     string = re.sub(r'[^a-zA-Z0-9]', ' ', string).strip().lower()
     return '-'.join(string.split())
 
+def get_hymn_url(name):
+    """Return the video URL for hymn or song `name`."""
+    if keyify(name) in index.keys():
+        return index[keyify(name)]['url']
+    else:
+        return None
+
 def get_mass_url(name, swap=False):
     """Return the video URL for Mass setting and part, formatted 'Mass Setting: Part', passed to `name`. If `swap = True`, `name` will be split at the colon and reversed. For example, 'Gloria: Heritage Mass' will become 'Heritage Mass: Gloria'."""
     # Reverse the Mass setting with part, if needed
@@ -77,10 +84,15 @@ def get_mass_url(name, swap=False):
     else:
         return None
 
-def get_hymn_url(name):
-    """Return the video URL for hymn or song `name`."""
-    if keyify(name) in index.keys():
-        return index[keyify(name)]['url']
+def mass_index_lookup(name, swap=False):
+    """Return the number and video URL for Mass setting and part, formatted 'Mass Setting: Part', passed to `name`. If `swap = True`, `name` will be split at the colon and reversed. For example, 'Gloria: Heritage Mass' will become 'Heritage Mass: Gloria'."""
+    # Reverse the Mass setting with part, if needed
+    if swap:
+        name = ' '.join(name.split(': ')[::-1])
+
+    # Extract the URL
+    if keyify(name) in mass_index.keys():
+        return mass_index[keyify(name)]
     else:
         return None
 

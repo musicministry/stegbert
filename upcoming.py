@@ -193,8 +193,8 @@ def main():
                             pass
                         # Handle Mass parts separately
                         elif k.lower() == 'parts':
-                            urls = [u.get_mass_url(i, swap=True) for i in names]
-                            linkcheck.update({u.keyify(name):link for name, link in zip(names, urls)})
+                            urls = [u.get_mass_url(i, swap=True) for i in v]
+                            linkcheck.update({u.keyify(name):link for name, link in zip(v, urls)})
                         # Separate dict for R&A, since we don't need a repo issue for these
                         elif 'http' in v:
                             ra_linkcheck.update({' '.join([r.feast, k]): v})
@@ -220,7 +220,12 @@ def main():
             for part in parts:
                 try:
                     p, m = part.split(':')
-                    file.write(f"- [{titlecase(p)}]({u.get_mass_url(f'{m.strip()}: {p.strip()}')})\n")
+                    index_entry = u.mass_index_lookup(part, swap=True)
+                    if index_entry['number'] == 'NA':
+                        number = '(Handout)'
+                    else:
+                        number = index_entry['number']
+                    file.write(f"- {number} - [{titlecase(p)}]({index_entry['url']})\n")
                 except ValueError:
                     file.write(f"- {part}\n")
                 
