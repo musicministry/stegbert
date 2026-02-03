@@ -1,6 +1,8 @@
 .venv
 .ghenv
 
+2026-A/next-lists.py
+
 tex
 *.pdf
 /YearA/*.tex
