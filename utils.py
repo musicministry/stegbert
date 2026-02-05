@@ -20,15 +20,18 @@ import os
 
 # Gather index
 gather_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/gather/gather.yml'
-index = yaml.safe_load(requests.get(gather_index_url).content)
-
-# Respond and Acclaim index
-ra_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/ra-index.yml'
-ra_index = yaml.safe_load(requests.get(ra_index_url).content)
+gather_index = yaml.safe_load(requests.get(gather_index_url).content)
 
 # Mass settings index
 mass_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/gather/mass-settings.yml'
 mass_index = yaml.safe_load(requests.get(mass_index_url).content)
+
+# Combine
+index = gather_index | mass_index
+
+# Respond and Acclaim index
+ra_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/ra-index.yml'
+ra_index = yaml.safe_load(requests.get(ra_index_url).content)
 
 # =========================================================================== #
 # Tools
@@ -65,22 +68,15 @@ def keyify(string: str):
     string = re.sub(r'[^a-zA-Z0-9]', ' ', string).strip().lower()
     return '-'.join(string.split())
 
-def get_hymn_url(name):
-    """Return the video URL for hymn or song `name`."""
-    if keyify(name) in index.keys():
-        return index[keyify(name)]['url']
-    else:
-        return None
-
-def get_mass_url(name, swap=False):
-    """Return the video URL for Mass setting and part, formatted 'Mass Setting: Part', passed to `name`. If `swap = True`, `name` will be split at the colon and reversed. For example, 'Gloria: Heritage Mass' will become 'Heritage Mass: Gloria'."""
-    # Reverse the Mass setting with part, if needed
+def get_url(name, swap=False):
+    """Return the video URL for hymn or song `name`. If the `name` has a colon and needs to be swapped, for example, `Gloria: Heritage Mass` needs to become `Heritage Mass: Gloria`, use `swap = True`."""
+    # Reverse the name, if needed
     if swap:
         name = ' '.join(name.split(': ')[::-1])
 
     # Extract the URL
-    if keyify(name) in mass_index.keys():
-        return mass_index[keyify(name)]['url']
+    if keyify(name) in index.keys():
+        return index[keyify(name)]['url']
     else:
         return None
 
@@ -106,7 +102,7 @@ def markdown_url(hymn):
     else:
         note = ""
     # Fetch the URL
-    url = get_hymn_url(hymn)
+    url = get_url(hymn)
     if url is not None:
         return f'[{hymn}]({url}){note}'
     else:
@@ -926,7 +922,7 @@ def video_table(hymns: dict):
         if ('psalm' in k.lower() or 'gospel' in k.lower()) and 'http' in v:
             content = f"<em>Respond & Acclaim</em> {re.search('R&A (.+?) -', v).group(1)} <br><br> {{{{< video {v.split('- ')[-1]} >}}}}{RAnote}"
         else:
-            content = v.replace('| ', '') + f"<br><br> {{{{< video {get_hymn_url(v.split(' - ')[1].strip())} >}}}}"
+            content = v.replace('| ', '') + f"<br><br> {{{{< video {get_url(v.split(' - ')[1].strip())} >}}}}"
         
         html += f'<td style="width: 75%;">{content}</td>'
         html += '</tr>\n'
@@ -954,7 +950,7 @@ def massparts_video_table(season:str, setting:str, include:list):
         if 'gloria' in i.lower() and (season.lower() == 'advent' or season.lower() == "lent"):
             content = f"<em>{i.split(': ')[1]}</em> <br><br>"
         else:
-            content = f"{{{{< video {get_mass_url(k, swap=True)} >}}}}"
+            content = f"{{{{< video {get_url(k, swap=True)} >}}}}"
         
         html += f'<td style="width: 75%;">{content}</td>'
         html += '</tr>\n'

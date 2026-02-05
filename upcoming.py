@@ -193,7 +193,7 @@ def main():
                             pass
                         # Handle Mass parts separately
                         elif k.lower() == 'parts':
-                            urls = [u.get_mass_url(i, swap=True) for i in v]
+                            urls = [u.get_url(i, swap=True) for i in v]
                             linkcheck.update({u.keyify(name):link for name, link in zip(v, urls)})
                         # Separate dict for R&A, since we don't need a repo issue for these
                         elif 'http' in v:
@@ -201,7 +201,7 @@ def main():
                         # Otherwise, just keyify the hymn name and get the URL
                         else:
                             name = u.keyify(v.split('-')[-1].strip())
-                            link = u.get_hymn_url(name)
+                            link = u.get_url(name)
                             linkcheck.update({name: link})
 
                     # Create the table

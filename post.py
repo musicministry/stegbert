@@ -141,7 +141,7 @@ def main():
         # Handle Mass parts separately
         elif k.lower() == 'parts':
             names = [' '.join(i.split(': ')[::-1]) for i in v]
-            urls = [u.get_mass_url(i) for i in names]
+            urls = [u.get_url(i) for i in names]
             linkcheck.update({u.keyify(name):link for name, link in zip(names, urls)})
         # Separate dict for R&A, since we don't need a repo issue for these
         elif 'http' in v:
@@ -149,7 +149,7 @@ def main():
         # Otherwise, just keyify the hymn name and get the URL
         else:
             name = u.keyify(v.split('-')[-1].strip())
-            link = u.get_hymn_url(name)
+            link = u.get_url(name)
             linkcheck.update({name: link})
 
     # Parse the dictionary
