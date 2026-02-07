@@ -4,7 +4,7 @@ project:
     port: 4200
 
 website:
-  favicon: _images/trebleclef.jpg
+  favicon: _images/trebleclef.png
 
 metadata-files:
   - _website.yml
