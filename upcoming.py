@@ -69,8 +69,8 @@ args = parse_args()
 
 # args = Args(
 #     year = 2026,
-#     start = 'baptism',
-#     end = 'ot06',
+#     start = 'ot05',
+#     end = 'lent05',
 # )
 
 # =============================================================================
@@ -225,7 +225,10 @@ def main():
                         number = '(Handout)'
                     else:
                         number = index_entry['number']
-                    file.write(f"- {number} - [{titlecase(p)}]({index_entry['url']})\n")
+                    if m == mass:
+                        file.write(f"- {number} - [{titlecase(p)}]({index_entry['url']})\n")
+                    else:
+                        file.write(f"- {number} - [{titlecase(m)}: {titlecase(p)}]({index_entry['url']})\n")
                 except ValueError:
                     file.write(f"- {part}\n")
                 
@@ -242,20 +245,22 @@ def main():
     missing_videos = []
     for k,v in linkcheck.items():
         has_url, is_available, status, title = u.check_video_availability(v)
-        if not has_url:
-            # Missing URL - needs to be added
-            missing_videos.append({
-                'hymn': k,
-                'url': v,
-                'status': status
-            })
-        elif not is_available:
-            # URL exists but video unavailable
-            unavailable_videos.append({
-                'hymn': k,
-                'url': v,
-                'status': status
-            })
+        # Only check YouTube videos
+        if status.lower() != 'invaild url format' and 'ommited' not in k:
+            if not has_url:
+                # Missing URL - needs to be added
+                missing_videos.append({
+                    'hymn': k,
+                    'url': v,
+                    'status': status
+                })
+            elif not is_available:
+                # URL exists but video unavailable
+                unavailable_videos.append({
+                    'hymn': k,
+                    'url': v,
+                    'status': status
+                })
 
     # Create GitHub issue for any unavailable video extracted from the
     # `musicministry/song-urls` repo
