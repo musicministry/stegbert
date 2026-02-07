@@ -208,20 +208,22 @@ def main():
     missing_videos = []
     for k,v in linkcheck.items():
         has_url, is_available, status, title = u.check_video_availability(v)
-        if not has_url:
-            # Missing URL - needs to be added
-            missing_videos.append({
-                'hymn': k,
-                'url': v,
-                'status': status
-            })
-        elif not is_available:
-            # URL exists but video unavailable
-            unavailable_videos.append({
-                'hymn': k,
-                'url': v,
-                'status': status
-            })
+        # Only check YouTube videos
+        if status.lower() != 'invaild url format' and 'ommited' not in k:
+            if not has_url:
+                # Missing URL - needs to be added
+                missing_videos.append({
+                    'hymn': k,
+                    'url': v,
+                    'status': status
+                })
+            elif not is_available:
+                # URL exists but video unavailable
+                unavailable_videos.append({
+                    'hymn': k,
+                    'url': v,
+                    'status': status
+                })
 
     # Create GitHub issue for any unavailable video extracted from the
     # `musicministry/song-urls` repo
