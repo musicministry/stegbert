@@ -1,16 +1,16 @@
 ---
-first-feast: Second Sunday in Ordinary Time
-first-date: January 18, 2026
-last-feast: Sixth Sunday in Ordinary Time
-last-date: February 15, 2026
+first-feast: Fifth Sunday in Ordinary Time
+first-date: February 8, 2026
+last-feast: Fifth Sunday in Lent
+last-date: March 22, 2026
 title: Hymn Schedules
-subtitle: "**January 18, 2026** (Second Sunday in Ordinary Time) through **February 15, 2026** (Sixth Sunday in Ordinary Time)"
+subtitle: "**February 8, 2026** (Fifth Sunday in Ordinary Time) through **March 22, 2026** (Fifth Sunday in Lent)"
 ---
 
 All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. **Please note that the Mass setting is indicated for every week at the top of each list. Click its name to jump to links for Mass parts.** Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.
 
 ::: {.callout-important title="Take heed!"}
-We will sing the Heritage Mass during Ordinary Time. Please find links to the Mass parts below.
+We will introduce and start singing the [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html) during Lent.
 :::
 
 :::: {.content-visible when-format="html"}
@@ -18,69 +18,6 @@ We will sing the Heritage Mass during Ordinary Time. Please find links to the Ma
 ### &nbsp;&#x2720; Hymn Schedules
 :::
 ::::
-
-#### January 18, 2026 [Second Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Heritage Mass](#heritage-mass)]{style="float:right"}
-
-+--------+---------------------------+-----------------------------------------------------------------------------------+
-| &emsp; | **Processional:**         | 766 - [City of God](https://www.youtube.com/watch?v=jLBQEUauY-I)                  |
-+--------+---------------------------+-----------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:**   | [R&A p. 32](https://youtu.be/WrYH58H4Qgo?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-+--------+---------------------------+-----------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:**   | [R&A p. 33](https://youtu.be/GfmISUff9ao?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
-+--------+---------------------------+-----------------------------------------------------------------------------------+
-| &emsp; | **Preparation of Gifts:** | 777 - [Here I Am, Lord (Schutte)](https://www.youtube.com/watch?v=bryEXPELAyg)    |
-+--------+---------------------------+-----------------------------------------------------------------------------------+
-| &emsp; | **Communion:**            | 939 - [Behold the Lamb](https://www.youtube.com/watch?v=FP8oOvGed-8)              |
-+--------+---------------------------+-----------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**          | 773 - [You Have Anointed Me](https://www.youtube.com/watch?v=fg-IRtumn3I)         |
-+--------+---------------------------+-----------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### January 25, 2026 [Third Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Heritage Mass](#heritage-mass)]{style="float:right"}
-
-+--------+---------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**         | 607 - [Sing a New Song](https://www.youtube.com/watch?v=uTS6pzJTLFs)                     |
-+--------+---------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:**   | [R&A p. 34](https://youtu.be/bTYaj28lh1g?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)        |
-+--------+---------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:**   | [R&A p. 35](https://youtu.be/_cFM_Ootlso?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)        |
-+--------+---------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Preparation of Gifts:** | 781 - [Lord, When You Came to the Seashore](https://www.youtube.com/watch?v=vNujTECsX5Q) |
-+--------+---------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**            | 834 - [We Are Many Parts](https://www.youtube.com/watch?v=sZ7XbqBbIFI)                   |
-+--------+---------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**          | 766 - [City of God](https://www.youtube.com/watch?v=jLBQEUauY-I)                         |
-+--------+---------------------------+------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### February 1, 2026 [Fourth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Heritage Mass](#heritage-mass)]{style="float:right"}
-
-+--------+---------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**         | 848 - [Gather Us In](https://www.youtube.com/watch?v=ap9d6jiyriw)                  |
-+--------+---------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:**   | [R&A p. 36](https://youtu.be/P84D_d_at8s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)  |
-+--------+---------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:**   | [R&A p. 37](https://youtu.be/85cW9k6ycEI?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)  |
-+--------+---------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Preparation of Gifts:** | 658 - [Seek Ye First](https://www.youtube.com/watch?v=llEEYrHwkTM)                 |
-+--------+---------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**            | 47 - [The Cry of the Poor](https://www.youtube.com/watch?v=AWMs8Zqgywk)            |
-+--------+---------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**          | 592 - [We Are the Light of the World](https://www.youtube.com/watch?v=6F4l9b4rVL4) |
-+--------+---------------------------+------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
 
 #### February 8, 2026 [Fifth Sunday in Ordinary Time]{style="float:right"}
 
@@ -112,7 +49,7 @@ We will sing the Heritage Mass during Ordinary Time. Please find links to the Ma
 +--------+---------------------------+-----------------------------------------------------------------------------------------+
 | &emsp; | **Responsorial Psalm:**   | [R&A p. 40](https://youtu.be/4xHCHwQxJN0?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)       |
 +--------+---------------------------+-----------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:**   | [R&A p. 41](https://youtu.be/-4oHL_ujLMQ?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)       |
+| &emsp; | **Gospel Acclamation:**   | [R&A p. 41](https://youtu.be/)                                                          |
 +--------+---------------------------+-----------------------------------------------------------------------------------------+
 | &emsp; | **Preparation of Gifts:** | 612 - [When In Our Music God is Glorified](https://www.youtube.com/watch?v=tLRGNXLzWBc) |
 +--------+---------------------------+-----------------------------------------------------------------------------------------+
@@ -125,15 +62,156 @@ We will sing the Heritage Mass during Ordinary Time. Please find links to the Ma
 \needspace{3\baselineskip}
 
 
+#### February 18, 2026 [Ash Wednesday]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+----------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**          | 487 - [Again We Keep This Solemn Fast](https://www.youtube.com/watch?v=NpAKebyaujk) |
++--------+----------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:**    | [R&A p. 42](https://youtu.be/bWlHPiSBIyo?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)   |
++--------+----------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:**    | [R&A p. 43](https://youtu.be/5o0YXg4YtEQ?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)   |
++--------+----------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Distribution-of-Ashes:** | 962 - [Ashes](https://www.youtube.com/watch?v=VLZmz-ukOWo)                          |
++--------+----------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**             | 484 - [Hosea](https://www.youtube.com/watch?v=W_v6VAB9BM4)                          |
++--------+----------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**             | 478 - [Return to God](https://www.youtube.com/watch?v=KHJtAT1hYNo)                  |
++--------+----------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**           | 493 - [Change Our Hearts](https://www.youtube.com/watch?v=ji7LqD4uU_Y)              |
++--------+----------------------------+-------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### February 22, 2026 [First Sunday in Lent]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 479 - [Lord, Who throughout These Forty Days](https://www.youtube.com/watch?v=vAGMA8NrGmU) |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 44](https://youtu.be/pj65fZE7510?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)          |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 45](https://youtu.be/)                                                             |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 483 - [Forty Days and Forty Nights](https://www.youtube.com/watch?v=5MmTQRr-jJQ)           |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 910 - [Shepherd of Souls](https://www.youtube.com/watch?v=yX1gxQ3rI-o)                     |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 473 - [Parce Dómine](https://www.youtube.com/watch?v=kxSFG0h7trQ)                          |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 964 - [The Master Came to Bring Good News](https://www.youtube.com/watch?v=A8Dj_eLt3gE)    |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### March 1, 2026 [Second Sunday in Lent]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 877 - [How Good, Lord, to Be Here!](https://www.youtube.com/watch?v=LbBqw7RvvFE)           |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 46](https://youtu.be/bEPEYxTBJsE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)          |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 47](https://youtu.be/NDAgduh0xzg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)          |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 961 - [Remember Your Love](https://www.youtube.com/watch?v=xyigXGHWIx4)                    |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 878 - [Transform Us](https://www.youtube.com/watch?v=y53p6YvhbeI)                          |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 628 - [You, Lord, Are Both Lamb and Shepherd](https://www.youtube.com/watch?v=3643tGRYC8o) |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 644 - [There's a Wideness in God's Mercy](https://www.youtube.com/watch?v=fLqlKZe1Ckc)     |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### March 8, 2026 [Third Sunday in Lent]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 481 - [The Glory of These Forty Days](https://www.youtube.com/watch?v=SozuIuW97Oo)  |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 48](https://youtu.be/wFB0c3ca39w?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)   |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 49](https://youtu.be/UGqXKT_jvwI?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)   |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 724 - [I Heard the Voice of Jesus Say](https://www.youtube.com/watch?v=0mag-eXtkO0) |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 941 - [Eat This Bread](https://www.youtube.com/watch?v=QLIqCBIOZm4)                 |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 493 - [Change Our Hearts](https://www.youtube.com/watch?v=ji7LqD4uU_Y)              |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### March 15, 2026 [Fourth Sunday in Lent]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 593 - [I Want to Walk as a Child of the Light](https://www.youtube.com/watch?v=of3F5EFvSuM) |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 50](https://youtu.be/YeKe01s4loE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)           |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 51](https://youtu.be/Lr5khW)                                                        |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 592 - [We Are the Light of the World](https://www.youtube.com/watch?v=6F4l9b4rVL4)          |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 684 - [Psalm of Hope](https://www.youtube.com/watch?v=_CkUoiGNRAo)                          |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 766 - [City of God](https://www.youtube.com/watch?v=jLBQEUauY-I)                            |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### March 22, 2026 [Fifth Sunday in Lent]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 479 - [Lord, Who throughout These Forty Days](https://www.youtube.com/watch?v=vAGMA8NrGmU) |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 52](https://youtu.be/0iIu80yM4lI?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)          |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 53](https://youtu.be/6asCxIQ1ZZk?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)          |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 945 - [I Am the Bread of Life](https://www.youtube.com/watch?v=KCnpR-eobag)                |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 684 - [Psalm of Hope](https://www.youtube.com/watch?v=_CkUoiGNRAo)                         |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 871 - [We Shall Rise Again](https://www.youtube.com/watch?v=epIc6I9BxQY)                   |
++--------+-------------------------+--------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+
 ::: {.titlered}
 ### &nbsp;&#x2720; Mass Parts
 :::
 
 #### Heritage Mass
 
-- [Heritage Mass: Gloria](https://youtu.be/tukrgUdjIWU?t=27)
-- [Heritage Mass: Holy](https://www.youtube.com/watch?v=h0gXURFOhyo)
-- [Heritage Mass: Memorial Acclamation A](https://www.youtube.com/watch?v=g4alz7JVzWM)
-- [Heritage Mass: Amen](https://www.youtube.com/watch?v=XpEK_3j3GMY)
-- [Heritage Mass: Lamb of God](https://www.youtube.com/watch?v=LQzlBbf3TZo)
+- (Handout) - [ Heritage Mass: Gloria](https://youtu.be/tukrgUdjIWU?t=27)
+- (Handout) - [ Heritage Mass: Holy](https://www.youtube.com/watch?v=h0gXURFOhyo)
+- (Handout) - [ Heritage Mass: Memorial Acclamation A](https://www.youtube.com/watch?v=g4alz7JVzWM)
+- (Handout) - [ Heritage Mass: Amen](https://www.youtube.com/watch?v=XpEK_3j3GMY)
+- (Handout) - [ Heritage Mass: Lamb of God](https://www.youtube.com/watch?v=LQzlBbf3TZo)
+
+#### Mass of St. Dymphna
+
+- *Gloria omitted during Lent*
+- (Handout) - [ Mass of St. Dymphna: Holy](https://musicministry.github.io/stegbert/stdymphna.html)
+- (Handout) - [ Mass of St. Dymphna: Memorial Acclamation A](https://musicministry.github.io/stegbert/stdymphna.html)
+- (Handout) - [ Mass of St. Dymphna: Amen](https://musicministry.github.io/stegbert/stdymphna.html)
+- 313 - [ Cantus Missae (B): Lamb of God](https://www.youtube.com/watch?v=JgVQ0SHPeno)
 
