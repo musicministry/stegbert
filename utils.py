@@ -65,6 +65,7 @@ def keyify(string: str):
     if "|" in string:
         string = string.split("|")[0].strip()
     # Remove punctuation and special characters
+    string = string.replace("'", "")
     string = re.sub(r'[^a-zA-Z0-9]', ' ', string).strip().lower()
     return '-'.join(string.split())
 
@@ -85,10 +86,9 @@ def mass_index_lookup(name, swap=False):
     # Reverse the Mass setting with part, if needed
     if swap:
         name = ' '.join(name.split(': ')[::-1])
-
     # Extract the URL
-    if keyify(name) in mass_index.keys():
-        return mass_index[keyify(name)]
+    if keyify(name) in index.keys():
+        return index[keyify(name)]
     else:
         return None
 
