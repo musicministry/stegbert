@@ -449,18 +449,29 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
         priority = entry.get('priority', 'optional')
 
         # Handle RA differently from hymnal options
+        numflag = False
         if entry['book'].lower() == 'ra':
             display_name = 'URL'
             number, _, _ = fuzzy_ra_index_lookup(date=date, celebration_name=celebration)
-            if is_gospel:
+            if number is None:
+                numflag = True
+            if is_gospel and number is not None:
                 number += 1
             number = f'R&A p. {number}'
+        # Appendices 
+        elif 'app' in entry['book'].lower():
+            display_name = 'URL'
+            number = 'R&A p. None'
+            numflag = True
         else:
             # Find entry in hymnal index using closest match
             name = entry['name']
             display_name, number = fuzzy_index_lookup(name, verbose=False)
 
-        return f"[{priority}] {number} - {display_name}"
+        if numflag:
+            return f"[{priority}] {number} - {display_name} ⚠️VERIFY⚠️"
+        else:
+            return f"[{priority}] {number} - {display_name}"
     
     # If multiple entries, return as list
     else:
@@ -469,20 +480,45 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
             priority = entry.get('priority', 'optional')
 
             # Handle RA differently from hymnal options
+            numflag = False
             if entry['book'].lower() == 'ra':
                 display_name = 'URL'
                 number, _, _ = fuzzy_ra_index_lookup(date=date, celebration_name=celebration)
-                if is_gospel:
+                if number is None:
+                    numflag = True
+                if is_gospel and number is not None:
                     number += 1
                 number = f'R&A p. {number}'
+            # Appendices 
+            elif 'app' in entry['book'].lower():
+                display_name = 'URL'
+                number = 'R&A p. None'
+                numflag = True
             else:
                 # Find entry in hymnal index using closest match
                 name = entry['name']
+                numflag = False
                 display_name, number = fuzzy_index_lookup(name, verbose=False)
+                if number is None:
+                    numflag = True
 
-            options.append(f"[{priority}] {number} - {display_name}")
+            if numflag:
+                options.append(f"[{priority}] {number} - {display_name} ⚠️VERIFY⚠️")
+            else:
+                options.append(f"[{priority}] {number} - {display_name}")
         
         return options
+
+def advance_psalm(text, step=1):
+    # New number
+    number = int(''.join(c for c in text if c.isdigit())) + step
+
+    # Split the string
+    text_list = text.split(' ')
+
+    # Replace and reassemble
+    text_list[3] = str(number)
+    return ' '.join(text_list)
 
 def flatten_frontmatter(frontmatter, feast_name, date, season, lit_year, hymnal, mass_setting=None):
     """
@@ -518,15 +554,29 @@ def flatten_frontmatter(frontmatter, feast_name, date, season, lit_year, hymnal,
     result['parts'] = [f'{p}: {result["Mass"]}' for p in mass_parts]
 
     # 3. Add songs one at a time
+    increase = 0
     for song in frontmatter.keys():
         # Handle responsorial psalm and gospel acclamation separately
         if 'psalm' in song.lower():
-            result['Responsorial Psalm'] = format_psalm_options(frontmatter['psalm'], priority_order, date, feast_name)
+            if song.lower() == 'psalm':
+                result['Responsorial Psalm'] = format_psalm_options(frontmatter[song], priority_order, date, feast_name)
 
-            # If no gospel acclamation is provided, require R&A
-            if 'gospel-acclamation' not in frontmatter.keys():
-                result['Gospel Acclamation'] = format_psalm_options(
-                    {'list': [{'book': 'RA', 'priority': 'required'}]}, priority_order, date, feast_name, is_gospel=True)
+                # If no gospel acclamation is provided, require R&A
+                if 'gospel-acclamation' not in frontmatter.keys():
+                    result['Gospel Acclamation'] = format_psalm_options(
+                        {'list': [{'book': 'RA', 'priority': 'required'}]}, priority_order, date, feast_name, is_gospel=True)
+            else:
+                # Advance pages for multiple psalms (Easter Vigil and Pentecost
+                # Vigil) - requires manual verification due to multiple options
+                results = format_psalm_options(frontmatter[song], priority_order, date, feast_name)
+                if isinstance(results, list):
+                    for i, entry in enumerate(results):
+                        results[i] = advance_psalm(entry, step=increase) + ' ⚠️VERIFY⚠️'
+                        increase += 1
+                    result[unkey(song)] = results
+                else:
+                   result[unkey(song)] = advance_psalm(results, step=increase) + ' ⚠️VERIFY⚠️'
+                   increase += 1
         
         # Ignore anthems for now
         elif song.lower() == 'anthems':
