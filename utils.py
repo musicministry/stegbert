@@ -399,7 +399,7 @@ def format_hymn_options(song_data, priority_order, is_gospel=False):
         hymn = sorted_hymns[0]
         name = hymn['name']
         if 'composer' in hymn.keys():
-            name = f'{name} ({hymn['composer']})'
+            name = f'{name} ({hymn["composer"]})'
         priority = hymn.get('priority', 'optional')
 
         # Find entry in hymnal index using closest match
