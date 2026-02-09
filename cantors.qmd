@@ -1,0 +1,8 @@
+---
+title: Cantor Schedule
+subtitle: Leading the parish in song
+---
+
+
+
+<iframe src="https://calendar.google.com/calendar/embed?src=c_32538347fa7e1ce3e6a78175c29b28d538249c270325a09e03acf1bdab9ac0fa%40group.calendar.google.com&ctz=America%2FNew_York" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>

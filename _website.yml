@@ -7,6 +7,8 @@ website:
         href: schedules.qmd
       - text: "Looking Ahead"
         href: upcoming.qmd
+      - text: "Cantors"
+        href: cantors.qmd
       - stdymphna.qmd
     logo: _images/trebleclef.png
   announcement:
