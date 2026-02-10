@@ -39,7 +39,7 @@ palm_sunday = {
         "Holy: Mass of St. Dymphna",
         "Memorial Acclamation A: Mass of St. Dymphna",
         "Amen: Mass of St. Dymphna",
-        "Lamb of God: Cantus Missae (version B)"
+        "Lamb of God: Cantus Missae (B)"
     ],
 
     "Processional": "498 - All Glory, Laud, and Honor",
