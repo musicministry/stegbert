@@ -76,7 +76,7 @@ args = parse_args()
 
 # args = Args(
 #     year = 2026,
-#     publish = 'baptism'
+#     publish = 'ash-wednesday'
 # )
 
 # =========================================================================== #
@@ -209,7 +209,7 @@ def main():
     for k,v in linkcheck.items():
         has_url, is_available, status, title = u.check_video_availability(v)
         # Only check YouTube videos
-        if status.lower() != 'invaild url format' and 'ommited' not in k:
+        if status.lower() != 'invalid url format' and 'ommited' not in k:
             if not has_url:
                 # Missing URL - needs to be added
                 missing_videos.append({
