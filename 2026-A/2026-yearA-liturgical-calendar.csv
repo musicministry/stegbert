@@ -30,7 +30,7 @@ date,weekday,feast,season,name,priority,year,month,day,dayofweek,filename
 2026-04-02,Thurs,holy-thursday,lent,Holy Thursday,1,2026,4,2,3,holy-week/holy-thursday.qmd
 2026-04-03,Fri,good-friday,lent,Good Friday,1,2026,4,3,4,holy-week/good-friday.qmd
 2026-04-04,Sat,easter-vigil,easter,Easter Vigil,1,2026,4,4,5,holy-week/easter-vigil.qmd
-2026-04-05,Sun,easter,easter,Easter,2,2026,4,5,6,easter/easter.qmd
+2026-04-05,Sun,easter01,easter,First Sunday in Easter,2,2026,4,5,6,easter/easter01.qmd
 2026-04-12,Sun,easter02,easter,Second Sunday in Easter,2,2026,4,12,6,easter/easter02.qmd
 2026-04-19,Sun,easter03,easter,Third Sunday in Easter,2,2026,4,19,6,easter/easter03.qmd
 2026-04-26,Sun,easter04,easter,Fourth Sunday in Easter,2,2026,4,26,6,easter/easter04.qmd
@@ -38,14 +38,14 @@ date,weekday,feast,season,name,priority,year,month,day,dayofweek,filename
 2026-05-10,Sun,easter06,easter,Sixth Sunday in Easter,2,2026,5,10,6,easter/easter06.qmd
 2026-05-17,Sun,ascension,easter,Ascension of the Lord,2,2026,5,17,6,easter/ascension.qmd
 2026-05-23,Sat,pentecost-vigil,easter,Pentecost Vigil,0,2026,5,23,5,easter/pentecost-vigil.qmd
-2026-05-23,Sat,pentecost-vigil,easter,Pentecost Vigil,0,2026,5,23,5,easter/pentecost-vigil-extended.qmd
+2026-05-23,Sat,pentecost-vigil-extended-form,easter,Pentecost Vigil Extended Form,0,2026,5,23,5,easter/pentecost-vigil-extended.qmd
 2026-05-24,Sun,pentecost,easter,Pentecost,2,2026,5,24,6,easter/pentecost.qmd
 2026-05-31,Sun,holy-trinity,ordinary-time,Holy Trinity,2,2026,5,31,6,feasts/holy-trinity.qmd
 2026-06-07,Sun,corpus-christi,ordinary-time,Corpus Christi,2,2026,6,7,6,feasts/corpus-christi.qmd
 2026-06-12,Fri,sacred-heart,ordinary-time,Sacred Heart of Jesus,0,2026,6,12,4,feasts/sacred-heart.qmd
 2026-06-14,Sun,ot11,ordinary-time,Eleventh Sunday in Ordinary Time,2,2026,6,14,6,ot/ot11.qmd
 2026-06-21,Sun,ot12,ordinary-time,Twelfth Sunday in Ordinary Time,2,2026,6,21,6,ot/ot12.qmd
-2026-06-23,Tues,nativity-john-baptist-vigil,ordinary-time,Nativity John Baptist Vigil,0,2026,6,23,1,feasts/jun23-nativity-john-baptist-vigil.qmd
+2026-06-23,Tues,nativity-john-baptist-vigil,ordinary-time,Nativity of John Baptist Vigil,0,2026,6,23,1,feasts/jun23-nativity-john-baptist-vigil.qmd
 2026-06-24,Wed,nativity-john-baptist,ordinary-time,Nativity of John Baptist,0,2026,6,24,2,feasts/jun24-nativity-john-baptist.qmd
 2026-06-28,Sun,ot13,ordinary-time,Thirteenth Sunday in Ordinary Time,2,2026,6,28,6,ot/ot13.qmd
 2026-06-29,Mon,peter-paul,ordinary-time,Saints Peter and Paul,0,2026,6,29,0,feasts/jun29-peter-paul.qmd
