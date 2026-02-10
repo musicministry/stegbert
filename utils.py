@@ -26,8 +26,12 @@ gather_index = yaml.safe_load(requests.get(gather_index_url).content)
 mass_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/gather/mass-settings.yml'
 mass_index = yaml.safe_load(requests.get(mass_index_url).content)
 
+# Supplemental index (anthems, handouts, etc.)
+supplemental_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/supplemental/supplemental.yml'
+supplemental_index = yaml.safe_load(requests.get(supplemental_index_url).content)
+
 # Combine
-index = gather_index | mass_index
+index = gather_index | supplemental_index | mass_index
 
 # Respond and Acclaim index
 ra_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/ra-index.yml'
@@ -413,7 +417,7 @@ def format_hymn_options(song_data, priority_order, is_gospel=False):
         if 'composer' in hymn.keys():
             name = f"{name} ({hymn['composer']})"
         priority = hymn.get('priority', 'optional')
-
+        
         # Find entry in hymnal index using closest match
         display_name, number = fuzzy_index_lookup(name, verbose=False)
 
