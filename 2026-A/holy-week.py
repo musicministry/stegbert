@@ -98,14 +98,10 @@ easter_vigil = {
     "Psalm After First Reading": "R&A p. 60 - https://youtu.be/SjG0vq25cP8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     "Psalm After Third Reading": "R&A p. 63 - https://youtu.be/VykG9JCN8D0?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     "Psalm After Fifth Reading": "R&A p. 65 - https://youtu.be/swXbF0Lz0mc?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Psalm After Seventh Reading": [
-        "[required - w/Baptisms] R&A p. 67 - https://youtu.be/WlYgUUMH2Iw?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-        "[required- no Baptisms] R&A p. 69 - https://youtu.be/yI1tWcFk02k?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os"
-    ],
+    "Psalm After Seventh Reading": "R&A p. 69 - https://youtu.be/yI1tWcFk02k?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     "Psalm After Epistle": "R&A p. 70 - https://youtu.be/uHORiqmMTCU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Litany-of-the-Saints": "Handout - Litany of the Saints",
-    "After-Each-Baptism": "Handout - Handout",
     "Sprinkling": "903 - Baptized in Water",
     
     "Offertory": "533 - Come, You Faithful, Raise the Strain",
