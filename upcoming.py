@@ -200,7 +200,10 @@ def main():
                             ra_linkcheck.update({' '.join([r.feast, k]): v})
                         # Otherwise, just keyify the hymn name and get the URL
                         else:
-                            name = u.keyify(v.split(' - ')[-1].strip())
+                            try:
+                                name = u.keyify(v.split(' - ')[-1].strip())
+                            except AttributeError:
+                                raise TypeError(f"Received a list for {k} in {r.feast}. Please review '{season}.py' and select one song.")
                             link = u.get_url(name)
                             linkcheck.update({name: link})
 
@@ -246,7 +249,7 @@ def main():
     for k,v in linkcheck.items():
         has_url, is_available, status, title = u.check_video_availability(v)
         # Only check YouTube videos
-        if status.lower() != 'invalid url format' and 'ommited' not in k:
+        if status.lower() != 'invalid url format' and 'omitted' not in k:
             if not has_url:
                 # Missing URL - needs to be added
                 missing_videos.append({
