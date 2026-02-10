@@ -148,7 +148,7 @@ def main():
             ra_linkcheck.update({' '.join([feast, k]): v})
         # Otherwise, just keyify the hymn name and get the URL
         else:
-            name = u.keyify(v.split('-')[-1].strip())
+            name = u.keyify(v.split(' - ')[-1].strip())
             link = u.get_url(name)
             linkcheck.update({name: link})
 
