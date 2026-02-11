@@ -6,11 +6,20 @@ subtitle: For Fr. Ryszard Kolodziej and Basilica Shrine of St. Mary, Wilmington,
 
 Fr. Ryszard has asked us to learn and starting singing the *Mass of St. Dymphna*. We will beging introducing these Mass parts to the congregation starting **Lent 2026**, which begins on Wednesday, February 18.
 
-**Cantors and choir members: Please start learning these now!** As vocal leaders, you will need to comfortably lead these parts until the congregation learns them well enough to sing. We will learn them together at choir and cantor rehearsals between now and then. (Note that we will sing all of them faster than performed here.)
+Audio samples are [below](#gloria). Download a copy of the cantor sheet [here](_images/MassOfStDymphna_melody.pdf).
+
+We will start by introducing the [Holy, Holy, Holy](#holy-holy-holy), [Memorial Acclamation](#memorial-acclamation), and [Great Amen](#amen). We will then add the [Lamb of God](#lamb-of-god) and, after Lent, the [Gloria](#gloria).
+
+::: {.callout-important title="Cantors and choir members: Please start learning these now!"}
+As vocal leaders, you will need to comfortably lead these parts until the congregation learns them well enough to sing. We will learn them together at choir and cantor rehearsals between now and then. (Note that we will sing all of them faster than performed here.)
+:::
+
 
 ##### Gloria
 
-Coming soon.  
+<audio controls="">
+  <source src="./_audio/st-dymphna-gloria.mp3" type="audio/wav"/>
+</audio>  
 <br>
 
 ##### Holy, Holy, Holy
