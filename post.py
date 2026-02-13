@@ -1,6 +1,6 @@
 # =============================================================================
 # author: mgrossi
-# date:   20 December 2025
+# date:   12 February 2026
 #
 # This script creates a Quarto markdown page containing the music lineup for a
 # single liturgy in calendar year `year`. (Note that for Advent and Christmas,
@@ -20,6 +20,14 @@
 # for responsorial psalms and gospel acclamations, the name of the Mass
 # setting to be used, and a list of Mass parts to include.
 #
+# To manually post a celebration that is not in the liturgical calendar (e.g.,
+# Confirmation), use `--publish "occasions: occasion"` where `occasions.py` is
+# the name of the file containing the music schedule(s) and `occasion` is the
+# name of the celebration to post. In this use case, the hymn schedule dict
+# requires `season` key indicating the liturgical season of the celebration and
+# `date` of the format "YYYY-MM-DD HH:MM" specifying the date and time of the
+# celebration.
+#
 # To execute in terminal:
 # python post.py 2026
 #
@@ -30,6 +38,10 @@
 #     or
 #
 # python post.py 2026 --publish 'advent01'
+#
+#     or
+#
+# python post.py 2026 -p 'occasions: confirmation'
 #
 # Feast names are taken from the name of the dictionaries containing the
 # music schedules and must be a name found in the `name` column of the
@@ -67,17 +79,17 @@ args = parse_args()
 # =========================================================================== #
 # Local development
 
-# class Args:
-#     def __init__(self, year, publish='next', outfile='auto', callout=None):
-#         self.year = year
-#         self.publish = publish
-#         self.outfile = outfile
-#         self.callout = callout
+class Args:
+    def __init__(self, year, publish='next', outfile='auto', callout=None):
+        self.year = year
+        self.publish = publish
+        self.outfile = outfile
+        self.callout = callout
 
-# args = Args(
-#     year = 2026,
-#     publish = 'ash-wednesday'
-# )
+args = Args(
+    year = 2026,
+    publish = 'occasions: confirmation'
+)
 
 # =========================================================================== #
 # Main program
@@ -87,44 +99,53 @@ def main():
     u.load_env_file()
     token = os.environ.get('GITHUB_TOKEN')
 
-    # Load hymn lists
+    # Path for hymn list files
     cycle = u.lityear(args.year)
     process_dir = f'{args.year}-{cycle}'
     sys.path.append(os.path.join(process_dir))
 
-    lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
-    cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
-                      parse_dates=['date'], index_col='feast')
+    # Manual postings
+    if ":" in args.publish:
 
-    # Get next Sunday, if needed
-    if args.publish.lower() == 'next':
-        today = dt.datetime.today()
-        next_sun = u.next_sunday(from_date=today)
-        publish = str(next_sun)
-        print(f'Publishing next Sunday {u.fmtdate(next_sun)}')
+        # Get feast and schedule file name from `--publish` argument
+        year = args.year
+        season = args.publish.split(':')[0].strip()
+        feast = args.publish.split(':')[1].strip()
+        print(f'Loading {titlecase(feast)} from {season}.py')
+    
+    # Pull from liturgical calendar
     else:
-        publish = args.publish
 
-    # Date and feast
-    try:
-        date = dt.datetime.strptime(publish, '%Y-%m-%d')
-        feast = cal[cal['date']==publish].index
-        if len(feast) > 1:
-            raise IndexError(f'More than one liturgy was found for {dt.datetime.strftime(date.date(), format="%B %d")}. Please specify a feast to publish instead of a date and try again.')
-        feast = feast[0]
-    except ValueError:
-        feast = publish
-        date = cal.loc[feast]['date']
+        lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
+        cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
+                        parse_dates=['date'], index_col='feast')
 
-    # File name
-    if args.outfile.lower() == 'auto':
-        outfile = os.path.join('posts', f'{str(date.date())}-{feast}.qmd')
-    else:
-        outfile = os.path.join('posts', args.outfile)
+        # Get next Sunday, if needed
+        if args.publish.lower() == 'next':
+            today = dt.datetime.today()
+            next_sun = u.next_sunday(from_date=today)
+            publish = str(next_sun)
+            print(f'Publishing next Sunday {u.fmtdate(next_sun)}')
+        else:
+            publish = args.publish
 
-    # Subset calendar
-    df = cal.loc[feast]
-    season = df.season
+        # Date and feast
+        try:
+            date = dt.datetime.strptime(publish, '%Y-%m-%d')
+            feast = cal[cal['date']==publish].index
+            if len(feast) > 1:
+                raise IndexError(f'More than one liturgy was found for {dt.datetime.strftime(date.date(), format="%B %d")}. Please specify a feast to publish instead of a date and try again.')
+            feast = feast[0]
+        except ValueError:
+            feast = publish
+            date = cal.loc[feast]['date']
+
+        # Subset calendar
+        df = cal.loc[feast]
+        season = df['season']
+        name = df['name']
+        year = df['year']
+        day = df['day']
 
     # Load the schedules and fix the keys
     hymn_lists = u.load_hymn_schedules(season)
@@ -158,19 +179,33 @@ def main():
     hymns.pop('Mass')
     hymns.pop('parts')
 
+    if ":" in args.publish:
+        name = titlecase(feast)
+        date = dt.datetime.strptime(hymns['date'], "%Y-%m-%d %H:%M")
+        day = str(date.day).zfill(2)
+        season = hymns['season']
+        hymns.pop('season')
+        hymns.pop('date')
+
     # Add Gloria omission if needed
     if all('gloria' not in p.lower() and (season == 'advent' or season == 'lent') for p in parts):
         parts.insert(0, f'Gloria: *Gloria omitted during {titlecase(season)}*')
 
+    # File name
+    if args.outfile.lower() == 'auto':
+        outfile = os.path.join('posts', f'{str(date.date())}-{feast}.qmd')
+    else:
+        outfile = os.path.join('posts', args.outfile)
+
     with open(outfile, 'w') as file:
         # Header
         file.write('---\n')
-        file.write(f'title: {df["name"]}\n')
+        file.write(f'title: {name}\n')
         file.write(f'last-updated: {str(date.date()-dt.timedelta(days=5))}\n')
         file.write(f'description: {u.fmtdate(date)}\n')
         file.write('categories:\n')
-        file.write(f'  - {titlecase(df.season)} {df.year}\n')
-        file.write(f'image: /_images/dates/{dt.datetime.strftime(date, format="%b").lower()}/{str(df["day"]).zfill(2)}.png\n')
+        file.write(f'  - {titlecase(season)} {year}\n')
+        file.write(f'image: /_images/dates/{dt.datetime.strftime(date, format="%b").lower()}/{day}.png\n')
         file.write('---\n\n')
 
         # Callout
