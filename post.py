@@ -79,17 +79,17 @@ args = parse_args()
 # =========================================================================== #
 # Local development
 
-class Args:
-    def __init__(self, year, publish='next', outfile='auto', callout=None):
-        self.year = year
-        self.publish = publish
-        self.outfile = outfile
-        self.callout = callout
+# class Args:
+#     def __init__(self, year, publish='next', outfile='auto', callout=None):
+#         self.year = year
+#         self.publish = publish
+#         self.outfile = outfile
+#         self.callout = callout
 
-args = Args(
-    year = 2026,
-    publish = 'occasions: confirmation'
-)
+# args = Args(
+#     year = 2026,
+#     publish = 'occasions: confirmation'
+# )
 
 # =========================================================================== #
 # Main program
@@ -156,8 +156,8 @@ def main():
     linkcheck = {}
     ra_linkcheck = {}
     for k,v in hymns.items():
-        # Ignore RA, Mass setting info, season, date, if provided
-        if (k.lower() == 'mass') or (k.lower() == 'ra') or (k.lower() == 'season') or (k.lower() == 'date') or ('handout' in v.lower()):
+        # Ignore RA, Mass setting info, season, and date, if provided
+        if (k.lower() == 'mass') or (k.lower() == 'ra') or (k.lower() == 'season') or (k.lower() == 'date'):
             pass
         # Handle Mass parts separately
         elif k.lower() == 'parts':
