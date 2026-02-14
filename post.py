@@ -156,8 +156,8 @@ def main():
     linkcheck = {}
     ra_linkcheck = {}
     for k,v in hymns.items():
-        # Ignore RA and Mass setting info
-        if (k.lower() == 'mass') or (k.lower() == 'ra'):
+        # Ignore RA, Mass setting info, season, and date, if provided
+        if (k.lower() == 'mass') or (k.lower() == 'ra') or (k.lower() == 'season') or (k.lower() == 'date'):
             pass
         # Handle Mass parts separately
         elif k.lower() == 'parts':
