@@ -1,0 +1,49 @@
+---
+title: change-our-hearts
+last-updated: 2026-02-13
+description: February 18, 2026
+categories:
+  - Lent 2026
+image: /_images/dates/feb/18.png
+---
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">487 - Again We Keep This Solemn Fast<br><br> {{< video https://www.youtube.com/watch?v=NpAKebyaujk >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 42 <br><br> {{< video https://youtu.be/bWlHPiSBIyo?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 43 <br><br> {{< video https://youtu.be/5o0YXg4YtEQ?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Distribution of Ashes:</strong></td><td style="width: 75%;">962 - Ashes<br><br> {{< video https://www.youtube.com/watch?v=daKcalWzzgk >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">484 - Hosea<br><br> {{< video https://www.youtube.com/watch?v=W_v6VAB9BM4 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">478 - Return to God<br><br> {{< video https://www.youtube.com/watch?v=KHJtAT1hYNo >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">493 - Change Our Hearts<br><br> {{< video https://www.youtube.com/watch?v=ji7LqD4uU_Y >}}</td></tr>
+</tbody>
+</table>
+
+### Mass Parts
+
+The Mass parts for Lent will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;"><em>*Gloria omitted during Lent*</em> <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../_audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../_audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../_audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;">{{< video https://www.youtube.com/watch?v=JgVQ0SHPeno >}}</td></tr>
+</tbody>
+</table>
+
+
