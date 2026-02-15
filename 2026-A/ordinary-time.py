@@ -99,3 +99,45 @@ ot06 = {
     "Communion":            "728 - Eye Has Not Seen",
     "Recessional":          "949 - Alleluia! Sing to Jesus"
 }
+
+
+holy_trinity = {
+    "Mass": "Heritage Mass",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Heritage Mass",
+        "Memorial Acclamation A: Heritage Mass",
+        "Amen: Heritage Mass",
+        "Lamb of God: Heritage Mass"
+    ],
+
+    "Processional": "567 - Holy, Holy, Holy! Lord God Almighty!",
+
+    "Responsorial Psalm": "R&A p. 96 - https://youtu.be/4CipytWuv0c?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation": "R&A p. 97 - https://youtu.be/djexyE_j_D0?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+
+    "Offertory": "615 - Holy God, We Praise Thy Name",
+    "Communion": "642 - What Wondrous Love Is This",
+    "Recessional": "566 - O God, Almighty Father"
+}
+
+corpus_christi = {
+    "Mass": "Heritage Mass",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Heritage Mass",
+        "Memorial Acclamation A: Heritage Mass",
+        "Amen: Heritage Mass",
+        "Lamb of God: Heritage Mass"
+    ],
+
+    "Processional": "616 - Praise to the Lord, the Almighty",
+
+    "Responsorial Psalm": "R&A p. 98 - https://youtu.be/2lyxAUr9KUY?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Gospel Acclamation": "R&A p. 99 - https://youtu.be/L0Fb8sDMJXg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+
+    "Offertory": "932 - One Bread, One Body",
+    "Communion": "910 - Shepherd of Souls",
+    "Meditation": "619 - Let All Mortal Flesh Keep Silence",
+    "Recessional": "615 - Holy God, We Praise Thy Name"
+}
