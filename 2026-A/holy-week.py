@@ -101,7 +101,7 @@ easter_vigil = {
     "Psalm After Seventh Reading": "R&A p. 69 - https://youtu.be/yI1tWcFk02k?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     "Psalm After Epistle": "R&A p. 70 - https://youtu.be/uHORiqmMTCU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
-    "Litany-of-the-Saints": "Handout - Litany of the Saints",
+    "Litany-of-the-Saints": "Handout - Litany of the Saints (Becker)",
     "Sprinkling": "903 - Baptized in Water",
     
     "Offertory": "533 - Come, You Faithful, Raise the Strain",
