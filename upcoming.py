@@ -187,9 +187,12 @@ def main():
 
                     # Compile the hymns and URLs
                     hymns = hymn_lists[r.feast]
+                    # Check for lists before proceeding
+                    u.check_for_lists(hymns, context="hymn dictionary")
+                    # Process each entry
                     for k,v in hymns.items():
-                        # Ignore RA and Mass setting info
-                        if (k.lower() == 'mass') or (k.lower() == 'ra'):
+                        # Ignore Mass setting info for now
+                        if (k.lower() == 'mass'):
                             pass
                         # Handle Mass parts separately
                         elif k.lower() == 'parts':

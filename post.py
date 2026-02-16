@@ -152,6 +152,9 @@ def main():
     hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
     hymns = hymn_lists[feast]
 
+    # Check for lists before proceeding
+    u.check_for_lists(hymns, context="hymn dictionary")
+
     # Check video availability
     linkcheck = {}
     ra_linkcheck = {}

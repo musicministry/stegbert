@@ -85,6 +85,18 @@ def get_url(name, swap=False):
     else:
         return None
 
+def check_for_lists(d, context=""):
+    """Ensure all dictionary values are strings, not lists or other types."""
+    # Get any entries that are not strings, except for 'parts'
+    non_strings = [(k, type(v).__name__) for k, v in d.items() 
+                   if not isinstance(v, str) and k.lower() != 'parts']
+    
+    # If there are any lists, require a selection be made first
+    if non_strings:
+        keys_and_types = ", ".join(f"{t} in {k}" for k, t in non_strings)
+        context_msg = f" in {context}" if context else ""
+        raise TypeError(f"Expected single string values{context_msg}, but found {keys_and_types}. Please make a selection and try again.")
+
 def get_local_path(name, swap=False):
     """Return the local file path for hymn or song `name`. If the `name` has a colon and needs to be swapped, for example, `Gloria: Heritage Mass` needs to become `Heritage Mass: Gloria`, use `swap = True`."""
     # Reverse the name, if needed
