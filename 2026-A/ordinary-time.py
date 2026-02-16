@@ -102,13 +102,13 @@ ot06 = {
 
 
 holy_trinity = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
-        "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Gloria: Mass of St. Dymphna",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "567 - Holy, Holy, Holy! Lord God Almighty!",
@@ -122,13 +122,13 @@ holy_trinity = {
 }
 
 corpus_christi = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
-        "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Gloria: Mass of St. Dymphna",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "616 - Praise to the Lord, the Almighty",
