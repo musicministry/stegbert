@@ -143,7 +143,7 @@ def main():
         # Subset calendar
         df = cal.loc[feast]
         season = df['season']
-        name = df['name']
+        feast_name = df['name']
         year = df['year']
         day = df['day']
 
@@ -180,7 +180,7 @@ def main():
     hymns.pop('parts')
 
     if ":" in args.publish:
-        name = titlecase(feast)
+        feast_name = titlecase(feast)
         date = dt.datetime.strptime(hymns['date'], "%Y-%m-%d %H:%M")
         day = str(date.day).zfill(2)
         season = hymns['season']
@@ -200,7 +200,7 @@ def main():
     with open(outfile, 'w') as file:
         # Header
         file.write('---\n')
-        file.write(f'title: {name}\n')
+        file.write(f'title: {feast_name}\n')
         file.write(f'last-updated: {str(date.date()-dt.timedelta(days=5))}\n')
         file.write(f'description: {u.fmtdate(date)}\n')
         file.write('categories:\n')
