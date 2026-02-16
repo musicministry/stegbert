@@ -7,6 +7,10 @@ categories:
 image: /_images/dates/feb/18.png
 ---
 
+::: {.callout-important title="Take heed!"}
+We will introduce and sing the [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html) during Lent.
+:::
+
 ### Hymns
 
 All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
