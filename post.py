@@ -145,7 +145,7 @@ def main():
         season = df['season']
         feast_name = df['name']
         year = df['year']
-        day = df['day']
+        day = str(df['day']).zfill(2)
 
     # Load the schedules and fix the keys
     hymn_lists = u.load_hymn_schedules(season)

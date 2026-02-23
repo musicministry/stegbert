@@ -4,7 +4,7 @@ last-updated: 2026-02-24
 description: March 1, 2026
 categories:
   - Lent 2026
-image: /_images/dates/mar/1.png
+image: /_images/dates/mar/01.png
 ---
 
 ### Hymns
