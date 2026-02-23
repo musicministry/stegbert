@@ -37,6 +37,13 @@ index = gather_index | supplemental_index | mass_index
 ra_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/ra-index.yml'
 ra_index = yaml.safe_load(requests.get(ra_index_url).content)
 
+# Respond and Acclaim YouTube videos and feast mapping
+ra_videos_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/ra-video-urls.yml'
+ra_videos = yaml.safe_load(requests.get(ra_videos_url).content)
+
+ra_feast_mapping_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/feast-mapping.yml'
+ra_feast_mapping = yaml.safe_load(requests.get(ra_feast_mapping_url).content)
+
 # =========================================================================== #
 # Tools
 
@@ -84,6 +91,13 @@ def get_url(name, swap=False):
         return index[keyify(name)]['url']
     else:
         return None
+
+def get_ra_video_url(celebration, get='psalm'):
+    """Return the R&A video URL for `celebration`."""
+    # Check the `get` string
+    assert get.lower() in ['psalm', 'gospel acclamation'], '`get` parameter must be "psalm" or "gospel acclamation"'
+    get = titlecase(get)
+    return(ra_videos[ra_feast_mapping[celebration] + f' - {get}']['url'])
 
 def check_for_lists(d, context=""):
     """Ensure all dictionary values are strings, not lists or other types."""
@@ -483,12 +497,16 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
         # Handle RA differently from hymnal options
         numflag = False
         if entry['book'].lower() == 'ra':
-            display_name = 'URL'
-            number, _, _ = fuzzy_ra_index_lookup(date=date, celebration_name=celebration)
+            number, index_key, _ = fuzzy_ra_index_lookup(date=date, celebration_name=celebration)
             if number is None:
                 numflag = True
             if is_gospel and number is not None:
+                display_name = get_ra_video_url(index_key.split(' - ')[-1].strip(),
+                                                get='gospel acclamation')
                 number += 1
+            else:
+                display_name = get_ra_video_url(index_key.split(' - ')[-1].strip(),
+                                                get='psalm')
             number = f'R&A p. {number}'
         # Appendices 
         elif 'app' in entry['book'].lower():
@@ -514,8 +532,8 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
             # Handle RA differently from hymnal options
             numflag = False
             if entry['book'].lower() == 'ra':
-                display_name = 'URL'
-                number, _, _ = fuzzy_ra_index_lookup(date=date, celebration_name=celebration)
+                number, index_key, _ = fuzzy_ra_index_lookup(date=date, celebration_name=celebration)
+                display_name = get_ra_video_url(index_key.split(' - ')[-1].strip())
                 if number is None:
                     numflag = True
                 if is_gospel and number is not None:
