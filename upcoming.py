@@ -112,8 +112,6 @@ def main():
     # Create a qmd file
     first_feast = df.loc[df['feast']==start, "name"].iloc[0]
     last_feast = df.loc[df['feast']==end, "name"].iloc[0]
-    # first_date = dt.datetime.strftime(start_date, "%B %d, %Y")
-    # last_date = dt.datetime.strftime(end_date, "%B %d, %Y")
     first_date = u.fmtdate(start_date)
     last_date = u.fmtdate(end_date)
 
@@ -126,19 +124,38 @@ def main():
         file.write(f'last-date: {last_date}\n')
         file.write('title: Hymn Schedules\n')
         file.write(f'subtitle: "**{first_date}** ({first_feast}) through **{last_date}** ({last_feast})"\n')
+        file.write('format:\n')
+        file.write('  html: default\n')
+        file.write('  pdf:\n')
+        file.write('    template: hymn-schedule-template.tex\n')
+        file.write('    pdf-engine: xelatex\n')
+        file.write('    keep-tex: false\n')
+        file.write('    geometry:\n')
+        file.write('      - left=0.85in\n')
+        file.write('      - right=0.85in\n')
+        file.write('      - top=1in\n')
+        file.write('      - bottom=0.85in\n')
+        file.write('filters: [pdf-cleanup.lua]\n')
+        file.write('pdf-colwidths: [0.05, 0.37, 0.58]\n')
         file.write('---\n\n')
 
         # Preface
+        file.write(
+            '::: {.content-visible when-format="pdf"}\n' \
+            '***\n' \
+            ':::\n\n'
+        )
+
         file.write("""All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. **Please note that the Mass setting is indicated for every week at the top of each list. Click its name to jump to links for Mass parts.** Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.\n\n""")
 
         # Callout
         if args.callout is not None:
             file.write(
-                f'::: {{.callout-important title="Take heed!"}}\n' \
+                '::: {.schedule-callout title="Take heed!"}\n' \
                 f'{args.callout}\n' \
                 ':::\n\n'
             )
-        
+
         # Hymn schedules
         file.write(
             ':::: {.content-visible when-format="html"}\n' \
@@ -221,7 +238,7 @@ def main():
             ':::\n\n'
         )
         for mass, parts in mass_list.items():
-            file.write(f'#### {mass}\n\n')
+            file.write(f'#### {mass} {{#{u.keyify(mass)}}}\n\n')
 
             for part in parts:
                 try:
@@ -232,9 +249,9 @@ def main():
                     else:
                         number = index_entry['number']
                     if m == mass:
-                        file.write(f"- {number} - [{titlecase(p)}]({index_entry['url']})\n")
+                        file.write(f"- {number} - [{titlecase(p.strip())}]({index_entry['url']})\n")
                     else:
-                        file.write(f"- {number} - [{titlecase(m)}: {titlecase(p)}]({index_entry['url']})\n")
+                        file.write(f"- {number} - [{titlecase(m.strip())}: {titlecase(p.strip())}]({index_entry['url']})\n")
                 except ValueError:
                     file.write(f"- {part}\n")
                 
