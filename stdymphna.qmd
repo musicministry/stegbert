@@ -20,23 +20,23 @@ As vocal leaders, you will need to comfortably lead these parts until the congre
 |                                 | [Recording]{.red .large}                                               | [Melody only]{.red .large}                                                    |
 +=================================+:======================================================================:+:=============================================================================:+
 | [Gloria]{.red .large}           | <audio controls="">                                                    | <audio controls="">                                                           |
-|                                 |     <source src="./audio/st-dymphna-gloria.mp3" type="audio/wav"/>    |     <source src="./audio/st-dymphna-gloria-melody.m4a" type="audio/wav"/>    |
+|                                 |     <source src="./audio/st-dymphna-gloria.mp3" type="audio/wav"/>     |     <source src="./audio/st-dymphna-gloria-melody.m4a" type="audio/wav"/ >    |
 |                                 | </audio> <br>                                                          | </audio>                                                                      |
 +---------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 | [Holy, Holy, Holy]{.red .large} | <audio controls="">                                                    | <audio controls="">                                                           |
-|                                 |     <source src="./audio/st-dymphna-holy.mp3" type="audio/wav"/>      |     <source src="./audio/st-dymphna-holy-melody.m4a" type="audio/wav"/>      |
+|                                 |     <source src="./audio/st-dymphna-holy.mp3" type="audio/wav"/>       |     <source src="./audio/st-dymphna-holy-melody.m4a" type="audio/wav"/ >      |
 |                                 | </audio> <br>                                                          | </audio>                                                                      |
 +---------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 | [Memorial]{.red .large}         | <audio controls="">                                                    | <audio controls="">                                                           |
-| [Acclamation]{.red .large}      |     <source src="./audio/st-dymphna-memaccA.mp3" type="audio/wav"/>   |     <source src="./audio/st-dymphna-memaccA-melody.m4a" type="audio/wav"/>   |
+| [Acclamation]{.red .large}      |     <source src="./audio/st-dymphna-memaccA.mp3" type="audio/wav"/>    |     <source src="./audio/st-dymphna-memaccA-melody.m4a" type="audio/wav"/ >   |
 |                                 | </audio> <br>                                                          | </audio>                                                                      |
 +---------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 | [Amen]{.red .large}             | <audio controls="">                                                    | <audio controls="">                                                           |
-|                                 |     <source src="./audio/st-dymphna-amen.mp3" type="audio/wav"/>      |     <source src="./audio/st-dymphna-amen-melody.m4a" type="audio/wav"/>      |
+|                                 |     <source src="./audio/st-dymphna-amen.mp3" type="audio/wav"/>       |     <source src="./audio/st-dymphna-amen-melody.m4a" type="audio/wav"/ >      |
 |                                 | </audio> <br>                                                          | </audio>                                                                      |
 +---------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 | [Lamb of God]{.red .large}      | <audio controls="">                                                    | <audio controls="">                                                           |
-|                                 |     <source src="./audio/st-dymphna-lambofgod.mp3" type="audio/wav"/> |     <source src="./audio/st-dymphna-lambofgod-melody.m4a" type="audio/wav"/> |
+|                                 |     <source src="./audio/st-dymphna-lambofgod.mp3" type="audio/wav"/>  |     <source src="./audio/st-dymphna-lambofgod-melody.m4a" type="audio/wav"/ > |
 |                                 | </audio> <br>                                                          | </audio>                                                                      |
 +---------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 
