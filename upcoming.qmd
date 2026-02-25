@@ -7,17 +7,14 @@ title: Hymn Schedules
 subtitle: "**February 18, 2026** (Ash Wednesday) through **May 24, 2026** (Pentecost)"
 format:
   html: default
-  pdf:
-    template: hymn-schedule-template.tex
-    pdf-engine: xelatex
-    keep-tex: false
+  hymn-schedule-pdf:
+    pdf-colwidths: [0.05, 0.37, 0.58]
     geometry:
       - left=0.85in
       - right=0.85in
       - top=1in
       - bottom=0.85in
 filters: [pdf-cleanup.lua]
-pdf-colwidths: [0.05, 0.37, 0.58]
 ---
 
 ::: {.content-visible when-format="pdf"}

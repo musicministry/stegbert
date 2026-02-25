@@ -1,14 +1,18 @@
--- pdf-cleanup.lua
+-- ============================================================================
+-- formatting.lua
 -- Lua filter for Pandoc/Quarto: PDF rendering of upcoming.qmd.
 --
+-- These functions and methods were created entirely by claude.ai, with minor
+-- modifications by matt.grossi.
+--
 -- IMPORTANT: This filter uses a top-level Pandoc(doc) function to read
--- metadata (pdf-colwidths) before processing tables. Defining both
--- Meta() and Table() at the top level causes Meta() to never fire in
--- some Pandoc versions, so all logic is unified here.
-
--- ============================================================
+-- metadata (pdf-colwidths) before processing tables. Defining both Meta() and
+-- at the top level causes Meta() to never fire in some Pandoc versions, so
+-- all logic is unified here.
+--
+-- ============================================================================
 -- Helpers
--- ============================================================
+-- ============================================================================
 local function blocks_to_latex(blocks)
   return pandoc.write(pandoc.Pandoc(blocks), "latex"):gsub("%s+$", "")
 end
@@ -25,10 +29,10 @@ local function is_pdf()
   return FORMAT:match("latex") or FORMAT:match("pdf")
 end
 
--- ============================================================
+-- ============================================================================
 -- Read pdf-colwidths from document metadata.
 -- Returns a list of numbers, or nil if not set.
--- ============================================================
+-- ============================================================================
 local function read_colwidths(meta)
   if not meta["pdf-colwidths"] then return nil end
   local widths = {}
@@ -39,9 +43,9 @@ local function read_colwidths(meta)
   return #widths > 0 and widths or nil
 end
 
--- ============================================================
+-- ============================================================================
 -- Transform a single Div element
--- ============================================================
+-- ============================================================================
 local function transform_div(el)
   if is_pdf() then
     if el.attributes["when-format"] == "html" then return {} end
@@ -75,7 +79,7 @@ local function transform_div(el)
   end
 end
 
--- ============================================================
+-- ============================================================================
 -- Transform a single Span element
 -- Two float:right spans appear per week:
 --   1. [Feast Name]{style="float:right"}  inside the #### heading
@@ -83,8 +87,9 @@ end
 --   2. [**Mass Setting:** [...]]{style="float:right"} standalone para
 --      → \hfill\textbf{Mass Setting:} ...       (no cross, plain right-align)
 -- Distinguish by checking if the first real inline child is Strong (bold).
--- The Mass Setting span always starts with **Mass Setting:**; feast names don't.
--- ============================================================
+-- The Mass Setting span always starts with **Mass Setting:**; feast names do
+-- not.
+-- ============================================================================
 local function transform_span(el)
   if not is_pdf() then return end
   local style = el.attributes["style"] or ""
@@ -121,9 +126,9 @@ local function transform_span(el)
   return result
 end
 
--- ============================================================
+-- ============================================================================
 -- Transform a Link: internal #anchors -> \hyperref
--- ============================================================
+-- ============================================================================
 local function transform_link(el)
   if not is_pdf() then return end
   local target = el.target or ""
@@ -135,9 +140,9 @@ local function transform_link(el)
   end
 end
 
--- ============================================================
+-- ============================================================================
 -- Transform a RawInline: HTML entities
--- ============================================================
+-- ============================================================================
 local function transform_rawinline(el)
   if not is_pdf() then return end
   if el.format == "html" then
@@ -150,19 +155,19 @@ local function transform_rawinline(el)
   end
 end
 
--- ============================================================
+-- ============================================================================
 -- Transform a RawBlock: drop HTML blocks in PDF
--- ============================================================
+-- ============================================================================
 local function transform_rawblock(el)
   if not is_pdf() then return end
   if el.format == "html" then return {} end
 end
 
--- ============================================================
+-- ============================================================================
 -- Transform a BulletList: replace default bullets with \cross{}.
--- The simplest approach: let Pandoc emit the itemize environment
--- normally, then do a string replacement of \item with \item[\cross{}].
--- ============================================================
+-- The simplest approach: let Pandoc emit the itemize environment normally,
+-- then do a string replacement of \item with \item[\cross{}].
+-- ============================================================================
 local function transform_bulletlist(el)
   if not is_pdf() then return end
   -- Render the whole list normally via Pandoc
@@ -172,10 +177,10 @@ local function transform_bulletlist(el)
   return {pandoc.RawBlock("latex", latex)}
 end
 
--- ============================================================
--- Transform a Table: minipage + tabular, no rules, cross in col 1,
--- raggedright on cols 2+, optional pdf-colwidths override.
--- ============================================================
+-- ============================================================================
+-- Transform a Table: minipage + tabular, no rules, cross in col 1, raggedright
+-- on cols 2+, optional pdf-colwidths override.
+-- ============================================================================
 local function transform_table(el, colwidths_override)
   if not is_pdf() then return end
 
@@ -237,10 +242,10 @@ local function transform_table(el, colwidths_override)
     col_str, table.concat(row_strings, "\n")))}
 end
 
--- ============================================================
--- Main entry point: Pandoc(doc) reads metadata first, then
--- walks the document applying all transformations.
--- ============================================================
+-- ============================================================================
+-- Main entry point: Pandoc(doc) reads metadata first, then walks the document
+-- applying all transformations.
+-- ============================================================================
 function Pandoc(doc)
   local colwidths = read_colwidths(doc.meta)
 
