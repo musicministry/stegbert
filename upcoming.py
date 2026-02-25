@@ -126,7 +126,7 @@ def main():
         file.write(f'subtitle: "**{first_date}** ({first_feast}) through **{last_date}** ({last_feast})"\n')
         file.write('format:\n')
         file.write('  html: default\n')
-        file.write('  hymn-schedule-pdf:\n')
+        file.write('  hymn-schedules-pdf:\n')
         file.write('    pdf-colwidths: [0.05, 0.37, 0.58]\n')
         file.write('    geometry:\n')
         file.write('      - left=0.85in\n')
