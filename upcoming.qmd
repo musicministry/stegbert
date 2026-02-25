@@ -17,7 +17,9 @@ format:
       - right=0.85in
       - top=1in
       - bottom=0.85in
-format-links: false
+format-links:
+  - format: hymn-schedules-pdf
+    text: PDF
 ---
 
 ::: {.content-visible when-format="pdf"}
