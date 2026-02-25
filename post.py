@@ -207,7 +207,7 @@ def main():
         file.write(f'last-updated: {str(date.date()-dt.timedelta(days=5))}\n')
         file.write(f'description: {u.fmtdate(date)}\n')
         file.write('categories:\n')
-        file.write(f'  - {titlecase(season)} {year}\n')
+        file.write(f'  - {titlecase(u.unkey(season))} {year}\n')
         file.write(f'image: /_images/dates/{dt.datetime.strftime(date, format="%b").lower()}/{day}.png\n')
         file.write('---\n\n')
 

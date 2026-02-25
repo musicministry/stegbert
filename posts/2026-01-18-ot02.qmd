@@ -3,7 +3,7 @@ title: Second Sunday in Ordinary Time
 last-updated: 2026-01-13
 description: January 18, 2026
 categories:
-  - Ordinary-Time 2026
+  - Ordinary Time 2026
 image: /_images/dates/jan/18.png
 ---
 

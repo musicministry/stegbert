@@ -3,7 +3,7 @@ title: Sixth Sunday in Ordinary Time
 last-updated: 2026-02-10
 description: February 15, 2026
 categories:
-  - Ordinary-Time 2026
+  - Ordinary Time 2026
 image: /_images/dates/feb/15.png
 ---
 

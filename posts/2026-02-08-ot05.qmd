@@ -3,7 +3,7 @@ title: Fifth Sunday in Ordinary Time
 last-updated: 2026-02-03
 description: February 8, 2026
 categories:
-  - Ordinary-Time 2026
+  - Ordinary Time 2026
 image: /_images/dates/feb/08.png
 ---
 
