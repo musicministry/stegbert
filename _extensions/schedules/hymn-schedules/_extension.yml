@@ -2,11 +2,11 @@ title: Hymn Schedule
 author: Matt Grossi
 version: 1.0.0
 quarto-required: ">=1.4.0"
+filters:
+  - formatting.lua
 contributes:
   formats:
     pdf:
       template: hymn-schedule-template.tex
       pdf-engine: xelatex
       keep-tex: false
-      filters:
-        - formatting.lua
