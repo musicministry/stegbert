@@ -7,7 +7,7 @@ tbl-cap-location: bottom
 
 Fr. Ryszard has asked us to learn and starting singing the *Mass of St. Dymphna*. We will beging introducing these Mass parts to the congregation starting **Lent 2026**, which begins on Wednesday, February 18.
 
-Audio samples are below. Download a copy of the cantor sheet [here](_images/MassOfStDymphna_melody.pdf).
+Audio samples are below. Download a copy of the cantor sheet [here](images/MassOfStDymphna_melody.pdf).
 
 We will start by introducing the Holy, Memorial Acclamation, and Great Amen. We will then add the Lamb of God and, after Lent, the Gloria.
 
@@ -20,23 +20,23 @@ As vocal leaders, you will need to comfortably lead these parts until the congre
 |                                 | [Recording]{.red .large}                                               | [Melody only]{.red .large}                                                    |
 +=================================+:======================================================================:+:=============================================================================:+
 | [Gloria]{.red .large}           | <audio controls="">                                                    | <audio controls="">                                                           |
-|                                 |     <source src="./_audio/st-dymphna-gloria.mp3" type="audio/wav"/>    |     <source src="./_audio/st-dymphna-gloria-melody.m4a" type="audio/wav"/>    |
+|                                 |     <source src="./audio/st-dymphna-gloria.mp3" type="audio/wav"/>    |     <source src="./audio/st-dymphna-gloria-melody.m4a" type="audio/wav"/>    |
 |                                 | </audio> <br>                                                          | </audio>                                                                      |
 +---------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 | [Holy, Holy, Holy]{.red .large} | <audio controls="">                                                    | <audio controls="">                                                           |
-|                                 |     <source src="./_audio/st-dymphna-holy.mp3" type="audio/wav"/>      |     <source src="./_audio/st-dymphna-holy-melody.m4a" type="audio/wav"/>      |
+|                                 |     <source src="./audio/st-dymphna-holy.mp3" type="audio/wav"/>      |     <source src="./audio/st-dymphna-holy-melody.m4a" type="audio/wav"/>      |
 |                                 | </audio> <br>                                                          | </audio>                                                                      |
 +---------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 | [Memorial]{.red .large}         | <audio controls="">                                                    | <audio controls="">                                                           |
-| [Acclamation]{.red .large}      |     <source src="./_audio/st-dymphna-memaccA.mp3" type="audio/wav"/>   |     <source src="./_audio/st-dymphna-memaccA-melody.m4a" type="audio/wav"/>   |
+| [Acclamation]{.red .large}      |     <source src="./audio/st-dymphna-memaccA.mp3" type="audio/wav"/>   |     <source src="./audio/st-dymphna-memaccA-melody.m4a" type="audio/wav"/>   |
 |                                 | </audio> <br>                                                          | </audio>                                                                      |
 +---------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 | [Amen]{.red .large}             | <audio controls="">                                                    | <audio controls="">                                                           |
-|                                 |     <source src="./_audio/st-dymphna-amen.mp3" type="audio/wav"/>      |     <source src="./_audio/st-dymphna-amen-melody.m4a" type="audio/wav"/>      |
+|                                 |     <source src="./audio/st-dymphna-amen.mp3" type="audio/wav"/>      |     <source src="./audio/st-dymphna-amen-melody.m4a" type="audio/wav"/>      |
 |                                 | </audio> <br>                                                          | </audio>                                                                      |
 +---------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 | [Lamb of God]{.red .large}      | <audio controls="">                                                    | <audio controls="">                                                           |
-|                                 |     <source src="./_audio/st-dymphna-lambofgod.mp3" type="audio/wav"/> |     <source src="./_audio/st-dymphna-lambofgod-melody.m4a" type="audio/wav"/> |
+|                                 |     <source src="./audio/st-dymphna-lambofgod.mp3" type="audio/wav"/> |     <source src="./audio/st-dymphna-lambofgod-melody.m4a" type="audio/wav"/> |
 |                                 | </audio> <br>                                                          | </audio>                                                                      |
 +---------------------------------+------------------------------------------------------------------------+-------------------------------------------------------------------------------+
 

@@ -10,7 +10,7 @@ website:
       - text: "Cantors"
         href: cantors.qmd
       - stdymphna.qmd
-    logo: _images/trebleclef.png
+    logo: images/trebleclef.png
   announcement:
     icon: info-circle
     content: "**Welcome!** This website is experimental and will be built out if or as needed. Please give feedback to Matt."

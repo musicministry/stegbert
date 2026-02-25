@@ -4,7 +4,7 @@ last-updated: 2025-12-02
 description: December 07, 2025
 categories:
   - Advent 2025
-image: /_images/dates/dec/07.png
+image: /images/dates/dec/07.png
 ---
 
 ### Hymns

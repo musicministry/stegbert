@@ -20,7 +20,7 @@ Do you like to sing or play an instrument? Do you appreciate good liturgical mus
 :::
 ::: {.column width="25%"}
 
-![Scan me to sign up!](_images/qr-music-ministry-survey.png){fig-alt="QR code for sign up form" .lightbox}
+![Scan me to sign up!](images/qr-music-ministry-survey.png){fig-alt="QR code for sign up form" .lightbox}
 
 :::
 :::
@@ -35,7 +35,7 @@ Anyone 18 and older is welcome to join. The ability to read music is helpful but
 
 As we grow in numbers, we will begin (re-)introducting choir anthems and four-part harmony to further enhance our music and liturgies.
 
-![](_images/choir_roles.jpeg){fig-alt="Cartoon of choir members" fig-align="center" .lightbox}
+![](images/choir_roles.jpeg){fig-alt="Cartoon of choir members" fig-align="center" .lightbox}
 
 ### Cantors
 

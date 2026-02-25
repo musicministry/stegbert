@@ -5,7 +5,7 @@ description: November 30, 2025
 categories:
   - YEAR
   - SEASON
-image: /_images/dates/mon/day.png
+image: /images/dates/mon/day.png
 ---
 
 ```{python}

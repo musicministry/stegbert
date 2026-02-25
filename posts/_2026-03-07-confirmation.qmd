@@ -4,7 +4,7 @@ last-updated: 2026-03-02
 description: March 7, 2026
 categories:
   - Lent 2026
-image: /_images/dates/mar/07.png
+image: /images/dates/mar/07.png
 ---
 
 ### Hymns
@@ -30,15 +30,15 @@ The Mass parts for Lent will be taken from *Mass of St. Dymphna*:
 <table class="hover normal" style="width: 100%;">
 <tbody>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
-  <source src="../_audio/st-dymphna-holy.mp3" type="audio/wav"/>
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
 </audio>
 <br><br></td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
-  <source src="../_audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
 </audio>
 <br><br></td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
-  <source src="../_audio/st-dymphna-amen.mp3" type="audio/wav"/>
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
 </audio>
 <br><br></td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;">{{< video https://www.youtube.com/watch?v=JgVQ0SHPeno >}}</td></tr>

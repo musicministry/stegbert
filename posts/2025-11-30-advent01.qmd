@@ -4,7 +4,7 @@ last-updated: 2025-11-25
 description: November 30, 2025
 categories:
   - Advent 2025
-image: /_images/dates/nov/30.png
+image: /images/dates/nov/30.png
 ---
 
 ### Hymns

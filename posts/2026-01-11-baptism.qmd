@@ -4,7 +4,7 @@ last-updated: 2026-01-06
 description: January 11, 2026
 categories:
   - Christmas 2026
-image: /_images/dates/jan/11.png
+image: /images/dates/jan/11.png
 ---
 
 ### Hymns

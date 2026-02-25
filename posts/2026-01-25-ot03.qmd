@@ -4,7 +4,7 @@ last-updated: 2026-01-20
 description: January 25, 2026
 categories:
   - Ordinary Time 2026
-image: /_images/dates/jan/25.png
+image: /images/dates/jan/25.png
 ---
 
 ### Hymns

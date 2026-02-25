@@ -4,7 +4,7 @@ last-updated: 2025-12-23
 description: December 28, 2025
 categories:
   - Christmas 2025
-image: /_images/dates/dec/28.png
+image: /images/dates/dec/28.png
 ---
 
 ### Hymns

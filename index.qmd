@@ -3,7 +3,7 @@ title: "St. Egbert Music Ministry"
 subtitle: Morehead City, North Carolina
 about:
   template: marquee
-  image: _images/organ_keyboard.jpg
+  image: images/organ_keyboard.jpg
   image-alt: Organ manual with pistons
   image-title: "King of Instruments, the organ"
 text: Home

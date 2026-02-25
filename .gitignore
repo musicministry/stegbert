@@ -10,8 +10,8 @@ _freeze/
 .Rhistory
 .devcontainer/
 .DS_Store
-_images/.DS_Store
-_images/dates/.DS_Store
+images/.DS_Store
+images/dates/.DS_Store
 Dockerfile
 docker-compose.yml
 _site/
