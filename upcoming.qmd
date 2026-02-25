@@ -14,7 +14,6 @@ format:
       - right=0.85in
       - top=1in
       - bottom=0.85in
-filters: [formatting.lua]
 ---
 
 ::: {.content-visible when-format="pdf"}
