@@ -133,7 +133,7 @@ def main():
         file.write('      - right=0.85in\n')
         file.write('      - top=1in\n')
         file.write('      - bottom=0.85in\n')
-        file.write('filters: [pdf-cleanup.lua]\n')
+        file.write('filters: [formatting.lua]\n')
         file.write('---\n\n')
 
         # Preface
