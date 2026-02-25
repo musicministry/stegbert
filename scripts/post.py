@@ -56,6 +56,7 @@ import argparse
 import sys
 import os
 import utils as u
+from pathlib import Path
 
 def parse_args():
     """Parse command line arguments."""
@@ -95,13 +96,16 @@ args = parse_args()
 # Main program
 
 def main():
+    # Project home directory
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
     # GitHub token
     u.load_env_file()
     token = os.environ.get('GITHUB_TOKEN')
 
     # Path for hymn list files
     cycle = u.lityear(args.year)
-    process_dir = f'{args.year}-{cycle}'
+    process_dir = os.path.join(PROJECT_ROOT, f'{args.year}-{cycle}')
     sys.path.append(os.path.join(process_dir))
 
     # Manual postings
@@ -196,9 +200,9 @@ def main():
 
     # File name
     if args.outfile.lower() == 'auto':
-        outfile = os.path.join('posts', f'{str(date.date())}-{feast}.qmd')
+        outfile = os.path.join(PROJECT_ROOT, 'posts', f'{str(date.date())}-{feast}.qmd')
     else:
-        outfile = os.path.join('posts', args.outfile)
+        outfile = os.path.join(PROJECT_ROOT, 'posts', args.outfile)
 
     with open(outfile, 'w') as file:
         # Header

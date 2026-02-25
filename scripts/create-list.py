@@ -36,6 +36,7 @@
 #
 # -----------------------------------------------------------------------------
 # Packages
+from pathlib import Path
 import datetime as dt
 import pandas as pd
 import argparse
@@ -88,13 +89,16 @@ args = parse_args()
 # =============================================================================
 # Main program
 
+# Project home directory
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
 # Command line arguments
 start = args.start
 end = args.end
 
 # Load hymn lists
 cycle = u.lityear(args.year)
-process_dir = f'{args.year}-{cycle}'
+process_dir = os.path.join(PROJECT_ROOT, f'{args.year}-{cycle}')
 sys.path.append(os.path.join(process_dir))
 
 lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
@@ -121,6 +125,7 @@ def main():
     cal.reset_index(inplace=True)
     results = u.process_week_range(start=start, end=end, df=cal,
                                    lit_year=cycle, hymnal=args.hymnal)
+
     # Write to file
     u.process_and_export(
         results=results,

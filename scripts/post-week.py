@@ -3,15 +3,15 @@
 # date:   24 Jan 2025
 #
 # This script checks for any celebrations during the next week inclusive of the
-# next Sunday. The argument `-y, --year` specifies the liturgical calendar year
-# to use. For any feasts that occur during the upcoming week, it will first 
-# check the hymn lists for a hymn schedule. If one exists, `post.py` will be
-# executed to publish a post for it. Otherwise, a lack of music schedule
-# implies the feast or solemnity is not being celebrated (or, if it is, there
-# will be no music for it), and a notification is printed for awareness.
+# next Sunday in the calendar year `year`. For any feasts that occur during the
+# upcoming week, it will first check the hymn lists for a hymn schedule. If one
+# exists, `post.py` will be executed to publish a post for it. Otherwise, no 
+# music schedule implies the feast or solemnity is not being celebrated (or, if
+# it is, there will be no music for it), and a notification is printed for
+# awareness.
 #
 # To execute in terminal:
-# python post-week.py --year 2026
+# python post-week.py 2026
 #
 # -----------------------------------------------------------------------------
 # Packages
@@ -22,6 +22,7 @@ import os
 import sys
 import subprocess
 import utils as u
+from pathlib import Path
 
 def parse_args():
     """Parse command line arguments."""
@@ -29,7 +30,7 @@ def parse_args():
         description='Function control parameters.',
         prog='upcoming',
         usage='%(prog)s [arguments]')
-    parser.add_argument('-y', '--year', metavar='year', type=int,
+    parser.add_argument('year', metavar='year', type=int,
                         help='Four-digit year to process')
     return parser.parse_args()
 
@@ -49,9 +50,12 @@ args = parse_args()
 # Main program
 
 def main():
+    # Project home directory
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
     # Load liturgical calendar
     cycle = u.lityear(args.year)
-    process_dir = f'{args.year}-{cycle}'
+    process_dir = os.path.join(PROJECT_ROOT, f'{args.year}-{cycle}')
     sys.path.append(os.path.join(process_dir))
 
     lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
@@ -75,7 +79,7 @@ def main():
         for feast in ss['feast']:
             if feast in hymn_lists.keys():
                 print(f"Posting for {ss[ss['feast']==feast]['name'].values[0]}")
-                subprocess.run(['python3', 'post.py', str(args.year),
+                subprocess.run(['python3', 'scripts/post.py', str(args.year),
                                 '--publish', feast])
             else:
                 print(f"{ss[ss['feast']==feast]['name'].values[0]} occurs this week but no music schedule was found. Nothing to process.")

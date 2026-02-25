@@ -29,6 +29,7 @@
 # -----------------------------------------------------------------------------
 # Packages
 from titlecase import titlecase
+from pathlib import Path
 import datetime as dt
 import pandas as pd
 import argparse
@@ -77,13 +78,16 @@ args = parse_args()
 # Main program
 
 def main():
+    # Project home directory
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
     # GitHub token
     u.load_env_file()
     token = os.environ.get('GITHUB_TOKEN')
-
+    
     # Load hymn lists
     cycle = u.lityear(args.year)
-    process_dir = f'{args.year}-{cycle}'
+    process_dir = os.path.join(PROJECT_ROOT, f'{args.year}-{cycle}')
     sys.path.append(os.path.join(process_dir))
 
     lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
@@ -115,7 +119,7 @@ def main():
     first_date = u.fmtdate(start_date)
     last_date = u.fmtdate(end_date)
 
-    with open(args.outfile, 'w') as file:
+    with open(os.path.join(PROJECT_ROOT, args.outfile), 'w') as file:
         # Header
         file.write('---\n')
         file.write(f'first-feast: {first_feast}\n')

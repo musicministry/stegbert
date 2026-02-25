@@ -258,7 +258,7 @@ def get_file_path(filename, hymnal):
     """Get full path to qmd file `filename` in source repo for hymnal `hymnal`."""
     # Set dir
     try:
-        planning_book = Path(__file__).parent.parent / f'planning-book-{hymnal.lower()}'
+        planning_book = Path(__file__).resolve().parent.parent.parent / f'planning-book-{hymnal.lower()}'
     except NameError:
         planning_book = Path.cwd().parent / f'planning-book-{hymnal.lower()}'
 
@@ -689,7 +689,8 @@ def format_dict_as_python(dict_data, var_name):
 def load_env_file():
     """Load environment variables from .ghenv file."""
     # Get environment variable file
-    env_file = Path('.ghenv')
+    PROJECT_ROOT = Path(__file__).resolve().parent.parent
+    env_file = Path(f'{PROJECT_ROOT}/.ghenv')
     # If the file exists, load the variables
     if env_file.exists():
         with open(env_file) as f:
