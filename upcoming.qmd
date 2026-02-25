@@ -6,10 +6,7 @@ last-date: May 24, 2026
 title: Hymn Schedules
 subtitle: "**February 18, 2026** (Ash Wednesday) through **May 24, 2026** (Pentecost)"
 format:
-  html:
-    format-links:
-        - text: PDF
-          href: upcoming.pdf
+  html: default
   hymn-schedules-pdf:
     pdf-colwidths: [0.05, 0.37, 0.58]
     geometry:
@@ -17,9 +14,6 @@ format:
       - right=0.85in
       - top=1in
       - bottom=0.85in
-format-links:
-  - format: hymn-schedules-pdf
-    text: PDF
 ---
 
 ::: {.content-visible when-format="pdf"}
