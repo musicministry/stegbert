@@ -1,5 +1,4 @@
 name: run post-sunday.py
-
 on:
   # schedule:
   #   - cron: '0 21 * * 0' # At 21:00 on Sunday
@@ -12,38 +11,51 @@ jobs:
       run:
         shell: bash -l {0}
     steps:
-    - name: checkout repo content
+    - name: Checkout repo content
       uses: actions/checkout@v3
+
     - name: Update apt-get
       run: sudo apt-get update
+
     - name: Setup Python
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
         cache: 'pip' # caching pip dependencies
+
     - name: Install Python packages
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
+
     - name: Set up Quarto
       uses: quarto-dev/quarto-actions/setup@v2
+      with:
+        # To install LaTeX to build PDF book 
+        tinytex: true 
+        # uncomment below and fill to pin a version
+        # version: 0.9.600
+
     - name: Run post.py
       env:
         GITHUB_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
         TARGET_REPO: musicministry/song-urls
         OWNER: musicministry
       run: python scripts/post.py 2026
+
     - name: Commit file
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add posts/*.qmd
         git diff-index --quiet HEAD || (git commit -a -m "Release next weekend" --allow-empty)
-    - name: push changes
+
+    - name: Push changes
       uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: quarto
+
     - name: Publish to GitHub Pages (and render)
       uses: quarto-dev/quarto-actions/publish@v2
       with:
