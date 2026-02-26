@@ -10,7 +10,8 @@
 # name can optionally be set using the `-o, --output` flag and defaults to
 # `[pwd]/posts/YYYY-MM-DD-feast.qmd` if no argument is passed, where
 # "YYYY-MM-DD" is the date of the liturgy and "feast" is the celebration for
-# that date. An optional callout can be added to the top of the page using the
+# that date. If `--pdf` is passed, a PDF document of the same name will also be
+# generated. An optional callout can be added to the top of the page using the
 # `-c, --callout` flag.
 # 
 # The music list to populate the file are taken from `.py` files for each
@@ -73,6 +74,8 @@ def parse_args():
                         help='Name and directory of csv file to write. Default to "posts/YYYY-MM-DD-feast.qmd"')
     parser.add_argument('-c', '--callout', nargs='?', type=str,
                         help='Optional text to include in a callout at the top of the page')
+    parser.add_argument('--pdf', action='store_true',
+                        help='Produce a PDF of the post page for distribution.')
     return parser.parse_args()
 
 args = parse_args()
@@ -81,15 +84,17 @@ args = parse_args()
 # Local development
 
 # class Args:
-#     def __init__(self, year, publish='next', outfile='auto', callout=None):
+#     def __init__(self, year, publish='next', outfile='auto', callout=None,
+#                  pdf=False):
 #         self.year = year
 #         self.publish = publish
 #         self.outfile = outfile
 #         self.callout = callout
+#         self.pfd = pdf
 
 # args = Args(
 #     year = 2026,
-#     publish = 'occasions: confirmation'
+#     publish = 'lent02'
 # )
 
 # =========================================================================== #
@@ -209,26 +214,35 @@ def main():
         file.write('---\n')
         file.write(f'title: {feast_name}\n')
         file.write(f'last-updated: {str(date.date()-dt.timedelta(days=5))}\n')
-        file.write(f'description: {u.fmtdate(date)}\n')
+        file.write(f'description: {u.fmtdate(date, day_of_week=True)}\n')
         file.write('categories:\n')
         file.write(f'  - {titlecase(u.unkey(season))} {year}\n')
         file.write(f'image: /images/dates/{dt.datetime.strftime(date, format="%b").lower()}/{day}.png\n')
+        file.write('format:\n')
+        file.write('  html: default\n')
+        if args.pdf:
+            file.write('  lineup-pdf:\n')
+            file.write('    pdf-colwidths: [0.35, 0.65]\n')
         file.write('---\n\n')
 
         # Callout
         if args.callout is not None:
             file.write(
-                f'::: {{.callout-important title="Take heed!"}}\n' \
+                '::: {.schedule-callout title="Take heed!"}\n' \
                 f'{args.callout}\n' \
                 ':::\n\n'
             )
-
-        # Lineup
-        file.write('### Hymns\n\n')
         
-        file.write('All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.\n\n')
+        # ---- Website ----
+        file.write('::: {.content-visible when-format="html"}\n\n')
+        
+        # Hymns
+        file.write('### Hymns\n\n')
 
+        file.write('All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.\n\n')
+        
         file.write(u.video_table(hymns=hymns))
+        file.write('\n')
 
         # Mass parts
         file.write('### Mass Parts\n\n')
@@ -238,6 +252,21 @@ def main():
         file.write(u.massparts_video_table(season=season, setting=mass, include=parts))
 
         file.write('\n')
+        file.write(':::\n\n')
+
+        # ---- PDF ----
+        file.write('::: {.content-visible when-format="pdf"}\n\n')
+        
+        file.write('[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}\n\n')
+        
+        file.write('```{=latex}\n')
+        file.write('\\vspace{2em}\n')
+        file.write('```\n\n')
+
+        file.write(u.single_table(hymn_dict=hymns, mass_parts=parts))
+        
+        file.write('\n')
+        file.write(':::\n\n')
 
     print(f'"{outfile}" file created.')
 

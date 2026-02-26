@@ -8,7 +8,7 @@
 # exists, `post.py` will be executed to publish a post for it. Otherwise, no 
 # music schedule implies the feast or solemnity is not being celebrated (or, if
 # it is, there will be no music for it), and a notification is printed for
-# awareness.
+# awareness. If `--pdf` is passed, PDF documents will also be generated.
 #
 # To execute in terminal:
 # python post-week.py 2026
@@ -32,6 +32,8 @@ def parse_args():
         usage='%(prog)s [arguments]')
     parser.add_argument('year', metavar='year', type=int,
                         help='Four-digit year to process')
+    parser.add_argument('--pdf', action='store_true',
+                        help='Produce a PDF of the post page for distribution.')
     return parser.parse_args()
 
 args = parse_args()
@@ -79,8 +81,12 @@ def main():
         for feast in ss['feast']:
             if feast in hymn_lists.keys():
                 print(f"Posting for {ss[ss['feast']==feast]['name'].values[0]}")
-                subprocess.run(['python3', 'scripts/post.py', str(args.year),
-                                '--publish', feast])
+                if args.pdf:
+                    subprocess.run(['python3', 'scripts/post.py', str(args.year),
+                                    '--publish', feast, '--pdf'])
+                else:
+                    subprocess.run(['python3', 'scripts/post.py', str(args.year),
+                                    '--publish', feast])
             else:
                 print(f"{ss[ss['feast']==feast]['name'].values[0]} occurs this week but no music schedule was found. Nothing to process.")
 

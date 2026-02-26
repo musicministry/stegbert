@@ -66,9 +66,12 @@ def unkey(string: str):
     """Convert lowercase hyphen-separated string to human-readably titlecase."""
     return titlecase(string.replace('-', ' ').replace('_', ' '))
 
-def fmtdate(d):
+def fmtdate(d, day_of_week=False):
     """Print date d"""
-    return d.strftime("%B %-d, %Y")
+    if day_of_week:
+        return d.strftime("%A, %B %-d, %Y")
+    else:
+        return d.strftime("%B %-d, %Y")
 
 def keyify(string: str):
     """Convert human-readable titlecase to lowercase hyphen-separated string."""
@@ -1188,3 +1191,88 @@ def get_all_pages_for_date(date):
             results[celebration] = page
     
     return results
+
+def arrange_songs(hymns, parts):
+    """Arrange hymns, songs, and parts of the Mass in liturgical order"""
+
+    def find_match(order_key, lookup):
+        """Look up order keys to parts_dict keys using prefix matching.
+        e.g., 'Memorial Acclamation' matches 'Memorial Acclamation A'."""
+        if order_key in lookup:
+            return order_key
+        matches = [k for k in lookup if k.startswith(order_key)]
+        return matches[0] if len(matches) == 1 else None
+
+    # Order in which songs would appear
+    order = [
+        'Psalm After First Reading',
+        'Psalm After Second Reading',
+        'Psalm After Third Reading',
+        'Psalm After Fourth Reading',
+        'Psalm After Fifth Reading',
+        'Psalm After Sixth Reading',
+        'Psalm After Seventh Reading',
+        'Psalm After Epistle',
+        'Processional',
+        'Kyrie',
+        'Sprinkling',
+        'Gloria',
+        'Responsorial Psalm',
+        'Sequence',
+        'Gospel Acclamation',
+        'Distribution of Ashes',
+        'Washing of Feet',
+        'Veneration of the Cross',
+        'Litany of the Saints',
+        'After each Baptism',
+        'Sprinkling',
+        'Offertory',
+        'Holy',
+        'Memorial Acclamation',
+        'Amen',
+        'Lamb of God',
+        'Communion',
+        'Meditation',
+        'Recessional',
+        'Transfer of the Blessed Sacrament',
+    ]
+
+    # Parse parts list into a dict: "Gloria: *Gloria omitted*" -> {"Gloria": "*Gloria omitted*"}
+    parts_dict = dict(item.split(": ", maxsplit=1) for item in parts)
+
+    # Merge: parts_dict takes priority over hymns for any key appearing in both
+    combined = {**hymns, **parts_dict}
+
+    # Extract rows in order, skipping parts not present in either source
+    table = []
+    for part in order:
+        key = find_match(part, combined)
+        if key:
+            table.append((key, combined[key]))
+
+    return table
+
+def single_table(hymn_dict: dict, mass_parts: list):
+    """Create a single Markdown table containing all songs in the Mass, including Mass parts, in order."""
+    # Combine hymns and Mass parts in liturgical order
+    combined = arrange_songs(hymns=hymn_dict, parts=mass_parts)
+
+    tbl = tabulate(
+        # Conditionals for R&A
+        [[f"**{k.strip()}:**", f"[{v.split(' - ')[0].strip()}]({v.split(' - ')[1].strip()})<br><br>"] if ("https" in v and 'gospel' in k.lower()) else
+        [f"**{k.strip()}:**", f"[{v.split(' - ')[0].strip()}]({v.split(' - ')[1].strip()})"] if "https" in v else
+
+        # Hymns
+        [f"**{k.strip()}:**", f"{v.split(' - ')[0].strip()} - {markdown_url(v.split(' - ')[-1].strip())}"] if " - " in v else
+
+        # Mass parts
+        [f"**{k.strip()}:**", f"[{v.strip()}]({get_url(k.strip()+': '+v.strip(), swap=True)})"] if 'omitted' not in v else
+        [f"**{k.strip()}:**", f"{v.strip()}"]
+
+        for k,v in combined],
+        tablefmt='grid'
+    
+        # Formatting
+        ) + '\n: {.hover .normal tbl-colwidths="[35, 65]"}' + '\n\n\\needspace{3\\baselineskip}\n\n'
+
+    return tbl

@@ -1,0 +1,132 @@
+% =========================================================================== %
+% Pandoc LaTeX template for Hymn Schedule PDF
+% Requires xelatex (set pdf-engine: xelatex in YAML front matter)
+% Mirrors the visual style of weeklist.sty
+% =========================================================================== %
+
+\documentclass[12pt]{extarticle}
+
+% ---- Core packages ----
+\usepackage{xcolor}
+\usepackage{fontspec}        % xelatex font support (enables Unicode)
+\usepackage[none]{hyphenat}  % Prevents hyphenation
+\usepackage{hyperref}
+\usepackage{needspace}       % \needspace (already used in .qmd)
+\usepackage{longtable}       % Pandoc uses longtable for tables
+\usepackage{booktabs}        % Pandoc table rules
+\usepackage{array}
+\usepackage{calc}            % Required for column width arithmetic
+\usepackage{fancyhdr}        % Header/footer
+\usepackage{lastpage}        % Page X of Y
+\usepackage{parskip}         % Space between paragraphs, no indent
+\usepackage{mdframed}        % Callout box
+\usepackage{etoolbox}
+\usepackage{bbding}          % Cross symbol
+$if(geometry)$
+\usepackage[$for(geometry)$$geometry$$sep$,$endfor$]{geometry}
+$else$
+\usepackage[left=1in,right=1in,top=1in,bottom=1in]{geometry}
+$endif$
+
+% ---- Hyperref config ----
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue,
+  urlcolor=blue,
+  pdfborder={0 0 0}
+}
+
+% ---- Colors ----
+\definecolor{schedred}{RGB}{179,33,33}
+\definecolor{calloutyellow}{RGB}{255,248,220}
+\definecolor{calloutred}{RGB}{248, 215, 218}
+\definecolor{calloutborder}{RGB}{220, 53, 69}
+
+% ---- Cross symbol: U+2720 Maltese Cross via fontspec/xelatex ----
+\newcommand{\cross}{\textcolor{schedred}{\CrossMaltese}}
+
+% ---- No paragraph indent ----
+\setlength{\parindent}{0pt}
+
+% ----- Custom table format: left-justified, ragged right -----
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+
+% \real is used by Pandoc in generated longtable column specs:
+%   >{raggedright}p{(\columnwidth - N\tabcolsep) * \real{0.xx}}
+% It is defined in Pandoc's default template but NOT in any package.
+% Custom templates must define it explicitly or every table will error.
+\newcommand{\real}[1]{#1}
+
+% Pandoc also expects \tightlist to exist
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+  % ---- Callout box (replaces Quarto callout-important for PDF) ----
+\newenvironment{calloutimportant}[1][Note]{%
+  \begin{mdframed}[
+    backgroundcolor=white,
+    frametitlebackgroundcolor=calloutred,
+    linecolor=lightgray,
+    linewidth=1pt,
+    innerleftmargin=8pt,
+    innerrightmargin=8pt,
+    innertopmargin=6pt,
+    innerbottommargin=6pt,
+    frametitle={#1}
+  ]
+}{%
+  \end{mdframed}%
+}
+
+% ---- Heading formatting ----
+% Pandoc maps #### -> \paragraph, ### -> \subsubsection
+% We remap these to display inline (date headings) or as section dividers.
+\makeatletter
+\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\z@}%
+  {0.8ex \@plus 0.2ex \@minus 0.1ex}%
+  {-0.5em}%
+  {\normalfont\normalsize\bfseries\color{schedred}}}
+\renewcommand{\subsubsection}{\@startsection{subsubsection}{3}{\z@}%
+  {1.0ex \@plus 0.2ex \@minus 0.1ex}%
+  {0.3ex}%
+  {\normalfont\large\bfseries\color{schedred}}}
+\renewcommand{\subsection}{\@startsection{subsection}{2}{\z@}%
+  {1.2ex \@plus 0.3ex \@minus 0.1ex}%
+  {0.4ex}%
+  {\normalfont\large\bfseries\color{schedred}}}
+\renewcommand{\section}{\@startsection{section}{1}{\z@}%
+  {1.5ex \@plus 0.5ex \@minus 0.2ex}%
+  {0.5ex}%
+  {\normalfont\Large\bfseries\color{schedred}}}
+\makeatother
+
+% ---- Supress page numbers ----
+\pagestyle{empty} 
+
+% ---- Tighter table spacing ----
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+
+% ---- Remove section numbering ----
+\setcounter{secnumdepth}{0}
+
+% =========================================================================== %
+\begin{document}
+
+% ---- HEADER ----
+{%
+\centering
+\textbf{\Large Organist, Cantor, Choir, Celebrant} \\[0.2em]
+\textbf{\large $church$} \\[0.6em]
+{\Large \cross} \\[0.5em]
+{\large \textcolor{schedred}{\textbf{$title$}}} \\[0.3em]
+\textcolor{schedred}{\textbf{$description$}} \\[2em]
+\hrule \vspace{1em}
+\par
+}
+
+\vspace{0.5em}
+
+$body$
+
+\end{document}
