@@ -1,0 +1,93 @@
+---
+title: Confirmation
+last-updated: 2026-03-02
+description: Saturday, March 7, 2026
+categories:
+  - Lent 2026
+image: /images/dates/mar/07.png
+format:
+  html: default
+  lineup-pdf:
+    pdf-colwidths: [0.35, 0.65]
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">601 - Laudate, Laudate Dominum<br><br> {{< video https://www.youtube.com/watch?v=JXWFKSPCJ-4 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 50 <br><br> {{< video https://youtu.be/YeKe01s4loE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;">Handout - NA<br><br> {{< video None >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Anointing With Chrism:</strong></td><td style="width: 75%;">NA - organ interlude, if desired<br><br> {{< video None >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">553 - O Spirit All-Embracing<br><br> {{< video https://www.youtube.com/watch?v=gprtl0sNEE8 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">920 - Pan de Vida<br><br> {{< video https://www.youtube.com/watch?v=8JtfB37qF90 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">741 - Somos el Cuerpo de Cristo<br><br> {{< video https://www.youtube.com/watch?v=tcMbXdkgwyw >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Lent will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;">{{< video https://www.youtube.com/watch?v=JgVQ0SHPeno >}}</td></tr>
+</tbody>
+</table>
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++-----------------------------+-----------------------------------------------------------------------------------+
+| **Processional:**           | 601 - [Laudate, Laudate Dominum](https://www.youtube.com/watch?v=JXWFKSPCJ-4)     |
++-----------------------------+-----------------------------------------------------------------------------------+
+| **Responsorial Psalm:**     | [R&A p. 50](https://youtu.be/YeKe01s4loE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
++-----------------------------+-----------------------------------------------------------------------------------+
+| **Gospel Acclamation:**     | Handout - NA                                                                      |
++-----------------------------+-----------------------------------------------------------------------------------+
+| **Offertory:**              | 553 - [O Spirit All-Embracing](https://www.youtube.com/watch?v=gprtl0sNEE8)       |
++-----------------------------+-----------------------------------------------------------------------------------+
+| **Holy:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)    |
++-----------------------------+-----------------------------------------------------------------------------------+
+| **Memorial Acclamation A:** | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)    |
++-----------------------------+-----------------------------------------------------------------------------------+
+| **Amen:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)    |
++-----------------------------+-----------------------------------------------------------------------------------+
+| **Lamb of God:**            | [Cantus Missae (B)](https://www.youtube.com/watch?v=JgVQ0SHPeno)                  |
++-----------------------------+-----------------------------------------------------------------------------------+
+| **Communion:**              | 920 - [Pan de Vida](https://www.youtube.com/watch?v=8JtfB37qF90)                  |
++-----------------------------+-----------------------------------------------------------------------------------+
+| **Recessional:**            | 741 - [Somos el Cuerpo de Cristo](https://www.youtube.com/watch?v=tcMbXdkgwyw)    |
++-----------------------------+-----------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
+
