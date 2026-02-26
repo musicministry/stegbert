@@ -1,5 +1,6 @@
 ---
 title: Cantor Schedule
+search: false
 ---
 
 St. Egbert's is grateful for our cantors who regularly share their time and talent leading the congregation in song. Your courage and dedication is appreciated.
