@@ -22,8 +22,16 @@ format:
 
 All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. **Please note that the Mass setting is indicated for every week at the top of each list. Click its name to jump to links for Mass parts.** Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.
 
+::: {.content-visible when-format="html"}
+::: {.callout-important title="Take heed!"}
+We will introduce and sing the [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html) during Lent.
+:::
+:::
+
+::: {.content-visible when-format="pdf"}
 ::: {.schedule-callout title="Take heed!"}
 We will introduce and sing the [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html) during Lent.
+:::
 :::
 
 :::: {.content-visible when-format="html"}
