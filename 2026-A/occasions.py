@@ -47,10 +47,10 @@ confirmation = {
     "Processional": "601 - Laudate, Laudate Dominum",
 
     "Responsorial Psalm": "R&A p. 50 - https://youtu.be/YeKe01s4loE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation": "Handout - Handout",
+    "Gospel Acclamation": "Handout - NA",
 
     "Anointing with Chrism": "NA - organ interlude, if desired",
     "Offertory": "553 - O Spirit All-Embracing",
     "Communion": "920 - Pan de Vida",
-    "Recessional": "686 - Blest Be the Lord"
+    "Recessional": "741 - Somos el Cuerpo de Cristo"
 }
