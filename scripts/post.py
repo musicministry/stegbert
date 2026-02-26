@@ -227,11 +227,7 @@ def main():
 
         # Callout
         if args.callout is not None:
-            file.write(
-                '::: {.schedule-callout title="Take heed!"}\n' \
-                f'{args.callout}\n' \
-                ':::\n\n'
-            )
+            file.write(u.make_callout(message=args.callout, title="Take heed!"))
         
         # ---- Website ----
         file.write('::: {.content-visible when-format="html"}\n\n')

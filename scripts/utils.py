@@ -1276,3 +1276,18 @@ def single_table(hymn_dict: dict, mass_parts: list):
         ) + '\n: {.hover .normal tbl-colwidths="[35, 65]"}' + '\n\n\\needspace{3\\baselineskip}\n\n'
 
     return tbl
+
+def make_callout(message: str, title="Take heed!", type="important"):
+
+    callout = '::: {.content-visible when-format="html"}\n' \
+              f'::: {{.callout-{type} title="{title}"}}\n' \
+              f'{message}\n' \
+              ':::\n' \
+              ':::\n\n' \
+              '::: {.content-visible when-format="pdf"}\n' \
+              f'::: {{.schedule-callout title="{title}"}}\n' \
+              f'{message}\n' \
+              ':::\n' \
+              ':::\n\n'
+    
+    return callout

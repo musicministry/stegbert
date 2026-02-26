@@ -59,17 +59,15 @@ local function transform_div(el)
           "\\vspace{1em}\n\\begin{calloutimportant}[%s]\n%s\n\\end{calloutimportant}\n\\vspace{1em}",
           title, body))}
       else
-        local body = blocks_to_html(el.content)
-        return {pandoc.RawBlock("html", string.format(
-[[<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container"><i class="callout-icon"></i></div>
-<div class="callout-title-container flex-fill">%s</div>
-</div>
-<div class="callout-body-container callout-body">
-%s
-</div>
-</div>]], title, body))}
+        -- Return a native Pandoc Div with Quarto's callout classes so
+        -- Quarto processes it normally for HTML (styling, icon, title).
+        -- The title is set via the custom-title attribute, which Quarto
+        -- reads when rendering callout-important divs.
+        local callout_div = pandoc.Div(
+          el.content,
+          pandoc.Attr("", {"callout-important"}, {["title"] = title})
+        )
+        return {callout_div}
       end
     end
   end
