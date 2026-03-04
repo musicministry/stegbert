@@ -1,5 +1,6 @@
 .venv
 .ghenv
+.env
 
 2026-A/next-lists.py
 
@@ -28,3 +29,6 @@ __pycache__/
 .Python
 
 /.luarc.json
+
+calendars/credentials.json
+calendars/token.json

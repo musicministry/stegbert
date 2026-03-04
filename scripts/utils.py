@@ -6,11 +6,13 @@ from tabulate import tabulate
 from numbr import Cast as num
 from pathlib import Path
 import datetime as dt
+import pandas as pd
 import numpy as np
 import importlib
 import requests
 import time
 import yaml
+import json
 import sys
 import re
 import os
@@ -1291,3 +1293,104 @@ def make_callout(message: str, title="Take heed!", type="important"):
               ':::\n\n'
     
     return callout
+
+# -----------------------------------------------------------------------------
+# Cantor dashboard
+
+def generate_lookup_widget(df: pd.DataFrame, output_path: Path):
+    # name -> [{"date": ..., "time": ...}, ...]
+    name_to_slots = (
+        df.groupby("Name")
+        .apply(lambda g: [{"date": r["Date"], "time": r["Mass Time"]} for _, r in g.iterrows()], include_groups=False)
+        .to_dict()
+    )
+    # time -> [{"date": ..., "name": ...}, ...]
+    time_to_slots = (
+        df.groupby("Mass Time")
+        .apply(lambda g: [{"date": r["Date"], "name": r["Name"]} for _, r in g.iterrows()], include_groups=False)
+        .to_dict()
+    )
+
+    names = sorted(df["Name"].unique().tolist())
+    times = sorted(df["Mass Time"].unique().tolist())
+    name_options = "\n".join(f'<option value="{n}">{n}</option>' for n in names)
+    time_options = "\n".join(f'<option value="{t}">{t}</option>' for t in times)
+
+    html = f"""<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  body {{ font-family: sans-serif; padding: 1em; }}
+  .controls {{ display: flex; align-items: center; gap: 1em; flex-wrap: wrap; margin-bottom: 1.2em; }}
+  label {{ font-weight: bold; }}
+  select {{ padding: 0.4em; font-size: 1em; }}
+  #result {{ margin-top: 1em; padding: 0.8em; background: #f5f5f5;
+             border-left: 4px solid #b32121; min-height: 2em; }}
+  #result ul {{ margin: 0.3em 0 0 1em; padding: 0; }}
+  #value-select-container {{ display: none; }}
+</style>
+</head>
+<body>
+
+<div class="controls">
+  <label for="filter-by">Filter by:</label>
+  <select id="filter-by">
+    <option value="">-- Select --</option>
+    <option value="name">Name</option>
+    <option value="time">Mass Time</option>
+  </select>
+
+  <div id="value-select-container">
+    <select id="value-select">
+      <option value="">-- Select --</option>
+    </select>
+  </div>
+</div>
+
+<div id="result"></div>
+
+<script>
+  const nameToSlots = {json.dumps(name_to_slots)};
+  const timeToSlots = {json.dumps(time_to_slots)};
+  const nameOptions = `<option value="">-- Select a name --</option>
+    {name_options}`;
+  const timeOptions = `<option value="">-- Select a time --</option>
+    {time_options}`;
+
+  const filterBy     = document.getElementById("filter-by");
+  const valueContainer = document.getElementById("value-select-container");
+  const valueSelect  = document.getElementById("value-select");
+  const result       = document.getElementById("result");
+
+  filterBy.addEventListener("change", function() {{
+    result.innerHTML = "";
+    if (!this.value) {{
+      valueContainer.style.display = "none";
+      valueSelect.innerHTML = "";
+      return;
+    }}
+    valueSelect.innerHTML = this.value === "name" ? nameOptions : timeOptions;
+    valueContainer.style.display = "inline-block";
+  }});
+
+  valueSelect.addEventListener("change", function() {{
+    const mode = filterBy.value;
+    const val  = this.value;
+    if (!val) {{ result.innerHTML = ""; return; }}
+
+    if (mode === "name") {{
+      const slots = nameToSlots[val] || [];
+      result.innerHTML = `<strong>${{val}}</strong> is scheduled for:
+        <ul>${{slots.map(s => `<li>${{s.date}} &ndash; ${{s.time}}</li>`).join("")}}</ul>`;
+    }} else {{
+      const slots = timeToSlots[val] || [];
+      result.innerHTML = `Scheduled at <strong>${{val}}</strong>:
+        <ul>${{slots.map(s => `<li>${{s.date}} &ndash; ${{s.name}}</li>`).join("")}}</ul>`;
+    }}
+  }});
+</script>
+</body>
+</html>"""
+
+    output_path.write_text(html, encoding="utf-8")
