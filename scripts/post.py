@@ -63,7 +63,7 @@ def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
         description='Function control parameters.',
-        prog='upcoming',
+        prog='post',
         usage='%(prog)s [arguments]')
     parser.add_argument('year', metavar='year', type=int,
                         help='Four-digit year to process')

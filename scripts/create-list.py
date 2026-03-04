@@ -37,18 +37,18 @@
 # -----------------------------------------------------------------------------
 # Packages
 from pathlib import Path
-import datetime as dt
 import pandas as pd
 import argparse
 import sys
-import os
+import os.path
 import utils as u
+import datetime as dt
 
 def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
         description='Function control parameters.',
-        prog='upcoming',
+        prog='create_list',
         usage='%(prog)s [arguments]')
     parser.add_argument('year', metavar='year', type=int,
                         help='Four-digit year to process')

@@ -18,7 +18,7 @@
 import datetime as dt
 import pandas as pd
 import argparse
-import os
+import os.path
 import sys
 import subprocess
 import utils as u
@@ -28,7 +28,7 @@ def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
         description='Function control parameters.',
-        prog='upcoming',
+        prog='post-week',
         usage='%(prog)s [arguments]')
     parser.add_argument('year', metavar='year', type=int,
                         help='Four-digit year to process')
