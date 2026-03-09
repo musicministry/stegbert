@@ -518,7 +518,7 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
                 )
                 number += 1
             elif 'easter-vigil' in celebration or 'pentecost-vigil-extended' in celebration:
-                lookup_name = f'{index_key.split(' - ')[-1].strip()}: {unkey(celebration.split('-psalm-')[-1])}'
+                lookup_name = f"{index_key.split(' - ')[-1].strip()}: {unkey(celebration.split('-psalm-')[-1])}"
                 display_name = get_ra_video_url(
                     lookup_name,
                     get='psalm'
@@ -564,7 +564,7 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
                     )
                     number += 1
                 elif 'easter-vigil' in celebration or 'pentecost-vigil-extended' in celebration:
-                    lookup_name = f'{index_key.split(' - ')[-1].strip()}: {unkey(celebration.split('-psalm-')[-1])}'
+                    lookup_name = f"{index_key.split(' - ')[-1].strip()}: {unkey(celebration.split('-psalm-')[-1])}"
                     display_name = get_ra_video_url(
                         lookup_name, get='psalm'
                     )
