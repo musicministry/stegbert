@@ -48,14 +48,6 @@ jobs:
           year=$(date +%Y)
           python scripts/post-week.py $year
 
-    - name: Write credentials files
-      env:
-        GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
-        GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
-      run: |
-        echo "$GOOGLE_CREDENTIALS_JSON" > credentials.json
-        echo "$GOOGLE_TOKEN_JSON" > token.json
-
     - name: Run cantors.py
       id: cantor           # needed to reference outputs below
       env:
@@ -63,9 +55,8 @@ jobs:
         GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
         GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
       run: |
-          year=$(date +%Y)
           month=$(date +%m)
-          python scripts/cantors.py --start $year-$month-01 --end $year-12-31
+          python scripts/cantors.py --start 2026-$month-01 --end 2026-12-31
 
     - name: Update token secret if refreshed
       if: always()
@@ -91,7 +82,7 @@ jobs:
         git diff --staged --quiet || git commit -m "Update cantor schedule [skip ci]"
         git push origin quarto
 
-    - name: Publish to GitHub Pages (and render)
+    - name: Publish to GitHub Pages (and render)xs
       uses: quarto-dev/quarto-actions/publish@v2
       with:
         target: gh-pages

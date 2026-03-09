@@ -174,13 +174,19 @@ def main():
     
     # Load credentials from environment (no file needed)
     CALENDAR_ID = os.environ["GOOGLE_CALENDAR_ID"]
+    in_ci = os.environ.get("GITHUB_OUTPUT") is not None
     creds = None
+
     token_json = os.environ.get("GOOGLE_TOKEN_JSON")
     if token_json:
         creds = Credentials.from_authorized_user_info(
             json.loads(token_json), SCOPES
         )
-        print(creds)
+    else:
+        # Local: read from file
+        token_path = PROJECT_ROOT / "calendars/token.json"
+        if token_path.exists():
+            creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
 
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
@@ -201,14 +207,13 @@ def main():
             creds = flow.run_local_server(port=0)
 
     # Write refreshed token to GitHub Actions output if running in CI
-    github_output = os.environ.get("GITHUB_OUTPUT")
-    if github_output:
-        with open(github_output, "a") as f:
+    if in_ci:
+        # Write to GitHub Actions step output for the secret-update step
+        with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             f.write(f"token_json={creds.to_json()}\n")
     else:
-        # Local dev: write to file as before
-        token_path = os.path.join(PROJECT_ROOT, "calendars/token.json")
-        with open(token_path, "w") as f:
+        # Local: write back to file so next run can reuse it
+        with open(PROJECT_ROOT / "calendars/token.json", "w") as f:
             f.write(creds.to_json())
 
     try:
