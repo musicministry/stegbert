@@ -1364,7 +1364,7 @@ def generate_lookup_widget(df: pd.DataFrame, output_path: Path):
 </head>
 <body>
 
-Use this tool to quickly find what Masses you are scheduled for. Search by name or Mass time. Updates automatically every Sunday afternoon using the cantor calendar. <br><br>
+Use this widget to quickly find the Masses you are scheduled for. Search by name or Mass time. Updates automatically every Sunday afternoon using the current version of the cantor calendar. <br><br><br>
 
 <div class="controls">
   <label for="filter-by">Filter by:</label>
