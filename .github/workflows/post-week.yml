@@ -58,18 +58,18 @@ jobs:
           python scripts/cantors.py --start 2026-$month-01 --end 2026-12-31
 
     - name: Update token secret if refreshed
-            if: always()
-            env:
-              GH_TOKEN: ${{ secrets.GH_PAT }}
-              OLD_TOKEN: ${{ secrets.GOOGLE_TOKEN_JSON }}
-              NEW_TOKEN: ${{ steps.cantor.outputs.token_json }}
-            run: |
-              if [ "$NEW_TOKEN" != "$OLD_TOKEN" ]; then
-                echo "Token was refreshed — updating secret."
-                gh secret set GOOGLE_TOKEN_JSON --body "$NEW_TOKEN"
-              else
-                echo "Token unchanged — no update needed."
-              fi
+      if: always()
+      env:
+        GH_TOKEN: ${{ secrets.GH_PAT }}
+        OLD_TOKEN: ${{ secrets.GOOGLE_TOKEN_JSON }}
+        NEW_TOKEN: ${{ steps.cantor.outputs.token_json }}
+      run: |
+        if [ "$NEW_TOKEN" != "$OLD_TOKEN" ]; then
+          echo "Token was refreshed — updating secret."
+          gh secret set GOOGLE_TOKEN_JSON --body "$NEW_TOKEN"
+        else
+          echo "Token unchanged — no update needed."
+        fi
 
     - name: Commit automated updates
       run: |
