@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write       # needed to commit CSV and HTML back to repo
-      secrets: write        # needed to update the token secret    
     defaults:
       run:
         shell: bash -l {0}
