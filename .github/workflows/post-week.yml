@@ -7,6 +7,9 @@ on:
 jobs:
   quarto-render-and-deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write       # needed to commit CSV and HTML back to repo
+      secrets: write        # needed to update the token secret    
     defaults:
       run:
         shell: bash -l {0}
@@ -45,29 +48,48 @@ jobs:
           year=$(date +%Y)
           python scripts/post-week.py $year
 
-    - name: Run cantors.py
+    - name: Write credentials files
       env:
-        GITHUB_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
-        OWNER: musicministry
+        GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+        GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
+      run: |
+        echo "$GOOGLE_CREDENTIALS_JSON" > credentials.json
+        echo "$GOOGLE_TOKEN_JSON" > token.json
+
+    - name: Run cantors.py
+      id: cantor           # needed to reference outputs below
+      env:
+        GOOGLE_CALENDAR_ID: ${{ secrets.GOOGLE_CALENDAR_ID }}
+        GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+        GOOGLE_TOKEN_JSON: ${{ secrets.GOOGLE_TOKEN_JSON }}
       run: |
           year=$(date +%Y)
           month=$(date +%m)
           python scripts/cantors.py --start $year-$month-01 --end $year-12-31
 
-    - name: Commit file
+    - name: Update token secret if refreshed
+      if: always()
+      env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        OLD_TOKEN: ${{ secrets.GOOGLE_TOKEN_JSON }}
+        NEW_TOKEN: ${{ steps.cantor.outputs.token_json }}
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git add posts/*.qmd
-        git diff-index --quiet HEAD || (git commit -a -m "Auto release upcoming feast" --allow-empty)
-        git add calendars/cantors.csv schedule_lookup.html
-        git diff-index --quiet HEAD || (git commit -a -m "Auto cantor calendar update" --allow-empty)
+        if [ "$NEW_TOKEN" != "$OLD_TOKEN" ]; then
+          echo "Token was refreshed — updating secret."
+          gh secret set GOOGLE_TOKEN_JSON --body "$NEW_TOKEN"
+        else
+          echo "Token unchanged — no update needed."
+        fi
 
-    - name: Push changes
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: quarto
+    - name: Commit automated updates
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "github-actions[bot]@users.noreply.github.com"
+        git add posts/*.qmd
+        git diff --staged --quiet || git commit -m "Auto release upcoming feast [skip ci]"
+        git add calendars/cantors.csv schedule_lookup.html
+        git diff --staged --quiet || git commit -m "Update cantor schedule [skip ci]"
+        git push origin quarto
 
     - name: Publish to GitHub Pages (and render)
       uses: quarto-dev/quarto-actions/publish@v2

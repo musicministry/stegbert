@@ -36,6 +36,7 @@ import pandas as pd
 import utils as u
 import argparse
 import pytz
+import json
 import re
 import os
 
@@ -141,38 +142,75 @@ def cantor_df(events: list, include_all_day=False):
     return df
 
 def main():
-    creds = None
-
     # Project home directory
     PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-    # Load calendar info
-    load_dotenv()
-    CALENDAR_ID = os.environ["GOOGLE_CALENDAR_ID"]
-    CREDENTIALS_PATH = os.environ.get("GOOGLE_CREDENTIALS_PATH", "credentials.json")
-    TOKEN_PATH = os.environ.get("GOOGLE_TOKEN_PATH", "token.json")
+    # # Load calendar info
+    # load_dotenv()
+    # CALENDAR_ID = os.environ["GOOGLE_CALENDAR_ID"]
+    # CREDENTIALS_PATH = os.environ.get("GOOGLE_CREDENTIALS_PATH", "credentials.json")
+    # TOKEN_PATH = os.environ.get("GOOGLE_TOKEN_PATH", "token.json")
 
-    # The file token.json stores the user's access and refresh tokens, and is
-    # created automatically when the authorization flow completes for the first
-    # time.
-    token = os.path.join(PROJECT_ROOT, TOKEN_PATH)
-    if os.path.exists(token):
-        creds = Credentials.from_authorized_user_file(token, SCOPES)
+    # # The file token.json stores the user's access and refresh tokens, and is
+    # # created automatically when the authorization flow completes for the first
+    # # time.
+    # token = os.path.join(PROJECT_ROOT, TOKEN_PATH)
+    # if os.path.exists(token):
+    #     creds = Credentials.from_authorized_user_file(token, SCOPES)
     
+    # # If there are no (valid) credentials available, let the user log in.
+    # if not creds or not creds.valid:
+    #     if creds and creds.expired and creds.refresh_token:
+    #         creds.refresh(Request())
+    #     else:
+    #         flow = InstalledAppFlow.from_client_secrets_file(
+    #             os.path.join(PROJECT_ROOT, CREDENTIALS_PATH), SCOPES
+    #         )
+    #         creds = flow.run_local_server(port=0)
+        
+    #     # Save the credentials for the next run
+    #     with open(token, "w") as token_file:
+    #         token_file.write(creds.to_json())
+    
+    # Load credentials from environment (no file needed)
+    CALENDAR_ID = os.environ["GOOGLE_CALENDAR_ID"]
+    creds = None
+    token_json = os.environ.get("GOOGLE_TOKEN_JSON")
+    if token_json:
+        creds = Credentials.from_authorized_user_info(
+            json.loads(token_json), SCOPES
+        )
+        print(creds)
+
     # If there are no (valid) credentials available, let the user log in.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
-            flow = InstalledAppFlow.from_client_secrets_file(
-                os.path.join(PROJECT_ROOT, CREDENTIALS_PATH), SCOPES
-            )
+            # This branch requires interactive login — only runs locally
+            credentials_json = os.environ.get("GOOGLE_CREDENTIALS_JSON")
+            if credentials_json:
+                flow = InstalledAppFlow.from_client_config(
+                    json.loads(credentials_json), SCOPES
+                )
+            else:
+                # Fallback for local dev with a file
+                flow = InstalledAppFlow.from_client_secrets_file(
+                    os.path.join(PROJECT_ROOT, "calendars/credentials.json"), SCOPES
+                )
             creds = flow.run_local_server(port=0)
-        
-        # Save the credentials for the next run
-        with open(token, "w") as token_file:
-            token_file.write(creds.to_json())
-    
+
+    # Write refreshed token to GitHub Actions output if running in CI
+    github_output = os.environ.get("GITHUB_OUTPUT")
+    if github_output:
+        with open(github_output, "a") as f:
+            f.write(f"token_json={creds.to_json()}\n")
+    else:
+        # Local dev: write to file as before
+        token_path = os.path.join(PROJECT_ROOT, "calendars/token.json")
+        with open(token_path, "w") as f:
+            f.write(creds.to_json())
+
     try:
         service = build("calendar", "v3", credentials=creds)
 
