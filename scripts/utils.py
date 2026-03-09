@@ -1,4 +1,4 @@
-# =========================================================================== #
+# =============================================================================
 # Load required packages
 from rapidfuzz import process, fuzz
 from titlecase import titlecase
@@ -10,6 +10,7 @@ import pandas as pd
 import numpy as np
 import importlib
 import requests
+import warnings
 import time
 import yaml
 import json
@@ -17,7 +18,7 @@ import sys
 import re
 import os
 
-# =========================================================================== #
+# -----------------------------------------------------------------------------
 # Load video YAMLs from GitHub
 
 # Gather index
@@ -46,7 +47,7 @@ ra_videos = yaml.safe_load(requests.get(ra_videos_url).content)
 ra_feast_mapping_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/feast-mapping.yml'
 ra_feast_mapping = yaml.safe_load(requests.get(ra_feast_mapping_url).content)
 
-# =========================================================================== #
+# -----------------------------------------------------------------------------
 # Tools
 
 def lityear(year):
@@ -102,7 +103,11 @@ def get_ra_video_url(celebration, get='psalm'):
     # Check the `get` string
     assert get.lower() in ['psalm', 'gospel acclamation'], '`get` parameter must be "psalm" or "gospel acclamation"'
     get = titlecase(get)
-    return(ra_videos[ra_feast_mapping[celebration] + f' - {get}']['url'])
+    if celebration in ra_feast_mapping.keys():
+        return ra_videos[f'{ra_feast_mapping[celebration]} - {get}']['url']
+    else:
+        warnings.warn(f'Unable to automatically find URL for "{celebration}"')
+        return 'URL'
 
 def check_for_lists(d, context=""):
     """Ensure all dictionary values are strings, not lists or other types."""
@@ -382,7 +387,7 @@ def process_and_export(results, hymnal, output_file='hymn_data.py'):
         f.write('#\n')
         f.write('# Auto-generated hymn data dictionaries\n')
         f.write('#\n')
-        f.write('# =============================================================================\n')
+        f.write('# -----------------------------------------------------------------------------\n')
         f.write('# Entry template:\n')
         f.write('#\n')
         f.write('#     seasonNN = {\n')
@@ -505,13 +510,24 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
             number, index_key, _ = fuzzy_ra_index_lookup(date=date, celebration_name=celebration)
             if number is None:
                 numflag = True
-            if is_gospel and number is not None:
-                display_name = get_ra_video_url(index_key.split(' - ')[-1].strip(),
-                                                get='gospel acclamation')
+                display_name = "URL"
+            elif is_gospel and number is not None:
+                display_name = get_ra_video_url(
+                    index_key.split(' - ')[-1].strip(),
+                    get='gospel acclamation'
+                )
                 number += 1
+            elif 'easter-vigil' in celebration or 'pentecost-vigil-extended' in celebration:
+                lookup_name = f'{index_key.split(' - ')[-1].strip()}: {unkey(celebration.split('-psalm-')[-1])}'
+                display_name = get_ra_video_url(
+                    lookup_name,
+                    get='psalm'
+                )
             else:
-                display_name = get_ra_video_url(index_key.split(' - ')[-1].strip(),
-                                                get='psalm')
+                display_name = get_ra_video_url(
+                    index_key.split(' - ')[-1].strip(),
+                    get='psalm'
+                )
             number = f'R&A p. {number}'
         # Appendices 
         elif 'app' in entry['book'].lower():
@@ -538,11 +554,25 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
             numflag = False
             if entry['book'].lower() == 'ra':
                 number, index_key, _ = fuzzy_ra_index_lookup(date=date, celebration_name=celebration)
-                display_name = get_ra_video_url(index_key.split(' - ')[-1].strip())
                 if number is None:
                     numflag = True
-                if is_gospel and number is not None:
+                    display_name = "URL"
+                elif is_gospel and number is not None:
+                    display_name = get_ra_video_url(
+                        index_key.split(' - ')[-1].strip(),
+                        get='gospel acclamation'
+                    )
                     number += 1
+                elif 'easter-vigil' in celebration or 'pentecost-vigil-extended' in celebration:
+                    lookup_name = f'{index_key.split(' - ')[-1].strip()}: {unkey(celebration.split('-psalm-')[-1])}'
+                    display_name = get_ra_video_url(
+                        lookup_name, get='psalm'
+                    )
+                else:
+                    display_name = get_ra_video_url(
+                        index_key.split(' - ')[-1].strip(),
+                        get='psalm'
+                    )
                 number = f'R&A p. {number}'
             # Appendices 
             elif 'app' in entry['book'].lower():
@@ -566,7 +596,7 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
 
 def advance_psalm(text, step=1):
     # New number
-    number = int(''.join(c for c in text if c.isdigit())) + step
+    number = int(''.join(c for c in text.split(' - ')[0] if c.isdigit())) + step
 
     # Split the string
     text_list = text.split(' ')
@@ -623,7 +653,8 @@ def flatten_frontmatter(frontmatter, feast_name, date, season, lit_year, hymnal,
             else:
                 # Advance pages for multiple psalms (Easter Vigil and Pentecost
                 # Vigil) - requires manual verification due to multiple options
-                results = format_psalm_options(frontmatter[song], priority_order, date, feast_name)
+                modified_feast_name = f"{feast_name}-{song}"
+                results = format_psalm_options(frontmatter[song], priority_order, date, modified_feast_name)
                 if isinstance(results, list):
                     for i, entry in enumerate(results):
                         results[i] = advance_psalm(entry, step=increase) + ' ⚠️VERIFY⚠️'
