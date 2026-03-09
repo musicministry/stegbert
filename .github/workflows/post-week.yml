@@ -50,6 +50,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.CROSS_REPO_TOKEN }}
         OWNER: musicministry
       run: |
+          year=$(date +%Y)
           month=$(date +%m)
           python scripts/cantors.py --start $year-$month-01 --end $year-12-31
 
