@@ -47,10 +47,13 @@ import os
 #     def __init__(self, start, end):
 #         self.start = start
 #         self.end = end
+
 # args = Args(
 #     start = 'today',
-#     end = 'tomorrow'
+#     end = '2026-04-30'
 # )
+
+# PROJECT_ROOT = Path(os.getcwd())
 
 # -----------------------------------------------------------------------------
 # Command line execution
@@ -144,39 +147,15 @@ def cantor_df(events: list, include_all_day=False):
 def main():
     # Project home directory
     PROJECT_ROOT = Path(__file__).resolve().parent.parent
-
-    # # Load calendar info
-    # load_dotenv()
-    # CALENDAR_ID = os.environ["GOOGLE_CALENDAR_ID"]
-    # CREDENTIALS_PATH = os.environ.get("GOOGLE_CREDENTIALS_PATH", "credentials.json")
-    # TOKEN_PATH = os.environ.get("GOOGLE_TOKEN_PATH", "token.json")
-
-    # # The file token.json stores the user's access and refresh tokens, and is
-    # # created automatically when the authorization flow completes for the first
-    # # time.
-    # token = os.path.join(PROJECT_ROOT, TOKEN_PATH)
-    # if os.path.exists(token):
-    #     creds = Credentials.from_authorized_user_file(token, SCOPES)
     
-    # # If there are no (valid) credentials available, let the user log in.
-    # if not creds or not creds.valid:
-    #     if creds and creds.expired and creds.refresh_token:
-    #         creds.refresh(Request())
-    #     else:
-    #         flow = InstalledAppFlow.from_client_secrets_file(
-    #             os.path.join(PROJECT_ROOT, CREDENTIALS_PATH), SCOPES
-    #         )
-    #         creds = flow.run_local_server(port=0)
-        
-    #     # Save the credentials for the next run
-    #     with open(token, "w") as token_file:
-    #         token_file.write(creds.to_json())
-    
-    # Load credentials from environment (no file needed)
+    # Load calendar info
     CALENDAR_ID = os.environ["GOOGLE_CALENDAR_ID"]
     in_ci = os.environ.get("GITHUB_OUTPUT") is not None
     creds = None
+    load_dotenv()
 
+    # Load credentials from environment
+    TOKEN_PATH = os.environ.get("GOOGLE_TOKEN_PATH")
     token_json = os.environ.get("GOOGLE_TOKEN_JSON")
     if token_json:
         creds = Credentials.from_authorized_user_info(
@@ -184,11 +163,12 @@ def main():
         )
     else:
         # Local: read from file
-        token_path = PROJECT_ROOT / "calendars/token.json"
+        token_path = PROJECT_ROOT / TOKEN_PATH
         if token_path.exists():
             creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
 
     # If there are no (valid) credentials available, let the user log in.
+    CREDENTIALS_PATH = os.environ.get("GOOGLE_CREDENTIALS_PATH")
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
@@ -202,7 +182,7 @@ def main():
             else:
                 # Fallback for local dev with a file
                 flow = InstalledAppFlow.from_client_secrets_file(
-                    os.path.join(PROJECT_ROOT, "calendars/credentials.json"), SCOPES
+                    os.path.join(PROJECT_ROOT, CREDENTIALS_PATH), SCOPES
                 )
             creds = flow.run_local_server(port=0)
 
@@ -212,9 +192,15 @@ def main():
         with open(os.environ["GITHUB_OUTPUT"], "a") as f:
             f.write(f"token_json={creds.to_json()}\n")
     else:
-        # Local: write back to file so next run can reuse it
-        with open(PROJECT_ROOT / "calendars/token.json", "w") as f:
-            f.write(creds.to_json())
+        # Update GOOGLE_TOKEN_JSON in .env
+        env_path = PROJECT_ROOT / ".env"
+        env_text = env_path.read_text()
+        new_line = f'GOOGLE_TOKEN_JSON={creds.to_json()}'
+        if "GOOGLE_TOKEN_JSON" in env_text:
+            env_text = re.sub(r'GOOGLE_TOKEN_JSON=.*', new_line, env_text)
+        else:
+            env_text += f'\n{new_line}'
+        env_path.write_text(env_text)
 
     try:
         service = build("calendar", "v3", credentials=creds)
