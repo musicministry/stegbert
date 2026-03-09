@@ -34,7 +34,7 @@
 # dictionaries containing the music schedules and must be a name found in the
 # `name` column of the liturgical calendar dataframe.
 #
-# -----------------------------------------------------------------------------
+# =============================================================================
 # Packages
 from pathlib import Path
 import pandas as pd
@@ -43,6 +43,31 @@ import sys
 import os.path
 import utils as u
 import datetime as dt
+
+# -----------------------------------------------------------------------------
+# Local development
+
+# class Args:
+#     def __init__(self, year, start, end, hymnal='gather', priority=0,
+#                  outfile='next-lists.py'):
+#         self.year = year
+#         self.start = start
+#         self.end = end
+#         self.hymnal = hymnal
+#         self.priority = priority
+#         self.outfile = outfile
+
+# args = Args(
+#     year = 2026,
+#     start = 'easter-vigil',
+#     end='easter01',
+#     priority = 0,
+# )
+
+# PROJECT_ROOT = os.getcwd()
+
+# -----------------------------------------------------------------------------
+# Command line execution
 
 def parse_args():
     """Parse command line arguments."""
@@ -67,26 +92,7 @@ def parse_args():
 
 args = parse_args()
 
-# =============================================================================
-# Local development
-
-# class Args:
-#     def __init__(self, year, start, end, hymnal='gather', priority=0, outfile='next-lists.py'):
-#         self.year = year
-#         self.start = start
-#         self.end = end
-#         self.hymnal = hymnal
-#         self.priority = priority
-#         self.outfile = outfile
-
-# args = Args(
-#     year = 2026,
-#     start = 'ash-wednesday',
-#     end='lent05',
-#     priority = 1,
-# )
-
-# =============================================================================
+# -----------------------------------------------------------------------------
 # Main program
 
 # Project home directory

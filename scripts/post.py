@@ -48,7 +48,7 @@
 # music schedules and must be a name found in the `name` column of the
 # liturgical calendar dataframe.
 #
-# --------------------------------------------------------------------------- #
+# =============================================================================
 # Packages
 from titlecase import titlecase
 import datetime as dt
@@ -58,6 +58,26 @@ import sys
 import os
 import utils as u
 from pathlib import Path
+
+# -----------------------------------------------------------------------------
+# Local development
+
+# class Args:
+#     def __init__(self, year, publish='next', outfile='auto', callout=None,
+#                  pdf=False):
+#         self.year = year
+#         self.publish = publish
+#         self.outfile = outfile
+#         self.callout = callout
+#         self.pfd = pdf
+
+# args = Args(
+#     year = 2026,
+#     publish = 'lent02'
+# )
+
+# -----------------------------------------------------------------------------
+# Command line execution
 
 def parse_args():
     """Parse command line arguments."""
@@ -80,24 +100,7 @@ def parse_args():
 
 args = parse_args()
 
-# =========================================================================== #
-# Local development
-
-# class Args:
-#     def __init__(self, year, publish='next', outfile='auto', callout=None,
-#                  pdf=False):
-#         self.year = year
-#         self.publish = publish
-#         self.outfile = outfile
-#         self.callout = callout
-#         self.pfd = pdf
-
-# args = Args(
-#     year = 2026,
-#     publish = 'lent02'
-# )
-
-# =========================================================================== #
+# -----------------------------------------------------------------------------
 # Main program
 
 def main():

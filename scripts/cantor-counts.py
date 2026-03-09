@@ -17,13 +17,26 @@
 #
 #     python cantor-counts.py --month 3 --outfile schedule.csv
 #
-# -----------------------------------------------------------------------------
+# =============================================================================
 # Packages
 from pathlib import Path
 import pandas as pd
 import argparse
 import calendar
 import os.path
+
+# -----------------------------------------------------------------------------
+# Local development
+
+# class Args:
+#     def __init__(self, infile='calendars/cantors.csv', outfile=None, month=None):
+#         self.start = infile
+#         self.end = outfile
+#         self.month = month
+# args = Args()
+
+# -----------------------------------------------------------------------------
+# Command line execution
 
 def parse_args():
     """Parse command line arguments."""
@@ -43,17 +56,7 @@ def parse_args():
 
 args = parse_args()
 
-# =============================================================================
-# Local development
-
-# class Args:
-#     def __init__(self, infile='calendars/cantors.csv', outfile=None, month=None):
-#         self.start = infile
-#         self.end = outfile
-#         self.month = month
-# args = Args()
-
-# =============================================================================
+# -----------------------------------------------------------------------------
 # Main program
 
 def main():

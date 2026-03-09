@@ -22,7 +22,7 @@
 #
 #     python cantors.py --end 2026-03-31 --exclude_all_day
 #
-# -----------------------------------------------------------------------------
+# =============================================================================
 # Packages
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
@@ -38,6 +38,21 @@ import argparse
 import pytz
 import re
 import os
+
+# -----------------------------------------------------------------------------
+# Local development
+
+# class Args:
+#     def __init__(self, start, end):
+#         self.start = start
+#         self.end = end
+# args = Args(
+#     start = 'today',
+#     end = 'tomorrow'
+# )
+
+# -----------------------------------------------------------------------------
+# Command line execution
 
 # If modifying these scopes, delete the file token.json.
 SCOPES = ["https://www.googleapis.com/auth/calendar"]
@@ -61,19 +76,7 @@ def parse_args():
 
 args = parse_args()
 
-# =============================================================================
-# Local development
-
-# class Args:
-#     def __init__(self, start, end):
-#         self.start = start
-#         self.end = end
-# args = Args(
-#     start = 'today',
-#     end = 'tomorrow'
-# )
-
-# =============================================================================
+# -----------------------------------------------------------------------------
 # Main program
 
 def event_info(event_dict: dict, keys=['start', 'summary']):
