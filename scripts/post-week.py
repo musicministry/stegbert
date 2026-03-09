@@ -13,7 +13,7 @@
 # To execute in terminal:
 # python post-week.py 2026
 #
-# -----------------------------------------------------------------------------
+# =============================================================================
 # Packages
 import datetime as dt
 import pandas as pd
@@ -23,6 +23,20 @@ import sys
 import subprocess
 import utils as u
 from pathlib import Path
+
+# -----------------------------------------------------------------------------
+# Local development
+
+# class Args:
+#     def __init__(self, year):
+#         self.year = year
+
+# args = Args(
+#     year = 2026
+# )
+
+# -----------------------------------------------------------------------------
+# Command line execution
 
 def parse_args():
     """Parse command line arguments."""
@@ -38,17 +52,7 @@ def parse_args():
 
 args = parse_args()
 
-# =============================================================================
-# Local development
-
-# class Args:
-#     def __init__(self, year):
-#         self.year = year
-# args = Args(
-#     year = 2026
-# )
-
-# =============================================================================
+# -----------------------------------------------------------------------------
 # Main program
 
 def main():
