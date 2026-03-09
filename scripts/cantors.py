@@ -64,11 +64,11 @@ def parse_args():
         prog='calendar',
         usage='%(prog)s [arguments]')
     parser.add_argument('-s', '--start', type=str, default='today',
-                        help='First date (str: "YYYY-MM-DD") to retrieve')
+                        help='First date to retrieve (str: "YYYY-MM-DD")')
     parser.add_argument('-e', '--end', type=str, default='tomorrow',
-                        help='Last date (str: "YYYY-MM-DD") to retrieve')
-    parser.add_argument('--exclude_all_day', action='store_true',
-                        help='Exclude all day events')
+                        help='Last date to retrieve (str: "YYYY-MM-DD")')
+    parser.add_argument('--include_all_day', action='store_true',
+                        help='Include all day events in table (Default: False)')
     parser.add_argument('-o', '--outfile', nargs='?', type=str, 
                         default='calendars/cantors.csv',
                         help='Name and directory of csv file to write. Default to "[pwd]/calendars/cantors.csv"')
@@ -117,20 +117,20 @@ def event_info(event_dict: dict, keys=['start', 'summary']):
 
     return subset
 
-def cantor_df(events: list, exclude_all_day=True):
+def cantor_df(events: list, include_all_day=False):
     """Create a dataframe from a list of Google calendar event dictionaries.
 
     Parameters
     ----------
     events: list, list of event dictionaries to be converted to dataframe
-    exclude_all_day: Bool, if True, all day events with no times are excluded.
-        Default: True
+    include_all_day: Bool, if True, all day events with no times are included.
+        Default: False
     """
     # Create a dataframe
-    if exclude_all_day:
-        df = pd.DataFrame([event_info(i) for i in events if 'dateTime' in i['start'].keys()])
-    else:
+    if include_all_day:
         df = pd.DataFrame([event_info(i) for i in events])
+    else:
+        df = pd.DataFrame([event_info(i) for i in events if 'dateTime' in i['start'].keys()])
 
     # Format dataframe
     df.rename(columns={'summary': 'Name'}, inplace=True)
@@ -214,7 +214,7 @@ def main():
             return
 
         # Format output into dataframe
-        df = cantor_df(events=events, exclude_all_day=args.exclude_all_day)
+        df = cantor_df(events=events, include_all_day=args.include_all_day)
         # Remove placeholder events with no one scheduled
         dfss = df[df['Name'] != '-']
         if not dfss.equals(df):
