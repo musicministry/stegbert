@@ -3,7 +3,7 @@ website:
   navbar:
     left:
       - about.qmd
-      - text: "Music Schedules"
+      - text: "Weekly Lineups"
         href: schedules.qmd
       - text: "Looking Ahead"
         href: upcoming.qmd
