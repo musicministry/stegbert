@@ -3,7 +3,7 @@
 # Ash Wednesday through Fifth Sunday in Lent
 # Liturgical Year A
 #
-# Updated: February 2026
+# Updated: March 2026
 #
 # Auto-generated hymn data dictionaries
 #
@@ -127,8 +127,8 @@ lent04 = {
     "Responsorial Psalm": "R&A p. 50 - https://youtu.be/YeKe01s4loE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     "Gospel Acclamation": "R&A p. 51 - https://youtu.be/Lr5khW-52NY?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
-    "Offertory": "592 - We Are the Light of the World",
-    "Communion": "684 - Psalm of Hope",
+    "Offertory": "645 - Amazing Grace",
+    "Communion": "592 - We Are the Light of the World",
     "Recessional": "766 - City of God"
 }
 
@@ -147,7 +147,7 @@ lent05 = {
     "Gospel Acclamation": "R&A p. 53 - https://youtu.be/6asCxIQ1ZZk?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Offertory": "945 - I Am the Bread of Life",
-    "Communion": "684 - Psalm of Hope",
+    "Communion": "489 - Merciful God (Lent Communion)",
     "Recessional": "871 - We Shall Rise Again"
 }
 

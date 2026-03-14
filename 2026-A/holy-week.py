@@ -3,7 +3,7 @@
 # Palm Sunday through Easter Vigil
 # Liturgical Year A
 #
-# Updated: February 2026
+# Updated: March 2026
 #
 # Auto-generated hymn data dictionaries
 #
@@ -48,7 +48,7 @@ palm_sunday = {
     "Gospel Acclamation": "R&A p. 55 - https://youtu.be/aJYnvp34V1s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Offertory": "642 - What Wondrous Love Is This",
-    "Communion": "684 - Psalm of Hope",
+    "Communion": "482 - The Cross of Jesus",
     "Recessional": "881 - Lift High the Cross"
 }
 
@@ -74,7 +74,7 @@ holy_thursday = {
 }
 
 good_friday = {
-    "Mass": "Mass of St. Dymphna",
+    "Mass": "NA",
     "parts": [],
 
     "Responsorial Psalm": "R&A p. 58 - https://youtu.be/sPVzFArq5bg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",

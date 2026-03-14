@@ -1,10 +1,10 @@
 ---
-first-feast: Ash Wednesday
-first-date: February 18, 2026
+first-feast: Fourth Sunday in Lent
+first-date: March 15, 2026
 last-feast: Pentecost
 last-date: May 24, 2026
 title: Hymn Schedules
-subtitle: "**February 18, 2026** (Ash Wednesday) through **May 24, 2026** (Pentecost)"
+subtitle: "**March 15, 2026** (Fourth Sunday in Lent) through **May 24, 2026** (Pentecost)"
 format:
   html: default
   hymn-schedules-pdf:
@@ -22,113 +22,11 @@ format:
 
 All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A” indicates *Respond and Acclaim*. **Please note that the Mass setting is indicated for every week at the top of each list. Click its name to jump to links for Mass parts.** Click on any title to listen to a recording for rehearsal purposes, but note that the lyrics may not match our hymnal. Please practice the lyrics in the *Gather* hymnal, regardless of the video.
 
-::: {.content-visible when-format="html"}
-::: {.callout-important title="Take heed!"}
-We will introduce and sing the [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html) during Lent.
-:::
-:::
-
-::: {.content-visible when-format="pdf"}
-::: {.schedule-callout title="Take heed!"}
-We will introduce and sing the [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html) during Lent.
-:::
-:::
-
 :::: {.content-visible when-format="html"}
 ::: {.titlered}
 ### &nbsp;&#x2720; Hymn Schedules
 :::
 ::::
-
-#### February 18, 2026 [Ash Wednesday]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+----------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**          | 487 - [Again We Keep This Solemn Fast](https://www.youtube.com/watch?v=NpAKebyaujk) |
-+--------+----------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:**    | [R&A p. 42](https://youtu.be/bWlHPiSBIyo?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)   |
-+--------+----------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:**    | [R&A p. 43](https://youtu.be/5o0YXg4YtEQ?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)   |
-+--------+----------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Distribution of Ashes:** | 962 - [Ashes](https://www.youtube.com/watch?v=daKcalWzzgk)                          |
-+--------+----------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**             | 484 - [Hosea](https://www.youtube.com/watch?v=W_v6VAB9BM4)                          |
-+--------+----------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**             | 478 - [Return to God](https://www.youtube.com/watch?v=KHJtAT1hYNo)                  |
-+--------+----------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**           | 493 - [Change Our Hearts](https://www.youtube.com/watch?v=ji7LqD4uU_Y)              |
-+--------+----------------------------+-------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### February 22, 2026 [First Sunday in Lent]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 479 - [Lord, Who throughout These Forty Days](https://www.youtube.com/watch?v=vAGMA8NrGmU) |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 44](https://youtu.be/pj65fZE7510?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)          |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 45](https://youtu.be/)                                                             |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 483 - [Forty Days and Forty Nights](https://www.youtube.com/watch?v=5MmTQRr-jJQ)           |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 910 - [Shepherd of Souls](https://www.youtube.com/watch?v=yX1gxQ3rI-o)                     |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Meditation:**         | 473 - [Parce Dómine](https://www.youtube.com/watch?v=kxSFG0h7trQ)                          |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 964 - [The Master Came to Bring Good News](https://www.youtube.com/watch?v=A8Dj_eLt3gE)    |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### March 1, 2026 [Second Sunday in Lent]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 877 - [How Good, Lord, to Be Here!](https://www.youtube.com/watch?v=LbBqw7RvvFE)           |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 46](https://youtu.be/bEPEYxTBJsE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)          |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 47](https://youtu.be/NDAgduh0xzg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)          |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 961 - [Remember Your Love](https://www.youtube.com/watch?v=3D87In-JjXY)                    |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 878 - [Transform Us](https://www.youtube.com/watch?v=y53p6YvhbeI)                          |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Meditation:**         | 628 - [You, Lord, Are Both Lamb and Shepherd](https://www.youtube.com/watch?v=3643tGRYC8o) |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 644 - [There's a Wideness in God's Mercy](https://www.youtube.com/watch?v=fLqlKZe1Ckc)     |
-+--------+-------------------------+--------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### March 8, 2026 [Third Sunday in Lent]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 481 - [The Glory of These Forty Days](https://www.youtube.com/watch?v=SozuIuW97Oo)  |
-+--------+-------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 48](https://youtu.be/wFB0c3ca39w?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)   |
-+--------+-------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 49](https://youtu.be/UGqXKT_jvwI?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)   |
-+--------+-------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 724 - [I Heard the Voice of Jesus Say](https://www.youtube.com/watch?v=0mag-eXtkO0) |
-+--------+-------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 941 - [Eat This Bread](https://www.youtube.com/watch?v=QLIqCBIOZm4)                 |
-+--------+-------------------------+-------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 493 - [Change Our Hearts](https://www.youtube.com/watch?v=ji7LqD4uU_Y)              |
-+--------+-------------------------+-------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
 
 #### March 15, 2026 [Fourth Sunday in Lent]{style="float:right"}
 
@@ -141,9 +39,9 @@ We will introduce and sing the [Mass of St. Dymphna](https://musicministry.githu
 +--------+-------------------------+---------------------------------------------------------------------------------------------+
 | &emsp; | **Gospel Acclamation:** | [R&A p. 51](https://youtu.be/Lr5khW)                                                        |
 +--------+-------------------------+---------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 592 - [We Are the Light of the World](https://www.youtube.com/watch?v=6F4l9b4rVL4)          |
+| &emsp; | **Offertory:**          | 645 - [Amazing Grace](https://www.youtube.com/watch?v=tU6GWeBY3qw)                          |
 +--------+-------------------------+---------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 684 - [Psalm of Hope](https://www.youtube.com/watch?v=_CkUoiGNRAo)                          |
+| &emsp; | **Communion:**          | 592 - [We Are the Light of the World](https://www.youtube.com/watch?v=6F4l9b4rVL4)          |
 +--------+-------------------------+---------------------------------------------------------------------------------------------+
 | &emsp; | **Recessional:**        | 766 - [City of God](https://www.youtube.com/watch?v=jLBQEUauY-I)                            |
 +--------+-------------------------+---------------------------------------------------------------------------------------------+
@@ -164,7 +62,7 @@ We will introduce and sing the [Mass of St. Dymphna](https://musicministry.githu
 +--------+-------------------------+--------------------------------------------------------------------------------------------+
 | &emsp; | **Offertory:**          | 945 - [I Am the Bread of Life](https://www.youtube.com/watch?v=KCnpR-eobag)                |
 +--------+-------------------------+--------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 684 - [Psalm of Hope](https://www.youtube.com/watch?v=_CkUoiGNRAo)                         |
+| &emsp; | **Communion:**          | 489 - [Merciful God (Lent Communion)](https://www.youtube.com/watch?v=6RGi8tO8ZGM)         |
 +--------+-------------------------+--------------------------------------------------------------------------------------------+
 | &emsp; | **Recessional:**        | 871 - [We Shall Rise Again](https://www.youtube.com/watch?v=epIc6I9BxQY)                   |
 +--------+-------------------------+--------------------------------------------------------------------------------------------+
@@ -186,7 +84,7 @@ We will introduce and sing the [Mass of St. Dymphna](https://musicministry.githu
 +--------+-------------------------+-----------------------------------------------------------------------------------+
 | &emsp; | **Offertory:**          | 642 - [What Wondrous Love Is This](https://www.youtube.com/watch?v=NZXCVy50t44)   |
 +--------+-------------------------+-----------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 684 - [Psalm of Hope](https://www.youtube.com/watch?v=_CkUoiGNRAo)                |
+| &emsp; | **Communion:**          | 482 - [The Cross of Jesus](https://www.youtube.com/watch?v=fepdwu6gBLM)           |
 +--------+-------------------------+-----------------------------------------------------------------------------------+
 | &emsp; | **Recessional:**        | 881 - [Lift High the Cross](https://www.youtube.com/watch?v=7D5zOkFs23A)          |
 +--------+-------------------------+-----------------------------------------------------------------------------------+
@@ -219,7 +117,7 @@ We will introduce and sing the [Mass of St. Dymphna](https://musicministry.githu
 
 #### April 3, 2026 [Good Friday]{style="float:right"}
 
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+[**Mass Setting:** [NA](#na)]{style="float:right"}
 
 +--------+------------------------------+-----------------------------------------------------------------------------------+
 | &emsp; | **Responsorial Psalm:**      | [R&A p. 58](https://youtu.be/sPVzFArq5bg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os) |
@@ -445,6 +343,7 @@ We will introduce and sing the [Mass of St. Dymphna](https://musicministry.githu
 
 #### Mass of St. Dymphna {#mass-of-st-dymphna}
 
+- *Gloria omitted during Lent*
 - (Handout) - [Mass of St. Dymphna: Holy](https://musicministry.github.io/stegbert/stdymphna.html)
 - (Handout) - [Mass of St. Dymphna: Memorial Acclamation A](https://musicministry.github.io/stegbert/stdymphna.html)
 - (Handout) - [Mass of St. Dymphna: Amen](https://musicministry.github.io/stegbert/stdymphna.html)
