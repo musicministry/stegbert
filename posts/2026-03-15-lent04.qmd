@@ -20,8 +20,8 @@ All hymns are taken from the blue Gather hymnal unless otherwise noted. Note tha
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">593 - I Want to Walk as a Child of the Light<br><br> {{< video https://www.youtube.com/watch?v=of3F5EFvSuM >}}</td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 50 <br><br> {{< video https://youtu.be/YeKe01s4loE?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 51 <br><br> {{< video https://youtu.be/Lr5khW-52NY?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
-<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">592 - We Are the Light of the World<br><br> {{< video https://www.youtube.com/watch?v=6F4l9b4rVL4 >}}</td></tr>
-<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">684 - Psalm of Hope<br><br> {{< video https://www.youtube.com/watch?v=_CkUoiGNRAo >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">645 - Amazing Grace<br><br> {{< video https://www.youtube.com/watch?v=tU6GWeBY3qw >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">592 - We Are the Light of the World<br><br> {{< video https://www.youtube.com/watch?v=6F4l9b4rVL4 >}}</td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">766 - City of God<br><br> {{< video https://www.youtube.com/watch?v=jLBQEUauY-I >}}</td></tr>
 </tbody>
 </table>
@@ -70,7 +70,7 @@ The Mass parts for Lent will be taken from *Mass of St. Dymphna*:
 +-----------------------------+---------------------------------------------------------------------------------------------+
 | **Gospel Acclamation:**     | [R&A p. 51](https://youtu.be/Lr5khW-52NY?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)<br><br>   |
 +-----------------------------+---------------------------------------------------------------------------------------------+
-| **Offertory:**              | 592 - [We Are the Light of the World](https://www.youtube.com/watch?v=6F4l9b4rVL4)          |
+| **Offertory:**              | 645 - [Amazing Grace](https://www.youtube.com/watch?v=tU6GWeBY3qw)                          |
 +-----------------------------+---------------------------------------------------------------------------------------------+
 | **Holy:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)              |
 +-----------------------------+---------------------------------------------------------------------------------------------+
@@ -80,7 +80,7 @@ The Mass parts for Lent will be taken from *Mass of St. Dymphna*:
 +-----------------------------+---------------------------------------------------------------------------------------------+
 | **Lamb of God:**            | [Cantus Missae (B)](https://www.youtube.com/watch?v=JgVQ0SHPeno)                            |
 +-----------------------------+---------------------------------------------------------------------------------------------+
-| **Communion:**              | 684 - [Psalm of Hope](https://www.youtube.com/watch?v=_CkUoiGNRAo)                          |
+| **Communion:**              | 592 - [We Are the Light of the World](https://www.youtube.com/watch?v=6F4l9b4rVL4)          |
 +-----------------------------+---------------------------------------------------------------------------------------------+
 | **Recessional:**            | 766 - [City of God](https://www.youtube.com/watch?v=jLBQEUauY-I)                            |
 +-----------------------------+---------------------------------------------------------------------------------------------+
