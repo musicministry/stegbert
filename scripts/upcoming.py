@@ -49,9 +49,11 @@ import utils as u
 
 # args = Args(
 #     year = 2026,
-#     start = 'ot05',
-#     end = 'lent05',
+#     start = 'lent04',
+#     end = 'holy-thursday',
 # )
+
+# PROJECT_ROOT = Path(os.getcwd())
 
 # -----------------------------------------------------------------------------
 # Command line execution
@@ -188,8 +190,9 @@ def main():
             # Add Gloria omission if needed
             for part in parts:
                 if all('gloria' not in p.lower() and (season == 'advent' or season == 'lent') for p in part):
-                    part.insert(0, f'*Gloria omitted during {titlecase(season)}*')
-
+                    part.insert(0, f'*Gloria omitted during {titlecase(u.unkey(season))}*')
+                elif all('gloria' not in p.lower() and season == 'holy-week' for p in part):
+                    part.insert(0, '*Gloria omitted during Lent*')
             # Create a list of all unique Mass settings to include at the
             # bottom of the page (duplicate key:value pairs are ignored when
             # updating dictionaries)
@@ -237,24 +240,26 @@ def main():
             ':::\n\n'
         )
         for mass, parts in mass_list.items():
-            file.write(f'#### {mass} {{#{u.keyify(mass)}}}\n\n')
+            if mass.lower() == 'na':
+                continue
+            else:
+                file.write(f'#### {mass} {{#{u.keyify(mass)}}}\n\n')
 
-            for part in parts:
-                try:
-                    p, m = part.split(':')
-                    index_entry = u.mass_index_lookup(part, swap=True)
-                    if index_entry['number'] == 'NA':
-                        number = '(Handout)'
-                    else:
-                        number = index_entry['number']
-                    if m == mass:
-                        file.write(f"- {number} - [{titlecase(p.strip())}]({index_entry['url']})\n")
-                    else:
-                        file.write(f"- {number} - [{titlecase(m.strip())}: {titlecase(p.strip())}]({index_entry['url']})\n")
-                except ValueError:
-                    file.write(f"- {part}\n")
-                
-            file.write('\n')
+                for part in parts:
+                    try:
+                        p, m = part.split(':')
+                        index_entry = u.mass_index_lookup(part, swap=True)
+                        if index_entry['number'] == 'NA':
+                            number = '(Handout)'
+                        else:
+                            number = index_entry['number']
+                        if m == mass:
+                            file.write(f"- {number} - [{titlecase(p.strip())}]({index_entry['url']})\n")
+                        else:
+                            file.write(f"- {number} - [{titlecase(m.strip())}: {titlecase(p.strip())}]({index_entry['url']})\n")
+                    except ValueError:
+                        file.write(f"- {part}\n")
+                file.write('\n')
 
     print(f'"{args.outfile}" file created.')
 
