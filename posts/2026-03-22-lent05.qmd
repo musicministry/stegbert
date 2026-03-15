@@ -1,0 +1,93 @@
+---
+title: Fifth Sunday in Lent
+last-updated: 2026-03-17
+description: Sunday, March 22, 2026
+categories:
+  - Lent 2026
+image: /images/dates/mar/22.png
+format:
+  html: default
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">479 - Lord, Who throughout These Forty Days<br><br> {{< video https://www.youtube.com/watch?v=vAGMA8NrGmU >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 52 <br><br> {{< video https://youtu.be/0iIu80yM4lI?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 53 <br><br> {{< video https://youtu.be/6asCxIQ1ZZk?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">945 - I Am the Bread of Life<br><br> {{< video https://www.youtube.com/watch?v=KCnpR-eobag >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">489 - Merciful God (Lent Communion)<br><br> {{< video https://www.youtube.com/watch?v=6RGi8tO8ZGM >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">871 - We Shall Rise Again<br><br> {{< video https://www.youtube.com/watch?v=epIc6I9BxQY >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Lent will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;"><em>*Gloria omitted during Lent*</em> <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;">{{< video https://www.youtube.com/watch?v=JgVQ0SHPeno >}}</td></tr>
+</tbody>
+</table>
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Processional:**           | 479 - [Lord, Who throughout These Forty Days](https://www.youtube.com/watch?v=vAGMA8NrGmU) |
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Gloria:**                 | *Gloria omitted during Lent*                                                               |
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Responsorial Psalm:**     | [R&A p. 52](https://youtu.be/0iIu80yM4lI?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)          |
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Gospel Acclamation:**     | [R&A p. 53](https://youtu.be/6asCxIQ1ZZk?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)<br><br>  |
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Offertory:**              | 945 - [I Am the Bread of Life](https://www.youtube.com/watch?v=KCnpR-eobag)                |
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Holy:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)             |
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Memorial Acclamation A:** | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)             |
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Amen:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)             |
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Lamb of God:**            | [Cantus Missae (B)](https://www.youtube.com/watch?v=JgVQ0SHPeno)                           |
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Communion:**              | 489 - [Merciful God (Lent Communion)](https://www.youtube.com/watch?v=6RGi8tO8ZGM)         |
++-----------------------------+--------------------------------------------------------------------------------------------+
+| **Recessional:**            | 871 - [We Shall Rise Again](https://www.youtube.com/watch?v=epIc6I9BxQY)                   |
++-----------------------------+--------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
+
