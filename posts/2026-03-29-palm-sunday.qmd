@@ -1,0 +1,90 @@
+---
+title: Palm Sunday
+last-updated: 2026-03-24
+description: Sunday, March 29, 2026
+categories:
+  - Holy Week 2026
+image: /images/dates/mar/29.png
+format:
+  html: default
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">498 - All Glory, Laud, and Honor<br><br> {{< video https://www.youtube.com/watch?v=vybSEKZQU6c >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 54 <br><br> {{< video https://youtu.be/Ch2RTsDWVaQ?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 55 <br><br> {{< video https://youtu.be/aJYnvp34V1s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">642 - What Wondrous Love Is This<br><br> {{< video https://www.youtube.com/watch?v=NZXCVy50t44 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">482 - The Cross of Jesus<br><br> {{< video https://www.youtube.com/watch?v=fepdwu6gBLM >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">881 - Lift High the Cross<br><br> {{< video https://www.youtube.com/watch?v=7D5zOkFs23A >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Holy Week will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;">{{< video https://www.youtube.com/watch?v=JgVQ0SHPeno >}}</td></tr>
+</tbody>
+</table>
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Processional:**           | 498 - [All Glory, Laud, and Honor](https://www.youtube.com/watch?v=vybSEKZQU6c)           |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Responsorial Psalm:**     | [R&A p. 54](https://youtu.be/Ch2RTsDWVaQ?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)         |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Gospel Acclamation:**     | [R&A p. 55](https://youtu.be/aJYnvp34V1s?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)<br><br> |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Offertory:**              | 642 - [What Wondrous Love Is This](https://www.youtube.com/watch?v=NZXCVy50t44)           |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Holy:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Memorial Acclamation A:** | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Amen:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Lamb of God:**            | [Cantus Missae (B)](https://www.youtube.com/watch?v=JgVQ0SHPeno)                          |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Communion:**              | 482 - [The Cross of Jesus](https://www.youtube.com/watch?v=fepdwu6gBLM)                   |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Recessional:**            | 881 - [Lift High the Cross](https://www.youtube.com/watch?v=7D5zOkFs23A)                  |
++-----------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
+
