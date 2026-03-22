@@ -34,18 +34,19 @@
 # =============================================================================
 
 easter01 = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
         "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "540 - Jesus Christ Is Risen Today",
 
     "Responsorial Psalm": "R&A p. 72 - https://youtu.be/VuGLnu5nqeg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Sequence": "Handout - Christ, the Lord, is Risen Today (VICTIMAE PASCHALI)",
     "Gospel Acclamation": "R&A p. 73 - https://youtu.be/kp8WHU0pT70?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Offertory": "520 - This Is the Feast of Victory",
@@ -55,13 +56,13 @@ easter01 = {
 }
 
 easter02 = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
         "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "644 - There's a Wideness in God's Mercy",
@@ -75,13 +76,13 @@ easter02 = {
 }
 
 easter03 = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
         "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "523 - Christ the Lord Is Risen Today",
@@ -95,13 +96,13 @@ easter03 = {
 }
 
 easter04 = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
         "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "539 - Sing with All the Saints in Glory",
@@ -115,13 +116,13 @@ easter04 = {
 }
 
 easter05 = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
         "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "607 - Sing a New Song (Schutte)",
@@ -135,13 +136,13 @@ easter05 = {
 }
 
 easter06 = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
         "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "542 - That Easter Day with Joy Was Bright",
@@ -155,13 +156,13 @@ easter06 = {
 }
 
 ascension = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
         "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "543 - Hail the Day That Sees Him Rise",
@@ -175,13 +176,13 @@ ascension = {
 }
 
 pentecost = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
         "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "559 - Come, Holy Ghost",

@@ -53,13 +53,13 @@ palm_sunday = {
 }
 
 holy_thursday = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
         "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Processional": "839 - As We Gather at Your Table",
@@ -67,10 +67,9 @@ holy_thursday = {
     "Responsorial Psalm": "R&A p. 56 - https://youtu.be/0llgRx3i8s8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     "Gospel Acclamation": "R&A p. 57 - https://youtu.be/Bw6eU0_3h10?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
-    "Washing-of-Feet": "696 - Ubi Cáritas (Hurd)",
     "Offertory": "914 - Lord, Who at Your First Eucharist",
     "Communion": "950 - Take and Eat",
-    "Transfer-of-the-Blessed-Sacrament": "509 - Pange Lingua"
+    "Transfer-of-the-Blessed-Sacrament": "509 - Hail Our Savior's Glorious Body"
 }
 
 good_friday = {
@@ -86,13 +85,13 @@ good_friday = {
 }
 
 easter_vigil = {
-    "Mass": "Heritage Mass",
+    "Mass": "Mass of St. Dymphna",
     "parts": [
         "Gloria: Heritage Mass",
-        "Holy: Heritage Mass",
-        "Memorial Acclamation A: Heritage Mass",
-        "Amen: Heritage Mass",
-        "Lamb of God: Heritage Mass"
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
     ],
 
     "Psalm After First Reading": "R&A p. 60 - https://youtu.be/SjG0vq25cP8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
@@ -101,12 +100,11 @@ easter_vigil = {
     "Psalm After Seventh Reading": "R&A p. 69 - https://youtu.be/yI1tWcFk02k?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     "Psalm After Epistle": "R&A p. 70 - https://youtu.be/uHORiqmMTCU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
-    "Litany-of-the-Saints": "Handout - Litany of the Saints (Becker)",
     "Sprinkling": "903 - Baptized in Water",
     
     "Offertory": "533 - Come, You Faithful, Raise the Strain",
-    "Communion": "929 - Joyous Cup",
-    "Meditation": "526 - Be Joyful, Mary",
+    "Communion": "526 - Be Joyful, Mary",
+    "Meditation": "Handout - Worthy is the Lamb (Manalo)",
     "Recessional": "540 - Jesus Christ Is Risen Today"
 }
 
