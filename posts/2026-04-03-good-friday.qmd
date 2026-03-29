@@ -1,0 +1,32 @@
+---
+title: Good Friday
+last-updated: 2026-03-29
+description: Friday, April 3, 2026
+categories:
+  - Holy Week 2026
+image: /images/dates/apr/03.png
+format:
+  html: default
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 58 <br><br> {{< video https://youtu.be/sPVzFArq5bg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 59 <br><br> {{< video https://youtu.be/rrgZlKcJ8Y4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Veneration of the Cross:</strong></td><td style="width: 75%;">514 - Behold the Wood<br><br> {{< video https://www.youtube.com/watch?v=YKjmF36njyA >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">512 - O Sacred Head Surrounded<br><br> {{< video https://www.youtube.com/watch?v=RyOJaLFbydQ >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Meditation:</strong></td><td style="width: 75%;">510 - Jesus, Remember Me<br><br> {{< video https://www.youtube.com/watch?v=nXP3oUatFt0 >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Holy Week will be taken from *NA*:
+

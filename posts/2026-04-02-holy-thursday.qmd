@@ -1,0 +1,94 @@
+---
+title: Holy Thursday
+last-updated: 2026-03-28
+description: Thursday, April 2, 2026
+categories:
+  - Holy Week 2026
+image: /images/dates/apr/02.png
+format:
+  html: default
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">839 - As We Gather at Your Table<br><br> {{< video https://www.youtube.com/watch?v=dhnQB7ZKGjU >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 56 <br><br> {{< video https://youtu.be/0llgRx3i8s8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 57 <br><br> {{< video https://youtu.be/Bw6eU0_3h10?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">914 - Lord, Who at Your First Eucharist<br><br> {{< video https://www.youtube.com/watch?v=Lk9_Mjq4ce4 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">950 - Take and Eat<br><br> {{< video https://www.youtube.com/watch?v=qgAV269Zi94 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Transfer of the Blessed Sacrament:</strong></td><td style="width: 75%;">509 - Hail Our Savior's Glorious Body<br><br> {{< video https://www.youtube.com/watch?v=2xSXJzsgDuE >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Holy Week will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;">{{< video https://youtu.be/tukrgUdjIWU?t=27 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-lambofgod.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+</tbody>
+</table>
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Processional:**           | 839 - [As We Gather at Your Table](https://www.youtube.com/watch?v=dhnQB7ZKGjU)           |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Gloria:**                 | [Heritage Mass](https://youtu.be/tukrgUdjIWU?t=27)                                        |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Responsorial Psalm:**     | [R&A p. 56](https://youtu.be/0llgRx3i8s8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)         |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Gospel Acclamation:**     | [R&A p. 57](https://youtu.be/Bw6eU0_3h10?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)<br><br> |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Offertory:**              | 914 - [Lord, Who at Your First Eucharist](https://www.youtube.com/watch?v=Lk9_Mjq4ce4)    |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Holy:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Memorial Acclamation A:** | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Amen:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Lamb of God:**            | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Communion:**              | 950 - [Take and Eat](https://www.youtube.com/watch?v=qgAV269Zi94)                         |
++-----------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
+

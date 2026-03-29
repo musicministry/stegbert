@@ -1,0 +1,110 @@
+---
+title: Easter Vigil
+last-updated: 2026-03-30
+description: Saturday, April 4, 2026
+categories:
+  - Holy Week 2026
+image: /images/dates/apr/04.png
+format:
+  html: default
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Psalm After First Reading:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 60 <br><br> {{< video https://youtu.be/SjG0vq25cP8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Psalm After Third Reading:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 63 <br><br> {{< video https://youtu.be/VykG9JCN8D0?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Psalm After Fifth Reading:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 65 <br><br> {{< video https://youtu.be/swXbF0Lz0mc?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Psalm After Seventh Reading:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 69 <br><br> {{< video https://youtu.be/yI1tWcFk02k?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Psalm After Epistle:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 70 <br><br> {{< video https://youtu.be/uHORiqmMTCU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Sprinkling:</strong></td><td style="width: 75%;">903 - Baptized in Water<br><br> {{< video https://www.youtube.com/watch?v=PcnfEiHCgOM >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">533 - Come, You Faithful, Raise the Strain<br><br> {{< video https://www.youtube.com/watch?v=ebaYxibPHRY >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">526 - Be Joyful, Mary<br><br> {{< video https://www.youtube.com/watch?v=JGNvmsuHMnU >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Meditation:</strong></td><td style="width: 75%;">Handout - Worthy is the Lamb (Manalo)<br><br> {{< video https://www.youtube.com/watch?v=cY4l_m0PsxA >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">540 - Jesus Christ Is Risen Today<br><br> {{< video https://www.youtube.com/watch?v=oIDjS4SggaM >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Holy Week will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;">{{< video https://youtu.be/tukrgUdjIWU?t=27 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-lambofgod.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+</tbody>
+</table>
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Psalm After First Reading:**   | [R&A p. 60](https://youtu.be/SjG0vq25cP8?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)         |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Psalm After Third Reading:**   | [R&A p. 63](https://youtu.be/VykG9JCN8D0?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)         |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Psalm After Fifth Reading:**   | [R&A p. 65](https://youtu.be/swXbF0Lz0mc?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)         |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Psalm After Seventh Reading:** | [R&A p. 69](https://youtu.be/yI1tWcFk02k?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)         |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Psalm After Epistle:**         | [R&A p. 70](https://youtu.be/uHORiqmMTCU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)         |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Sprinkling:**                  | 903 - [Baptized in Water](https://www.youtube.com/watch?v=PcnfEiHCgOM)                    |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Gloria:**                      | [Heritage Mass](https://youtu.be/tukrgUdjIWU?t=27)                                        |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Sprinkling:**                  | 903 - [Baptized in Water](https://www.youtube.com/watch?v=PcnfEiHCgOM)                    |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Offertory:**                   | 533 - [Come, You Faithful, Raise the Strain](https://www.youtube.com/watch?v=ebaYxibPHRY) |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Holy:**                        | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Memorial Acclamation A:**      | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Amen:**                        | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Lamb of God:**                 | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Communion:**                   | 526 - [Be Joyful, Mary](https://www.youtube.com/watch?v=JGNvmsuHMnU)                      |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Meditation:**                  | Handout - [Worthy is the Lamb (Manalo)](https://www.youtube.com/watch?v=cY4l_m0PsxA)      |
++----------------------------------+-------------------------------------------------------------------------------------------+
+| **Recessional:**                 | 540 - [Jesus Christ Is Risen Today](https://www.youtube.com/watch?v=oIDjS4SggaM)          |
++----------------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
+
