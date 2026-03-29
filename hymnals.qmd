@@ -1,0 +1,152 @@
+---
+title: "Hymnals at St. Egbert's"
+subtitle: "Replacement Proposal: what, why, when, and how"
+engine: jupyter
+---
+
+```{python}
+import numpy as np
+
+# Hymnal quantity
+pews = 350
+choirs = 15
+keyboards = 3
+guitars = 5
+solos = 5
+
+# Journeysongs, Third Edition (OCP)
+js_pew = 27.15
+js_choir = 39.85
+js_keyboard = 173.80
+js_guitar = 139.75
+js_solo = 96.25
+
+# Breaking Bread 2026 (OCP)
+bb_pew = 15.49
+bb_choir = 0
+bb_keyboard = 176.00 + 36.00
+bb_guitar = 150.00 + 36.00
+bb_solo = 107.00 + 36.00
+
+# Glory & Praise, Fourth Edition (OCP)
+gp_pew = 24.00
+gp_choir = 38.50
+gp_keyboard = 168.00
+gp_guitar = 135.00
+gp_solo = 0
+
+# Gather, Third Edition (GIA)
+g3_pew = 25.00
+g3_choir = 36.00
+g3_keyboard = 160.00
+g3_guitar = 125.00
+g3_solo = 135.00 + 135.00 + 135.00
+
+# Gather, Fourth Edition (GIA)
+g4_pew = 25.00
+g4_choir = 34.00
+g4_keyboard = 170.00
+g4_guitar = 145.00
+g4_solo = 145.00 + 145.00 + 145.00
+
+# Worship, Fourth Edition (GIA)
+w4_pew = 23.50
+w4_choir = 34.00
+w4_keyboard = 160.00
+w4_guitar = 125.00
+w4_solo = 115.00 + 115.00
+
+# Totals
+quantity = np.array([pews, choirs, keyboards, guitars, solos])
+
+js_total = np.dot(quantity, np.array([js_pew, js_choir, js_keyboard, js_guitar, js_solo]))
+bb_total = np.dot(quantity, np.array([bb_pew, bb_choir, bb_keyboard, bb_guitar, bb_solo]))
+gp_total = np.dot(quantity, np.array([gp_pew, gp_choir, gp_keyboard, gp_guitar, gp_solo]))
+
+g3_total = np.dot(quantity, np.array([g3_pew, g3_choir, g3_keyboard, g3_guitar, g3_solo]))
+g4_total = np.dot(quantity, np.array([g4_pew, g4_choir, g4_keyboard, g4_guitar, g4_solo]))
+w4_total = np.dot(quantity, np.array([w4_pew, w4_choir, w4_keyboard, w4_guitar, w4_solo]))
+```
+
+### Overview
+
+St. Egbert’s currently has 300-350 copies of GIA’s [Gather Third Edition](https://giamusic.com/hymnals-gather-3) [pew edition with Sunday readings](https://giamusic.com/resource/gather-third-edition-pew-with-readings-hymnal-g8000r) along with an estimated 10-15 copies of the corresponding [choir edition](https://giamusic.com/resource/gather-third-edition-choir-edition-hymnal-g8000c), which includes choir harmonization for many (but not all) songs and verse text and melody for a number of songs for which these are omitted from the pew edition. These books were purchased circa 2010 when the USCCB re-translated the Roman Missal. Many if not most of the pew books were donated in memoriam for specific people by friends or family members. Stickers inside the front covers indicate this.
+
+A number of issues have prompted casual conversations about replacing these hymnals, listed here and described in more detail [below](#problems-with-the-existing-hymnal):
+
+1. Moldy books resulting from recent moisture issues in the church
+2. Limited theologically-sound content
+3. Uncommon or modified lyrics for popular songs and ancient hymns
+4. Psalter lyrics that does not match the USCCB prescribed texts
+5. Lack of digital resources and cumbersome ancillary resources
+
+An [analysis of available options](#analysis-of-alternatives) has identified OCP's [Journeysongs Third Edition](https://ocp.org/en-us/hymnals/675/journeysongs-third-edition)[^1] as the best alternative for the parish. Details are [below](#proposed-solution).
+
+[^1]: See discussion below for an important consideration of the edition number
+
+
+### Problems with the existing hymnal
+
+#### 1. Moldy books resulting from recent moisture issues in the church
+
+The existing organ accompaniment books and several (at least) pew books have mold or remnants of mold on the covers and pages as a result of recent moisture issues in the church. This presents a health and safety hazard to users in addition to being unsightly and unfitting for liturgical use. Purchasing replacements *en masse* only makes fiscal sense if the books are to be retained into the future. But [as indicated blow](#when), we will need to replace them within the next few years anyway.
+
+#### 2. Limited theologically-sound and usable content
+
+GIA advertises the Gather hymnal as "a blend of 70% piano/guitar-based titles and 30% organ-based titles." The former are generally considered "contemporary" songs while the latter are more traditional four-part hymns. Many of the contemporary songs contain questionable (at best) theology in their lyrics that do not align with Catholic theology. Some are these are unusable altogether, even with the most liberal interpretation of appropriateness.
+
+Other contemporary songs are too musically complex to teach to the congregation or cantors and, as such, have never been used at St. Egbert's. "Musically complex" refers to the "singability" of the song and may include melody (*e.g.*, awkward musical intervals, unusual or unexpected key changes), rhythm, lack of musical structure, or some combination thereof. Efforts to slowly introduce some of these songs in an effort to utilze as much of the hymnal as possible has been largely unsuccessful and met with objections from even cantors and choir members whose role it is to lead the congregation in song. A number of songs are so complex that GIA does not include the verses in the hymnal, leaving them to the cantor or choir to sing from choir hymnals. Regrettably, this discourages congregrational signing and is not at all aligned with the Church's declarations on the role of music in the liturgy.
+
+At the same time, a considerable number of songs (84 of 594, or 14%) were composed by David Haas, a once-popular composer against whom multiple allegations of sexual misconduct, abuse, and even rape, have been made. [Independent investigations have found many of these allegations to be credible](https://www.ncronline.org/news/new-report-details-44-accounts-alleged-abuse-david-haas), prompting many dioceses and churches across the country and around the world, [Catholic](https://www.catholicbusinessjournal.com/news/faith-at-work/arts-and-entertainment/music/david-haas-is-out-st-paul-minneapolis-and-los-angeles-archdioceses-drop-music-prohibit-concerts-after-new-allegations-against-david-haas/) and [Protestant](https://metrodcelca.org/davidhaasupdate/) alike, to urge music ministers to cease publically using Haas's music out of respect for his victims and in acknowledgement of the severety of the offenses, especially in light of Christian morality. It does not appear that the Diocese of Raleigh ever issued such a directive, leaving the discretion with individual parishes. Accordingly, in the past few years, considerable effort has been made to eliminate Haas's music from St. Egbert's liturgies, regardless of their popularity, familiarity, or preference.
+
+Unfortunately, these realities make a sizeable percentage of the hymnal unusable for Catholic liturgy, either in general or locally at St. Egbert's.
+
+#### 3. Uncommon or modified lyrics for popular songs and ancient hymns
+
+Many of the traditional hymns in Gather contain uncommon lyrics, modified translations, or alternative hymn tunes, making it challenging for song leaders who often know more familiar texts and melodies by heart and requiring them to pay exceptionally close attention to what is in the hymnal. This also makes finding practice videos online challenging at best.
+
+"Uncommon lyrics" usually refers to verses in hymns that are omitted from most other Catholic hymnals. This is generally easy to overcome (it is easy to skip a verse) but requires due diligence in advance to avoid being caught by surprise. "Modified translations" means different translations (from Latin, for example) or versions of the lyrics, but also refers to attempts at making hymns gender-neutral by replacing masculine pronouns with "God" or "Christ." While some of this is fine and arguably appropriate, many instances border the absurd (for example, replacing pronouns for Jesus Christ.) "Alternative hymn tunes" refers to hymn texts that are most commonly sung to certain familiar hymn tunes (in both Catholic and Protestant denominations) but have been put to different, less familiar hymn tunes in the Gather hymnal. In the past, these songs appear to have been sung to the more common hymn tunes at St. Egbert's, but it then becomes impossible for congregants to follow along with the melody in the book.
+
+#### 4. Complex psalter or lyrics that does not match the USCCB prescribed texts
+
+The Gather hymnal provides two options for responsorial psalms. The first option are the lectionary psalms presented with the Sunday readings. These versions, while generally faithful to the prescribed text in the Lectionary, are often difficult to sing due to melodic jumps, tonal modulations within the song, and unexpected movements. Accordingly, they are not commonly sung in Catholic parishes. It is unclear whether or to what extent these have every been used at St. Egbert's in the past.
+
+The second option is a set so-called "common psalms" in the hymnal. This means that, for (nearly) every psalm that appears in the Lectionary, one or two versions exist in the front of the hymnal that are usually more contemporary in style than those with the readings. These seem to have been preferred at St. Egbert's in the past. However, the text of these versions, both refrains and verses, rarely match the text prescribed in the Lectionary. In addition, while many psalm refrains appear multiple times throughout the liturgical year in the Lectionary, they are often paired with different verses. Using common psalms, which only contain one set of verses, in these instances completely disregards the prescribed Liturgy of the Word for the given liturgy.
+
+The same applies to gospel acclamations. "Common acclamations" are often used, with a single verse sung throughout each liturgical season, but this ignore the fact that the Church intentially prescribes acclamation verses for every liturgy.
+
+To combat both of these challenges, St. Egbert's started using OCP's [Respond & Acclaim](https://www.ocp.org/en-us/collections/dg/71/respond-and-acclaim) for responsorial psalms and gospel acclamations. While this collection matches the Lectionary texts and is generally musically singable for song leaders and the congregation alike, the melodies are nowhere in the Gather hymnal. Congregants have indicated that it can be difficult to remember refrain melodies, especially when the words do not match completely.
+
+#### 5. Lack of digital resources and cumbersome ancillary resources
+
+### Proposed Solution
+
+#### What
+
+Proposed here is OCP's [Journeysongs Third Edition with Readings](https://ocp.org/en-us/hymnals/675/journeysongs-third-edition) as a replacement for our existing hymnals. A cost estimate is presented in @tbl-js-cost and the justification is provided [below](#why).
+
+| Item | Item Cost | Quantity | Estimated Cost | Explanation 
+|:---------------------|:------------:|:--------:|:--------------:|:---------------------------------
+Pew hymnal             | $`{python} js_pew`      | `{python} pews`      | $`{python} format(np.ceil(js_pew * pews * 1.07), ',.0f')`           | For congregation
+Choir hymnal           | $`{python} js_choir`    | `{python} choirs`    | $`{python} format(np.ceil(js_choir * choirs * 1.07), ',.0f')`       | Four part harmonies and descants for choir
+Keyboard accompaniment | $`{python} js_keyboard` | `{python} keyboards` | $`{python} format(np.ceil(js_keyboard * keyboards * 1.07), ',.0f')` | For organist/pianist, including spare
+Guitar accompaniment   | $`{python} js_guitar`   | `{python} guitars`   | $`{python} format(np.ceil(js_pew * guitars * 1.07), ',.0f')`        | For guitar players, including spare
+Solo accompaniment     | $`{python} js_solo`     | `{python} solos`     | $`{python} format(np.ceil(js_pew * solos * 1.07), ',.0f')`          | For Bb and C instrumentals
+**Estimated total:**   |                         |                      | **$`{python} format(np.ceil(js_total * 1.07), ',.0f')`**            |
+: Cost estimates as of 2026 {#tbl-js-cost}
+
+#### Why
+
+#### When
+
+**Early/mid 2028:** The USCCB is slated to [retranslate the Lectionary](https://www.ncregister.com/cna/catholic-american-bible-gets-green-light) used at Mass with a [possible release as early as Advent 2028](https://www.ocp.org/en-us/blog/entry/update-on-new-english-language-lectionary-for-mass). Since our existing hymnals also contain Sunday readings, we will need to replace them at that time anyway. With this need for replacement being both imminent and unavoidable, it makes most logistical sense to wait until that time. **We should proactively plan now to buy new hymnals in early-mid 2028 in order to have them in time for the First Sunday of Advent in December 2028.**
+
+#### How
+
+Many if not most of the existing pew books were donated by parishioners *in memoriam* of loved ones, commemorated by stickers inside the front covers. A similar campaign could be used to finance the next batch of hymnals. In order to have enough time to raise the needed money in advance, **fundraising should start as soon as possible so that the parish is able to purchase new hymnals when the appropriate time comes.**
+
+It is best to proactively aim to have the money raised by 2028. Inflation and delays in the release of the new Lectionary[^2] should be factored into the fundraising targets.
+
+[^2]: The new Lectionary will most certainly be rolled out at start of Advent, though the year remains to be determined. Accordingly, if it is not released in Advent 2028, the next earliest possiblility would be Advent 2029.
+
+### Analysis of Alternatives
