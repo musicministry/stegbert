@@ -166,13 +166,13 @@ def next_sunday(from_date):
     
     Arguments
     ---------
-    `from_date` : str or datetime object
+    `from_date` : str, datetime, or Pandas Timestamp object
         Date from which to find the next Sunday. If str, must be of the format 
         `YYYY-mm-dd`.
     
     Returns
     -------
-        datetime object of the next Sunday
+        Pandas Timestamp object of the next Sunday
     """
     # Convert to datetime if `from_date` is a string
     if isinstance(from_date, str):
@@ -185,7 +185,7 @@ def next_sunday(from_date):
     if days_ahead == 0:  # If today is Sunday, get the next one
         days_ahead += 7
     next_sunday = start_date + dt.timedelta(days=days_ahead)
-    return next_sunday.date()
+    return pd.to_datetime(next_sunday.date())
 
 def fuzzy_index_lookup(name, verbose=False):
     """Use fuzzy name matching to find the closest hymnal entry for the song `name`. If the match is not perfect a perfect match, an alert will be appended to the name.

@@ -69,7 +69,7 @@ def main():
                       parse_dates=['date'], index_col='date')
 
     # Check for feasts this week including next Sunday
-    today = dt.datetime.today()
+    today = pd.to_datetime(dt.datetime.today())
     next_sun = u.next_sunday(from_date=today)
     this_week = cal.loc[today:next_sun]
     seasons = this_week['season'].unique()
