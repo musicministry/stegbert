@@ -28,5 +28,32 @@ All hymns are taken from the blue Gather hymnal unless otherwise noted. Note tha
 
 ### Mass Parts
 
-The Mass parts for Holy Week will be taken from *NA*:
+No Mass parts for Good Friday.
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++-------------------------+-------------------------------------------------------------------------------------------+
+| **Gloria:**             | *Gloria omitted during Holy-Week*                                                         |
++-------------------------+-------------------------------------------------------------------------------------------+
+| **Responsorial Psalm:** | [R&A p. 58](https://youtu.be/sPVzFArq5bg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)         |
++-------------------------+-------------------------------------------------------------------------------------------+
+| **Gospel Acclamation:** | [R&A p. 59](https://youtu.be/rrgZlKcJ8Y4?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)<br><br> |
++-------------------------+-------------------------------------------------------------------------------------------+
+| **Communion:**          | 512 - [O Sacred Head Surrounded](https://www.youtube.com/watch?v=RyOJaLFbydQ)             |
++-------------------------+-------------------------------------------------------------------------------------------+
+| **Meditation:**         | 510 - [Jesus, Remember Me](https://www.youtube.com/watch?v=nXP3oUatFt0)                   |
++-------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
 

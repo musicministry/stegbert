@@ -246,9 +246,11 @@ def main():
         # Mass parts
         file.write('### Mass Parts\n\n')
 
-        file.write(f'The Mass parts for {u.unkey(season)} will be taken from *{mass}*:\n\n')
-
-        file.write(u.massparts_video_table(season=season, setting=mass, include=parts))
+        if mass.lower() == 'na' or mass.lower() == 'none':
+            file.write(f'No Mass parts for {feast_name}.')
+        else:
+            file.write(f'The Mass parts for {u.unkey(season)} will be taken from *{mass}*:\n\n')
+            file.write(u.massparts_video_table(season=season, setting=mass, include=parts))
 
         file.write('\n')
         file.write(':::\n\n')
