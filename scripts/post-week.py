@@ -71,13 +71,14 @@ def main():
     # Check for feasts this week including next Sunday
     today = dt.datetime.today()
     next_sun = u.next_sunday(from_date=today)
-    ss = cal.loc[today:next_sun]
-    seasons = ss['season'].unique()
+    this_week = cal.loc[today:next_sun]
+    seasons = this_week['season'].unique()
 
     # Load the hymn list(s) to see if music is scheduled
     for season in seasons:
         hymn_lists = u.load_hymn_schedules(season)
         hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
+        ss = this_week[this_week['season']==season]
 
         # There may be more than one feast (e.g., Christmas Eve, Christmas Day)
         # Check each feast for scheduled music and, if there is a scheduled
