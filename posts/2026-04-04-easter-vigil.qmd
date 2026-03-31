@@ -7,6 +7,8 @@ categories:
 image: /images/dates/apr/04.png
 format:
   html: default
+  lineup-pdf:
+    pdf-colwidths: [0.35, 0.65]
 ---
 
 ::: {.content-visible when-format="html"}
