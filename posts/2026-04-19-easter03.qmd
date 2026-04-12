@@ -1,0 +1,96 @@
+---
+title: Third Sunday in Easter
+last-updated: 2026-04-14
+description: Sunday, April 19, 2026
+categories:
+  - Easter 2026
+image: /images/dates/apr/19.png
+format:
+  html: default
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">523 - Christ the Lord Is Risen Today<br><br> {{< video https://www.youtube.com/watch?v=oLFv7vlDxNQ >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 76 <br><br> {{< video https://youtu.be/su1zUblHORU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 77 <br><br> {{< video https://youtu.be/YdaUTrnFTjs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">538 - On the Journey to Emmaus<br><br> {{< video https://www.youtube.com/watch?v=ikmvYJ7qIqU >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">918 - In the Breaking of the Bread<br><br> {{< video https://www.youtube.com/watch?v=0H8CPadsVco >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">524 - Alleluia No. 1<br><br> {{< video https://www.youtube.com/watch?v=Cwug0qhRdaM >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Easter will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;">{{< video https://youtu.be/tukrgUdjIWU?t=27 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-lambofgod.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+</tbody>
+</table>
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Processional:**           | 523 - [Christ the Lord Is Risen Today](https://www.youtube.com/watch?v=oLFv7vlDxNQ)       |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Gloria:**                 | [Heritage Mass](https://youtu.be/tukrgUdjIWU?t=27)                                        |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Responsorial Psalm:**     | [R&A p. 76](https://youtu.be/su1zUblHORU?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)         |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Gospel Acclamation:**     | [R&A p. 77](https://youtu.be/YdaUTrnFTjs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)<br><br> |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Offertory:**              | 538 - [On the Journey to Emmaus](https://www.youtube.com/watch?v=ikmvYJ7qIqU)             |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Holy:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Memorial Acclamation A:** | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Amen:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Lamb of God:**            | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Communion:**              | 918 - [In the Breaking of the Bread](https://www.youtube.com/watch?v=0H8CPadsVco)         |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Recessional:**            | 524 - [Alleluia No. 1](https://www.youtube.com/watch?v=Cwug0qhRdaM)                       |
++-----------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
+
