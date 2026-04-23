@@ -111,7 +111,7 @@ easter04 = {
     "Gospel Acclamation": "R&A p. 79 - https://youtu.be/GfUhvUHt1Kg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Offertory": "712 - The King of Love My Shepherd Is",
-    "Communion": "537 - Easter Alleluia",
+    "Communion": "950 - Take and Eat",
     "Recessional": "525 - The Strife Is O'er"
 }
 
@@ -131,7 +131,7 @@ easter05 = {
     "Gospel Acclamation": "R&A p. 81 - https://youtu.be/GXrwzWRrNXs?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Offertory": "458 - I Sing a Maid",
-    "Communion": "950 - Take and Eat",
+    "Communion": "537 - Easter Alleluia",
     "Recessional": "742 - The Church's One Foundation"
 }
 

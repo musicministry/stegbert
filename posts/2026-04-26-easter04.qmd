@@ -21,7 +21,7 @@ All hymns are taken from the blue Gather hymnal unless otherwise noted. Note tha
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 78 <br><br> {{< video https://youtu.be/oSZKN3QxY58?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 79 <br><br> {{< video https://youtu.be/GfUhvUHt1Kg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">712 - The King of Love My Shepherd Is<br><br> {{< video https://www.youtube.com/watch?v=79vxApyJt4Y >}}</td></tr>
-<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">537 - Easter Alleluia<br><br> {{< video https://www.youtube.com/watch?v=nvbt4VZinVE >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">950 - Take and Eat<br><br> {{< video https://www.youtube.com/watch?v=qgAV269Zi94 >}}</td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">525 - The Strife Is O'er<br><br> {{< video https://www.youtube.com/watch?v=iPhy-adyUlc >}}</td></tr>
 </tbody>
 </table>
@@ -83,7 +83,7 @@ The Mass parts for Easter will be taken from *Mass of St. Dymphna*:
 +-----------------------------+-------------------------------------------------------------------------------------------+
 | **Lamb of God:**            | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
 +-----------------------------+-------------------------------------------------------------------------------------------+
-| **Communion:**              | 537 - [Easter Alleluia](https://www.youtube.com/watch?v=nvbt4VZinVE)                      |
+| **Communion:**              | 950 - [Take and Eat](https://www.youtube.com/watch?v=qgAV269Zi94)                         |
 +-----------------------------+-------------------------------------------------------------------------------------------+
 | **Recessional:**            | 525 - [The Strife Is O'er](https://www.youtube.com/watch?v=iPhy-adyUlc)                   |
 +-----------------------------+-------------------------------------------------------------------------------------------+
