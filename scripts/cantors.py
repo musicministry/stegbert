@@ -1,26 +1,40 @@
+"""
+cantors.py
+==========
+Extracts events from Google calendar whose ID and authentication credentials 
+are specified in `.env`.
+
+Usage
+-----
+    python cantors.py --start 2026-03-01 --end 2026-03-31    
+    python cantors.py --end 2026-03-31 --include_all_day
+
+Arguments
+---------
+    -s, --start         First date to extract as string formatted "YYYY-MM-DD".
+                        (optional, default: "today" for current day)
+    -e, --end           Last date to extract as string formatted "YYYY-MM-DD".
+                        (optional, default: "tomorrow" for next day)
+    --include_all_day   Include all day events (default: False)
+    -o, --outfile       CSV file to write (optional, default:
+                        "[pwd]/calendars/cantors.csv")
+
+Author: mgrossi
+"""
+
 # =============================================================================
-# author: mgrossi
-# date:   04 March 2026
 #
-# This script extracts events from Google calendar whose ID is specified in
-# `credentials.json` using authentication from `token.json` based on the Google
-# Calendar API docs (https://developers.google.com/workspace/calendar/api/quickstart/python#configure_the_sample).
-# Results are saved as a dataframe using the file name and directory passed to
-# `--outfile, -o`, which defaults to "[pwd]/calendars/cantors.csv" if empty.
-# Optional start and end dates formatted "YYYY-MM-DD" can be passed using
-# `--start, -s` and `--end, -e`; if omitted, defaults to today and tomorrow,
-# respectively. Note that unlike the Google API extraction method, this script
-# returns events *inclusive* of `--end, -e`.
+# This script extracts events from Google calendar whose ID and authentication
+# credentials are stored in `.env`. Results are saved as a dataframe using the
+# file name and directory passed to `--outfile, -o`, which defaults to
+# "[pwd]/calendars/cantors.csv" if empty. Optional start and end dates
+#  formatted "YYYY-MM-DD" can be passed using `--start, -s` and `--end, -e`;
+# if omitted, defaults to today and tomorrow, respectively. Note that unlike
+# the Google API extraction method, this script returns events *inclusive* of
+# `--end, -e`.
 #
-# Use `--exclude_all_day` to exclude all day events from the extraction.
-#
-# To execute in terminal:
-#
-#     python cantors.py --start 2026-03-01 --end 2026-03-31
-#
-# or
-#
-#     python cantors.py --end 2026-03-31 --exclude_all_day
+# See Google Calendar API docs:
+# https://developers.google.com/workspace/calendar/api/quickstart/python
 #
 # =============================================================================
 # Packages
@@ -64,9 +78,10 @@ SCOPES = ["https://www.googleapis.com/auth/calendar"]
 def parse_args():
     """Parse command line arguments."""
     parser = argparse.ArgumentParser(
-        description='Function control parameters.',
+        description=__doc__,
         prog='calendar',
-        usage='%(prog)s [arguments]')
+        usage='%(prog)s [arguments]',
+        formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument('-s', '--start', type=str, default='today',
                         help='First date to retrieve (str: "YYYY-MM-DD")')
     parser.add_argument('-e', '--end', type=str, default='tomorrow',
@@ -75,7 +90,7 @@ def parse_args():
                         help='Include all day events in table (Default: False)')
     parser.add_argument('-o', '--outfile', nargs='?', type=str, 
                         default='calendars/cantors.csv',
-                        help='Name and directory of csv file to write. Default to "[pwd]/calendars/cantors.csv"')
+                        help='Name and directory of csv file to write. Default: "[pwd]/calendars/cantors.csv"')
     return parser.parse_args()
 
 args = parse_args()
@@ -88,11 +103,15 @@ def event_info(event_dict: dict, keys=['start', 'summary']):
     
     Parameters
     ----------
-    event_dict: dict, dictionary of event details from Google calendar API
-    keys: list, keys from `event_dict` to be extracted.
-        Default: ['start', 'summary']
+        event_dict: dictionary of event details from Google calendar API
+        keys: list of keys from `event_dict` to be extracted.
+            Default: ['start', 'summary']
+    
+    Returns
+    -------
+        Filtered calendar event detail dictionary containing only desired keys
     """
-    # Subset `event_dict`
+    # Subset `event_dict` using desired keys
     subset = {key:event_dict[key] for key in keys if key in event_dict}
 
     # Parse start date/time
@@ -126,9 +145,12 @@ def cantor_df(events: list, include_all_day=False):
 
     Parameters
     ----------
-    events: list, list of event dictionaries to be converted to dataframe
-    include_all_day: Bool, if True, all day events with no times are included.
-        Default: False
+        events: list of event dictionaries to be converted to dataframe
+        include_all_day: Bool, include all day events in the filtered dataframe
+    
+    Returns
+    -------
+        Dataframe containing Google calendar events
     """
     # Create a dataframe
     if include_all_day:
@@ -136,7 +158,6 @@ def cantor_df(events: list, include_all_day=False):
     else:
         df = pd.DataFrame([event_info(i) for i in events if 'dateTime' in i['start'].keys()])
 
-    # Format dataframe
     df.rename(columns={'summary': 'Name'}, inplace=True)
     df['start'] = pd.to_datetime(df['start_date'].astype(str) + df['start_time'].astype(str), format='%Y-%m-%d%H:%M:%S')
     df['Date'] = pd.to_datetime(df['start_date']).dt.strftime('%a %-m/%-d')
@@ -150,11 +171,14 @@ def main():
     
     # Load calendar info
     CALENDAR_ID = os.environ["GOOGLE_CALENDAR_ID"]
+
+    # Are we running in a GitHub Actions?
     in_ci = os.environ.get("GITHUB_OUTPUT") is not None
+    
+    # Load credentials from environment
     creds = None
     load_dotenv()
 
-    # Load credentials from environment
     TOKEN_PATH = os.environ.get("GOOGLE_TOKEN_PATH")
     token_json = os.environ.get("GOOGLE_TOKEN_JSON")
     if token_json:
