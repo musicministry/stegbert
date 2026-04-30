@@ -3,112 +3,125 @@ title: "Weddings at St. Egbert's"
 subtitle: Guidance for liturgical music selection
 ---
 
-Congratulations on your big day! We wish you a lifetime of blessings and happiness.
+::: {.img-float}
+![](https://cliparts.co/cliparts/rin/KpG/rinKpGk4T.jpg){style="float: right; margin: 5px;" width=35%}
+:::
 
-For Catholics, weddings are a *liturgical celebration* of the *sacrament of Holy Matrimony* (marriage), a sacrifice of two people becoming one in God. What is liturgy, you ask? Liturgy is at the heart of what the church does: it is our public worship of God, creatures worshipping our creator. And what is worship? It is giving thanks and honor to God that is due to him for all he has given to us. It is our expression of honor, acknowledgement, and respect to and for God because he is greater than us in all ways. Everything about the wedding liturgy, including the music, is about your worship of God and God alone. For this reason, the Church prohibits popular music of any kind within the liturgy. Liturgical music must be deliberate, appropriate, and "correspond to the spirit of the liturgical celebration itself" ([*Instruction on Music in the Liturgy (Musicam sacram)*](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_instr_19670305_musicam-sacram_en.html), 9). Suitable music options are provided below to help you plan your wedding liturgy.
+Congratulations on your big day! We offer many prayers for you for a lifetime of blessings and happiness.
 
-> "The marriage covenant, by which a man and a woman form with each other an intimate communion of life and love, has been founded and endowed with its own special laws by the Creator."  
-> [*On the Church in the Modern World (Gaudium et Spes*)](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html), 48
+For Catholics, a wedding is a *liturgical celebration* of the *sacrament of Holy Matrimony* (marriage), a sacrifice of two people becoming one in God. What is liturgy, you ask? Liturgy is at the heart of what the church does: it is our public worship of God, our creator. And what is worship? It is giving thanks and honor to God that is due to him for all he has given to us. It is our expression of honor, acknowledgement, and respect to and for God because he is greater than us in all ways.
 
-### Processional and Recessional Instrumentals
+Everything about the wedding liturgy, including the music, is about your worship of God and God alone. For this reason, the Church prohibits popular music of any kind within the liturgy. Liturgical music must be deliberate, appropriate, and "correspond to the spirit of the liturgical celebration itself" ([*Instruction on Music in the Liturgy*](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_instr_19670305_musicam-sacram_en.html), 9). Instructions and suitable music options are provided below to help you plan your wedding liturgy. Click on the title of any piece to listen to a sample recording.
 
-Choose one for the entrance of mothers, the bridal party, and the bride. Alternatively, separate pieces can be used for each entrance, if desired:
+We encourage you to use this web form to submit your choices. For questions or assistance, or if you would prefer to have us select your music for you, please reach out to Matt Grossi, music director and organist, at mgrossi@stegbert.org.
 
-* Canon in D Major (Pachelbel)
+### Processional
 
-* Bist du Bei Mir (Bach)
-	
-*	Overture from Royal Fireworks Suite (Handel)
+The entrance procession involves the couple's families (parents), wedding party, and the bride herself. You have a few options:
 
-* Prelude to Te Deum — organ and trumpet (Charpentier)
-* Prelude to Te Deum — organ only
-
-* Trumpet Tune — organ and trumpet (Purcell/Clarke)
-* Trumpet Tune — organ only
-
-* Trumpet Tune in D (Johnson)
-* Trumpet Tune in D — organ only
-
-* Trumpet Voluntary — organ and trumpet (Clarke)
-* Trumpet Voluntary — organ only
-
+1. Sung processional hymn: Like at Mass, the hymn would be sung during the entire processional. **Choose one** from the [list of processional hymns](#processional-hymns) below.  
+   [OR]{.red}  
+2. One instrumental piece: Many couples opt for a single piece as a musical portrayal of familial unity. Pachelbel's *Canon in D* is a popular choice, with the slower movements played during the seating of families and bridal party and the faster climatic movement summoning the bride, but you may **choose any one piece** from the [instrumental options](#instrumentals) below.  
+   [OR]{.red}  
+3. One instrumental piece for the seating of the families and the bridal party and a second piece for the bridal entrance. **Choose the first** one from the [instrumental options](#instrumentals) and **the second** from either the [instrumental options](#instrumentals) or the [marches](#marches) below.
 
 ### Responsorial Psalm
 
-Choose one psalm:
+Please **select one** Responsorial Psalm from the [list below](#responsorial-psalms).
 
-	Psalm 25: To You, O Lord (Soper) — all verses
+### Preparation of Gifts
 
-	Psalm 103: The Lord is Kind and Merciful (Haas) — all verses
+**Select one** hymn from the [list of offertory hymn options](#offertory-hymns) below to be sung during the Preparation of Gifts. You may also opt to have instrumental music played instead. Omit this if you are not having a Mass.
 
-	Psalm 145: I Will Praise Your Name (Haas; BB, GC) — all verses
-		For all verses: https://www.youtube.com/watch?v=VoJmPNZTO84
+### Communion
 
+**Select one** hymn from the [list of communion hymn options](#communion-hymns) below to be sung during the reception of Holy Communion. Omit this if you are not having a Mass.
+
+### Recessional
+
+**Select one** recessional march from the [list of marches](#marches) below.
+
+<br>
+
+***
 
 ### Hymns
 
-If you are having a full Mass, choose one for the presentation of the gifts and one for communion:
+##### Processional Hymns
 
-* All Praise and Glad Thanksgiving or
-* O God, Almighty Father (GOTT VATER SEI GEPRIESEN; BB, WPS)
+* [598: O God Beyond All Praising](https://www.youtube.com/watch?v=gkSmhipBwgw)
+* [601: Laudáte, Laudáte Dóminum](https://www.youtube.com/watch?v=JXWFKSPCJ-4)
+* [613: Praise, My Soul, the King of Heaven](https://www.youtube.com/watch?v=KrbdKMn2APY)
+* [614: Joyful, Joyful, We Adore You](https://www.youtube.com/watch?v=wFr_W91ONUc)
+* [616: Praise to the Lord, the Almighty](https://www.youtube.com/watch?v=sysFksHRlqM)
+* [641: Love Divine, All Loves Excelling](https://www.youtube.com/watch?v=Ij7R_qgeBj0&list=RDIj7R_qgeBj0&start_radio=1)
+* [969: Love Has Brought Us Here Together](https://www.youtube.com/watch?v=zHh7lEHWnno&list=RDzHh7lEHWnno&start_radio=1)
 
-* God Is Love (ABBOT’S LEIGH; BB)
+##### Offertory Hymns
 
-* God, We Praise You (NETTLETON; BB)
+* [970: God, in the Planning](https://www.youtube.com/watch?v=LzxFoCdQccU&list=RDLzxFoCdQccU&start_radio=1)
+* [556: Come Down, O Love Divine](https://www.youtube.com/watch?v=6HPKL1wOVXk)
+* [696: Ubi Cáritas (Hurd)](https://www.youtube.com/watch?v=kKpwJC9KnQo)
+* [706: Where Charity and Love Prevail](https://www.youtube.com/watch?v=RbeJrA8Lp3s)
+* [708: Set Your Hearts on the Higher Gifts](https://www.youtube.com/watch?v=cizvjQqAUdE)
+* [709: Not for Tongues of Heaven's Angels](https://www.youtube.com/watch?v=F8KOwGXz3iw)
+* [966: When Love is Found](https://www.youtube.com/watch?v=WXFKQwq8cWg)
 
-* God, Who Created Hearts to Love (LASST UNS ERFREUEN; BB)
+##### Communion Hymns
 
-* Hear Us Now, Our God and Father (HYFRYDOL, BB)
+* [907: Where Two or Three Are Gathered](https://www.youtube.com/watch?v=KrbdKMn2APY)
+* [930: Taste and See](https://www.youtube.com/watch?v=O-AeXLMpDJE)
+* [931: Come to the Banquet](https://www.youtube.com/watch?v=6-_OUeOCyQ8)
+* [935: Draw Near](https://www.youtube.com/watch?v=u2eNJSXCkrE)
+* [943: Bread of Life from Heaven](https://www.youtube.com/watch?v=ihI9QQ_3TPM)
+* [948: At the Table of Jesus](https://www.youtube.com/watch?v=oFUkhpFo_KY)
+* [950: Take and Eat](https://www.youtube.com/watch?v=qgAV269Zi94)
 
-* Love Divine, All Loves Excelling (HYFRYDOL; BB, WPS)
+### Instrumentals
 
-* O God Beyond All Praising (THAXTED; BB)
+* [Canon in D Major](https://www.youtube.com/watch?v=NmaWBhErKN8&list=RDNmaWBhErKN8&start_radio=1) (Pachelbel)
+<!-- * [Bist du Bei Mir](https://www.youtube.com/watch?v=CQUNNH56nYI&list=RDCQUNNH56nYI&start_radio=1) (Bach) -->
+* [Jesu, Joy of Man's Desiring](https://www.youtube.com/watch?v=uD06sG3FKvo&list=RDuD06sG3FKvo&start_radio=1) (Bach)
+* [Largo](https://www.youtube.com/watch?v=jTzFI2MjAeE&list=RDjTzFI2MjAeE&start_radio=1) (Handel)
+* [Sheep May Safely Graze](https://www.youtube.com/watch?v=Kx-R9MMze4g&list=RDKx-R9MMze4g&start_radio=1) (Bach)
 
-* Praise, My Soul, the King of Heaven (LAUDA ANIMA; BB, WSP)
+### Marches
 
-Gifts
+* [Allegro Moderato (from Water Music)](https://www.youtube.com/watch?v=0fyNnyBLl_I&list=RD0fyNnyBLl_I&start_radio=1) (Handel)
+<!-- * [Ode to Joy](https://www.youtube.com/watch?v=y7q-Gcow4EU&list=RDy7q-Gcow4EU&start_radio=1) -- organ and trumpet (Beethoven)
+* [Ode to Joy](https://www.youtube.com/watch?v=FY8aUfnJ5k4&list=RDFY8aUfnJ5k4&start_radio=1) --organ only (Beethoven) -->
+* [Ode to Joy](https://www.youtube.com/watch?v=y7q-Gcow4EU&list=RDy7q-Gcow4EU&start_radio=1) (Beethoven)
+<!-- * [Overture from Royal Fireworks Suite](https://www.youtube.com/watch?v=syuM9BL3Zo8&list=RDsyuM9BL3Zo8&start_radio=1) (Handel) -->
+<!-- * [Prelude to Te Deum](https://www.youtube.com/watch?v=KCsqtRBxMIw&list=RDKCsqtRBxMIw&start_radio=1) — organ and trumpet (Charpentier)
+* [Prelude to Te Deum](https://www.youtube.com/watch?v=0Y6t2sEnlKc&list=RD0Y6t2sEnlKc&start_radio=1) — organ only -->
+* [Prelude to Te Deum](https://www.youtube.com/watch?v=0Y6t2sEnlKc&list=RD0Y6t2sEnlKc&start_radio=1) (Charpentier)
+<!-- * [Rondeau (from Symphony of Fanfares)](https://www.youtube.com/watch?v=WZQG-DZy7uY&list=RDWZQG-DZy7uY&start_radio=1) (Mouret) -->
+* [Thaxted (O God, Beyond All Praising)](https://www.youtube.com/watch?v=wC0MZtxZBrk&list=RDwC0MZtxZBrk&start_radio=1) (Holst)
+<!-- * [The Rejoicing (from Fireworks Suite)](https://www.youtube.com/watch?v=2b_OW3JQp-Q&list=RD2b_OW3JQp-Q&start_radio=1) (Handel) -->
+<!-- * [Trumpet Tune](https://www.youtube.com/watch?v=3Dv7tX3oBMg&list=RD3Dv7tX3oBMg&start_radio=1) — organ and trumpet (Purcell/Clarke)
+* [Trumpet Tune](https://www.youtube.com/watch?v=IyCJETwOb7U&list=RDIyCJETwOb7U&start_radio=1) — organ only -->
+* [Trumpet Tune](https://www.youtube.com/watch?v=IyCJETwOb7U&list=RDIyCJETwOb7U&start_radio=1) (Purcell/Clarke)
+<!-- * [Trumpet Tune in D](https://www.youtube.com/watch?v=TNEzdsvUhZc&list=RDTNEzdsvUhZc&start_radio=1) (Johnson)
+* [Trumpet Tune in D](https://www.youtube.com/watch?v=j6MPquYmRnI&list=RDj6MPquYmRnI&start_radio=1) — organ only -->
+* [Trumpet Tune in D](https://www.youtube.com/watch?v=j6MPquYmRnI&list=RDj6MPquYmRnI&start_radio=1) (Johnson)
+<!-- * [Trumpet Voluntary](https://www.youtube.com/watch?v=1GewxjuyAmM&list=RD1GewxjuyAmM&start_radio=1) — organ and trumpet (Clarke)
+* [Trumpet Voluntary](https://www.youtube.com/watch?v=sikgGgL0AvE&list=RDsikgGgL0AvE&start_radio=1) — organ only -->
+* [Trumpet Voluntary](https://www.youtube.com/watch?v=sikgGgL0AvE&list=RDsikgGgL0AvE&start_radio=1) (Clarke)
 
-	God, in the Planning and Purpose of Life (SLANE; WPS)
+### Responsorial Psalms
 
-	No Greater Love (Joncas; WPS)
+* [Psalm 33: The earth is full of the goodness of the Lord](https://www.youtube.com/watch?v=YI7hLGEjVis&list=RDYI7hLGEjVis&start_radio=1)
+* [Psalm 34: Taste and see the goodness of the Lord](https://www.youtube.com/watch?v=HMCoDWruihE&list=RDHMCoDWruihE&start_radio=1) (Alstott)
+* [Psalm 34: Taste and see the goodness of the Lord](https://www.youtube.com/watch?v=wfRflH_EiZ4&list=RDwfRflH_EiZ4&start_radio=1) (Guimont)
+* [Psalm 103: The Lord is kind and merciful](https://www.youtube.com/watch?v=i3ZmJ-4GgEk&list=RDi3ZmJ-4GgEk&start_radio=1) (Alstott)
+* [Psalm 103: The Lord is kind and merciful](https://www.youtube.com/watch?v=ygr1Yaek3uE&list=RDygr1Yaek3uE&start_radio=1) (Cotter)
+* [Psalm 103: The Lord is kind and merciful](https://www.youtube.com/watch?v=-XNkXsaJK6c&list=RD-XNkXsaJK6c&start_radio=1) (Haugen)
+* [Psalm 128: Blessed are those who fear the Lord](https://www.youtube.com/watch?v=Oj7tUd3qmec&list=RDOj7tUd3qmec&start_radio=1) (Alstott)
+* [Psalm 128: Blest are those who love you](https://www.youtube.com/watch?v=cL6qwkJFKDo&list=RDcL6qwkJFKDo&start_radio=1) (Haugen)
+* [Psalm 145: I will praise your name forever, my King and my God](https://www.youtube.com/watch?v=niYc8TORGn8&list=RDniYc8TORGn8&start_radio=1) (Alstott)
 
-	Not for Tongues of Heaven’s Angels (WPS)
+***
 
-	When Love is Found (O WALY WALY; WPS)
-
-
-Communion
-
-	One Love Released (Frenzel and Keil; BB)
-
-	Ubi Caritas (chant; WPS) 
-
-	Ubi Caritas (Hurd; BB) — vs. 1,2,3,5
-
-	Ubi Caritas (Taize style; WPS)
-
-	Take and Eat (Joncas; GC, WPS) — end with vs. 6
-	
-	The Supper of the Lord (Rosania; BB)
-
-	When We Eat This Bread (Joncas; BB) — vs. 1,2,5
-
-
-Recessional
-
-	Allegro Moderato (from Water Music) (Handel)
-
-	Hornpipe (from Water Music) (Handel)
-
-	Ode to Joy (Beethoven)
-
-	Psalm 19: The Heaven’s Declare the Glory of God (Marcello)
-
-	Rondeau (from Symphony of Fanfares) (Mouret)
-
-	The Rejoicing (from Fireworks Suite) (Handel)
-
-	Trumpet Voluntary — organ and trumpet (Stanley)
-	Trumpet Voluntary — organ only
-
+> "The marriage covenant, by which a man and a woman form with each other an intimate communion of life and love, has been founded and endowed with its own special laws by the Creator."  
+> [*On the Church in the Modern World*](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html), 48
 
