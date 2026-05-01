@@ -10,6 +10,9 @@ website:
       - text: "Cantors"
         href: cantors.qmd
       - stdymphna.qmd
+    right:
+      - text: "Official Parish Website"
+        href: https://www.stegbertcatholicchurch.org/
     logo: images/trebleclef.png
   announcement:
     icon: info-circle
