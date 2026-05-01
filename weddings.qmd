@@ -1,6 +1,9 @@
 ---
 title: "Weddings at St. Egbert's"
 subtitle: Guidance for liturgical music selection
+format:
+  html: default
+  pdf: default
 ---
 
 ::: {.img-float}
@@ -17,7 +20,7 @@ We encourage you to use [this web form](https://forms.gle/Sf6pEEu8HYaqokMr8) to 
 
 ### Processional
 
-The entrance procession involves the couple's families (parents), wedding party, and the bride herself. You have a few options:
+The entrance procession involves the couple's families (parents), wedding party, and the bride herself or the bride and groom together. You have a few options:
 
 1. Sung processional hymn: Like at Mass, the hymn would be sung during the entire processional. **Choose one** from the [list of processional hymns](#processional-hymns) below.  
    [OR]{.red}  
@@ -125,6 +128,4 @@ The hymns and songs listed below are appropriate suggestions from the parish hym
 
 ***
 
-> "The marriage covenant, by which a man and a woman form with each other an intimate communion of life and love, has been founded and endowed with its own special laws by the Creator."  
-> ~ [*On the Church in the Modern World*](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html), 48
-
+> "The marriage covenant, by which a man and a woman form with each other an intimate communion of life and love, has been founded and endowed with its own special laws by the Creator." ([*On the Church in the Modern World*](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html), 48)
