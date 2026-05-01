@@ -47,13 +47,15 @@ Please **select one** Responsorial Psalm from the [list below](#responsorial-psa
 
 ### Hymns
 
+The hymns and songs listed below are appropriate suggestions from the parish hymnal. Other suitable songs from the hymnal may be used upon request. The music director will determine suitability.
+
 ##### Processional Hymns
 
 * [598: O God Beyond All Praising](https://www.youtube.com/watch?v=gkSmhipBwgw)
 * [601: Laudáte, Laudáte Dóminum](https://www.youtube.com/watch?v=JXWFKSPCJ-4)
-* [613: Praise, My Soul, the King of Heaven](https://www.youtube.com/watch?v=KrbdKMn2APY)
+<!-- * [613: Praise, My Soul, the King of Heaven](https://www.youtube.com/watch?v=KrbdKMn2APY) -->
 * [614: Joyful, Joyful, We Adore You](https://www.youtube.com/watch?v=wFr_W91ONUc)
-* [616: Praise to the Lord, the Almighty](https://www.youtube.com/watch?v=sysFksHRlqM)
+<!-- * [616: Praise to the Lord, the Almighty](https://www.youtube.com/watch?v=sysFksHRlqM) -->
 * [641: Love Divine, All Loves Excelling](https://www.youtube.com/watch?v=Ij7R_qgeBj0&list=RDIj7R_qgeBj0&start_radio=1)
 * [969: Love Has Brought Us Here Together](https://www.youtube.com/watch?v=zHh7lEHWnno&list=RDzHh7lEHWnno&start_radio=1)
 
@@ -69,8 +71,8 @@ Please **select one** Responsorial Psalm from the [list below](#responsorial-psa
 
 ##### Communion Hymns
 
-* [907: Where Two or Three Are Gathered](https://www.youtube.com/watch?v=KrbdKMn2APY)
-* [930: Taste and See](https://www.youtube.com/watch?v=O-AeXLMpDJE)
+<!-- * [907: Where Two or Three Are Gathered](https://www.youtube.com/watch?v=KrbdKMn2APY) -->
+<!-- * [930: Taste and See](https://www.youtube.com/watch?v=O-AeXLMpDJE) -->
 * [931: Come to the Banquet](https://www.youtube.com/watch?v=6-_OUeOCyQ8)
 * [935: Draw Near](https://www.youtube.com/watch?v=u2eNJSXCkrE)
 * [943: Bread of Life from Heaven](https://www.youtube.com/watch?v=ihI9QQ_3TPM)
@@ -79,6 +81,7 @@ Please **select one** Responsorial Psalm from the [list below](#responsorial-psa
 
 ### Instrumentals
 
+<!-- * [Air (Water Music Suite No. 1)](https://www.youtube.com/watch?v=9uMHCoUg444) (Bach) -->
 * [Canon in D Major](https://www.youtube.com/watch?v=NmaWBhErKN8&list=RDNmaWBhErKN8&start_radio=1) (Pachelbel)
 <!-- * [Bist du Bei Mir](https://www.youtube.com/watch?v=CQUNNH56nYI&list=RDCQUNNH56nYI&start_radio=1) (Bach) -->
 * [Jesu, Joy of Man's Desiring](https://www.youtube.com/watch?v=uD06sG3FKvo&list=RDuD06sG3FKvo&start_radio=1) (Bach)
@@ -110,12 +113,12 @@ Please **select one** Responsorial Psalm from the [list below](#responsorial-psa
 
 ### Responsorial Psalms
 
-* [Psalm 33: The earth is full of the goodness of the Lord](https://www.youtube.com/watch?v=YI7hLGEjVis&list=RDYI7hLGEjVis&start_radio=1)
+* [Psalm 33: The earth is full of the goodness of the Lord](https://www.youtube.com/watch?v=YI7hLGEjVis&list=RDYI7hLGEjVis&start_radio=1) (Alstott)
 * [Psalm 34: Taste and see the goodness of the Lord](https://www.youtube.com/watch?v=HMCoDWruihE&list=RDHMCoDWruihE&start_radio=1) (Alstott)
 * [Psalm 34: Taste and see the goodness of the Lord](https://www.youtube.com/watch?v=wfRflH_EiZ4&list=RDwfRflH_EiZ4&start_radio=1) (Guimont)
 * [Psalm 103: The Lord is kind and merciful](https://www.youtube.com/watch?v=i3ZmJ-4GgEk&list=RDi3ZmJ-4GgEk&start_radio=1) (Alstott)
 * [Psalm 103: The Lord is kind and merciful](https://www.youtube.com/watch?v=ygr1Yaek3uE&list=RDygr1Yaek3uE&start_radio=1) (Cotter)
-* [Psalm 103: The Lord is kind and merciful](https://www.youtube.com/watch?v=-XNkXsaJK6c&list=RD-XNkXsaJK6c&start_radio=1) (Haugen)
+<!-- * [Psalm 103: The Lord is kind and merciful](https://www.youtube.com/watch?v=-XNkXsaJK6c&list=RD-XNkXsaJK6c&start_radio=1) (Haugen) -->
 * [Psalm 128: Blessed are those who fear the Lord](https://www.youtube.com/watch?v=Oj7tUd3qmec&list=RDOj7tUd3qmec&start_radio=1) (Alstott)
 * [Psalm 128: Blest are those who love you](https://www.youtube.com/watch?v=cL6qwkJFKDo&list=RDcL6qwkJFKDo&start_radio=1) (Haugen)
 * [Psalm 145: I will praise your name forever, my King and my God](https://www.youtube.com/watch?v=niYc8TORGn8&list=RDniYc8TORGn8&start_radio=1) (Alstott)
@@ -123,5 +126,5 @@ Please **select one** Responsorial Psalm from the [list below](#responsorial-psa
 ***
 
 > "The marriage covenant, by which a man and a woman form with each other an intimate communion of life and love, has been founded and endowed with its own special laws by the Creator."  
-> [*On the Church in the Modern World*](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html), 48
+> ~ [*On the Church in the Modern World*](https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651207_gaudium-et-spes_en.html), 48
 
