@@ -2,7 +2,8 @@
 title: "Weddings at St. Egbert's"
 subtitle: Guidance for liturgical music selection
 format:
-  html: default
+  html:  
+   navbar: false
   pdf: default
 ---
 
