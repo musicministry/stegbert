@@ -18,12 +18,30 @@ format:
 ```{python}
 import numpy as np
 
+def buffer(price, percentage):
+    if percentage > 1:
+        return price * (percentage - 1)
+    else:
+        return price * percentage
+
+def tax(price, tax=0.07):
+    if tax > 1:
+        return price * (tax - 1)
+    else:
+        return price * tax
+
+def roundup(x, by=1000):
+    return int(np.ceil(x / by) * by)
+
+def display(x):
+    return f"${format(x, ',.0f')}"
+
 # Others
-tax = 1.07
+sales_tax = 1.07
 yearly_inc = 1.16
 platform = 4000
 facade = 100000
-buffer = 25000
+buffer_amt = 25000
 buffer_pct = 1.10
 
 # Imagine 359  (L=lighted drawknobs, D=moving drawknobs)
@@ -34,23 +52,54 @@ imagine359D = 135450
 infinity367L = 177380
 infinity367D = 189670
 
-# Totals
-imagine359L_2025_total = ((imagine359L + platform) * tax) * buffer_pct
-imagine359D_2025_total = ((imagine359D + platform) * tax) * buffer_pct
-infinity367L_2025_total = ((infinity367L + platform) * tax) * buffer_pct
-infinity367D_2025_total = ((infinity367D + platform) * tax) * buffer_pct
+# 2025
+imagine359L_2025_tax = tax(price=(imagine359L + platform), tax=sales_tax)
+imagine359L_2025_buffer = buffer(price=(imagine359L + platform), percentage=buffer_pct)
+imagine359L_2025_subtotal = imagine359L + platform + imagine359L_2025_buffer + imagine359L_2025_tax
+imagine359L_2025_total = imagine359L + platform + imagine359L_2025_buffer
 
-imagine359L_2026_total = (((imagine359L * yearly_inc) + platform) * tax) * buffer_pct
-imagine359D_2026_total = (((imagine359D * yearly_inc) + platform) * tax) * buffer_pct
-infinity367L_2026_total = (((infinity367L * yearly_inc) + platform) * tax) * buffer_pct
-infinity367D_2026_total = (((infinity367D * yearly_inc) + platform) * tax) * buffer_pct
+imagine359D_2025_tax = tax(price=(imagine359D + platform), tax=sales_tax)
+imagine359D_2025_buffer = buffer(price=(imagine359D + platform), percentage=buffer_pct)
+imagine359D_2025_subtotal = imagine359D + platform + imagine359D_2025_buffer + imagine359D_2025_tax
+imagine359D_2025_total = imagine359D + platform + imagine359D_2025_buffer
+
+infinity367L_2025_tax = tax(price=(infinity367L + platform), tax=sales_tax)
+infinity367L_2025_buffer = buffer(price=(infinity367L + platform), percentage=buffer_pct)
+infinity367L_2025_subtotal = (infinity367L * yearly_inc) + platform + infinity367L_2025_buffer + infinity367L_2025_tax
+infinity367L_2025_total = (infinity367L * yearly_inc) + platform + infinity367L_2025_buffer
+
+infinity367D_2025_tax = tax(price=(infinity367D + platform), tax=sales_tax)
+infinity367D_2025_buffer = buffer(price=(infinity367D + platform), percentage=buffer_pct)
+infinity367D_2025_subtotal = infinity367D + platform + infinity367D_2025_buffer + infinity367D_2025_tax
+infinity367D_2025_total = infinity367D + platform + infinity367D_2025_buffer
+
+# 2026
+imagine359L_2026_tax = tax(price=((imagine359L * yearly_inc) + platform), tax=sales_tax)
+imagine359L_2026_buffer = buffer(price=((imagine359L * yearly_inc) + platform), percentage=buffer_pct)
+imagine359L_2026_subtotal = (imagine359L * yearly_inc) + platform + imagine359L_2026_buffer + imagine359L_2026_tax
+imagine359L_2026_total = (imagine359L * yearly_inc) + platform + imagine359L_2026_buffer
+
+imagine359D_2026_tax = tax(price=((imagine359D * yearly_inc) + platform), tax=sales_tax)
+imagine359D_2026_buffer = buffer(price=((imagine359D * yearly_inc) + platform), percentage=buffer_pct)
+imagine359D_2026_subtotal = (imagine359D * yearly_inc) + platform + imagine359D_2026_buffer + imagine359D_2026_tax
+imagine359D_2026_total = (imagine359D * yearly_inc) + platform + imagine359D_2026_buffer
+
+infinity367L_2026_tax = tax(price=((infinity367L * yearly_inc) + platform), tax=sales_tax)
+infinity367L_2026_buffer = buffer(price=((infinity367L * yearly_inc) + platform), percentage=buffer_pct)
+infinity367L_2026_subtotal = (infinity367L * yearly_inc) + platform + infinity367L_2026_buffer + infinity367L_2026_tax
+infinity367L_2026_total = (infinity367L * yearly_inc) + platform + infinity367L_2026_buffer
+
+infinity367D_2026_tax = tax(price=((infinity367D * yearly_inc) + platform), tax=sales_tax)
+infinity367D_2026_buffer = buffer(price=((infinity367D * yearly_inc) + platform), percentage=buffer_pct)
+infinity367D_2026_subtotal = (infinity367D * yearly_inc) + platform + infinity367D_2026_buffer + infinity367D_2026_tax
+infinity367D_2026_total = (infinity367D * yearly_inc) + platform + infinity367D_2026_buffer
 ```
 
 ### BLUF / TL;DR
 
-The organ at St. Egbert's is now more than 30 years old, making it vulnerable to part failures and ongoing repairs. Its sound sampling technology is outdated and uninspiring by modern standards, and the instrument itself is undersized for the church and the parish's music ministry program. The parish should begin proactively planning and raising money to replace it within the next few years, aiming to do so before it stops working to a degree that it is unfeasible to repair. Estimated project cost ranges from **$190,000** to **$264,000** (all inclusive) in 2026, with prices increasing roughly 16% each year---another reason to act sooner rather than later.
+The organ at St. Egbert's is now more than 30 years old, making it vulnerable to part failures and ongoing repairs. Its sound sampling technology is outdated and uninspiring by modern standards, and the instrument itself is undersized for the church and the parish's music ministry program. The parish should begin proactively planning and raising money to replace it within the next few years, aiming to do so before it stops working to a degree that it is unfeasible to repair. Estimated project cost ranges from **`{python} display(roundup(imagine359D_2026_total))`** to **`{python} display(roundup(infinity367D_2026_total))`** (all inclusive) in 2026, with prices increasing roughly 16% each year---another reason to act sooner rather than later.
 
-The recommended target organ for St. Egbert Church is a [**Rodgers Infinity 367D**](https://www.rodgersinstruments.com/organs/infinity-series/infinity-series-367) three-manual instrument at an estimated price of **$`{python} format(infinity367D_2026_total, ',.0f')`** (cost breakdown [below](#what)).
+The recommended target organ for St. Egbert Church is a [**Rodgers Infinity 367D**](https://www.rodgersinstruments.com/organs/infinity-series/infinity-series-367) three-manual instrument at an estimated price of **`{python} display(infinity367D_2026_total)`** (cost breakdown [below](#what)).
 
 This proposal details [why a new organ is needed](#considerations-for-the-existing-organ), [identifies](#what) and [justifies](#why) the ideal replacement instrument, and provides an [analysis of alternatives](#analysis-of-alternatives). Templated [fundraising](#how) materials (an informational pamphlet and a fundraising pledge page) are appended for consideration as well.
 
@@ -166,11 +215,13 @@ The ideal organ for St. Egbert's is a [Rodger's Infinity 367D](https://www.rodge
 
 | **LINE ITEM**                           | **COST** |   |
 |:----------------------------------------|---------:|---|
-| Rodgers Infinity 367D organ (see note)  | $`{python} format(infinity367D*yearly_inc, ',.0f')` |   |
-| Rolling platform                        | $`{python} format(platform, ',.0f')` |   |
-| Tax (if applicable)                     | $`{python} format(sum([(infinity367D*yearly_inc), platform])*(tax-1.), ',.0f')` |   |
-| Buffer for parish expenses (10%)        | $`{python} format((sum([(infinity367D*yearly_inc), platform])*tax)*(buffer_pct-1.), ',.0f')` |   |
-| **Total**                               | **$`{python} format(infinity367D_2026_total, ',.0f')`** |   |
+| Rodgers Infinity 367D organ (see note)  | `{python} display(infinity367D*yearly_inc)` |   |
+| Rolling platform                        | `{python} display(platform)` |   |
+| Buffer for parish expenses (10%)        | `{python} display(infinity367D_2026_buffer)` |   |
+| Sales tax                               | `{python} display(infinity367D_2026_tax)` |   |
+| **Sub Total**                           | **`{python} display(infinity367D_2026_subtotal)`** |   |
+| Sales tax reimbursement                 | -`{python} display(infinity367D_2026_tax)` |   |
+| **TOTAL**                               | **`{python} display(infinity367D_2026_total)`** |   |
 : Cost estimate of a Rodgers Infinity 367D organ installation based on 16% increase from 2025 prices, which represents the 2024-2025 price increase. Prices can be locked in for a period of time (usually up to one year) with the signing of a contract and initial deposit.
 
 
@@ -238,18 +289,20 @@ A slightly newer Rodgers digital organ of similar size but with considerably mor
 
 #### Rodgers options
 
-The next model down from the Rodgers Infinity 367 is the [Imagine 359](https://www.rodgersinstruments.com/organs/imagine-series/imagine-359d). A smaller yet equally capable organ, the Imagine 359D offers 51 stops, 147 organ voices, and 45 orchestral voices. It contains the same highly authentic sound technology but lacks many features and additional flexibilities of the Infinity 367. Priced at about $190k, which includes the same 14-channel audio installation [described above](#why), this organ would still be a remarkable improvement and upgrade from the existing organ. The cost estimate breaks down as follows:
+The next model down from the Rodgers Infinity 367 is the [Imagine 359](https://www.rodgersinstruments.com/organs/imagine-series/imagine-359d). A smaller yet equally capable organ, the Imagine 359D offers 51 stops, 147 organ voices, and 45 orchestral voices. It contains the same highly authentic sound technology but lacks many features and additional flexibilities of the Infinity 367. Priced at about $`{python} int(roundup(imagine359D_2026_total)/1e3)`k, which includes the same 14-channel audio installation [described above](#why), this organ would still be a remarkable improvement and upgrade from the existing organ. The cost estimate breaks down as follows:
 
 | **LINE ITEM**                           | **COST** |   |
 |:----------------------------------------|---------:|---|
-| Rodgers Imagine 359D organ              | $`{python} format(imagine359D*yearly_inc, ',.0f')` |   |
-| Rolling platform                        | $`{python} format(platform, ',.0f')` |   |
-| Tax (if applicable)                     | $`{python} format(sum([(imagine359D*yearly_inc), platform])*(tax-1.), ',.0f')` |   |
-| Buffer for parish expenses (10%)        | $`{python} format((sum([(imagine359D*yearly_inc), platform])*tax)*(buffer_pct-1.), ',.0f')` |   |
-| **Total**                               | **$`{python} format(imagine359D_2026_total, ',.0f')`** |   |
-: Cost estimate of the Rodgers 359D based on 16% increase from 2025 prices, which represents the 2024-2025 price increase.
+| Rodgers Infinity 359D organ (see note)  | `{python} display(imagine359D*yearly_inc)` |   |
+| Rolling platform                        | `{python} display(platform)` |   |
+| Buffer for parish expenses (10%)        | `{python} display(imagine359D_2026_buffer)` |   |
+| Sales tax                               | `{python} display(imagine359D_2026_tax)` |   |
+| **Sub Total**                           | **`{python} display(imagine359D_2026_subtotal)`** |   |
+| Sales tax reimbursement                 | -`{python} display(imagine359D_2026_tax)` |   |
+| **TOTAL**                               | **`{python} display(imagine359D_2026_total)`** |   |
+: Cost estimate of a Rodgers Infinity 359D organ installation based on 16% increase from 2025 prices, which represents the 2024-2025 price increase. Prices can be locked in for a period of time (usually up to one year) with the signing of a contract and initial deposit.
 
-Priced in between the Infinity 367D and the Imagine 359D is the Infinity 367L ($257k), which is exactly the same as the 367D except it has lighted drawknobs instead of mechanical drawknobs. Mechanical drawknobs are more realistic than lighted, since pipe organs are mechanical instruments.
+Priced in between the Infinity 367D and the Imagine 359D is the Infinity 367L ($`{python} int(roundup(infinity367L_2026_total)/1e3)`k), which is exactly the same as the 367D except it has lighted drawknobs instead of mechanical drawknobs. Mechanical drawknobs are more realistic than lighted, since pipe organs are mechanical instruments.
 
 The recommendation is for the parish to target the Infinity 367D but fall back on the Infinity 367L or Imagine 359D if fundraising stalls.
 
@@ -283,6 +336,6 @@ It has been assumed that a full pipe organ is out of reachable budget for St. Eg
 
 ### Summary
 
-The Rodgers Infinity 367D organ is a remarkably impressive instrument that would be a tremendous upgrade from the current organ at St. Egbert's. With three manuals, 67 stops, more than 500 organ voices, and 14 audio channels divided between a 10-channel main organ and a 4-channel antiphonal organ, this organ is plenty adequate for the size of the church and the needs of the existing music ministry. With the current organ beginning to show signs of its 32 years of service, the parish is encouraged to proactively begin raising funds now so that it can replace the instrument before it dies completely. While the Infinity's price tag of $264k will require significant fundraising, it will constitute a dedicated investment in the future of the parish: its stunning fidelity to the sounds of pipe organs combined with endless possibilities of stop combinations and orchestral integrations will undoubtedly raise the parish's music program to a new level for decades to come.
+The Rodgers Infinity 367D organ is a remarkably impressive instrument that would be a tremendous upgrade from the current organ at St. Egbert's. With three manuals, 67 stops, more than 500 organ voices, and 14 audio channels divided between a 10-channel main organ and a 4-channel antiphonal organ, this organ is plenty adequate for the size of the church and the needs of the existing music ministry. With the current organ beginning to show signs of its 32 years of service, the parish is encouraged to proactively begin raising funds now so that it can replace the instrument before it dies completely. While the Infinity's price tag of `{python} display(infinity367D_2026_total)` will require significant fundraising, it will constitute a dedicated investment in the future of the parish: its stunning fidelity to the sounds of pipe organs combined with endless possibilities of stop combinations and orchestral integrations will undoubtedly raise the parish's music program to a new level for decades to come.
 
 ***
