@@ -4,9 +4,9 @@ subtitle: A proposal
 engine: jupyter
 toc: true
 format:
-#   html: 
-#     toc: true
-#     navbar: false
+  html: 
+    toc: true
+    navbar: false
   pdf:
     toc: false
     geometry: 
