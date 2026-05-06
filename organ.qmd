@@ -4,9 +4,9 @@ subtitle: A proposal
 engine: jupyter
 toc: true
 format:
-  html: 
-    toc: true
-    navbar: false
+#   html: 
+#     toc: true
+#     navbar: false
   pdf:
     toc: false
     geometry: 
@@ -210,7 +210,7 @@ The organ console itself is generally in good condition for its age, but it is w
 
 #### What
 
-The ideal organ for St. Egbert's is a [Rodger's Infinity 367D](https://www.rodgersinstruments.com/organs/infinity-series/infinity-series-367). The estimated cost breakdown for 2026, which includes a 10-year warranty, is as follows:
+The ideal organ for St. Egbert's is a [Rodger's Infinity 367D](https://www.rodgersinstruments.com/organs/infinity-series/infinity-series-367) to be installed by [R.A. Daffer Church Organs, Inc.](https://dafferorgans.com/), the Mid-Atlantic regional Rodgers distributor out of Jessup, MD. The estimated cost breakdown for 2026, which includes a 10-year warranty, is as follows:
 
 :::: {.columns}
 ::: {.column}
@@ -258,7 +258,7 @@ This three manual organ is well sized for St. Egbert church and is loaded with f
 * Two expression shoes and a crescendo shoe (current organ has one expression shoe and no crescendo shoe)
 * Hymn player with 350 built-in hymns, plus the ability to record and play back anything
 * Up to 22 audio channels (current organ has 2)
-* Lighted and adjustable music stand with iPad support and automatic page-turn technology
+* Lighted and adjustable music stand with mobile tablet (*e.g.*, iPad) support and automatic page-turn technology
 
 The stop list is extremely versatile, with full principal, flute, and reed choruses in every division, plus a floating solo division that can be assigned to any manual. This makes the instrument very capable for accompanying congregational singing with a robust principal chorus from the Great division, cantors with soft yet articulate flutes from the Swell division, choir with supportive but softer principal chorus from the Choir division, and instruments with softer principal choruses from Choir or Swell division. The floating Solo division can be used on a moment's notice to help a struggling choir or congregation by articulating the melody line from any manual. Its four organ palettes (American Eclectic, English Cathedral, French Romantic, and German Baroque) offers immense flexibility and an infinite number of possible registrations. The large orchestral library supplements the instrument with dozens of string, brass, wind, reed, and percussion instruments that can be played either by themselves or along with the organ.
 
@@ -296,7 +296,7 @@ One advantage to replacing the organ before it no longer functions is that the p
 
 #### Rodgers options
 
-The next model down from the Rodgers Infinity 367 is the [Imagine 359](https://www.rodgersinstruments.com/organs/imagine-series/imagine-359d). A smaller yet equally capable organ, the Imagine 359D offers 51 stops, 147 organ voices, and 45 orchestral voices. It contains the same highly authentic sound technology but lacks many features and additional flexibilities of the Infinity 367. For example, in addition to fewer stops, it lacks the floating Solo division, iPad integration with digital page turning, and a number of convenient pistons for controlling the organ itself. Priced at about $`{python} int(roundup(imagine359D_2026_total)/1e3)`k, which includes the same 14-channel audio installation [described above](#why), this organ would still be a remarkable improvement and upgrade from the existing organ. The cost estimate breaks down as follows:
+The next model down from the Rodgers Infinity 367 is the [Imagine 359](https://www.rodgersinstruments.com/organs/imagine-series/imagine-359d). A smaller yet equally capable organ, the Imagine 359D offers 51 stops, 147 organ voices, and 45 orchestral voices. It contains the same highly authentic sound technology but lacks many features and additional flexibilities of the Infinity 367. For example, in addition to fewer stops, it lacks the floating Solo division, mobile tablet integration with digital page turning, and a number of convenient pistons for controlling the organ itself. Priced at about $`{python} int(roundup(imagine359D_2026_total)/1e3)`k, which includes the same 14-channel audio installation [described above](#why), this organ would still be a remarkable improvement and upgrade from the existing organ. The cost estimate breaks down as follows:
 
 | **LINE ITEM**                    | **COST** |   |
 |:---------------------------------|---------:|---|
@@ -326,6 +326,16 @@ The primary competitor to Rodgers in the United States is Allen. There are sever
 4. **Voicing:** Voicing is when the sound of every note of every stop is carefully adjusted and fine-tuned for the room in which the organ is installed. This is a very important part of an organ installation, as it is what makes the instrument sound its best. Allen organs, if they're voiced at all, are often voiced by service technicians rather than organists. Rodgers uses organists to professionally voice their instruments, a detail that makes a big difference.
 
 Another lesser-known manufacture in the United States is Johannus, but these tend to be budget digital organs, which themselves are already budget organs. Johannus organs are ideal for private homes or practice studios, but they do not have much in the way of mid-size or large organs, so they are rarely found in churches. Their only three-manual instrument is very stripped down compared to either a Rodgers or an Allen and, aesthetically, leaves a lot to be desired. They also do not (yet) have the same reputation and track record as both Rodgers and Allen. Thus, Johannus has not been considered for St. Egbert's.
+
+#### Pre-owned (used) organ
+
+Pre-owned organs, whether purchased as a private sale or through a commercial sales company like R.A. Daffer Church Organs, often cost significantly less than new organs, but there are several reasons why churches should be leery of this idea:
+
+1. **Age:** As discussed [above](#overview), digital organs generally have a finite usable life span. Assume, for the sake of argument, this lifespan is (generously) 50 years. With very rare exceptions, the newest used organs available at any time are usually 20-25 years old. That currently puts most from the early 2000s, which means they are only about 10 years newer than St. Egbert's current organ. From a human psychologically perspective, parishioners think they are getting a new organ, and while it is indeed new to them, a 20-25 year old organ is halfway through its reliable lifespan. That means the parish will find itself in the market again in another 20 years or so, which is not a long time. Most parishioners will then still remember the previous purchase and think, "We just bought a new organ, why do we need another one?"
+
+2. **Old technology:** Rodgers and Allen tend to update their model offerings roughly every 10-15 years. This is when the largest technological advances get rolled out. From a sound technology standpoint, only organs built within the last 15 years should be seriously considered. It is within this time frame that the modern sampling capabilities became widely available, and the sound quality is leaps and bounds ahead of organs from even the previous decade. The industry has now reached a point where any new improvements in sound quality capabilities are unlikely to be perceivable by the human ear, just like what has happened in the television industry. It is advisable to purchase the current state-of-the-art.
+
+3. **No warranty:** Pre-owned organs are usually sold "as is" without any warranty on the organ itself, though commercial organ distributors will sometimes include limited warranties on installation. Private sales will never have warranties.
 
 #### Virtual organ
 
