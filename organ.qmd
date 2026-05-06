@@ -6,6 +6,7 @@ toc: true
 format:
   html: 
     toc: true
+    navbar: false
   pdf:
     toc: false
     geometry: 
