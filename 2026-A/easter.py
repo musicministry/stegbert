@@ -171,7 +171,7 @@ ascension = {
     "Gospel Acclamation": "R&A p. 87 - https://youtu.be/TSsUAa_H6sA?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
     "Offertory": "545 - A Hymn of Glory Let Us Sing!",
-    "Communion": "681 - We Remember",
+    "Communion": "556 - Come Down, O Love Divine",
     "Recessional": "544 - Lord, You Give the Great Commission"
 }
 
@@ -190,7 +190,7 @@ pentecost = {
     "Responsorial Psalm": "R&A p. 94 - https://youtu.be/Cmeo3cPnYjM?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
     "Gospel Acclamation": "R&A p. 95 - https://youtu.be/at4kPcIIz4Q?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
 
-    "Offertory": "902 - O Breathe on Me, O Breath of God",
+    "Offertory": "556 - Come Down, O Love Divine",
     "Communion": "834 - We Are Many Parts",
     "Recessional": "546 - Go to the World!"
 }
