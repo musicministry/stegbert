@@ -15,7 +15,7 @@
 # `-c, --callout` flag.
 # 
 # The music list to populate the file are taken from `.py` files for each
-# season (e.g., `advent.py`, `christmas.py`) containing dictinaries (one per
+# season (e.g., `advent.py`, `christmas.py`) containing dictionaries (one per
 # liturgy) where the keys specify hymn in the Mass (e.g., "Professional") and
 # the value is the name of the hymn. Each dictionary should also contain URLs
 # for responsorial psalms and gospel acclamations, the name of the Mass
@@ -73,8 +73,10 @@ from pathlib import Path
 
 # args = Args(
 #     year = 2026,
-#     publish = 'lent02'
+#     publish = 'corpus-christi'
 # )
+
+# PROJECT_ROOT = Path(os.getcwd())
 
 # -----------------------------------------------------------------------------
 # Command line execution
