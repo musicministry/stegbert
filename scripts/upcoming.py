@@ -8,7 +8,7 @@
 # be set using the `-o, --output` flag and defaults to `upcoming.qmd` if no
 # argument is passed. The music lists to populate the file are taken from `.py`
 # files for each season (e.g., `advent.py`, `christmas.py`) containing 
-# dictinaries (one per liturgy) where the keys specify the hymn in the Mass
+# dictionaries (one per liturgy) where the keys specify the hymn in the Mass
 # (e.g., "Professional") and the value is the name of the hymn. Each dictionary
 # should also contain URLs for responsorial psalms and gospel acclamation, the
 # name of the Mass setting to be used, and a list of Mass parts to include.
