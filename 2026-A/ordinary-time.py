@@ -104,7 +104,7 @@ ot06 = {
 holy_trinity = {
     "Mass": "Mass of St. Dymphna",
     "parts": [
-        "Gloria: Mass of St. Dymphna",
+        "Gloria: Heritage Mass",
         "Holy: Mass of St. Dymphna",
         "Memorial Acclamation A: Mass of St. Dymphna",
         "Amen: Mass of St. Dymphna",
@@ -113,18 +113,19 @@ holy_trinity = {
 
     "Processional": "567 - Holy, Holy, Holy! Lord God Almighty!",
 
-    "Responsorial Psalm": "R&A p. 96 - https://youtu.be/4CipytWuv0c?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation": "R&A p. 97 - https://youtu.be/djexyE_j_D0?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm": "R&A p. 96 - https://www.youtube.com/watch?v=4CipytWuv0c",
+    "Gospel Acclamation": "R&A p. 97 - https://www.youtube.com/watch?v=djexyE_j_D0",
 
     "Offertory": "615 - Holy God, We Praise Thy Name",
     "Communion": "642 - What Wondrous Love Is This",
+    "Meditation": "580 - For God So Loved the World",
     "Recessional": "566 - O God, Almighty Father"
 }
 
 corpus_christi = {
     "Mass": "Mass of St. Dymphna",
     "parts": [
-        "Gloria: Mass of St. Dymphna",
+        "Gloria: Heritage Mass",
         "Holy: Mass of St. Dymphna",
         "Memorial Acclamation A: Mass of St. Dymphna",
         "Amen: Mass of St. Dymphna",
@@ -133,11 +134,114 @@ corpus_christi = {
 
     "Processional": "616 - Praise to the Lord, the Almighty",
 
-    "Responsorial Psalm": "R&A p. 98 - https://youtu.be/2lyxAUr9KUY?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
-    "Gospel Acclamation": "R&A p. 99 - https://youtu.be/L0Fb8sDMJXg?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os",
+    "Responsorial Psalm": "R&A p. 98 - https://www.youtube.com/watch?v=2lyxAUr9KUY",
+    "Gospel Acclamation": "R&A p. 99 - https://www.youtube.com/watch?v=L0Fb8sDMJXg",
 
     "Offertory": "932 - One Bread, One Body",
     "Communion": "910 - Shepherd of Souls",
     "Meditation": "619 - Let All Mortal Flesh Keep Silence",
     "Recessional": "615 - Holy God, We Praise Thy Name"
 }
+
+ot11 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "688 - O God, Our Help in Ages Past",
+
+    "Responsorial Psalm": "R&A p. 100 - https://www.youtube.com/watch?v=QTxAquatwKk",
+    "Gospel Acclamation": "R&A p. 101 - https://www.youtube.com/watch?v=bRqcBEMhUfc",
+
+    "Offertory": "853 - All People That on Earth Do Dwell",
+    "Communion": "914 - Lord, Who at Your First Eucharist",
+    "Recessional": "544 - Lord, You Give the Great Commission"
+}
+
+ot12 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "837 - Gather Your People (Hurd)",
+
+    "Responsorial Psalm": "R&A p. 102 - https://www.youtube.com/watch?v=6Kv7R4_D8pg",
+    "Gospel Acclamation": "R&A p. 103 - https://www.youtube.com/watch?v=MfzbAQlcldM",
+
+    "Offertory": "683 - Be Not Afraid (Dufford)",
+    "Communion": "920 - Pan de Vida",
+    # "Meditation": "693 - All Will Be Well",
+    "Recessional": "689 - Though the Mountains May Fall"
+}
+
+ot13 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "624 - Lift Up Your Hearts",
+
+    "Responsorial Psalm": "R&A p. 104 - https://www.youtube.com/watch?v=5Xyc1brXyMI",
+    "Gospel Acclamation": "R&A p. 105 - https://www.youtube.com/watch?v=rg8DZXFud_s",
+
+    "Offertory": "903 - Baptized in Water",
+    "Communion": "914 - Lord, Who at Your First Eucharist",
+    "Recessional": "801 - Take Up Your Cross (ERHALT UNS HERR)"
+}
+
+ot14 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "855 - Morning Has Broken",
+
+    "Responsorial Psalm": "R&A p. 106 - https://www.youtube.com/watch?v=28_GCyynw-o",
+    "Gospel Acclamation": "R&A p. 107 - https://www.youtube.com/watch?v=tN5RCOwvl24",
+
+    "Offertory": "724 - I Heard the Voice of Jesus Say",
+    "Communion": "930 - Taste and See (Moore)",
+    "Meditation": "720 - Come to Me (Bell)",
+    "Recessional": "871 - We Shall Rise Again"
+}
+
+ot15 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "838 - Come to the Feast",
+
+    "Responsorial Psalm": "R&A p. 108 - https://www.youtube.com/watch?v=ofki6mUE9Ug",
+    "Gospel Acclamation": "R&A p. 109 - https://www.youtube.com/watch?v=h66erAKfn7A",
+
+    "Offertory": "651 - Open My Eyes",
+    "Communion": "783 - Unless a Grain of Wheat",
+    "Recessional": "644 - There's a Wideness in God's Mercy"
+}
+
