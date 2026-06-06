@@ -18,10 +18,11 @@ All hymns are taken from the blue Gather hymnal unless otherwise noted. Note tha
 <table class="hover normal" style="width: 100%;">
 <tbody>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">567 - Holy, Holy, Holy! Lord God Almighty!<br><br> {{< video https://www.youtube.com/watch?v=sKPbdyHnN-E >}}</td></tr>
-<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 96 <br><br> {{< video https://youtu.be/4CipytWuv0c?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
-<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 97 <br><br> {{< video https://youtu.be/djexyE_j_D0?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 96 <br><br> {{< video https://www.youtube.com/watch?v=4CipytWuv0c >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 97 <br><br> {{< video https://www.youtube.com/watch?v=djexyE_j_D0 >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">615 - Holy God, We Praise Thy Name<br><br> {{< video https://www.youtube.com/watch?v=x2xrSUbL4UU >}}</td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">642 - What Wondrous Love Is This<br><br> {{< video https://www.youtube.com/watch?v=NZXCVy50t44 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Meditation:</strong></td><td style="width: 75%;">580 - For God So Loved the World<br><br> {{< video https://www.youtube.com/watch?v=6MvSiO40c28 >}}</td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">566 - O God, Almighty Father<br><br> {{< video https://www.youtube.com/watch?v=sBPrt2Pnp9Y >}}</td></tr>
 </tbody>
 </table>
@@ -33,10 +34,7 @@ The Mass parts for Ordinary Time will be taken from *Mass of St. Dymphna*:
 
 <table class="hover normal" style="width: 100%;">
 <tbody>
-<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;"><audio controls="">
-  <source src="../audio/st-dymphna-gloria.mp3" type="audio/wav"/>
-</audio>
-<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;">{{< video https://youtu.be/tukrgUdjIWU?t=27 >}}</td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
   <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
 </audio>
@@ -70,11 +68,11 @@ The Mass parts for Ordinary Time will be taken from *Mass of St. Dymphna*:
 +-----------------------------+-------------------------------------------------------------------------------------------+
 | **Processional:**           | 567 - [Holy, Holy, Holy! Lord God Almighty!](https://www.youtube.com/watch?v=sKPbdyHnN-E) |
 +-----------------------------+-------------------------------------------------------------------------------------------+
-| **Gloria:**                 | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
+| **Gloria:**                 | [Heritage Mass](https://youtu.be/tukrgUdjIWU?t=27)                                        |
 +-----------------------------+-------------------------------------------------------------------------------------------+
-| **Responsorial Psalm:**     | [R&A p. 96](https://youtu.be/4CipytWuv0c?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)         |
+| **Responsorial Psalm:**     | [R&A p. 96](https://www.youtube.com/watch?v=4CipytWuv0c)                                  |
 +-----------------------------+-------------------------------------------------------------------------------------------+
-| **Gospel Acclamation:**     | [R&A p. 97](https://youtu.be/djexyE_j_D0?list=PL1_lMtcpfrcloo19ceGJAEXPuXK2LS4os)<br><br> |
+| **Gospel Acclamation:**     | [R&A p. 97](https://www.youtube.com/watch?v=djexyE_j_D0)<br><br>                          |
 +-----------------------------+-------------------------------------------------------------------------------------------+
 | **Offertory:**              | 615 - [Holy God, We Praise Thy Name](https://www.youtube.com/watch?v=x2xrSUbL4UU)         |
 +-----------------------------+-------------------------------------------------------------------------------------------+
@@ -87,6 +85,8 @@ The Mass parts for Ordinary Time will be taken from *Mass of St. Dymphna*:
 | **Lamb of God:**            | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
 +-----------------------------+-------------------------------------------------------------------------------------------+
 | **Communion:**              | 642 - [What Wondrous Love Is This](https://www.youtube.com/watch?v=NZXCVy50t44)           |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Meditation:**             | 580 - [For God So Loved the World](https://www.youtube.com/watch?v=6MvSiO40c28)           |
 +-----------------------------+-------------------------------------------------------------------------------------------+
 | **Recessional:**            | 566 - [O God, Almighty Father](https://www.youtube.com/watch?v=sBPrt2Pnp9Y)               |
 +-----------------------------+-------------------------------------------------------------------------------------------+
