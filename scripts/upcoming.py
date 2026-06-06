@@ -49,8 +49,8 @@ import utils as u
 
 # args = Args(
 #     year = 2026,
-#     start = 'lent04',
-#     end = 'holy-thursday',
+#     start = 'holy-trinity',
+#     end = 'ot15',
 # )
 
 # PROJECT_ROOT = Path(os.getcwd())
@@ -182,6 +182,7 @@ def main():
             # Load the schedules and fix the keys
             hymn_lists = u.load_hymn_schedules(season)
             hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
+            hymn_lists = {k:v for k,v in hymn_lists.items() if k in ss['feast'].to_list()}
 
             # Get the Mass settings and parts
             masses = [hymn_lists[k]['Mass'] for k in hymn_lists.keys()]
