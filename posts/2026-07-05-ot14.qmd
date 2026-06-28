@@ -1,0 +1,99 @@
+---
+title: Fourteenth Sunday in Ordinary Time
+last-updated: 2026-06-30
+description: Sunday, July 5, 2026
+categories:
+  - Ordinary Time 2026
+image: /images/dates/jul/05.png
+format:
+  html: default
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">855 - Morning Has Broken<br><br> {{< video https://www.youtube.com/watch?v=lXB-Iei1w2Y&list=RDlXB-Iei1w2Y&start_radio=1 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 106 <br><br> {{< video https://www.youtube.com/watch?v=28_GCyynw-o >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 107 <br><br> {{< video https://www.youtube.com/watch?v=tN5RCOwvl24 >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">724 - I Heard the Voice of Jesus Say<br><br> {{< video https://www.youtube.com/watch?v=0mag-eXtkO0 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">930 - Taste and See (Moore)<br><br> {{< video https://www.youtube.com/watch?v=O-AeXLMpDJE >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Meditation:</strong></td><td style="width: 75%;">720 - Come to Me (Bell)<br><br> {{< video https://www.youtube.com/watch?v=EF1SVSq_574&list=RDEF1SVSq_574&start_radio=1 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">871 - We Shall Rise Again<br><br> {{< video https://www.youtube.com/watch?v=epIc6I9BxQY >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Ordinary Time will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;">{{< video https://youtu.be/tukrgUdjIWU?t=27 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-lambofgod.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+</tbody>
+</table>
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Processional:**           | 855 - [Morning Has Broken](https://www.youtube.com/watch?v=lXB-Iei1w2Y&list=RDlXB-Iei1w2Y&start_radio=1) |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Gloria:**                 | [Heritage Mass](https://youtu.be/tukrgUdjIWU?t=27)                                                       |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Responsorial Psalm:**     | [R&A p. 106](https://www.youtube.com/watch?v=28_GCyynw-o)                                                |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Gospel Acclamation:**     | [R&A p. 107](https://www.youtube.com/watch?v=tN5RCOwvl24)<br><br>                                        |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Offertory:**              | 724 - [I Heard the Voice of Jesus Say](https://www.youtube.com/watch?v=0mag-eXtkO0)                      |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Holy:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)                           |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Memorial Acclamation A:** | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)                           |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Amen:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)                           |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Lamb of God:**            | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)                           |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Communion:**              | 930 - [Taste and See (Moore)](https://www.youtube.com/watch?v=O-AeXLMpDJE)                               |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Meditation:**             | 720 - [Come to Me (Bell)](https://www.youtube.com/watch?v=EF1SVSq_574&list=RDEF1SVSq_574&start_radio=1)  |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+| **Recessional:**            | 871 - [We Shall Rise Again](https://www.youtube.com/watch?v=epIc6I9BxQY)                                 |
++-----------------------------+----------------------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
+
