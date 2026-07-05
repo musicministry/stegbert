@@ -1,10 +1,10 @@
 ---
-first-feast: Holy Trinity
-first-date: May 31, 2026
-last-feast: Fifteenth Sunday in Ordinary Time
-last-date: July 12, 2026
+first-feast: Fifteenth Sunday in Ordinary Time
+first-date: July 12, 2026
+last-feast: Twenty-Sixth Sunday in Ordinary Time
+last-date: September 27, 2026
 title: Hymn Schedules
-subtitle: "**May 31, 2026** (Holy Trinity) through **July 12, 2026** (Fifteenth Sunday in Ordinary Time)"
+subtitle: "**July 12, 2026** (Fifteenth Sunday in Ordinary Time) through **September 27, 2026** (Twenty-Sixth Sunday in Ordinary Time)"
 format:
   html: default
   hymn-schedules-pdf:
@@ -28,138 +28,6 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 :::
 ::::
 
-#### May 31, 2026 [Holy Trinity]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 567 - [Holy, Holy, Holy! Lord God Almighty!](https://www.youtube.com/watch?v=sKPbdyHnN-E) |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 96](https://www.youtube.com/watch?v=4CipytWuv0c)                                  |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 97](https://www.youtube.com/watch?v=djexyE_j_D0)                                  |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 615 - [Holy God, We Praise Thy Name](https://www.youtube.com/watch?v=x2xrSUbL4UU)         |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 642 - [What Wondrous Love Is This](https://www.youtube.com/watch?v=NZXCVy50t44)           |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Meditation:**         | 580 - [For God So Loved the World](https://www.youtube.com/watch?v=6MvSiO40c28)           |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 566 - [O God, Almighty Father](https://www.youtube.com/watch?v=sBPrt2Pnp9Y)               |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### June 7, 2026 [Corpus Christi]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 616 - [Praise to the Lord, the Almighty](https://www.youtube.com/watch?v=sysFksHRlqM)  |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 98](https://www.youtube.com/watch?v=2lyxAUr9KUY)                               |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 99](https://www.youtube.com/watch?v=L0Fb8sDMJXg)                               |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 932 - [One Bread, One Body](https://www.youtube.com/watch?v=ylWKlw6HXmw)               |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 910 - [Shepherd of Souls](https://www.youtube.com/watch?v=yX1gxQ3rI-o)                 |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Meditation:**         | 619 - [Let All Mortal Flesh Keep Silence](https://www.youtube.com/watch?v=Vxd7rWLhCMc) |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 615 - [Holy God, We Praise Thy Name](https://www.youtube.com/watch?v=x2xrSUbL4UU)      |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### June 14, 2026 [Eleventh Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 688 - [O God, Our Help in Ages Past](https://www.youtube.com/watch?v=rsHIwXTjAOU)        |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 100](https://www.youtube.com/watch?v=QTxAquatwKk)                                |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 101](https://www.youtube.com/watch?v=bRqcBEMhUfc)                                |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 853 - [All People That on Earth Do Dwell](https://www.youtube.com/watch?v=JmGwHdNtpEw)   |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 914 - [Lord, Who at Your First Eucharist](https://www.youtube.com/watch?v=Lk9_Mjq4ce4)   |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 544 - [Lord, You Give the Great Commission](https://www.youtube.com/watch?v=ONT5mkXpZ8g) |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### June 21, 2026 [Twelfth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 837 - [Gather Your People (Hurd)](https://www.youtube.com/watch?v=I07pRKXrp2A)     |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 102](https://www.youtube.com/watch?v=6Kv7R4_D8pg)                          |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 103](https://www.youtube.com/watch?v=MfzbAQlcldM)                          |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 683 - [Be Not Afraid (Dufford)](https://www.youtube.com/watch?v=SYlQhi2l7-Q)       |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 920 - [Pan de Vida](https://www.youtube.com/watch?v=8JtfB37qF90)                   |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 689 - [Though the Mountains May Fall](https://www.youtube.com/watch?v=GY3kRRWj2TA) |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### June 28, 2026 [Thirteenth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 624 - [Lift Up Your Hearts](https://www.youtube.com/watch?v=bvIddKZdjjs)                  |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 104](https://www.youtube.com/watch?v=5Xyc1brXyMI)                                 |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 105](https://www.youtube.com/watch?v=rg8DZXFud_s)                                 |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 903 - [Baptized in Water](https://www.youtube.com/watch?v=PcnfEiHCgOM)                    |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 914 - [Lord, Who at Your First Eucharist](https://www.youtube.com/watch?v=Lk9_Mjq4ce4)    |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 801 - [Take Up Your Cross (ERHALT UNS HERR)](https://www.youtube.com/watch?v=eFHdtVFtm64) |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### July 5, 2026 [Fourteenth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+----------------------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 855 - [Morning Has Broken](https://www.youtube.com/watch?v=lXB-Iei1w2Y&list=RDlXB-Iei1w2Y&start_radio=1) |
-+--------+-------------------------+----------------------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 106](https://www.youtube.com/watch?v=28_GCyynw)                                                  |
-+--------+-------------------------+----------------------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 107](https://www.youtube.com/watch?v=tN5RCOwvl24)                                                |
-+--------+-------------------------+----------------------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 724 - [I Heard the Voice of Jesus Say](https://www.youtube.com/watch?v=0mag-eXtkO0)                      |
-+--------+-------------------------+----------------------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 930 - [Taste and See (Moore)](https://www.youtube.com/watch?v=O-AeXLMpDJE)                               |
-+--------+-------------------------+----------------------------------------------------------------------------------------------------------+
-| &emsp; | **Meditation:**         | 720 - [Come to Me (Bell)](https://www.youtube.com/watch?v=EF1SVSq_574&list=RDEF1SVSq_574&start_radio=1)  |
-+--------+-------------------------+----------------------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 871 - [We Shall Rise Again](https://www.youtube.com/watch?v=epIc6I9BxQY)                                 |
-+--------+-------------------------+----------------------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
 #### July 12, 2026 [Fifteenth Sunday in Ordinary Time]{style="float:right"}
 
 [**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
@@ -177,6 +45,243 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 +--------+-------------------------+----------------------------------------------------------------------------------------+
 | &emsp; | **Recessional:**        | 644 - [There's a Wideness in God's Mercy](https://www.youtube.com/watch?v=fLqlKZe1Ckc) |
 +--------+-------------------------+----------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### July 19, 2026 [Sixteenth Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 848 - [Gather Us In](https://www.youtube.com/watch?v=ap9d6jiyriw)                        |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 110](https://www.youtube.com/watch?v=nswETou7fuI)                                |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 111](https://www.youtube.com/watch?v=buvAWjs75Z8)                                |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 738 - [The Reign of God](https://www.youtube.com/watch?v=7wAxrdgyguQ)                    |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 940 - [You Satisfy the Hungry Heart](https://www.youtube.com/watch?v=eGyZ7aXWaFA)        |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 573 - [To Jesus Christ, Our Sovereign King](https://www.youtube.com/watch?v=ZA_KA07wTa0) |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### July 26, 2026 [Seventeenth Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 846 - [Come, Host of Heaven's High Dwelling Place](https://www.youtube.com/watch?v=JPHK96E7cmo) |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 112](https://www.youtube.com/watch?v=)                                                  |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 113](https://www.youtube.com/watch?v=2)                                                 |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 738 - [The Reign of God](https://www.youtube.com/watch?v=7wAxrdgyguQ)                           |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 943 - [Bread of Life from Heaven](https://www.youtube.com/watch?v=ihI9QQ_3TPM)                  |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 610 - [Sing of the Lord's Goodness](https://www.youtube.com/watch?v=q5R9PmGf3aE)                |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### August 2, 2026 [Eighteenth Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 838 - [Come to the Feast](https://www.youtube.com/watch?v=oS7UAkfi0Jc)                |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 114](https://www.youtube.com/watch?v=HgK)                                     |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 115](https://www.youtube.com/watch?v=UbYeJMl7fEU)                             |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 738 - [The Reign of God](https://www.youtube.com/watch?v=7wAxrdgyguQ)                 |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 945 - [I Am the Bread of Life](https://www.youtube.com/watch?v=KCnpR-eobag)           |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 641 - [Love Divine, All Loves Excelling](https://www.youtube.com/watch?v=JNpw-9pifXs) |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### August 9, 2026 [Nineteenth Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 689 - [Though the Mountains May Fall](https://www.youtube.com/watch?v=GY3kRRWj2TA) |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 116](https://www.youtube.com/watch?v=FLVxPSQqAHM)                          |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 117](https://www.youtube.com/watch?v=_LG)                                  |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 694 - [How Firm a Foundation](https://www.youtube.com/watch?v=FqiwrsH4epE)         |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 940 - [You Satisfy the Hungry Heart](https://www.youtube.com/watch?v=eGyZ7aXWaFA)  |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | NA - [Eternal Father, Strong to Save](https://www.youtube.com/watch?v=FW0VUA6-QkE) |
++--------+-------------------------+------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### August 16, 2026 [Twentieth Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+----------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 839 - [As We Gather at Your Table](https://www.youtube.com/watch?v=dhnQB7ZKGjU)        |
++--------+-------------------------+----------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 122](https://www.youtube.com/watch?v=jtK9oRoguTI)                              |
++--------+-------------------------+----------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 123](https://www.youtube.com/watch?v=uOB3hMpQZMg)                              |
++--------+-------------------------+----------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 657 - [We Cannot Measure How You Heal](https://www.youtube.com/watch?v=ygeK4XorRm4)    |
++--------+-------------------------+----------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 946 - [Let Us Be Bread](https://www.youtube.com/watch?v=Y6LuaLISL-s)                   |
++--------+-------------------------+----------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 644 - [There's a Wideness in God's Mercy](https://www.youtube.com/watch?v=fLqlKZe1Ckc) |
++--------+-------------------------+----------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### August 23, 2026 [Twenty-First Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 742 - [The Church's One Foundation](https://www.youtube.com/watch?v=zwixwjhapVU)    |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 124](https://www.youtube.com/watch?v=yw4rEt7tYP0)                           |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 125](https://www.youtube.com/watch?v=v_0znl05wVQ)                           |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 744 - [As a Fire Is Meant for Burning](https://www.youtube.com/watch?v=DVPMNXIW9dw) |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 916 - [I Receive the Living God](https://www.youtube.com/watch?v=PNG9iuZC0KQ)       |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 743 - [Sing a New Church](https://www.youtube.com/watch?v=yZgNOk3-WLg)              |
++--------+-------------------------+-------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### August 30, 2026 [Twenty-Second Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 801 - [Take Up Your Cross (ERHALT UNS HERR)](https://www.youtube.com/watch?v=eFHdtVFtm64) |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 126](https://www.youtube.com/watch?v=BuKPQSNRHFU)                                 |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 127](https://www.youtube.com/watch?v=NphDrmPbTtw)                                 |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 790 - [The Summons](https://www.youtube.com/watch?v=TY13dATqEKc)                          |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 783 - [Unless a Grain of Wheat](https://www.youtube.com/watch?v=wwGS0hPllwU)              |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 881 - [Lift High the Cross](https://www.youtube.com/watch?v=7D5zOkFs23A)                  |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### September 6, 2026 [Twenty-Third Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 839 - [As We Gather at Your Table](https://www.youtube.com/watch?v=dhnQB7ZKGjU)           |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 128](https://www.youtube.com/watch?v=QIkxJnZq)                                    |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 129](https://www.youtube.com/watch?v=4yXRUxMug3c)                                 |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 907 - [Where Two or Three Are Gathered](https://youtu.be/XgLzEEFieoI?t=24)                |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 943 - [Bread of Life from Heaven](https://www.youtube.com/watch?v=ihI9QQ_3TPM)            |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 651 - [Open My Eyes](https://www.youtube.com/watch?v=wLWYXpJjrjg)                         |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 736 - [The Kingdom of God (LAUDATE DOMINUM)](https://www.youtube.com/watch?v=Ldg2hxi9Rys) |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### September 13, 2026 [Twenty-Fourth Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 964 - [The Master Came to Bring Good News](https://www.youtube.com/watch?v=A8Dj_eLt3gE)   |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 130](https://www.youtube.com/watch?v=om5nZn84FqI)                                 |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 131](https://www.youtube.com/watch?v=I4NOd5OG9Lc)                                 |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 751 - [The Servant Song](https://www.youtube.com/watch?v=0hjOMCyiQw4)                     |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 646 - [Keep in Mind](https://www.youtube.com/watch?v=oVYR1qjGQ0k)                         |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 828 - [Make Me a Channel of Your Peace](https://www.youtube.com/watch?v=eHVz45n5a9M)      |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 736 - [The Kingdom of God (LAUDATE DOMINUM)](https://www.youtube.com/watch?v=Ldg2hxi9Rys) |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### September 20, 2026 [Twenty-Fifth Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 606 - [Glory and Praise to Our God](https://www.youtube.com/watch?v=adx3YsjfamA)          |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 132](https://www.youtube.com/watch?v=nv_kGYIElpQ)                                 |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 133](https://www.youtube.com/watch?v=ijQPyEmW8O4)                                 |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 695 - [You Are Near](https://www.youtube.com/watch?v=B6QwtsDN4xA)                         |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 588 - [I Have Loved You](https://www.youtube.com/watch?v=4Q_oTru4-Ko)                     |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 586 - [You Are All We Have](https://www.youtube.com/watch?v=bQZ0-mVV5aM)                  |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 736 - [The Kingdom of God (LAUDATE DOMINUM)](https://www.youtube.com/watch?v=Ldg2hxi9Rys) |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### September 27, 2026 [Twenty-Sixth Sunday in Ordinary Time]{style="float:right"}
+
+[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
+
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 570 - [All Hail the Power of Jesus' Name!](https://www.youtube.com/watch?v=3TzkU6Sb0Iw)  |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 134](https://www.youtube.com/watch?v=kWe_moiMLHo)                                |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 135](https://www.youtube.com/watch?v=EOp3gMrvOyE)                                |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 703 - [Lord of All Nations, Grant Me Grace](https://www.youtube.com/watch?v=AbZ55vUu5mM) |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 907 - [Where Two or Three Are Gathered](https://youtu.be/XgLzEEFieoI?t=24)               |
++--------+-------------------------+------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 573 - [To Jesus Christ, Our Sovereign King](https://www.youtube.com/watch?v=ZA_KA07wTa0) |
++--------+-------------------------+------------------------------------------------------------------------------------------+
 : {.hover .normal tbl-colwidths="[2, 25, 73]"}
 
 \needspace{3\baselineskip}
