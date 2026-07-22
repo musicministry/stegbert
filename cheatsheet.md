@@ -1,6 +1,6 @@
 # Code Execution Cheat Sheet
 
-### :book: Retrieve songs from planning book
+## :book: Retrieve songs from planning book
 
 Song lists are written to `next-lists.py`.
 
@@ -17,7 +17,7 @@ python scripts/create-list.py YYYY advent01 advent04 --priority 1
 > 4. Make any additional corrections as needed,
 > 5. Copy and paste the corrected contents of `next-lists.py` into the appropriate liturgical season file(s) (*e.g.*, `advent.py`). Special occasions, such as Confirmation, should be added to `occasions.py`.
 
-### :calendar: Weekly Lineups
+## :calendar: Weekly Lineups
 
 To post one occasion:
 
@@ -33,14 +33,14 @@ python scripts/post-week.py YYYY
 
 Use `--pdf` to generate individual PDF files for each post.
 
-### :spiral_calendar: Looking Ahead
+## :spiral_calendar: Looking Ahead
 
 ```bash
 python upcoming.py YYYY 'advent01' 'advent04'
 ```
 Both `html` and `pdf` versions are always created.
 
-### :singer: Cantor Calendar
+## :singer: Cantor Calendar
 
 To start and end at specified dates:
 
@@ -48,7 +48,7 @@ To start and end at specified dates:
 python cantors.py --start 2026-03-01 --end 2026-03-31
 ```
 
-### :bar_chart: Count Cantors
+## :bar_chart: Count Cantors
 
 ```bash
 python scripts/cantor-counts.py --month 01
