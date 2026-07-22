@@ -772,7 +772,7 @@ def simple_table(hymn_dict: dict, file):
     
     tbl = tabulate(
             # Conditional for responsorial psalm
-            [["&emsp;", f"**{unkey(k)}:**", f"[{v.split('-')[0].strip()}]({v.split('-')[1].strip()})"] if ('psalm' in k.lower() or 'gospel' in k.lower()) and "http" in v else
+            [["&emsp;", f"**{unkey(k)}:**", f"[{v.split('-', 1)[0].strip()}]({v.split('-', 1)[1].strip()})"] if ('psalm' in k.lower() or 'gospel' in k.lower()) and "http" in v else
             
             # Everything else
             ["&emsp;", f"**{unkey(k)}:**", f"{v.split(' - ')[0].strip()} - {markdown_url(v.split(' - ')[-1].strip())}"] for k,v in hymns.items()],
