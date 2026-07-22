@@ -68,9 +68,8 @@ More information about site configuration and customization options can be found
 
 #### Python setup
 
-::: {.callout-note}
-All commands below should be executed from within the project's parent directory, which we will assume to be `musicministry-site` located in `path/to/stcecilia` but this will be unique to your system and file structure.
-:::
+> [!NOTE]
+> All commands below should be executed from within the project's parent directory, which we will assume to be `musicministry-site` located in `path/to/stcecilia` but this will be unique to your system and file structure.
 
 Python scripts are used to create and update content throughout the site. The repo contains everything you need, but some initial configuration is required.
 
@@ -173,9 +172,8 @@ or a Sequence can be added for the Solemnities of Easter, Pentecost, or Corpus C
 }
 ```
 
-:::{.callout-important title="Be careful!"}
-Format and naming conventions matter throughout these instructions. Deviations or mistakes may lead to unintentional behavior or cause scripts to crash.
-:::
+> [!IMPORTANT]
+> Format and naming conventions matter throughout these instructions. Deviations or mistakes may lead to unintentional behavior or cause scripts to crash.
 
 In the example above, the Responsorial Psalm and Gospel Acclamation are assumed to be taken from the same hymnal. Currently, *Respond and Acclaim* (R&A) by OCP is also supported using the following structure:
 
@@ -256,9 +254,8 @@ The output file name defaults to `next-lists.py`, which can be changed using the
 
 3. As of a result of the behavior in (2) above, even when there is only one hymn option, the hymn number will be prefaced by "[required]". Manually delete these prefaces.
 
-::: {.callout-important}
-If the output file is not named according to the [seasons listed above](#creating-hymn-lists), manually rename the file after reviewing. The automation will not find files named anything else. This is by design, not a bug.
-:::
+> [!IMPORTANT]
+> If the output file is not named according to the [seasons listed above](#creating-hymn-lists), manually rename the file after reviewing. The automation will not find files named anything else. This is by design, not a bug.
 
 #### Looking Ahead
 
@@ -284,15 +281,13 @@ python scripts/upcoming.py YYYY advent01 advent04 --callout "The Gloria is omitt
 
 will add the following banner to the top of the page after the generic instructions but before the hymn list:
 
-::: {.callout-important title="Take heed!"}
-The Gloria is omitted during Advent but resumes Christmas Eve
-:::
+> [!IMPORTANT]
+> The Gloria is omitted during Advent but resumes Christmas Eve
 
 The output file name defaults to `upcoming.qmd`, as expected by the website by default, but this can be changed using the `-o, --outfile` flag. This is useful for testing or creating additional lists that you don't want released on the website.
 
-::: {.callout-tip}
+> [!TIP]
 The file extension must be `qmd` (Quarto Markdown). If you change the file name and want it to be included in the site, change the `href` value for "Looking Ahead" in `_website.yml`.
-:::
 
 #### Weekly Music Schedule Posts
 
@@ -356,15 +351,13 @@ python ./scripts/cantors.py --start 2026-01-01 --end 2026-02-28
 
 The dataframe will be written to "/calendars/cantors.csv" by default, but this can be changed using the `-o, --outfile` flag. One can also manually edit this file if desired, but doing so is cumbersome and tedious.
 
-::: {.callout-tip}
-Use `cantors.py` to initialize the utility after adding a new calendar.
-:::
+> [!TIP]
+> Use `cantors.py` to initialize the utility after adding a new calendar.
 
 By default, `cantors.py` only retrieves events with start and end times, making it easy to retrieve only cantors assigned to Mass times. One can, however, also retrieve all day events by passing the `--include_all_day` flag.
 
-::: {.callout-note}
-Beware that all day events, when retrieved, also show up in the lookup utility dropdowns.
-:::
+> [!NOTE]
+> Beware that all day events, when retrieved, also show up in the lookup utility dropdowns.
 
 `cantors.py` currently runs automatically every Sunday afternoon as a GitHub Action to ensure the lookup took does not get inadvertently neglected. When this happens, it will start retrieving from the first of the current month and retrieve events through the end of the current year, excluding all day events. Thus, if the calendar is updated but the script never run, it will automatically update at the end of the week. This behavior can be modified or supressed altogether in the `.github/workflows/post-week.yml` GitHub Actions workflow file.
 
@@ -399,6 +392,5 @@ Veronica   1
 
 If a file name is passed to `-o, --output`, the list of events (first table, "CANTOR SCHEDULE FOR MARCH", above) will be written to a CSV file. This is useful if one needs to provide the cantor schedule in document form.
 
-::: {.callout-tip}
-These calendar scripts currently assume cantors are added to the calendar by name with the Mass time being the event start time and that these are the only events on the calendar. The scripts will struggle -- perhaps even fail -- to properly parse events stored in a different way (for example, all day events with the cantor name and Mass time in the event name.)
-:::
+> [!TIP]
+> These calendar scripts currently assume cantors are added to the calendar by name with the Mass time being the event start time and that these are the only events on the calendar. The scripts will struggle -- perhaps even fail -- to properly parse events stored in a different way (for example, all day events with the cantor name and Mass time in the event name.)
