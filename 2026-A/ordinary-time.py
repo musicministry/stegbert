@@ -260,7 +260,7 @@ ot16 = {
     "Responsorial Psalm": "R&A p. 110 - https://www.youtube.com/watch?v=nswETou7fuI",
     "Gospel Acclamation": "R&A p. 111 - https://www.youtube.com/watch?v=buvAWjs75Z8",
 
-    "Offertory": "739 - Within the Reign of God",
+    "Offertory": "738 - The Reign of God",
     "Communion": "940 - You Satisfy the Hungry Heart",
     "Recessional": "573 - To Jesus Christ, Our Sovereign King"
 }
@@ -280,7 +280,7 @@ ot17 = {
     "Responsorial Psalm": "R&A p. 112 - https://www.youtube.com/watch?v=-33YoEi4COM",
     "Gospel Acclamation": "R&A p. 113 - https://www.youtube.com/watch?v=2-rE3NDO5t4",
 
-    "Offertory": "739 - Within the Reign of God",
+    "Offertory": "738 - The Reign of God",
     "Communion": "943 - Bread of Life from Heaven",
     "Recessional": "610 - Sing of the Lord's Goodness"
 }
@@ -300,7 +300,7 @@ ot18 = {
     "Responsorial Psalm": "R&A p. 114 - https://www.youtube.com/watch?v=HgK-IxdOSX4",
     "Gospel Acclamation": "R&A p. 115 - https://www.youtube.com/watch?v=UbYeJMl7fEU",
 
-    "Offertory": "739 - Within the Reign of God",
+    "Offertory": "738 - The Reign of God",
     "Communion": "945 - I Am the Bread of Life",
     "Recessional": "641 - Love Divine, All Loves Excelling"
 }
@@ -320,7 +320,7 @@ ot19 = {
     "Responsorial Psalm": "R&A p. 116 - https://www.youtube.com/watch?v=FLVxPSQqAHM",
     "Gospel Acclamation": "R&A p. 117 - https://www.youtube.com/watch?v=_LG-5UnrdVo",
 
-    "Offertory": "685 - How Can I Keep from Singing",
+    "Offertory": "694 - How Firm a Foundation",
     "Communion": "940 - You Satisfy the Hungry Heart",
     "Recessional": "NA - Eternal Father, Strong to Save"
 }
@@ -360,7 +360,7 @@ ot20 = {
     "Responsorial Psalm": "R&A p. 122 - https://www.youtube.com/watch?v=jtK9oRoguTI",
     "Gospel Acclamation": "R&A p. 123 - https://www.youtube.com/watch?v=uOB3hMpQZMg",
 
-    "Offertory": "879 - Hail, Holy Queen Enthroned Above",
+    "Offertory": "657 - We Cannot Measure How You Heal",
     "Communion": "946 - Let Us Be Bread",
     "Recessional": "644 - There's a Wideness in God's Mercy"
 }
@@ -423,7 +423,7 @@ ot23 = {
     "Offertory": "907 - Where Two or Three Are Gathered",
     "Communion": "943 - Bread of Life from Heaven",
     "Meditation": "651 - Open My Eyes",
-    "Recessional": "636 - Now Thank We All Our God"
+    "Recessional": "736 - The Kingdom of God (LAUDATE DOMINUM)"
 }
 
 ot24 = {
@@ -436,7 +436,7 @@ ot24 = {
         "Lamb of God: Mass of St. Dymphna"
     ],
 
-    "Processional": "590 - Christ, Be Our Light!",
+    "Processional": "964 - The Master Came to Bring Good News",
 
     "Responsorial Psalm": "R&A p. 130 - https://www.youtube.com/watch?v=om5nZn84FqI",
     "Gospel Acclamation": "R&A p. 131 - https://www.youtube.com/watch?v=I4NOd5OG9Lc",
@@ -444,7 +444,7 @@ ot24 = {
     "Offertory": "751 - The Servant Song",
     "Communion": "646 - Keep in Mind",
     "Meditation": "828 - Make Me a Channel of Your Peace",
-    "Recessional": "964 - The Master Came to Bring Good News"
+    "Recessional": "736 - The Kingdom of God (LAUDATE DOMINUM)"
 }
 
 ot25 = {
@@ -464,7 +464,8 @@ ot25 = {
 
     "Offertory": "695 - You Are Near",
     "Communion": "588 - I Have Loved You",
-    "Recessional": "576 - Canticle of the Sun"
+    "Meditation": "586 - You Are All We Have",
+    "Recessional": "736 - The Kingdom of God (LAUDATE DOMINUM)"
 }
 
 ot26 = {
