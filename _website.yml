@@ -9,6 +9,8 @@ website:
         href: upcoming.qmd
       - text: "Cantors"
         href: cantors.qmd
+      - text: "Descants"
+        href: descants.qmd
       - stdymphna.qmd
     right:
       - text: "Official Parish Website"
