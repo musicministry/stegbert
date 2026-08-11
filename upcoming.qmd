@@ -1,10 +1,10 @@
 ---
-first-feast: Fifteenth Sunday in Ordinary Time
-first-date: July 12, 2026
+first-feast: Twentieth Sunday in Ordinary Time
+first-date: August 16, 2026
 last-feast: Twenty-Sixth Sunday in Ordinary Time
 last-date: September 27, 2026
 title: Hymn Schedules
-subtitle: "**July 12, 2026** (Fifteenth Sunday in Ordinary Time) through **September 27, 2026** (Twenty-Sixth Sunday in Ordinary Time)"
+subtitle: "**August 16, 2026** (Twentieth Sunday in Ordinary Time) through **September 27, 2026** (Twenty-Sixth Sunday in Ordinary Time)"
 format:
   html: default
   hymn-schedules-pdf:
@@ -28,111 +28,6 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 :::
 ::::
 
-#### July 12, 2026 [Fifteenth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 838 - [Come to the Feast](https://www.youtube.com/watch?v=oS7UAkfi0Jc)                 |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 108](https://www.youtube.com/watch?v=ofki6mUE9Ug)                              |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 109](https://www.youtube.com/watch?v=h66erAKfn7A)                              |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 651 - [Open My Eyes](https://www.youtube.com/watch?v=wLWYXpJjrjg)                      |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 783 - [Unless a Grain of Wheat](https://www.youtube.com/watch?v=wwGS0hPllwU)           |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 644 - [There's a Wideness in God's Mercy](https://www.youtube.com/watch?v=fLqlKZe1Ckc) |
-+--------+-------------------------+----------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### July 19, 2026 [Sixteenth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 848 - [Gather Us In](https://www.youtube.com/watch?v=ap9d6jiyriw)                        |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 110](https://www.youtube.com/watch?v=nswETou7fuI)                                |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 111](https://www.youtube.com/watch?v=buvAWjs75Z8)                                |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 738 - [The Reign of God](https://www.youtube.com/watch?v=7wAxrdgyguQ)                    |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 940 - [You Satisfy the Hungry Heart](https://www.youtube.com/watch?v=eGyZ7aXWaFA)        |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 573 - [To Jesus Christ, Our Sovereign King](https://www.youtube.com/watch?v=ZA_KA07wTa0) |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### July 26, 2026 [Seventeenth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+-------------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 846 - [Come, Host of Heaven's High Dwelling Place](https://www.youtube.com/watch?v=JPHK96E7cmo) |
-+--------+-------------------------+-------------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 112](https://www.youtube.com/watch?v=-33YoEi4COM)                                       |
-+--------+-------------------------+-------------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 113](https://www.youtube.com/watch?v=2-rE3NDO5t4)                                       |
-+--------+-------------------------+-------------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 738 - [The Reign of God](https://www.youtube.com/watch?v=7wAxrdgyguQ)                           |
-+--------+-------------------------+-------------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 943 - [Bread of Life from Heaven](https://www.youtube.com/watch?v=ihI9QQ_3TPM)                  |
-+--------+-------------------------+-------------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 610 - [Sing of the Lord's Goodness](https://www.youtube.com/watch?v=q5R9PmGf3aE)                |
-+--------+-------------------------+-------------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### August 2, 2026 [Eighteenth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+---------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 838 - [Come to the Feast](https://www.youtube.com/watch?v=oS7UAkfi0Jc)                |
-+--------+-------------------------+---------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 114](https://www.youtube.com/watch?v=HgK-IxdOSX4)                             |
-+--------+-------------------------+---------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 115](https://www.youtube.com/watch?v=UbYeJMl7fEU)                             |
-+--------+-------------------------+---------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 738 - [The Reign of God](https://www.youtube.com/watch?v=7wAxrdgyguQ)                 |
-+--------+-------------------------+---------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 945 - [I Am the Bread of Life](https://www.youtube.com/watch?v=KCnpR-eobag)           |
-+--------+-------------------------+---------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 641 - [Love Divine, All Loves Excelling](https://www.youtube.com/watch?v=JNpw-9pifXs) |
-+--------+-------------------------+---------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### August 9, 2026 [Nineteenth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 689 - [Though the Mountains May Fall](https://www.youtube.com/watch?v=GY3kRRWj2TA) |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 116](https://www.youtube.com/watch?v=FLVxPSQqAHM)                          |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 117](https://www.youtube.com/watch?v=_LG-5UnrdVo)                          |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 694 - [How Firm a Foundation](https://www.youtube.com/watch?v=FqiwrsH4epE)         |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 940 - [You Satisfy the Hungry Heart](https://www.youtube.com/watch?v=eGyZ7aXWaFA)  |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | NA - [Eternal Father, Strong to Save](https://www.youtube.com/watch?v=FW0VUA6-QkE) |
-+--------+-------------------------+------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
 #### August 16, 2026 [Twentieth Sunday in Ordinary Time]{style="float:right"}
 
 [**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
@@ -148,7 +43,7 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 +--------+-------------------------+----------------------------------------------------------------------------------------+
 | &emsp; | **Communion:**          | 946 - [Let Us Be Bread](https://www.youtube.com/watch?v=Y6LuaLISL-s)                   |
 +--------+-------------------------+----------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 644 - [There's a Wideness in God's Mercy](https://www.youtube.com/watch?v=fLqlKZe1Ckc) |
+| &emsp; | **Recessional:**        | 879 - [Hail, Holy Queen, Enthroned Above](https://www.youtube.com/watch?v=9MNRnB6D7NQ) |
 +--------+-------------------------+----------------------------------------------------------------------------------------+
 : {.hover .normal tbl-colwidths="[2, 25, 73]"}
 
@@ -188,7 +83,7 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 +--------+-------------------------+-------------------------------------------------------------------------------------------+
 | &emsp; | **Offertory:**          | 790 - [The Summons](https://www.youtube.com/watch?v=TY13dATqEKc)                          |
 +--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Meditation:**         | 783 - [Unless a Grain of Wheat](https://www.youtube.com/watch?v=wwGS0hPllwU)              |
+| &emsp; | **Communion:**          | 783 - [Unless a Grain of Wheat](https://www.youtube.com/watch?v=wwGS0hPllwU)              |
 +--------+-------------------------+-------------------------------------------------------------------------------------------+
 | &emsp; | **Recessional:**        | 881 - [Lift High the Cross](https://www.youtube.com/watch?v=7D5zOkFs23A)                  |
 +--------+-------------------------+-------------------------------------------------------------------------------------------+
@@ -256,8 +151,6 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 | &emsp; | **Offertory:**          | 695 - [You Are Near](https://www.youtube.com/watch?v=B6QwtsDN4xA)                         |
 +--------+-------------------------+-------------------------------------------------------------------------------------------+
 | &emsp; | **Communion:**          | 588 - [I Have Loved You](https://www.youtube.com/watch?v=4Q_oTru4-Ko)                     |
-+--------+-------------------------+-------------------------------------------------------------------------------------------+
-| &emsp; | **Meditation:**         | 586 - [You Are All We Have](https://www.youtube.com/watch?v=bQZ0-mVV5aM)                  |
 +--------+-------------------------+-------------------------------------------------------------------------------------------+
 | &emsp; | **Recessional:**        | 736 - [The Kingdom of God (LAUDATE DOMINUM)](https://www.youtube.com/watch?v=Ldg2hxi9Rys) |
 +--------+-------------------------+-------------------------------------------------------------------------------------------+

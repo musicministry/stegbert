@@ -362,7 +362,7 @@ ot20 = {
 
     "Offertory": "657 - We Cannot Measure How You Heal",
     "Communion": "946 - Let Us Be Bread",
-    "Recessional": "644 - There's a Wideness in God's Mercy"
+    "Recessional": "879 - Hail, Holy Queen, Enthroned Above"
 }
 
 ot21 = {
@@ -401,7 +401,7 @@ ot22 = {
     "Gospel Acclamation": "R&A p. 127 - https://www.youtube.com/watch?v=NphDrmPbTtw",
 
     "Offertory": "790 - The Summons",
-    "Meditation": "783 - Unless a Grain of Wheat",
+    "Communion": "783 - Unless a Grain of Wheat",
     "Recessional": "881 - Lift High the Cross"
 }
 
@@ -464,7 +464,6 @@ ot25 = {
 
     "Offertory": "695 - You Are Near",
     "Communion": "588 - I Have Loved You",
-    "Meditation": "586 - You Are All We Have",
     "Recessional": "736 - The Kingdom of God (LAUDATE DOMINUM)"
 }
 
