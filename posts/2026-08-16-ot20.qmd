@@ -22,7 +22,7 @@ All hymns are taken from the blue Gather hymnal unless otherwise noted. Note tha
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 123 <br><br> {{< video https://www.youtube.com/watch?v=uOB3hMpQZMg >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">657 - We Cannot Measure How You Heal<br><br> {{< video https://www.youtube.com/watch?v=ygeK4XorRm4 >}}</td></tr>
 <tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">946 - Let Us Be Bread<br><br> {{< video https://www.youtube.com/watch?v=Y6LuaLISL-s >}}</td></tr>
-<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">644 - There's a Wideness in God's Mercy<br><br> {{< video https://www.youtube.com/watch?v=fLqlKZe1Ckc >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">879 - Hail, Holy Queen, Enthroned Above<br><br> {{< video https://www.youtube.com/watch?v=9MNRnB6D7NQ >}}</td></tr>
 </tbody>
 </table>
 
@@ -85,7 +85,7 @@ The Mass parts for Ordinary Time will be taken from *Mass of St. Dymphna*:
 +-----------------------------+----------------------------------------------------------------------------------------+
 | **Communion:**              | 946 - [Let Us Be Bread](https://www.youtube.com/watch?v=Y6LuaLISL-s)                   |
 +-----------------------------+----------------------------------------------------------------------------------------+
-| **Recessional:**            | 644 - [There's a Wideness in God's Mercy](https://www.youtube.com/watch?v=fLqlKZe1Ckc) |
+| **Recessional:**            | 879 - [Hail, Holy Queen, Enthroned Above](https://www.youtube.com/watch?v=9MNRnB6D7NQ) |
 +-----------------------------+----------------------------------------------------------------------------------------+
 : {.hover .normal tbl-colwidths="[35, 65]"}
 
