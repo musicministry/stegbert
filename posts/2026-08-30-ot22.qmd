@@ -1,0 +1,96 @@
+---
+title: Twenty-Second Sunday in Ordinary Time
+last-updated: 2026-08-25
+description: Sunday, August 30, 2026
+categories:
+  - Ordinary Time 2026
+image: /images/dates/aug/30.png
+format:
+  html: default
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">801 - Take Up Your Cross (ERHALT UNS HERR)<br><br> {{< video https://www.youtube.com/watch?v=eFHdtVFtm64 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 126 <br><br> {{< video https://www.youtube.com/watch?v=BuKPQSNRHFU >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 127 <br><br> {{< video https://www.youtube.com/watch?v=NphDrmPbTtw >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">790 - The Summons<br><br> {{< video https://www.youtube.com/watch?v=TY13dATqEKc >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">783 - Unless a Grain of Wheat<br><br> {{< video https://www.youtube.com/watch?v=wwGS0hPllwU >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">881 - Lift High the Cross<br><br> {{< video https://www.youtube.com/watch?v=7D5zOkFs23A >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Ordinary Time will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;">{{< video https://youtu.be/tukrgUdjIWU?t=27 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-lambofgod.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+</tbody>
+</table>
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Processional:**           | 801 - [Take Up Your Cross (ERHALT UNS HERR)](https://www.youtube.com/watch?v=eFHdtVFtm64) |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Gloria:**                 | [Heritage Mass](https://youtu.be/tukrgUdjIWU?t=27)                                        |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Responsorial Psalm:**     | [R&A p. 126](https://www.youtube.com/watch?v=BuKPQSNRHFU)                                 |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Gospel Acclamation:**     | [R&A p. 127](https://www.youtube.com/watch?v=NphDrmPbTtw)<br><br>                         |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Offertory:**              | 790 - [The Summons](https://www.youtube.com/watch?v=TY13dATqEKc)                          |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Holy:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Memorial Acclamation A:** | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Amen:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Lamb of God:**            | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)            |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Communion:**              | 783 - [Unless a Grain of Wheat](https://www.youtube.com/watch?v=wwGS0hPllwU)              |
++-----------------------------+-------------------------------------------------------------------------------------------+
+| **Recessional:**            | 881 - [Lift High the Cross](https://www.youtube.com/watch?v=7D5zOkFs23A)                  |
++-----------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
+
