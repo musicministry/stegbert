@@ -486,3 +486,187 @@ ot26 = {
     "Communion": "907 - Where Two or Three Are Gathered",
     "Recessional": "573 - To Jesus Christ, Our Sovereign King"
 }
+
+ot27 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "576 - Canticle of the Sun",
+
+    "Responsorial Psalm": "R&A p. 136 - https://www.youtube.com/watch?v=C5UKaimyd0E",
+    "Gospel Acclamation": "R&A p. 137 - https://www.youtube.com/watch?v=mx_bM_4iQQo",
+
+    "Offertory": "745 - Christ Is Made the Sure Foundation",
+    "Communion": "932 - One Bread, One Body",
+    "Meditation": "828 - Make Me a Channel of Your Peace",
+    "Recessional": "636 - Now Thank We All Our God"
+}
+
+ot28 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "838 - Come to the Feast",
+
+    "Responsorial Psalm": "R&A p. 138 - https://www.youtube.com/watch?v=6d5PH_IWcJA",
+    "Gospel Acclamation": "R&A p. 139 - https://www.youtube.com/watch?v=TGQpmr9E7CE",
+
+    "Offertory": "940 - You Satisfy the Hungry Heart",
+    "Communion": "907 - Where Two or Three Are Gathered",
+    "Recessional": "614 - Joyful, Joyful, We Adore You"
+}
+
+ot29 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "607 - Sing a New Song (Schutte)",
+
+    "Responsorial Psalm": "R&A p. 140 - https://www.youtube.com/watch?v=HkB5Kfyusj0",
+    "Gospel Acclamation": "R&A p. 141 - https://www.youtube.com/watch?v=bovpbAeG1s4",
+
+    "Offertory": "782 - Only This I Want",
+    "Communion": "935 - Draw Near",
+    "Recessional": "578 - How Great Thou Art"
+}
+
+ot30 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "624 - Lift Up Your Hearts",
+
+    "Responsorial Psalm": "R&A p. 142 - https://www.youtube.com/watch?v=d-WTSAbBepA",
+    "Gospel Acclamation": "R&A p. 143 - https://www.youtube.com/watch?v=oe4esgvVL9o",
+
+    "Offertory": "703 - Lord of All Nations, Grant Me Grace",
+    "Communion": "708 - Set Your Heart on the Higher Gifts",
+    "Recessional": "835 - They'll Know We Are Christians"
+}
+
+all_saints = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "882 - Ye Watchers and Ye Holy Ones",
+
+    "Responsorial Psalm": "R&A p. 144 - https://www.youtube.com/watch?v=soq_EBPRI7E",
+    "Gospel Acclamation": "R&A p. 145 - https://www.youtube.com/watch?v=o5aDdT9ylI8",
+
+    "Offertory": "884 - For All the Saints",
+    "Communion": "592 - We Are the Light of the World",
+    "Meditation": "885 - For All the Saints Who've Shown Your Love",
+    "Recessional": "883 - For the Faithful Who Have Answered"
+}
+
+ot32 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "766 - City of God",
+
+    "Responsorial Psalm": "R&A p. 146 - https://www.youtube.com/watch?v=LiFNhPFzeFs",
+    "Gospel Acclamation": "R&A p. 147 - https://www.youtube.com/watch?v=wZHRrqGL3AY",
+
+    "Offertory": "583 - Wisdom, My Road",
+    "Communion": "918 - In the Breaking of the Bread",
+    "Recessional": "871 - We Shall Rise Again"
+}
+
+ot33 = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "590 - Christ, Be Our Light!",
+
+    "Responsorial Psalm": "R&A p. 148 - https://www.youtube.com/watch?v=bTsUxK5CcCQ",
+    "Gospel Acclamation": "R&A p. 149 - https://www.youtube.com/watch?v=Uuu0V6tQhnI",
+
+    "Offertory": "859 - God of Day and God of Darkness",
+    "Communion": "939 - Behold the Lamb",
+    "Meditation": "593 - I Want to Walk as a Child of the Light",
+    "Recessional": "766 - City of God"
+}
+
+christ_the_king = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "571 - Christ Is the King!",
+
+    "Responsorial Psalm": "R&A p. 150 - https://www.youtube.com/watch?v=S9N5FNuPS4o",
+    "Gospel Acclamation": "R&A p. 151 - https://www.youtube.com/watch?v=nLPLBhM8Dnw",
+
+    "Offertory": "574 - Crown Him with Many Crowns",
+    "Communion": "634 - Come, You Thankful People, Come",
+    "Meditation": "632 - Father, We Thank You, Who Have Planted",
+    "Recessional": "570 - All Hail the Power of Jesus' Name!"
+}
+
+thanksgiving = {
+    "Mass": "Mass of St. Dymphna",
+    "parts": [
+        "Gloria: Heritage Mass",
+        "Holy: Mass of St. Dymphna",
+        "Memorial Acclamation A: Mass of St. Dymphna",
+        "Amen: Mass of St. Dymphna",
+        "Lamb of God: Mass of St. Dymphna"
+    ],
+
+    "Processional": "634 - Come, You Thankful People, Come",
+
+    "Responsorial Psalm": "R&A p. 152 - https://www.youtube.com/watch?v=Dh8rn0gkdW8",
+    "Gospel Acclamation": "R&A p. 153 - https://www.youtube.com/watch?v=MUDmIIJOAeE",
+
+    "Offertory": "633 - For the Beauty of the Earth",
+    "Communion": "940 - You Satisfy the Hungry Heart",
+    "Recessional": "636 - Now Thank We All Our God"
+}
