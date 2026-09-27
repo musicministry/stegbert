@@ -118,6 +118,9 @@ def main():
     process_dir = os.path.join(PROJECT_ROOT, f'{args.year}-{cycle}')
     sys.path.append(os.path.join(process_dir))
 
+    # Handle uppercase feasts
+    args.publish = args.publish.lower()
+
     # Manual postings
     if ":" in args.publish:
 
@@ -135,7 +138,7 @@ def main():
                         parse_dates=['date'], index_col='feast')
 
         # Get next Sunday, if needed
-        if args.publish.lower() == 'next':
+        if args.publish == 'next':
             today = dt.datetime.today()
             next_sun = u.next_sunday(from_date=today)
             publish = str(next_sun)

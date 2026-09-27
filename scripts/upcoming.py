@@ -100,8 +100,8 @@ def main():
                     parse_dates=['date'], index_col='date')
 
     # Start date and feast
-    start = args.start
-    end = args.end
+    start = args.start.lower()
+    end = args.end.lower()
     try:
         start_date = dt.datetime.strptime(start, '%Y-%m-%d')
         start = cal.loc[start_date,'feast']

@@ -99,8 +99,8 @@ args = parse_args()
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
 # Command line arguments
-start = args.start
-end = args.end
+start = args.start.lower()
+end = args.end.lower()
 
 # Load hymn lists
 cycle = u.lityear(args.year)
