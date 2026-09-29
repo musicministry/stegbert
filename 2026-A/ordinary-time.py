@@ -502,7 +502,7 @@ ot27 = {
     "Responsorial Psalm": "R&A p. 136 - https://www.youtube.com/watch?v=C5UKaimyd0E",
     "Gospel Acclamation": "R&A p. 137 - https://www.youtube.com/watch?v=mx_bM_4iQQo",
 
-    "Offertory": "745 - Christ Is Made the Sure Foundation",
+    "Offertory": "703 - Lord of All Nations, Grant Me Grace",
     "Communion": "932 - One Bread, One Body",
     "Meditation": "828 - Make Me a Channel of Your Peace",
     "Recessional": "636 - Now Thank We All Our God"
@@ -523,8 +523,8 @@ ot28 = {
     "Responsorial Psalm": "R&A p. 138 - https://www.youtube.com/watch?v=6d5PH_IWcJA",
     "Gospel Acclamation": "R&A p. 139 - https://www.youtube.com/watch?v=TGQpmr9E7CE",
 
-    "Offertory": "940 - You Satisfy the Hungry Heart",
-    "Communion": "907 - Where Two or Three Are Gathered",
+    "Offertory": "703 - Lord of All Nations, Grant Me Grace",
+    "Communion": "940 - You Satisfy the Hungry Heart",
     "Recessional": "614 - Joyful, Joyful, We Adore You"
 }
 
@@ -543,7 +543,7 @@ ot29 = {
     "Responsorial Psalm": "R&A p. 140 - https://www.youtube.com/watch?v=HkB5Kfyusj0",
     "Gospel Acclamation": "R&A p. 141 - https://www.youtube.com/watch?v=bovpbAeG1s4",
 
-    "Offertory": "782 - Only This I Want",
+    "Offertory": "703 - Lord of All Nations, Grant Me Grace",
     "Communion": "935 - Draw Near",
     "Recessional": "578 - How Great Thou Art"
 }
@@ -563,7 +563,7 @@ ot30 = {
     "Responsorial Psalm": "R&A p. 142 - https://www.youtube.com/watch?v=d-WTSAbBepA",
     "Gospel Acclamation": "R&A p. 143 - https://www.youtube.com/watch?v=oe4esgvVL9o",
 
-    "Offertory": "703 - Lord of All Nations, Grant Me Grace",
+    "Offertory": "583 - Wisdom, My Road",
     "Communion": "708 - Set Your Heart on the Higher Gifts",
     "Recessional": "835 - They'll Know We Are Christians"
 }
@@ -626,7 +626,7 @@ ot33 = {
 
     "Offertory": "859 - God of Day and God of Darkness",
     "Communion": "939 - Behold the Lamb",
-    "Meditation": "593 - I Want to Walk as a Child of the Light",
+    "Meditation": "583 - Wisdom, My Road",
     "Recessional": "766 - City of God"
 }
 
