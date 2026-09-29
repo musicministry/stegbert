@@ -543,7 +543,7 @@ ot29 = {
     "Responsorial Psalm": "R&A p. 140 - https://www.youtube.com/watch?v=HkB5Kfyusj0",
     "Gospel Acclamation": "R&A p. 141 - https://www.youtube.com/watch?v=bovpbAeG1s4",
 
-    "Offertory": "703 - Lord of All Nations, Grant Me Grace",
+    "Offertory": "583 - Wisdom, My Road",
     "Communion": "935 - Draw Near",
     "Recessional": "578 - How Great Thou Art"
 }
@@ -626,7 +626,7 @@ ot33 = {
 
     "Offertory": "859 - God of Day and God of Darkness",
     "Communion": "939 - Behold the Lamb",
-    "Meditation": "583 - Wisdom, My Road",
+    "Meditation": "593 - I Want to Walk as a Child of the Light",
     "Recessional": "766 - City of God"
 }
 
