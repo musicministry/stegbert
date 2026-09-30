@@ -181,6 +181,7 @@ def main():
 
     TOKEN_PATH = os.environ.get("GOOGLE_TOKEN_PATH")
     token_json = os.environ.get("GOOGLE_TOKEN_JSON")
+
     if token_json:
         creds = Credentials.from_authorized_user_info(
             json.loads(token_json), SCOPES
@@ -188,6 +189,7 @@ def main():
     else:
         # Local: read from file
         token_path = PROJECT_ROOT / TOKEN_PATH
+
         if token_path.exists():
             creds = Credentials.from_authorized_user_file(str(token_path), SCOPES)
 
@@ -218,13 +220,15 @@ def main():
     else:
         # Update GOOGLE_TOKEN_JSON in .env
         env_path = PROJECT_ROOT / ".env"
-        env_text = env_path.read_text()
-        new_line = f'GOOGLE_TOKEN_JSON={creds.to_json()}'
-        if "GOOGLE_TOKEN_JSON" in env_text:
-            env_text = re.sub(r'GOOGLE_TOKEN_JSON=.*', new_line, env_text)
-        else:
-            env_text += f'\n{new_line}'
-        env_path.write_text(env_text)
+        try:
+            env_text = env_path.read_text()
+            new_line = f'GOOGLE_TOKEN_JSON={creds.to_json()}'
+            if "GOOGLE_TOKEN_JSON" in env_text:
+                env_text = re.sub(r'GOOGLE_TOKEN_JSON=.*', new_line, env_text)
+            else:
+                env_text += f'\n{new_line}'
+            env_path.write_text(env_text)
+        except Exception as e:
 
     try:
         service = build("calendar", "v3", credentials=creds)
