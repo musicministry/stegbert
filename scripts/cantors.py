@@ -229,6 +229,7 @@ def main():
                 env_text += f'\n{new_line}'
             env_path.write_text(env_text)
         except Exception as e:
+            print(f"Warning: could not update token in .env: {e}")
 
     try:
         service = build("calendar", "v3", credentials=creds)
