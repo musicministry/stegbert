@@ -1,0 +1,99 @@
+---
+title: Twenty-Seventh Sunday in Ordinary Time
+last-updated: 2026-09-29
+description: Sunday, October 4, 2026
+categories:
+  - Ordinary Time 2026
+image: /images/dates/oct/04.png
+format:
+  html: default
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">576 - Canticle of the Sun<br><br> {{< video https://www.youtube.com/watch?v=kC6EWt7BK7s >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 136 <br><br> {{< video https://www.youtube.com/watch?v=C5UKaimyd0E >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 137 <br><br> {{< video https://www.youtube.com/watch?v=mx_bM_4iQQo >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">703 - Lord of All Nations, Grant Me Grace<br><br> {{< video https://www.youtube.com/watch?v=AbZ55vUu5mM >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">932 - One Bread, One Body<br><br> {{< video https://www.youtube.com/watch?v=ylWKlw6HXmw >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Meditation:</strong></td><td style="width: 75%;">828 - Make Me a Channel of Your Peace<br><br> {{< video https://www.youtube.com/watch?v=eHVz45n5a9M >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">636 - Now Thank We All Our God<br><br> {{< video https://www.youtube.com/watch?v=lmJtef10DWw >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Ordinary Time will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;">{{< video https://youtu.be/tukrgUdjIWU?t=27 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-lambofgod.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+</tbody>
+</table>
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Processional:**           | 576 - [Canticle of the Sun](https://www.youtube.com/watch?v=kC6EWt7BK7s)                 |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Gloria:**                 | [Heritage Mass](https://youtu.be/tukrgUdjIWU?t=27)                                       |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Responsorial Psalm:**     | [R&A p. 136](https://www.youtube.com/watch?v=C5UKaimyd0E)                                |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Gospel Acclamation:**     | [R&A p. 137](https://www.youtube.com/watch?v=mx_bM_4iQQo)<br><br>                        |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Offertory:**              | 703 - [Lord of All Nations, Grant Me Grace](https://www.youtube.com/watch?v=AbZ55vUu5mM) |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Holy:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)           |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Memorial Acclamation A:** | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)           |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Amen:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)           |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Lamb of God:**            | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)           |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Communion:**              | 932 - [One Bread, One Body](https://www.youtube.com/watch?v=ylWKlw6HXmw)                 |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Meditation:**             | 828 - [Make Me a Channel of Your Peace](https://www.youtube.com/watch?v=eHVz45n5a9M)     |
++-----------------------------+------------------------------------------------------------------------------------------+
+| **Recessional:**            | 636 - [Now Thank We All Our God](https://www.youtube.com/watch?v=lmJtef10DWw)            |
++-----------------------------+------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
+
