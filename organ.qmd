@@ -4,20 +4,21 @@ subtitle: A proposal
 engine: jupyter
 toc: true
 format:
-  html: 
-    toc: true
-    navbar: false
-  pdf:
-    toc: false
-    geometry: 
-      - top=1in
-      - bottom=1in
-      - left=1in
-      - right=1in
+    html: 
+      toc: true
+      navbar: false
+    pdf:
+      toc: false
+      geometry: 
+        - top=1in
+        - bottom=1in
+        - left=1in
+        - right=1in
 ---
 
 ```{python}
 import numpy as np
+from datetime import datetime as dt
 
 def buffer(price, percentage):
     if percentage > 1:
@@ -38,14 +39,28 @@ def display(x):
     return f"${format(x, ',.0f')}"
 
 # Others
-sales_tax = 1.07
+sales_tax = 1.0675
 yearly_inc = 1.16
 platform = 4000
 facade = 100000
 buffer_amt = 25000
 buffer_pct = 1.10
 
-# Imagine 359  (L=lighted drawknobs, D=moving drawknobs)
+# Allen GX-III/58
+gx358 = 198200
+gx358_2026_tax = tax(price=gx358, tax=sales_tax)
+gx358_2026_buffer = buffer(price=gx358, percentage=buffer_pct)
+gx358_2026_subtotal = gx358 + gx358_2026_tax + gx358_2026_tax
+gx358_2026_total = gx358 + gx358_2026_tax
+
+# Allen GX-III/53
+gx353 = 173425
+gx353_2026_tax = tax(price=gx353, tax=sales_tax)
+gx353_2026_buffer = buffer(price=gx353, percentage=buffer_pct)
+gx353_2026_subtotal = gx353 + gx353_2026_tax + gx353_2026_tax
+gx353_2026_total = gx353 + gx353_2026_tax
+
+# Rodgers Imagine 359  (L=lighted drawknobs, D=moving drawknobs)
 imagine359L = 125465
 imagine359D = 135450
 
@@ -98,25 +113,25 @@ infinity367D_2026_total = (infinity367D * yearly_inc) + platform + infinity367D_
 
 ### BLUF / TL;DR
 
-The organ at St. Egbert's is now more than 30 years old, making it vulnerable to part failures and ongoing repairs. Its sound sampling technology is outdated and uninspiring by modern standards, and the instrument itself is undersized for the church and the parish's music ministry program. The parish should begin proactively planning and raising money to replace it within the next few years, aiming to do so before it stops working to a degree that it is unfeasible to repair. Estimated project cost ranges from **`{python} display(roundup(imagine359D_2026_total))`** to **`{python} display(roundup(infinity367D_2026_total))`** (all inclusive) in 2026, with prices increasing roughly 16% each year---another reason to act sooner rather than later.
+The organ at St. Egbert's is now more than 30 years old, making it vulnerable to part failures and ongoing repairs. Its sound sampling technology is outdated and uninspiring by modern standards, and the instrument itself is undersized for the church and the parish's music ministry program. The parish should begin proactively planning and raising money to replace it within the next few years, aiming to do so before it stops working to a degree that it is unfeasible to repair. Estimated project cost for 2026 is **`{python} display(roundup(gx358_2026_total))`** (all inclusive), with prices increasing roughly 10-15% each year---another reason to act sooner rather than later.
 
-The recommended target organ for St. Egbert Church is a [**Rodgers Infinity 367D**](https://www.rodgersinstruments.com/organs/infinity-series/infinity-series-367) three-manual instrument at an estimated price of **`{python} display(infinity367D_2026_total)`** (cost breakdown [below](#what)).
+The recommended target organ for St. Egbert Church is an [**Allen III/58**](https://allenorgan.com/church-organs/gx350a.html) three-manual instrument at an estimated price of **`{python} display(gx358_2026_total)`** (cost breakdown [below](#what)).
 
-This proposal details [why a new organ is needed](#considerations-for-the-existing-organ), [identifies](#what) and [justifies](#why) the ideal replacement instrument, and provides an [analysis of alternatives](#analysis-of-alternatives). Templated [fundraising](#how) materials (an informational pamphlet and a fundraising pledge page) are appended for consideration as well.
+This proposal details [why a new organ is needed](#considerations-for-the-existing-organ), [identifies](#what) and [justifies](#why) the ideal replacement instrument, and provides an [analysis of alternatives](#analysis-of-alternatives). Templated [fundraising](#how) materials---an informational pamphlet and a fundraising pledge page---are appended for consideration as well.
 
-![The Rodgers Infinity 367D three-manual organ features "*a wide range of tonal genres, exceptional musical expressiveness, and unmatched versatility, providing everything that today’s organists want and need to perform their best.*" (Rodgers Instruments)](https://www.rodgersinstruments.com/uploads/products/banners/fotos/large_foto/750x700/367---banner-1.png){fig-alt="Rodgers Infinity 367D digital organ" width="52%"}
+![The Allen III/58 three-manual organ features *"APEX II Technology \[offering\] the pinnacle of organ design for the 21st century. Combining the most advanced tone generation technology, unique features, build quality and product longevity."* (Allen Organ)](https://allenorgan.com/wp-content/uploads/2025/06/2024-GX-350a-Header01-1.jpg){fig-alt="Allen III/58 digital organ" width="78%"}
 
 ### Terminology
 
-The following terminology are used throughout the proposal and defined here for convenience.
+The following terminology is used throughout the proposal and defined here for convenience.
 
 * **Console:** The part of the organ containing the manuals, pedalboard, and stop controls.
+* **Coupler:** Feature that allows stops from one division of the organ to be played on a different division for greater flexibility.
 * **Division:** Groups of pipes in a pipe organ based on which keyboard they are played from. Some divisions are *enclosed*, meaning the pipes are located behind large sound-dampening shutters that allow the organist to dampen the sound, thereby decreasing the volume. Other divisions are *unenclosed*, meaning the pipes are fully exposed with no volume control. 
 
    * **Great division:** The main division of the organ producing the strongest vibrant sound that most people associate with organs. Used primarily to support congregational singing.
    * **Swell division:** The second division on a two-manual organ named after the swell shades behind which its pipes are located to offer volume control. Useful for accompanying cantors or soloists.
    * **Choir division:** The third division on a three-manual organ, usually enclosed, but with a slightly stronger sound than the Swell division but not as strong as the Great. Useful for accompanying choirs or ensembles when foundational but not overpowering registrations are needed.
-   * **Solo division:** The fourth division on a four-manual organ, usually characterized by stops that are voiced to stand alone and be heard above the rest of the organ. Useful for "soloing" the melody of a hymn so that it can be heard above the chords to help with unfamiliar or new melody lines.
    * **Pedal division:** The pipes played exclusively by the pedalboard.
 
 * **Manual:** A keyboard consisting of 64 keys played with the hands.
@@ -126,32 +141,34 @@ The following terminology are used throughout the proposal and defined here for 
 * **Registration:** Combination of stops used to produce desired sound while playing.
 * **Shoe:** A pedal used to control a part of the organ:
 
-   * **Swell** or **expression shoe:** Opens and closes the swell shades to vary the volume of enclosed divisions.
+   * **Swell** or **expression shoe:** Opens and closes the swell shades (wooden "shutters") on a pipe organ to vary the volume of enclosed divisions.
    * **Crescendo shoe:** Systematically adds stops to gradually and organically build up the volume of the instrument while being played.
 
-* **Stop:** A subset of a rank of pipes based on their speaking pitch ranging from 32' pedal stops providing bass foundation to 2' (or smaller) manual stops that give bright high pitched sounds. Stop families include principals (full, strong, vibrant sound), flutes (softer sound that resembles flutes and wind instruments), strings, and reeds (nasally, "edgy" sounds that resemble reed instruments). Each stop has its own unique sound, purpose, and use.
+* **Stop:** A subset of a rank of pipes based on their speaking pitch ranging from 32' pedal stops providing bass foundation to 2' (or smaller) manual stops that give bright high pitched sounds. Stop families include *principals* (full, strong, vibrant sound), *flutes* (softer sound that resembles flutes and wind instruments), strings, and *reeds* (nasally, "edgy" sounds that resemble reed instruments). Each stop has its own unique sound, purpose, and use.
 * **Voicing:** The tuning of the sound quality (*e.g.*, bass, timbre) of every note of every stop on the organ to ensure everything is balanced properly.
 
 
 ### Overview
 
-The current organ at St. Egbert's is a two-manual Allen MDS-6 AK digital computer organ installed in September 1994 featuring sound technology from the late 1980s. Digital organs are budget organs for churches that are unable to afford full pipe organs, which can cost 5-10x as much as comparable digital organs. Pipe organs, when properly maintained, can outlive the building in which they are installed. Digital organs, on the other hand, are more like electronic appliances with an unavoidable shelf life. While there are digital organs that are more than 50 years old still in use, they are not the norm and have most certainly undergone expensive repairs over their lifetime. On average, churches should expect to replace a digital organ every 30-40 years or else budget yearly for ongoing repairs and be willing to spend what is needed to keep an old instrument in use.
+The current organ at St. Egbert's is a two-manual Allen MDS-6 AK digital computer organ installed in September 1994 featuring sound technology from the late 1980s. Digital organs are budget organs for churches that are unable to afford a full pipe organ, which can cost 5-10x as much as a comparable digital organ. Pipe organs, when properly maintained, can outlive the building in which they are installed. Digital organs, on the other hand, are more like electronic appliances with an unavoidable shelf life. While there are digital organs that are more than 50 years old still in use, they are not the norm and have most certainly undergone expensive repairs over their lifetime. On average, churches should expect to replace a digital organ every 30-40 years or else budget generously every year for ongoing repairs and be willing to spend what is needed to keep an old instrument in use.
 
-The primary points of failure for digital organs are outdated electronics and technology. While Allen advertises indefinite support and repair of any organ they have ever sold, the reality is that, as instruments age, parts become increasingly difficult to obtain as old technology is replaced by newer state-of-the-art counterparts. Eventually, old parts are no longer made. At 32 years old, St. Egbert's is at risk of confronting this if the sound module (*i.e.*, the motherboard or "guts" of the organ) dies. If this were to happen, the sound board would need to be replaced with the same part off an equally old organ turned in for parts. For an estimated cost of around $15-20k (as of 2025), the church would end up replacing a 30+ year old sound module with another 30+ year old module, with no way of knowing how long this equally-old part itself would last.
+The primary points of failure for digital organs are outdated electronics and technology. While Allen advertises indefinite support and repair of any organ they have ever sold, the reality is that, as instruments age, parts become increasingly difficult to obtain as old technology is replaced by newer state-of-the-art counterparts. Eventually, old parts are no longer made. At `{python} dt.today().year - 1994` years old, St. Egbert's is at risk of confronting this if the sound module (*i.e.*, the motherboard or "guts" of the organ) dies. If this were to happen, the sound board would need to be replaced with the same part off an equally old organ turned in for parts. For an estimated cost of around $15-20k (as of 2025), the church would end up replacing a 30+ year old sound module with another 30+ year old module, with no way of knowing how long this equally-old part itself would last.
 
-The catalyst for this project has been a couple repairs needed in the last two years: a power supply in 2024 and an audio control switch in 2025. At risk of future failure are the amplifiers, speakers, sound module, and other controls, to name a few. As St. Egbert's enters this last quarter of the average digital organ's life, the parish would greatly benefit from proactively fundraising now so that it can comfortably replace it with something fitting for the church *before* the congregation finds itself desperately needing to quickly raise money for a dead instrument.
+The catalyst for this project has been a couple repairs needed in the last two years: a power supply in 2024 and an audio control switch in 2025. At risk of future failure are the amplifiers, speakers, sound module, and other controls, to name a few. As St. Egbert's enters this last quarter of the average digital organ's life, the parish would be prudent to begin proactively fundraising now so that it can comfortably replace it with something fitting for the church *before* the congregation finds itself desperately needing to quickly raise money for a dead instrument.[^1]
 
-Replacing a digital organ presents exciting opportunities for a parish, not the least of which is a significant upgrade in audio technology. Computers have come a long way since 1994, and so too have digital computer organs. It is also an opportunity for the parish to reflect on its current music ministry program, envision its future, and select a suitable instrument capable of serving the parish's needs and fulfilling its musical dreams. For St. Egbert's this means choosing an instrument that is sufficiently flexible to lead the congregation, cantors, a choir, and instrumentalists, and is installed in such a way that the sound is balanced throughout the entire church.
+[^1]: Like what recently happened with the HVAC system in Moselein Hall, when the parish needed to raise $70k as quickly as possible to restore air conditioning and prevent mold growth in the middle of summer.
+
+Replacing a digital organ presents exciting opportunities for a parish, not the least of which is a significant upgrade in audio technology. Computers have come a long way since 1994, and so too have digital computer organs. It is also an opportunity for the parish to reflect on its current music ministry program, envision its future, and select a suitable instrument capable of serving the parish's needs and fulfilling its musical dreams. For St. Egbert's, this means choosing an instrument that is sufficiently flexible to lead the congregation, cantors, a choir, and instrumentalists, and is installed in such a way that the sound is balanced throughout the entire church.
 
 ### Considerations for the existing organ
 
 #### 1. Part failures due to age
 
-At 32 years old (as of 2026), the current organ has reached the age at which most digital organs need to be replaced unless the church wants to spend money on keeping old technology running. In Advent 2024, the power supply for the organ failed spectacularly in the middle of a Sunday liturgy. When this happened, every note of every stop on the organ started sounding continuously at full volume, a consequence of improperly regulated power being received by the sound board. All that could be done was switch the organ off, rendering it unusable right before Christmas. The service call plus parts and labor cost a few thousand dollars. Fortunately, power supplies are not specialized parts, so a newer model was able to be installed.
+At `{python} dt.today().year - 1994` years old (as of 2026), the current organ has reached the age at which most digital organs need to be replaced unless the church wants to spend money on keeping old technology running. In Advent 2024, the power supply for the organ failed spectacularly in the middle of a Sunday liturgy. When this happened, every note of every stop on the organ started sounding continuously at full volume, a consequence of improperly regulated power being received by the sound board. All that could be done was switch the organ off, rendering it unusable right before Christmas. The service call plus parts and labor cost a few thousand dollars. Fortunately, power supplies are not specialized parts, so a newer model was able to be installed.
 
 Roughly a year later, an audio control switch failed, rendering half of the organ unusable. Because of the way old organs were designed, "half of the organ" meant that seemingly random stops across all divisions and within families of stops were affected. For example, in the Great division, the 8' principal stop became inoperable while the 4' principal stop still worked, and the 8' flute stop in the Great division worked but the 4' flute did not. The situation was similar in the Swell and Pedal divisions as well. This made it impossible to properly register the instrument for hymn singing and other musical needs. This service call plus parts and labor was another $2000 or so.
 
-*To be fair, Allen commits to repairing any organ it has ever sold---and repairs, even cumulatively, do cost a fraction of the price of a new instrument.* The two recent repairs together cost just under $10k. But this is because neither involved specialized parts: while the original power supply is no longer made, it could be replaced with a newer model because power supplies are universal, and the switch, while not used on new organs anymore, was used by Allen for a sufficiently long period of time that new ones can still be acquired. Challenges arise, however, when parts that are no longer made and are no longer able to be acquired need replacing. The most critical example of this is the sound module, the motherboard or "guts" of the organ, the "digital computer" component that creates the sounds. This part, while state-of-the-art at the time, is no longer made, and because technology advances so much in several decades, new models are not backwards compatible with old organs. And herein lies the critical caveat to Allen's commitment: there comes a time when the only way to make certain repairs to an old organ is to replace old technology with the same old technology---in other words, an equally-old used part pulled off a similarly aged organ scrapped for parts. Allen service technicians will do this, and the price will still be much less than a new organ. The Eastern North Carolina Allen service technician, for example, estimated the cost for replacing the current sound board, should it be needed, to be tens of thousands of dollars in 2026---but for another 30+ year old part that could itself fail at any time.
+*To be fair, Allen commits to repairing any organ it has ever sold---and repairs, even cumulatively, do cost a fraction of the price of a new instrument.* The two recent repairs together cost just under $10k. But this is because neither involved specialized parts: while the original power supply is no longer made, it could be replaced with a newer model because power supplies are universal, and the switch, while not used on new organs anymore, was used by Allen for a sufficiently long period of time that new ones (*i.e.*, unused units still in stock) could still be acquired. Challenges arise, however, when parts that are no longer made and are no longer able to be acquired need replacing. The most critical example of this is the sound module, the motherboard or "guts" of the organ, the "digital computer" component that creates the sounds. This part, while state-of-the-art at the time, is no longer made, and because technology advances so rapidly, new models are not backwards compatible with old organs. And herein lies the critical caveat to Allen's commitment: there comes a time when the only way to make certain repairs to an old organ is to replace old technology with the same old technology---in other words, an equally-old used part pulled off a similarly aged organ scrapped for parts. Allen service technicians will do this, and the price will still be much less than a new organ. The Eastern North Carolina Allen service technician, for example, estimated the cost for replacing the current sound board, should it be needed, to be tens of thousands of dollars in 2026---but for another 30+ year old part that could itself fail at any time.
 
 The parish should carefully consider this reality and think about it like maintaining an old car. With enough money and trips to a trusted mechanic, any car can remain on the road indefinitely. But it still remains an old car with old technology and missing features. Is it worthwhile? It should be noted that there are dozens of other switches in the current organ, and service calls to replace them one at a time as they fail will add up. The most expensive repair would be the sound module, as mentioned. Other parts at risk of failing include the speakers (*i.e.* dried out and blown speaker cones), amplifiers (one for each of the two channels), the digital transposer, mechanical stop rails, and the expression shoe, to name a few.
 
@@ -185,7 +202,7 @@ Organ size also means number of audio channels. The current organ has only two c
 
 ::: callout-tip
 # For what it's worth...
-The installer of the current organ seems to have attempted to compensate for its small size with increased volume, a classic example of a poor installation. A larger organ does not mean louder; rather, it means having the right stops distributed across enough speakers to fill the room evenly with sound.
+The installer of the current organ seems to have attempted to compensate for its small size with increased volume, a classic trademark of a poor installation. A larger organ does not mean louder; rather, it means having the right stops distributed across enough properly-positioned speakers to fill the room evenly with clear, crisp, articulate sound.
 :::
 
 #### 4. Missing functionality or unconventional behavior
@@ -194,7 +211,9 @@ Related to [the size of the organ](#organ-is-too-small-for-liturgical-and-music-
 
 * **No second expression shoe:** The *expression shoe* or *swell shoe* on an organ is one way to change the volume of the organ. On a pipe organ, the pipes of *enclosed divisions* (such as the Swell division) are located behind (*i.e.*, enclosed by) large vertical shutters called swell shutters that open and close to dampen the sound. Three manual organs have two enclosed divisions, each with its own swell shoe, giving the organist much more flexibility. The current organ has one expression shoe that puts the Swell division under expression, which is expected behavior. It also has the option to put the Great division under expression, which would never be true on a pipe organ. The intent of this was to allow the organist to fake having a third division -- a Choir division -- under expression. The problem with this, however, is that in this mode, *the volume of the entire organ is modified by the single shoe.* This is not the way pipe organs behave and is not really a "feature" but rather an annoying attempt to make up for the absence of an important functionality.
 
-* **No divisional pistons:** *Pistons* are preset buttons that allow the organist to store different registrations, or stop combinations, for easy access. The current organ has seven "general pistons" that control the entire organ. Many organs also have "divisional pistons" that control only one division, which can be very handy for targeted registration changes.
+* **No divisional pistons:** *Pistons* are preset buttons that allow the organist to store different registrations, or stop combinations, for easy access. The current organ has seven "general pistons" that control the entire organ. Many organs also have "divisional pistons" that control only one division, which can be very handy for targeted registration changes. This organ has none of these.
+
+  Pistons are sometimes called "thumb pistons" because the buttons are located beneath the keyboard and intended to be pressed quickly by the organist's thumb. Yet, on the current organ, all seven pistons are located below the Swell manual, which is used less than the Great manual, and off-centered to the right, making them difficult to quickly access, especially for left-handed organists.
 
 * **No MIDI:** Modern digital organs come equipped internal MIDI modules containing hundreds of additional sounds to supplement the organ stops. These sounds include additional organ stops and all sorts of instrument sounds, offering an enormous range of musical possibilities, especially for small churches unable to afford to hire instrumentalists. While the current organ is MIDI-ready, this option was never purchased.
 
@@ -204,16 +223,126 @@ Related to [the size of the organ](#organ-is-too-small-for-liturgical-and-music-
 
 #### 5. Console age
 
-The organ console itself is generally in good condition for its age, but it is worth noting that the wooden roll top cover is warped from years of humidity. It does open and close, but not well. Closing the organ, which protects it from dust, abuse, or vandalism, risks the cover binding and becoming stuck closed. The solution to this is to open the top service lid of the console and guide the cover back. The piston buttons have also started sticking, a common issue for these memory capture units when they age.
+The organ console itself is generally in good condition for its age, but it is worth noting that the wooden roll top cover is warped from years of humidity. It does open and close, but not well. Closing the organ, which protects it from dust, abuse, or vandalism, risks the cover binding and becoming stuck closed. The solution to this is to open the top service lid of the console and guide the cover back. The piston buttons have also started sticking and not engaging properly, common issues for these memory capture units when they age.
 
 ### Proposed Solution
 
 #### What
 
-The ideal organ for St. Egbert's is a [Rodger's Infinity 367D](https://www.rodgersinstruments.com/organs/infinity-series/infinity-series-367) to be installed by [R.A. Daffer Church Organs, Inc.](https://dafferorgans.com/), the Mid-Atlantic regional Rodgers distributor out of Jessup, MD. The estimated cost breakdown for 2026, which includes a 10-year warranty, is as follows:
+The ideal organ for St. Egbert's is an [**Allen III/58**](https://allenorgan.com/church-organs/gx350a.html) to be installed by [R.A. Daffer Church Organs, Inc.](https://dafferorgans.com/), the Mid-Atlantic regional Allen distributor out of Jessup, MD. The estimated cost breakdown for 2026, which includes delivery, installation, voicing, and a 10-year parts and 3-year labor warranty, is as follows:
 
 :::: {.columns}
 ::: {.column}
+
+| **LINE ITEM**                    | **COST** |   |
+|:---------------------------------|---------:|---|
+| Allen III/58 organ               | `{python} display(gx358)` |   |
+|  - Rolling platform              |   |   |
+|  - Adjustable bench              |   |   |
+|  - Adjustable lighted music rack |   |   |
+| Buffer for parish expenses (10%) | `{python} display(gx358_2026_buffer)` |   |
+| Sales tax                        | `{python} display(gx358_2026_tax)` |   |
+| **Sub Total**                    | **`{python} display(gx358_2026_subtotal)`** |   |
+| Sales tax reimbursement          | -`{python} display(gx358_2026_tax)` |   |
+| **TOTAL**                        | **`{python} display(gx358_2026_total)`** |   |
+: Cost estimate of an Allen III/58 organ installation quoted September 2026. Prices can be locked in for a period of time with the signing of a contract and initial deposit.
+
+::: {.content-visible when-format="html"}
+***
+:::
+
+:::
+::: {.column .centered}
+
+![](https://allenorgan.com/wp-content/uploads/2026/06/A350Gallery02.jpg){fig-alt="Allen III/58 digital organ" width="83%"}
+
+:::
+::::
+
+
+::: {.callout-important}
+The cost of the organ includes installation and voicing but not any facilities work that may be needed to receive the organ. Examples might include wall-mounted speaker shelves or speaker wire conduit. A buffer equating to 10% of the project cost is included to cover these expenses, but these costs can often be decreased by utilizing in-house architectural, engineering, and construction expertise and/or donated materials and supplies.
+:::
+
+::: {.callout-note title="A note on sales tax"}
+North Carolina state sales tax is paid up front and later reimbursed to the parish. St. Egbert's could consider financing this expense and pay it off in full once reimbursed from the State.
+:::
+
+#### Why
+
+[This three manual organ](https://allenorgan.com/apexii-organs/iii58.html) is well sized for St. Egbert church and is loaded with features and flexibilities that can completely transform the parish's music program with stunning tonal quality, remarkable versatility, and exceptional user experience. Some of its most notable features include:
+
+* 66 stops (current organ has 28)
+* Six full voice palettes behind each engraved stop: Cavaillé-Coll (French), Arp Schnitger (German), English Cathedral, and Aeolian-Skinner (American), and more
+* 264 additional organ, orchestral, and percussion voices and sounds
+* Mechanical (moving) drawknobs that give the organ an authentic behavior and an attractive aesthetic appearance
+* 32 pistons, including general and divisional pistons, 16 toe pistons, and 128 memory banks (current organ has only 7 general pistons, no toe pistons, and 2 memory banks)
+* Two expression shoes and one crescendo shoe (current organ only has one expression shoe)
+* Hymn player with 160 prerecorded hymns plus the ability to record and play back anything
+* Smartphone sequencing and playback application
+* 10 audio channels (current organ has 2)
+* Digital Zimbelstern (multi-bell system, *e.g.*, for Gloria at Easter Vigil)
+
+The stop list is extremely versatile, with full principal, flute, and reed choruses in every division. This makes the instrument very capable for accompanying congregational singing with a robust principal chorus from the Great division, cantors with soft yet articulate flutes from the Swell division, choir with supportive but softer principal chorus from the Choir division, and instruments with softer principal choruses from Choir or Swell division. Its six organ palettes offer immense flexibility to adequately accommodate all flavors of organ music and literature from around the world. The large orchestral library supplements the instrument with dozens of string, brass, wind, reed, and percussion instruments that can be played either by themselves or along with the organ.
+
+The current III/58 proposal includes 10 audio channels for St. Egbert's. This includes four low-mid range and four mid-high range speakers plus two subwoofers. The speakers would be installed on a new shelf to be mounted over the main entry doors leading to the vestibule and the two subwoofers would be located in the rear of the church on the floor on either side of the large stained glass window. In addition, an external amplifier rack enclosed in a matching finished wooden cabinet would be co-located with the subwoofers. Locating the amps closer to the speakers, instead of inside the organ console, lessens audio quality loss, shortens wire runs, minimizes the risk of wires breaking or accidentally being cut, and avoids having expensive amps inside the movable organ console, keeping the console weight manageable and somewhat less fragile. Unlike the current installation, which has only two channels, both of which are installed on one side of the church in a corner, this installation will enable 10 speakers to be carefully and deliberately positioned and oriented to optimally direct sound throughout the church, allowing the organ to speak from the tallest part of the room and the sound to distribute evenly throughout the room without needing to overpower the speakers with excessive volume. This setup resembles how a pipe organ would be installed in the church and will constitute a remarkable improvement over the current situation.
+
+This organ also contains a built-in hymn player and recorder module. This allows a non-organist to easily play dozens of pre-recorded hymns with the push of a button or from an app, and the recorder module allows the organist to record additional music, such as Mass parts, to be played back in the same fashion. This would be handy in the absence of an organist and other substitute, especially considering how difficult it has been to recruit substitute musicians at St. Egbert's.
+
+Most importantly, the sound sampling technology provides stunningly accurate pipe organ sound, making modern digital organs indistinguishable from "the real deal." Even non-organists and non-musicians can tell the difference. One has to hear it to believe it, but the congregation can be assured it will not be disappointed! Some examples from YouTube:
+
+* [All Creature of our God and King](https://www.youtube.com/watch?v=mE9CoUH4BZY&list=RDmE9CoUH4BZY&start_radio=1): A beloved traditional hymn familiar to the St. Egbert congregation
+* [Let All Things Now Living](https://www.youtube.com/watch?v=qqjVGXg_dDA): A familiar thanksgiving hymn often at St. Egebert's
+* [Ps. 66: Let all the earth cry to God with joy (Alstott)](https://www.youtube.com/watch?v=bJpMomzF_6s): An example of a familiar responsorial psalm accompanied by an authentic-sounding flute chorus
+* [Obangiji](https://www.youtube.com/watch?v=I9yyxuIxRNw): A festive piece based on a popular Nigerian folk melody by Fela Sowande, one of Nigeria’s greatest classical composers and organists
+* [Trumpet Voluntary](https://www.youtube.com/watch?v=ATfTeNsEhQE): A popular wedding march from the 18th century by J. Stanley (Note that the organ in this video is in a showroom, not an acoustically live church.)
+
+There are many more features and flexibilities that, together with its remarkable sound, make this state-of-the-art instrument a joy to play and not merely a liturgical organ, but a versatile concert instrument as well. The proposal also includes a matching rolling platform for the organ and ample power and audio cable to allow the instrument to be moved to the front of the church to offer, for example, fundraising concerts, if the parish opted to do this in the future. The Allen III/58 is an investment in the future of the parish, as it has the ability to profoundly transform the music ministry and bring music at St. Egbert's to a new level. It is truly worthy of the fourteenth century French composer Guillaume de Machaut's organ moniker, the King of Instruments.
+
+#### When
+
+While there is not yet an urgent need to replace the current organ, if the parish opts to proactively proceed with replacement before the instrument dies, it is encouraged to do so as soon as fiscally feasible for two reasons: first, prices have been increasing roughly 10-15% each year, and second, the longer the parish waits, the less the current organ could be worth on trade in or private sale.
+
+#### How
+
+The Allen III/58 is the ideal instrument and its price should be considered the target amount to raise. While financing is available, this is discouraged in favor of taking the necessary time to raise the needed funds to avoid taking on debt.[^2] If, after some period of time, fundraising efforts plateau and fall short of the target, [other options](#analysis-of-alternatives) can be considered based on the amount raised. 
+
+[^2]: The parish could consider temporarily financing the North Carolina state sales tax, which is more than $12k and must be paid up front but is later refunded back to the parish. The loan would then be paid off in full as soon as the refund is received.
+
+Most people and parishes do not give much thought to the monetary value of an organ until it comes time to replace one, so the cost of a new organ can sometimes invoke sticker shock. Parishioners should be reminded that a comparable pipe organ would cost at least 10x more and require regular tuning and maintenance. Put into perspective, a $200k investment over a 35 year period comes out to roughly $100 per week, or about $35 per weekend liturgy, not considering Holy Days, weddings, funerals, and other special occasions. A comparable pipe organ, based on installation alone, would cost $1000 per week or $360 per liturgy, plus maintenance and tuning expenses.
+
+Some fundraising strategies that have proven successful in other parishes include:
+
+1. **Initial ask for money/big donations:** People generally like to donate to projects they can tangibly see or, in this case, hear. Many parishes have been known to end up with a handful of big donations that cover a bulk of the cost.
+2. **Fundraising efforts:** Creative fundraising projects, like buying organ keys, pedals, or stops in memory of loved ones, can be effective for the average parishioner. A sample flyer and pledge sheet, made for another parish but easily adaptable to St. Egbert's, are appended as example advertisements.
+3. **Capital campaign:** Either a stand-alone long-term fundraising campaign or combined into a larger parish capital campaign. If the latter, it is recommended that parishioners be given the option to give specifically for the organ replacement project.
+
+One advantage to replacing the organ before it no longer functions is that the parish could consider selling it to help offset the price of the new one. Otherwise, the dealer will take it, possibly with a slight "trade in" discount, like when trading in a used car for a new one. There is a market for used organs, either for small churches or home practice organs. For example, a slightly newer Allen digital organ of similar size but with considerably more features than St. Egbert's current organ recently sold for $2,600 on Facebook Marketplace. The internal speaker in St. Egbert's organ makes it entirely self-contained and, thereby, more attractive for a home practice organ. Like any used technological product, like a car, the longer one holds onto it, the less it will be worth in the end.
+
+### Analysis of Alternatives
+
+#### Allen options
+
+The next model down from the Allen III/58 is the [III/53](https://allenorgan.com/apexii-organs/iii44.html). A smaller yet equally capable organ, the III/53 offers 53 stops (compared to 66) and seven channels of audio (six low-mid range speakers and one subwoofer) instead of ten. It also lacks some other "nice to have" features that mostly benefit the organist. Priced at about $`{python} int(roundup(gx353_2026_total)/1e3)`k, which includes mostly the same installation [described above](#why), this organ would still be a remarkable improvement and upgrade from the existing organ. The cost breaks down as follows:
+
+| **LINE ITEM**                    | **COST** |   |
+|:---------------------------------|---------:|---|
+| Allen III/53 organ              | `{python} display(gx353)` |   |
+|  - Rolling platform              |   |   |
+|  - Adjustable bench              |   |   |
+|  - Adjustable lighted music rack |   |   |
+| Buffer for parish expenses (10%) | `{python} display(gx353_2026_buffer)` |   |
+| Sales tax                        | `{python} display(gx353_2026_tax)` |   |
+| **Sub Total**                    | **`{python} display(gx353_2026_subtotal)`** |   |
+| Sales tax reimbursement          | -`{python} display(gx353_2026_tax)` |   |
+| **TOTAL**                        | **`{python} display(gx353_2026_total)`** |   |
+: Cost of an Allen III/53 organ installation quoted September 2026. Prices can be locked in for a period of time with the signing of a contract and initial deposit.
+
+The recommendation is to target the III/58 but fall back on the III/53 if fundraising stalls.
+
+#### Other brands
+
+The primary competitor to Allen in the United States is Rodgers. The most comparable Rodgers organ models to the Allen III/58 and III/53 are the Infinity 367D and the Imagine 359D, respectively. The 2026 price for the Infinity 367D is estimated to be as follows:
 
 | **LINE ITEM**                    | **COST** |   |
 |:---------------------------------|---------:|---|
@@ -224,79 +353,9 @@ The ideal organ for St. Egbert's is a [Rodger's Infinity 367D](https://www.rodge
 | **Sub Total**                    | **`{python} display(infinity367D_2026_subtotal)`** |   |
 | Sales tax reimbursement          | -`{python} display(infinity367D_2026_tax)` |   |
 | **TOTAL**                        | **`{python} display(infinity367D_2026_total)`** |   |
-: Cost estimate of a Rodgers Infinity 367D organ installation based on 16% increase from 2025 prices, which represents the 2024-2025 price increase. Prices can be locked in for a period of time (usually up to one year) with the signing of a contract and initial deposit.
+: Cost estimate of a Rodgers Infinity 367D organ installation based on 16% increase from 2025 prices, which represents the 2024-2025 price increase.
 
-::: {.content-visible when-format="html"}
-***
-:::
-
-:::
-::: {.column .centered}
-
-![](https://www.rodgersinstruments.com/uploads/products/banners/fotos/large_foto/750x700/367---banner-1.png){fig-alt="Rodgers Infinity 367D digital organ" width="97%"}
-
-:::
-::::
-
-
-::: {.callout-important}
-The cost of the organ includes installation and voicing but not any facilities work that may be needed to receive the organ. Examples might include wall-mounted speaker shelves or speaker wire conduit. A buffer equating to 10% of the project cost is included to cover these expenses.
-:::
-
-::: {.callout-note title="A note on sales tax"}
-North Carolina state sales tax is typically paid up front and later reimbursed to the parish.
-:::
-
-#### Why
-
-This three manual organ is well sized for St. Egbert church and is loaded with features and flexibilities that can completely transform the parish's music program with stunning tonal quality, remarkable versatility, and exceptional user experience. Some of its most notable [features](https://www.rodgersinstruments.com/organs/infinity-series/infinity-series-367) include:
-
-* [67 stops](https://www.rodgersinstruments.com/organs/infinity-series/infinity-series-367) (current organ has 28)
-* 563 organ voices, 61 orchestral voices, and much more
-* Mechanical (moving) drawknobs that give the organ an authentic behavior and an attractive aesthetic appearance
-* 37 pistons, including general and divisional pistons, and 99 memory banks (current organ has 7 general pistons only and 2 memory banks)
-* Two expression shoes and a crescendo shoe (current organ has one expression shoe and no crescendo shoe)
-* Hymn player with 350 built-in hymns, plus the ability to record and play back anything
-* Up to 22 audio channels (current organ has 2)
-* Lighted and adjustable music stand with mobile tablet (*e.g.*, iPad) support and automatic page-turn technology
-
-The stop list is extremely versatile, with full principal, flute, and reed choruses in every division, plus a floating solo division that can be assigned to any manual. This makes the instrument very capable for accompanying congregational singing with a robust principal chorus from the Great division, cantors with soft yet articulate flutes from the Swell division, choir with supportive but softer principal chorus from the Choir division, and instruments with softer principal choruses from Choir or Swell division. The floating Solo division can be used on a moment's notice to help a struggling choir or congregation by articulating the melody line from any manual. Its four organ palettes (American Eclectic, English Cathedral, French Romantic, and German Baroque) offers immense flexibility and an infinite number of possible registrations. The large orchestral library supplements the instrument with dozens of string, brass, wind, reed, and percussion instruments that can be played either by themselves or along with the organ.
-
-The Infinity supports up to 22 channels of audio. The current proposal from Rodgers includes 14 channels for St. Egbert's: ten would be used for the main organ, with speakers installed either in the rear of the church on either side of the stained glass window or (less likely) in the front on either side of the sanctuary. Unlike the current installation, which has only two channels, both of which are installed on one side of the church, this installation will allow the organ sound to be distributed evenly throughout the church without needing to overpower the speakers with excessive volume. In addition to these ten channels, the proposal calls for a four-channel antiphonal organ to be installed in the choir area. This will likely play only the Choir and Solo divisions to help the choir and instruments hear the organ in real time (without sound delays caused by the main organ speaking from the middle of the church). Importantly, the antiphonal organ will be voiced at a much lower volume than the main organ, providing only what is needed for musician support, not for the entire congregation. This setup resembles how a pipe organ would be installed in the church and will constitute a remarkable improvement over the current situation.
-
-This organ also contains a built-in hymn player and recorder module. This allows a non-organist to play more than 300 pre-recorded hymns with the push of a button or from an app, and the recorder module allows the organist to record and play back additional music, such as Mass parts. This would be handy in the absence of an organist and other substitute, especially considering how difficult it has been to recruit substitute musicians at St. Egbert's.
-
-Most importantly, the sound sampling technology provides stunningly accurate pipe organ sound, making modern digital organs indistinguishable from "the real deal." Even non-organists and non-musicians can tell the difference. One has to hear it to believe it, but the congregation can be assured it will not be disappointed! Some examples from YouTube:
-
-* [Trumpet Tune (Purcell)](https://www.youtube.com/watch?v=8iQh8kY6z1E&list=RD8iQh8kY6z1E&start_radio=1): A popular wedding march that needs an articulate trumpet stop balanced by a principal chorus. The current organ lacks a trumpet solo stop like this, and the Trompette stop that it does have in the Swell division is completely overpowered by the principal chorus in the Great division, making it impossible to properly play this piece.
-* [Holy, Holy, Holy (NICEAN)](https://www.youtube.com/watch?v=aH2ZbwwFd9o&list=RDaH2ZbwwFd9o&start_radio=1): A beloved traditional hymn familiar to the St. Egbert congregation
-* [O Come, All Ye Faithful](https://www.youtube.com/watch?v=gAvJvXzyP40&list=RDgAvJvXzyP40&start_radio=1): A rendition of the Willcocks arrangement of this beloved hymn
-* [Canon in D (Pachelbel)](https://www.youtube.com/watch?v=9wkaqSbZ7Es&list=PLiG66Se0-6ffz7UOUkoQQFH7u_WSR6AT0&index=14): Another popular wedding piece, combined here with the well-known hymn tune "Seek Ye First" demonstrating the beautiful orchestral capabilities.
-* [The King of Love My Shepherd Is](https://www.youtube.com/watch?v=ZopyBVWxkno&list=RDZopyBVWxkno&start_radio=1): A demonstration of the flute and principal choruses complementing each other and building organically throughout this familiar hymn in a way that is not possible on the current organ.
-
-There are many more features and flexibilities that, together with its remarkable sound, make this state-of-the-art instrument a joy to play and not merely a liturgical organ, but a versatile concert instrument as well. The proposal also includes a rolling platform for the organ to enable it to be moved to the front of the church to offer, for example, fundraising concerts, if the parish opted to do this in the future. The Rodgers Infinity 367D is an investment in the future of the parish, as it truly has the ability to transform the music ministry and bring music at St. Egbert's to a new level.
-
-#### When
-
-While there is not yet an urgent need to replace the current organ, if the parish opts to proactively proceed with replacement before the instrument dies, it is encouraged to do so as soon as fiscally feasible, as prices have been increasing roughly 16% each year.
-
-#### How
-
-The Infinity 367D is the ideal instrument and its price should be considered the target amount to raise. While financing is available, this is discouraged in favor of taking the necessary time to raise the needed funds to avoid taking on debt. If, after some period of time, fundraising efforts plateau and fall short of the target, [other options](#analysis-of-alternatives) can be considered based on the amount raised. 
-
-Most people and parishes do not give much thought to the monetary value of an organ until it comes time to replace one, so the cost of a new organ can sometimes invoke sticker shock. Parishioners should be reminded that a comparable pipe organ would cost much more. Some fundraising strategies that have proven successful in other parishes include:
-
-1. **Initial ask for money/big donations:** People generally like to donate to projects they can tangibly see or, in this case, hear. Many parishes have been known to end up with a handful of big donations that cover a bulk of the cost.
-2. **Fundraising efforts:** Creative fundraising projects, like buying organ keys, pedals, or stops in memory of loved ones, can be effective for the average parishioner. A sample flyer and pledge sheet, made for another parish but easily adaptable to St. Egbert's, are appended as example advertisements.
-3. **Capital campaign:** Either a stand-alone long-term fundraising campaign or combined into a larger parish capital campaign. If the latter, it is recommended that parishioners be given the option to give specifically for the organ replacement project.
-
-One advantage to replacing the organ before it no longer functions is that the parish could consider selling it to help offset the price of the new one. Otherwise, the dealer will take it, possibly with a slight "trade in" discount, like when trading in a used car for a new one. There is a market for used organs, either for small churches or home practice organs. For example, a slightly newer Rodgers digital organ of similar size but with considerably more features than St. Egbert's current organ recently sold for $2,600 on Facebook Marketplace. St. Egbert's organ has an internal speaker, making it entirely self-contained, which could make it more attractive for a home practice organ. 
-
-### Analysis of Alternatives
-
-#### Rodgers options
-
-The next model down from the Rodgers Infinity 367 is the [Imagine 359](https://www.rodgersinstruments.com/organs/imagine-series/imagine-359d). A smaller yet equally capable organ, the Imagine 359D offers 51 stops, 147 organ voices, and 45 orchestral voices. It contains the same highly authentic sound technology but lacks many features and additional flexibilities of the Infinity 367. For example, in addition to fewer stops, it lacks the floating Solo division, mobile tablet integration with digital page turning, and a number of convenient pistons for controlling the organ itself. Priced at about $`{python} int(roundup(imagine359D_2026_total)/1e3)`k, which includes the same 14-channel audio installation [described above](#why), this organ would still be a remarkable improvement and upgrade from the existing organ. The cost estimate breaks down as follows:
+Similarly, the quoted 2026 price for the 359D is as follows:
 
 | **LINE ITEM**                    | **COST** |   |
 |:---------------------------------|---------:|---|
@@ -307,54 +366,46 @@ The next model down from the Rodgers Infinity 367 is the [Imagine 359](https://w
 | **Sub Total**                    | **`{python} display(imagine359D_2026_subtotal)`** |   |
 | Sales tax reimbursement          | -`{python} display(imagine359D_2026_tax)` |   |
 | **TOTAL**                        | **`{python} display(imagine359D_2026_total)`** |   |
-: Cost estimate of a Rodgers Infinity 359D organ installation based on 16% increase from 2025 prices, which represents the 2024-2025 price increase. Prices can be locked in for a period of time (usually up to one year) with the signing of a contract and initial deposit.
+: Cost estimate of a Rodgers Infinity 359D organ installation based on 16% increase from 2025 prices, which represents the 2024-2025 price increase.
 
-Priced in between the Infinity 367D and the Imagine 359D is the Infinity 367L ($`{python} int(roundup(infinity367L_2026_total)/1e3)`K), which is exactly the same as the 367D except it has lighted drawknobs instead of mechanical drawknobs. Mechanical drawknobs are more realistic than lighted, since pipe organs are mechanical instruments.
+While both are remarkable-sounding instruments with many of the same features as their Allen counterparts, they are both more expensive. Besides the cost difference, an Allen organ is being recommended over Rodgers for a few reasons:
 
-The recommendation is for the parish to target the Infinity 367D but fall back on the Infinity 367L or Imagine 359D if fundraising stalls.
+1. **Build quality and longevity:** Allen organs are made and built in the United States at their factory in Allentown, PA. The company has earned an industry reputation for solid construction and durability. Proof of this is the number of old Allen organs still in use today -- including the one at St. Egbert's. In contrast, Rodgers parts are all made oversees, shipped to the United States, and assembled in Oregon. The most recent lineup of Rodgers models, including the 367 and 359 series, have suffered from notable and unfortunate degradation in quality, including premature parts failures.
 
-#### Other brands
+2. **Customer service and commitment:** Allen is known for its commitment to every organ it has ever sold, as explained above. The company has built a reputation around standing by its products and providing prompt customer support when needed. Recent company acquisitions with Rodgers has resulted in deteriorated customer service, leaving some customers with a non-functioning organ for many weeks or months on end waiting for new parts to arrive.
 
-The primary competitor to Rodgers in the United States is Allen. There are several reasons a Rodgers organ is being recommended over Allen, some of which are:
+3. **Service availability:** Related to the last point, there currently is no authorized regional Rodgers dealer representing North Carolina, which would make it extremely difficult, if not altogether impossible, to obtain specialized service should a technician be needed.
 
-1. **Bang for the buck:** On the surface, Allen and Rodgers organs appear very comparable: similar stop lists, modern features and technology offerings, similar prices. But under the hood, Rodgers offers much more for the same, if not less, money. The best example is how the two manufacturers handle voice palettes. Both Allen and Rodgers offers multiple (usually 2-4) different voice palettes that change the voicing of the organ's stops. Rodgers, for example, offers four voice palettes: an American  Eclectic organ, an English Cathedral organ, a French Romantic organ, and a German Baroque organ. On Rodgers organs, every stop can be changed individually to any of these four palettes, allowing tremendous flexibility and endless possibilities for registration. On Allen organs, however, the entire organ must be changed over. This one feature alone makes Rodgers immensely more versatile instruments.
-
-2. **Sound quality:** Both manufacturers have loyalists who insist their favorite organ brand sounds more authentic than the other. In some ways, this is a subjective personal preference. Truth be told, as technology advanced over the decades, both manufacturers have gone back and forth with having the edge up on sound quality. In the latest generation of sound technology, Rodgers organs tend to sound much more authentic, while Allen organs continue to possess a characteristic "Allen" sound quality. While some organists prefer this unique sound, the counter-argument is that the goal of a digital organ is for the sound to be indistinguishable from that of a pipe organ. When a digital organ manufacturer has its own unique and recognizable sound, it doesn't sound like a pipe organ; it sounds like the specific brand of digital organs that it is.
-
-3. **Installation:** While Allen organs have a well-deserved reputation for build quality, the company has a much worse reputation when it comes to installation and voicing. Proper installation and voicing are absolutely crucial for an organ to sound its best. Far too many churches have Allen organs that appear to be haphazardly dropped into place with little evidence of planning or consultation from trained organists. The current organ at St. Egbert's is an example of this. As mentioned, the organ speaks from only two speakers positioned side by side (a characteristic Allen installation) hanging on a side wall practically in a corner of the church. No pipe organ would ever be installed this way, so why should a digital organ? Like with installing a pipe organ, a digital organ installation should be well-thought out and executed. This includes determining the right size instrument for the room. When asked if he wanted to see a church to suggest an adequate instrument, an Allen sales rep said on the phone, "I don't need to see the room. We'll sell you whatever you want and make it work." That revealed a lot about why so many Allen organs around the country are so poorly installed. Rodgers reps, on the other hand, visited the church and made recommendations for instruments and installation methods, with emphasis placed on considering how a pipe organ would be configured in the church.
-
-4. **Voicing:** Voicing is when the sound of every note of every stop is carefully adjusted and fine-tuned for the room in which the organ is installed. This is a very important part of an organ installation, as it is what makes the instrument sound its best. Allen organs, if they're voiced at all, are often voiced by service technicians rather than organists. Rodgers uses organists to professionally voice their instruments, a detail that makes a big difference.
-
-Another lesser-known manufacture in the United States is Johannus, but these tend to be budget digital organs, which themselves are already budget organs. Johannus organs are ideal for private homes or practice studios, but they do not have much in the way of mid-size or large organs, so they are rarely found in churches. Their only three-manual instrument is very stripped down compared to either a Rodgers or an Allen and, aesthetically, leaves a lot to be desired. They also do not (yet) have the same reputation and track record as both Rodgers and Allen. Thus, Johannus has not been considered for St. Egbert's.
+Another lesser-known manufacture in the United States is Johannus, but these tend to be budget digital organs, which themselves are already budget organs. Johannus organs are ideal for private homes or practice studios, but they do not offer much in the way of mid-size or large organs, so they are rarely found in churches. Their only three-manual instrument is very stripped down compared to either a Rodgers or an Allen and, aesthetically, leaves a lot to be desired. Johannus also lacks the same reputation and track record as both Rodgers and Allen. For these and other reasons, Johannus has not been considered for St. Egbert's.
 
 #### Pre-owned (used) organ
 
-Pre-owned organs, whether purchased as a private sale or through a commercial sales company like R.A. Daffer Church Organs, often cost significantly less than new organs, but there are several reasons why churches should be leery of this idea:
+Pre-owned organs, whether purchased as a private sale or through a commercial organ distributor like R.A. Daffer Church Organs, often cost significantly less than new organs, but there are several reasons why churches should be leery of this idea:
 
-1. **Age:** As discussed [above](#overview), digital organs generally have a finite usable life span. Assume, for the sake of argument, this lifespan is (generously) 50 years. With very rare exceptions, the newest used organs available at any time are usually 20-25 years old. That currently puts most from the early 2000s, which means they are only about 10 years newer than St. Egbert's current organ. From a human psychologically perspective, parishioners think they are getting a new organ, and while it is indeed new to them, a 20-25 year old organ is halfway through its reliable lifespan. That means the parish will find itself in the market again in another 20 years or so, which is not a long time. Most parishioners will then still remember the previous purchase and think, "We just bought a new organ, why do we need another one?"
+1. **Age:** As discussed [above](#overview), digital organs generally have a finite usable life span. Assume, for the sake of argument, this lifespan is (generously) 40 years. With very rare exceptions, the newest used organs available at any time are usually 20-25 years old. That currently puts most from the early 2000s, which means they are only about 10 years newer than St. Egbert's current organ. From a human psychology perspective, parishioners think they are getting a new organ, and while it is indeed new to them, a 20-25 year old organ is more than halfway through its reliable lifespan. That means the parish will find itself in the market again in another 15-20 years or so, which is not a long time. Most parishioners will then still remember the previous purchase and think, "We just bought a new organ, why do we need another one?"
 
-2. **Old technology:** Rodgers and Allen tend to update their model offerings roughly every 10-15 years. This is when the largest technological advances get rolled out. From a sound technology standpoint, only organs built within the last 15 years should be seriously considered. It is within this time frame that the modern sampling capabilities became widely available, and the sound quality is leaps and bounds ahead of organs from even the previous decade. The industry has now reached a point where any new improvements in sound quality capabilities are unlikely to be perceivable by the human ear, just like what has happened in the television industry. It is advisable to purchase the current state-of-the-art.
+2. **Old technology:** Allen and Rodgers tend to update their model offerings roughly every 10-15 years. These major updates are when the largest technological advances get rolled out. From a sound technology standpoint, only Rodgers organs built within the last 10 years should be seriously considered -- and for Allen, the window is even smaller: their Apex sampling technology is less than 5 years old, with the latest version coming out just this year (2026). It is within this time frame that the modern sampling capabilities became widely available, and the sound quality is leaps and bounds ahead of organs from even the previous decade. The industry has now reached a point where any new improvements in sound quality capabilities are unlikely to be perceivable by the human ear, just like what has happened in the television industry. Thus, it is advisable to only purchase the current state-of-the-art.
 
-3. **No warranty:** Pre-owned organs are usually sold "as is" without any warranty on the organ itself, though commercial organ distributors will sometimes include limited warranties on installation. Private sales will never have warranties.
+3. **No warranty:** Pre-owned organs are usually sold "as is" without any warranty on the organ itself, though commercial organ distributors will sometimes include limited warranties on installation. Private sales will never have warranties. One can never be confidently certain about the history of a used instrument.
 
 #### Virtual organ
 
-Virtual organs are an emerging technology, the latest in the digital organ market. Virtual organs use regular computers -- a desktop or laptop -- and software to generate high-quality sound. There are several software options: [Hauptwerk](https://www.hauptwerk.com/), the most common, started off free but is now subscription based, requiring new versions be purchased as they are released. [GrandOrgue](https://github.com/GrandOrgue/grandorgue) is a free open-source alternative, but it lacks documentation and there's no guarantee that it will stay free. [Organova](https://www.organova.music/) is a new web-based version, allowing the user to play organ samples directly from the cloud instead of through locally installed software. All of these options offer a wide variety of organ samples from all around the world, and their sounds are as authentic as a modern digital organ.
+Virtual organs are an emerging technology, the latest in the digital organ market. Virtual organs use regular computers -- a desktop or laptop -- and software to generate high-quality sound. There are several software options: [Hauptwerk](https://www.hauptwerk.com/), the most common, started off free but is now subscription based, requiring new versions be purchased as they are released. [GrandOrgue](https://github.com/GrandOrgue/grandorgue) is a free open-source alternative, but it lacks comprehensive documentation and there's no guarantee that it will stay free. [Organova](https://www.organova.music/) is a new web-based version, allowing the user to play organ samples directly from the cloud instead of through locally installed software. All of these options offer a wide variety of organ samples from all around the world, and their sounds are as authentic as a modern digital organ.
 
 Virtual organs consist of custom consoles that either contain drawknobs or tabs that control the software, or touch screen monitors that the organist uses to engage or disengage stops. They are designed such that the computer plugs directly into them and the software can be configured to be controlled by all of the stops, tabs, pistons, and shoes on the console.
 
-While these organs cost a fraction of the price of a digital organ, they are are still rarely found in churches. There are several critical limitations and concerns. First is user experience. A computer-savvy organist may have little trouble adjusting to using a touch screen monitor to control the instrument, but a classically trained organist will undoubtedly find herself out of her element at such an instrument. It may, therefore, be difficult to find someone to play it in the future. Second, they lack the same level of support that one would get from a major manufacturer like Rodgers or Allen. Consoles, speakers, amplifiers, wires, computer, and software must be purchased separately and installed by the church. While not impossible to accomplish with the right expertise in-house, this piecemeal setup introduces many potential points of failure and incompatibility. Third, software running on a computer is inevitably prone to software and hardware issues -- crashes, operating system and software updates, computer slowing down over time. A digital organ powers up immediately when turned on, but a virtual organ needs to boot an operating system and load the software. This is not a problem for casual settings like practicing at home, but it raises concerns in a liturgical setting where dependability is paramount. Overall, while promising, this technology is considered to not yet be mature enough for installation in a church like St. Egbert's.
+While these organs cost a fraction of the price of a digital organ, they are rarely found in churches. There are several critical limitations and concerns. First is user experience. A computer-savvy organist may have little trouble adjusting to using a touch screen monitor to control the instrument, but a classically trained organist will undoubtedly find herself out of her element at such an instrument. It may, therefore, be difficult to find someone to play it in the future. Second, they lack the same level of support that one would get from a major manufacturer like Allen or Rodgers. Consoles, speakers, amplifiers, wires, computer, and software must be purchased separately and installed by the church. While not impossible to accomplish with the right expertise in-house, this piecemeal setup introduces many potential points of failure and incompatibility. Third, software running on a computer is inevitably prone to software and hardware issues -- crashes, operating system and software updates, computer slowing down over time. A digital organ powers up immediately when turned on, but a virtual organ needs to boot an operating system and load the software. This is not a problem for casual settings like practicing at home, but it raises concerns in a liturgical setting where dependability is paramount. Overall, while promising, this technology is simply not yet mature enough for installation in a church like St. Egbert's.
 
 #### Pipe organ
 
-Pipe organs are laudable investments: nothing is more authentic than the "real deal," and properly maintained, they will outlive their building. Pipe organs generally cost many times as much as a comparable digital organ, and require regular maintenance, including tuning twice a year. A new custom pipe organ for St. Egbert's would likely cost 5-10x as much as the Infinity (*i.e.*, $1-2M.)
+Pipe organs are laudable investments: nothing is more authentic than the "real deal," and properly maintained, they will outlive their building. Pipe organs generally cost many times as much as a comparable digital organ, and require regular maintenance, including tuning twice a year. A high quality, well-built rank of organ pipes can cost as much as $20,000 (the Allen III/58 has over 60 ranks, not to mention the fact that it is essentially six different organs in one). Adding costs for case work, console, and electrical and structural engineering, to name a few additional expenses, a new custom pipe organ for St. Egbert's comparable in size and functionality to the Allen III/58 would likely cost 10x as much (*i.e.*, $2M.) Given how authentic modern digital organs are, it is hard to justify such a difference in cost to install a new full pipe organ nowadays.
 
-There are also used pipe organs available, for example, through [Organ Clearing House](https://www.organclearinghouse.com/). Some are even free so that the buyer need "only" pay for dismantling, moving, and installation. In some cases, like [this historic Aeolian-Skinner organ](https://www.organclearinghouse.com/organs-for-sale#/3032-aeolianskinner-boston-ma), are already dismantled and out of its original loft, which is a large cost itself. They are usually in varying degrees of (dis)repair, requiring a partial or complete refurbishing to get them functional again. Additional costs include retrofitting its new home, such as electrical, structural, architectural modifications. The cost of all of this depends primarily on the size of the instrument and its condition, but will almost always be less expensive than the same instrument brand new, since so much of the cost of a pipe organ is in parts and material.
+There are also used pipe organs available, for example, through [Organ Clearing House](https://www.organclearinghouse.com/). Some are even free so that the buyer need "only" pay for dismantling, moving, and installation. In some cases, like [this historic Aeolian-Skinner organ](https://www.organclearinghouse.com/organs-for-sale#/3032-aeolianskinner-boston-ma), are already dismantled and out of its original loft, which is a large cost itself. They are usually in varying degrees of (dis)repair, requiring a partial or complete refurbishing to get them functional again. It is almost guaranteed that the wind chests and pipes will need to be releathered, one of the most expensive maintenance costs of pipe organs. Additional costs include retrofitting its new home, such as electrical, structural, architectural modifications. The cost of all of this depends primarily on the size of the instrument and its condition, but will almost always be less expensive than the same instrument brand new, since so much of the cost of a pipe organ is in parts and material. A key drawback, however, especially with an already-dismantled organ, is that there is no way of knowing what it sounds like, what works, and what does not.
 
-It has been assumed that a full pipe organ, whether new or used, is out of reachable budget for St. Egbert's. If the parish wishes to go down this route, more research will need to be done and new proposals will need to be sought. It is worth noting that new pipe organs are always custom-built according to desired specifications and room considerations. Because of this, a pipe organ that is plenty adequate for the parish's needs yet is also smaller than the Rodgers Infinity 367D could easily be designed, so a $2.5M (10x) price estimate could be unnecessarily high.
+It has been assumed that a full pipe organ, whether new or used, is out of reachable budget for St. Egbert's. If the parish wishes to go down this route, more research will need to be done and new proposals will need to be sought. It is worth noting that new pipe organs are always custom-built according to desired specifications and room considerations. Because of this, a pipe organ that is plenty adequate for the parish's needs yet is also smaller than the Allen III/58 could easily be designed, so a $2.1M (10x) price estimate could be unnecessarily high.
 
 ### Summary
 
-The Rodgers Infinity 367D organ is a remarkably impressive instrument that would be a tremendous upgrade from the current organ at St. Egbert's. With three manuals, 67 stops, more than 500 organ voices, and 14 audio channels divided between a ten-channel main organ and a four-channel antiphonal organ, this organ is plenty adequate for the size of the church and the needs of the existing music ministry. With the current organ beginning to show signs of its 32 years of service, the parish is encouraged to proactively begin raising funds now so that it can replace the instrument before it dies completely. While the Infinity's price tag of `{python} display(infinity367D_2026_total)` will require significant fundraising, it will constitute a dedicated investment in the future of the parish: its stunning fidelity to the sounds of pipe organs combined with endless possibilities of stop combinations and orchestral integrations will undoubtedly raise the parish's music program to a new level for decades to come.
+The Allen III/58 organ is a remarkably impressive instrument that would be a tremendous upgrade from the current organ at St. Egbert's. With three manuals, 66 stops, hundreds of organ voices across six voice palettes, and ten audio channels, this organ is plenty adequate for the size of the church and the needs of the existing and future music ministry. With the current organ beginning to show signs of its `{python} dt.today().year - 1994` years of service, the parish is encouraged to proactively begin raising funds now so that it can replace the instrument before it dies completely. While the III/58's price tag of `{python} display(gx358_2026_total)` will require significant fundraising, it will constitute a dedicated investment in the future of the parish: its stunning fidelity to the sounds of pipe organs combined with endless possibilities of stop combinations and orchestral integrations will undoubtedly raise the parish's music program to new levels for decades to come -- as one would aptly expect from a King of Instruments.
 
 ***
