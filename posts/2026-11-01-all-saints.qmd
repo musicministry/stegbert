@@ -1,0 +1,99 @@
+---
+title: All Saints
+last-updated: 2026-10-27
+description: Sunday, November 1, 2026
+categories:
+  - Ordinary Time 2026
+image: /images/dates/nov/01.png
+format:
+  html: default
+---
+
+::: {.content-visible when-format="html"}
+
+### Hymns
+
+All hymns are taken from the blue Gather hymnal unless otherwise noted. Note that the lyrics may not match our hymnal. Please practice the lyrics in the Gather hymnal, regardless of the video.
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Processional:</strong></td><td style="width: 75%;">882 - Ye Watchers and Ye Holy Ones<br><br> {{< video https://www.youtube.com/watch?v=vjBleDVU3dA >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Responsorial Psalm:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 144 <br><br> {{< video https://www.youtube.com/watch?v=soq_EBPRI7E >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gospel Acclamation:</strong></td><td style="width: 75%;"><em>Respond & Acclaim</em> p. 145 <br><br> {{< video https://www.youtube.com/watch?v=o5aDdT9ylI8 >}} <br> Other video recordings from *Respond & Acclaim* for rehearsal purposes can usually be found on several private YouTube channels such as <a href='https://www.youtube.com/@ChrisBrunelle/videos'>Chris Brunelle</a>, <a href='https://www.youtube.com/@LiturgicalMusic'>Liturgical Music</a>, or <a href='https://www.youtube.com/@MusicMinistry101/videos'>Music Ministry 101</a>. <br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Offertory:</strong></td><td style="width: 75%;">884 - For All the Saints<br><br> {{< video https://www.youtube.com/watch?v=EFV_iJPwR9k >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Communion:</strong></td><td style="width: 75%;">592 - We Are the Light of the World<br><br> {{< video https://www.youtube.com/watch?v=6F4l9b4rVL4 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Meditation:</strong></td><td style="width: 75%;">885 - For All the Saints Who've Shown Your Love<br><br> {{< video https://www.youtube.com/watch?v=7ECJANNNFP0 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Recessional:</strong></td><td style="width: 75%;">883 - For the Faithful Who Have Answered<br><br> {{< video https://www.youtube.com/watch?v=RPeZXojH9sY >}}</td></tr>
+</tbody>
+</table>
+
+
+### Mass Parts
+
+The Mass parts for Ordinary Time will be taken from *Mass of St. Dymphna*:
+
+<table class="hover normal" style="width: 100%;">
+<tbody>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Gloria:</strong></td><td style="width: 75%;">{{< video https://youtu.be/tukrgUdjIWU?t=27 >}}</td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Holy:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-holy.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Memorial Acclamation A:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-memaccA.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Amen:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-amen.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+<tr><td style="width: 25%; text-align: right; vertical-align: top; padding-right: 0.5em;"><strong>Lamb of God:</strong></td><td style="width: 75%;"><audio controls="">
+  <source src="../audio/st-dymphna-lambofgod.mp3" type="audio/wav"/>
+</audio>
+<br><br></td></tr>
+</tbody>
+</table>
+
+
+:::
+
+::: {.content-visible when-format="pdf"}
+
+[All song numbers are from the blue *Gather* hymnal unless otherwise noted.]{.red}
+
+```{=latex}
+\vspace{2em}
+```
+
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Processional:**           | 882 - [Ye Watchers and Ye Holy Ones](https://www.youtube.com/watch?v=vjBleDVU3dA)              |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Gloria:**                 | [Heritage Mass](https://youtu.be/tukrgUdjIWU?t=27)                                             |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Responsorial Psalm:**     | [R&A p. 144](https://www.youtube.com/watch?v=soq_EBPRI7E)                                      |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Gospel Acclamation:**     | [R&A p. 145](https://www.youtube.com/watch?v=o5aDdT9ylI8)<br><br>                              |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Offertory:**              | 884 - [For All the Saints](https://www.youtube.com/watch?v=EFV_iJPwR9k)                        |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Holy:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)                 |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Memorial Acclamation A:** | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)                 |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Amen:**                   | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)                 |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Lamb of God:**            | [Mass of St. Dymphna](https://musicministry.github.io/stegbert/stdymphna.html)                 |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Communion:**              | 592 - [We Are the Light of the World](https://www.youtube.com/watch?v=6F4l9b4rVL4)             |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Meditation:**             | 885 - [For All the Saints Who've Shown Your Love](https://www.youtube.com/watch?v=7ECJANNNFP0) |
++-----------------------------+------------------------------------------------------------------------------------------------+
+| **Recessional:**            | 883 - [For the Faithful Who Have Answered](https://www.youtube.com/watch?v=RPeZXojH9sY)        |
++-----------------------------+------------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[35, 65]"}
+
+\needspace{3\baselineskip}
+
+
+:::
+
