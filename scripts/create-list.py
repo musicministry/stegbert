@@ -103,7 +103,7 @@ start = args.start.lower()
 end = args.end.lower()
 
 # Load hymn lists
-cycle = u.lityear(args.year)
+cycle = u.lit_year(args.year)
 process_dir = os.path.join(PROJECT_ROOT, f'{args.year}-{cycle}')
 sys.path.append(os.path.join(process_dir))
 
