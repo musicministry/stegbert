@@ -1,6 +1,7 @@
 # =============================================================================
 # Load required packages
 from rapidfuzz import process, fuzz
+from functools import lru_cache
 from titlecase import titlecase
 from tabulate import tabulate
 from numbr import Cast as num
@@ -36,21 +37,25 @@ supplemental_index = yaml.safe_load(requests.get(supplemental_index_url).content
 # Combine
 index = gather_index | supplemental_index | mass_index
 
-# Respond and Acclaim index
-ra_index_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/ra-index.yml'
-ra_index = yaml.safe_load(requests.get(ra_index_url).content)
-
-# Respond and Acclaim YouTube videos and feast mapping
-ra_videos_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/ra-video-urls.yml'
-ra_videos = yaml.safe_load(requests.get(ra_videos_url).content)
-
+# Respond and Acclaim feast mapping
 ra_feast_mapping_url = 'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/feast-mapping.yml'
 ra_feast_mapping = yaml.safe_load(requests.get(ra_feast_mapping_url).content)
+
+# Feast slug -> exact R&A index celebration name, for dates that have more than
+# one index entry and where the slug can't be fuzzy-matched reliably.
+RA_NAME_OVERRIDES = {
+    'christmas-dawn':     'Nativity of the Lord (Christmas): Mass at Dawn',
+    'christmas-day':      'Nativity of the Lord (Christmas): Mass during the Day',
+    'christmas-midnight': 'Nativity of the Lord (Christmas): Mass during the Night',
+    'lent03':             'Third Sunday of Lent',
+    'lent04':             'Fourth Sunday of Lent',
+    'lent05':             'Fifth Sunday of Lent',
+}
 
 # -----------------------------------------------------------------------------
 # Tools
 
-def lityear(year):
+def lit_year(year):
     """Return the liturgical cycle for year `year`"""
     # Pick a starting year for cycle
     A, B, C = 2020, 2021, 2022
@@ -60,6 +65,15 @@ def lityear(year):
     ind = (year-np.array([A, B, C]))%3==0
     # Return the cycle year that is evenly divisible by 3
     return years[ind][0][0]
+
+def lit_cal_year(date):
+    """Calendar year of the liturgical year (the calendar year in which the liturgical year ends)."""
+    d = date.date() if isinstance(date, dt.datetime) else date  # handles pd.Timestamp too
+    christmas = dt.date(d.year, 12, 25)
+    # Fourth Sunday of Advent = last Sunday before Christmas
+    fourth = christmas - dt.timedelta(days=(christmas.weekday() + 1) % 7 or 7)
+    advent1 = fourth - dt.timedelta(days=21)
+    return d.year + 1 if d >= advent1 else d.year
 
 def week(i):
     """Return integer `i` as ordinal word"""
@@ -98,8 +112,21 @@ def get_url(name, swap=False):
     else:
         return None
 
-def get_ra_video_url(celebration, get='psalm'):
+@lru_cache(maxsize=None)
+def load_ra_yaml(kind, year):
+    """kind: 'index' or 'video-urls' (adjust to match the repo's filenames)."""
+    url = f'https://raw.githubusercontent.com/musicministry/song-urls/refs/heads/ra/ra-{kind}-{year}.yml'
+    resp = requests.get(url)
+    resp.raise_for_status()   # fail loudly instead of parsing "404: Not Found"
+    return yaml.safe_load(resp.content)
+
+def get_ra_video_url(celebration, date, get='psalm'):
     """Return the R&A video URL for `celebration`."""
+
+    # Load R&A for specified year
+    ra_index = load_ra_yaml('index', lit_cal_year(date))
+    ra_videos = load_ra_yaml('video-urls', lit_cal_year(date))
+
     # Check the `get` string
     assert get.lower() in ['psalm', 'gospel acclamation'], '`get` parameter must be "psalm" or "gospel acclamation"'
     get = titlecase(get)
@@ -229,6 +256,9 @@ def fuzzy_ra_index_lookup(date, celebration_name, threshold=70):
         >>> get_page_fuzzy(date(2026, 1, 4), "Epiphany")
         (28, "January 04, 2026 - The Epiphany of the Lord", 100)
     """
+    # Load index
+    ra_index = load_ra_yaml('index', lit_cal_year(date))
+
     # Format date to match the index
     date_str = date.strftime("%B %d, %Y")
     
@@ -246,6 +276,14 @@ def fuzzy_ra_index_lookup(date, celebration_name, threshold=70):
     # Extract just the celebration names (part after " - ")
     candidate_celebrations = {k: k.split(" - ", 1)[1] for k in candidates.keys()}
     
+    # Explicit override: exact match on the index celebration name if fuzzy
+    # match will fail
+    target = RA_NAME_OVERRIDES.get(celebration_name)
+    if target:
+        for key, celebration in candidate_celebrations.items():
+            if celebration == target:
+                return candidates[key], key, 100
+
     # Find best match
     result = process.extractOne(
         celebration_name,
@@ -295,9 +333,13 @@ def get_hymn_list(file_path, lit_year):
         results = yaml.safe_load(match.group(1))
         key = list(results.keys())[0]
         try:
-            return results[key][lit_year.lower()]
-        except KeyError:
             return results[key]['abc']
+        except KeyError:
+            return results[key][lit_year.lower()]
+        # try:
+        #     return results[key][lit_year.lower()]
+        # except KeyError:
+        #     return results[key]['abc']
     return None
 
 def process_week_range(start, end, df, lit_year, hymnal):
@@ -495,6 +537,7 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
     Returns:
         str or list: Formatted entry or entries
     """
+
     # Sort options by priority when applicable
     sorted_entries = sorted(song_data['list'], 
                          key=lambda h: priority_order.get(h.get('priority', 'optional'), 3))
@@ -514,6 +557,7 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
             elif is_gospel and number is not None:
                 display_name = get_ra_video_url(
                     index_key.split(' - ')[-1].strip(),
+                    date=date,
                     get='gospel acclamation'
                 )
                 number += 1
@@ -521,11 +565,13 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
                 lookup_name = f"{index_key.split(' - ')[-1].strip()}: {unkey(celebration.split('-psalm-')[-1])}"
                 display_name = get_ra_video_url(
                     lookup_name,
+                    date=date,
                     get='psalm'
                 )
             else:
                 display_name = get_ra_video_url(
                     index_key.split(' - ')[-1].strip(),
+                    date=date,
                     get='psalm'
                 )
             number = f'R&A p. {number}'
@@ -560,18 +606,18 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
                 elif is_gospel and number is not None:
                     display_name = get_ra_video_url(
                         index_key.split(' - ')[-1].strip(),
-                        get='gospel acclamation'
+                        date=date, get='gospel acclamation'
                     )
                     number += 1
                 elif 'easter-vigil' in celebration or 'pentecost-vigil-extended' in celebration:
                     lookup_name = f"{index_key.split(' - ')[-1].strip()}: {unkey(celebration.split('-psalm-')[-1])}"
                     display_name = get_ra_video_url(
-                        lookup_name, get='psalm'
+                        lookup_name, date=date, get='psalm'
                     )
                 else:
                     display_name = get_ra_video_url(
                         index_key.split(' - ')[-1].strip(),
-                        get='psalm'
+                        date=date, get='psalm'
                     )
                 number = f'R&A p. {number}'
             # Appendices 
@@ -750,7 +796,42 @@ def load_hymn_schedules(file_name):
             if isinstance(obj, dict):
                 dicts[name] = obj
     
-    return dicts
+    return clean_tags(dicts)
+
+def clean_tags(data):
+    """Remove "required", "optional", "preferred", and "flexible" tags if and only if there are no lists."""
+
+    TAG = re.compile(r'^\[\w+\]\s*')   # a leading [word] plus trailing space
+
+    problems = []
+
+    def check(obj, path):
+        if isinstance(obj, dict):
+            for k, v in obj.items():
+                check(v, path + (k,))
+        elif isinstance(obj, list):
+            if any(isinstance(i, str) and TAG.match(i) for i in obj):
+                problems.append(' > '.join(map(str, path)))
+            for n, i in enumerate(obj):
+                if not isinstance(i, str):
+                    check(i, path + (n,))
+
+    check(data, ())
+    if problems:
+        raise ValueError(
+            'Each part must have only one selected song. The following needs a selection:\n' + '\n'.join(problems)
+        )
+
+    def strip(obj):
+        if isinstance(obj, dict):
+            return {k: strip(v) for k, v in obj.items()}
+        if isinstance(obj, list):
+            return [strip(v) for v in obj]
+        if isinstance(obj, str):
+            return TAG.sub('', obj)
+        return obj
+
+    return strip(data)
 
 def simple_table(hymn_dict: dict, file):
     """Create simple Markdown table from dictionary of hymns."""
@@ -1136,15 +1217,17 @@ def massparts_video_table(season:str, setting:str, include:list):
     
     return html
 
-def get_page(date_celebration):
+def get_page(date_celebration, date):
     """Get page number by exact date and celebration. Must be formatted
     'date - celebration'
     For example, `November 30, 2025 - First Sunday of Advent'
     """
+    ra_index = load_ra_yaml('index', lit_cal_year(date))
     return ra_index.get(date_celebration)
 
-def search_celebration(search_term):
+def search_celebration(search_term, date):
     """Search for celebrations by partial name match."""
+    ra_index = load_ra_yaml('index', lit_cal_year(date))
     search_lower = search_term.lower()
     return {k: v for k, v in ra_index.items()
             if search_lower in k.lower()}
@@ -1171,6 +1254,9 @@ def get_page_by_date(date_obj, celebration_substring="", fuzzy=False, threshold=
         >>> get_page_by_date(date(2026, 1, 4), "Epifany", fuzzy=True)
         28
     """
+    # Load index
+    ra_index = load_ra_yaml('index', lit_cal_year(date_obj))
+
     # Use fuzzy matching, if indicated
     if fuzzy and celebration_substring:
         page, _, _ = fuzzy_ra_index_lookup(date_obj, celebration_substring, threshold)
@@ -1213,6 +1299,9 @@ def get_all_pages_for_date(date):
             'The Nativity of the Lord (Christmas): At the Mass during the Day': 22
         }
     """
+    # Load index
+    ra_index = load_ra_yaml('index', lit_cal_year(date))
+
     # Format date to match the index
     date_str = date.strftime("%B %d, %Y")
     
