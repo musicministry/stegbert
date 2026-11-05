@@ -3,6 +3,7 @@
 .env
 
 2026-A/next-lists.py
+2027-B/next-lists.py
 
 /.quarto/
 **/*.quarto_ipynb
