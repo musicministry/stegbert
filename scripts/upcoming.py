@@ -226,7 +226,7 @@ def main():
             for r in ss.itertuples():
                 if r.feast in hymn_lists.keys():
                     # Create the header
-                    file.write(f'#### {u.fmtdate(r.Index)} [{r.name}]{{style="float:right"}}\n\n')
+                    file.write(f'#### [{r.name}]{{style="float:right"}} {u.fmtdate(r.Index)}\n\n')
 
                     # Compile the hymns and URLs
                     hymns = hymn_lists[r.feast]

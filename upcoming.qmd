@@ -1,10 +1,10 @@
 ---
-first-feast: Twenty-Seventh Sunday in Ordinary Time
-first-date: October 4, 2026
-last-feast: Thanksgiving
-last-date: November 26, 2026
+first-feast: Thirty-Second Sunday in Ordinary Time
+first-date: November 8, 2026
+last-feast: Baptism of the Lord
+last-date: January 10, 2027
 title: Hymn Schedules
-subtitle: "**October 4, 2026** (Twenty-Seventh Sunday in Ordinary Time) through **November 26, 2026** (Thanksgiving)"
+subtitle: "**November 8, 2026** (Thirty-Second Sunday in Ordinary Time) through **January 10, 2027** (Baptism of the Lord)"
 format:
   html: default
   hymn-schedules-pdf:
@@ -28,116 +28,7 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 :::
 ::::
 
-#### October 4, 2026 [Twenty-Seventh Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 576 - [Canticle of the Sun](https://www.youtube.com/watch?v=kC6EWt7BK7s)                 |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 136](https://www.youtube.com/watch?v=C5UKaimyd0E)                                |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 137](https://www.youtube.com/watch?v=mx_bM_4iQQo)                                |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 703 - [Lord of All Nations, Grant Me Grace](https://www.youtube.com/watch?v=AbZ55vUu5mM) |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 932 - [One Bread, One Body](https://www.youtube.com/watch?v=ylWKlw6HXmw)                 |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Meditation:**         | 828 - [Make Me a Channel of Your Peace](https://www.youtube.com/watch?v=eHVz45n5a9M)     |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 636 - [Now Thank We All Our God](https://www.youtube.com/watch?v=lmJtef10DWw)            |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### October 11, 2026 [Twenty-Eighth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 838 - [Come to the Feast](https://www.youtube.com/watch?v=oS7UAkfi0Jc)                   |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 138](https://www.youtube.com/watch?v=6d5PH_IWcJA)                                |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 139](https://www.youtube.com/watch?v=TGQpmr9E7CE)                                |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 703 - [Lord of All Nations, Grant Me Grace](https://www.youtube.com/watch?v=AbZ55vUu5mM) |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 940 - [You Satisfy the Hungry Heart](https://www.youtube.com/watch?v=eGyZ7aXWaFA)        |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 614 - [Joyful, Joyful, We Adore You](https://www.youtube.com/watch?v=wFr_W91ONUc)        |
-+--------+-------------------------+------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### October 18, 2026 [Twenty-Ninth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+--------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 607 - [Sing a New Song (Schutte)](https://www.youtube.com/watch?v=uTS6pzJTLFs) |
-+--------+-------------------------+--------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 140](https://www.youtube.com/watch?v=HkB5Kfyusj0)                      |
-+--------+-------------------------+--------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 141](https://www.youtube.com/watch?v=bovpbAeG1s4)                      |
-+--------+-------------------------+--------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 583 - [Wisdom, My Road](https://www.youtube.com/watch?v=mBxbbWvq2sc)           |
-+--------+-------------------------+--------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 935 - [Draw Near](https://www.youtube.com/watch?v=u2eNJSXCkrE)                 |
-+--------+-------------------------+--------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 578 - [How Great Thou Art](https://www.youtube.com/watch?v=Pk4O5UW5QBw)        |
-+--------+-------------------------+--------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### October 25, 2026 [Thirtieth Sunday in Ordinary Time]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+-----------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 624 - [Lift Up Your Hearts](https://www.youtube.com/watch?v=bvIddKZdjjs)                |
-+--------+-------------------------+-----------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 142](https://www.youtube.com/watch?v=d-WTSAbBepA)                               |
-+--------+-------------------------+-----------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 143](https://www.youtube.com/watch?v=oe4esgvVL9o)                               |
-+--------+-------------------------+-----------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 583 - [Wisdom, My Road](https://www.youtube.com/watch?v=mBxbbWvq2sc)                    |
-+--------+-------------------------+-----------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 708 - [Set Your Heart on the Higher Gifts](https://www.youtube.com/watch?v=cizvjQqAUdE) |
-+--------+-------------------------+-----------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 835 - [They'll Know We Are Christians](https://www.youtube.com/watch?v=MJv9j598CSg)     |
-+--------+-------------------------+-----------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### November 1, 2026 [All Saints]{style="float:right"}
-
-[**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
-
-+--------+-------------------------+------------------------------------------------------------------------------------------------+
-| &emsp; | **Processional:**       | 882 - [Ye Watchers and Ye Holy Ones](https://www.youtube.com/watch?v=vjBleDVU3dA)              |
-+--------+-------------------------+------------------------------------------------------------------------------------------------+
-| &emsp; | **Responsorial Psalm:** | [R&A p. 144](https://www.youtube.com/watch?v=soq_EBPRI7E)                                      |
-+--------+-------------------------+------------------------------------------------------------------------------------------------+
-| &emsp; | **Gospel Acclamation:** | [R&A p. 145](https://www.youtube.com/watch?v=o5aDdT9ylI8)                                      |
-+--------+-------------------------+------------------------------------------------------------------------------------------------+
-| &emsp; | **Offertory:**          | 884 - [For All the Saints](https://www.youtube.com/watch?v=EFV_iJPwR9k)                        |
-+--------+-------------------------+------------------------------------------------------------------------------------------------+
-| &emsp; | **Communion:**          | 592 - [We Are the Light of the World](https://www.youtube.com/watch?v=6F4l9b4rVL4)             |
-+--------+-------------------------+------------------------------------------------------------------------------------------------+
-| &emsp; | **Meditation:**         | 885 - [For All the Saints Who've Shown Your Love](https://www.youtube.com/watch?v=7ECJANNNFP0) |
-+--------+-------------------------+------------------------------------------------------------------------------------------------+
-| &emsp; | **Recessional:**        | 883 - [For the Faithful Who Have Answered](https://www.youtube.com/watch?v=RPeZXojH9sY)        |
-+--------+-------------------------+------------------------------------------------------------------------------------------------+
-: {.hover .normal tbl-colwidths="[2, 25, 73]"}
-
-\needspace{3\baselineskip}
-
-#### November 8, 2026 [Thirty-Second Sunday in Ordinary Time]{style="float:right"}
+#### [Thirty-Second Sunday in Ordinary Time]{style="float:right"} November 8, 2026
 
 [**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
 
@@ -158,7 +49,7 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 
 \needspace{3\baselineskip}
 
-#### November 15, 2026 [Thirty-Third Sunday in Ordinary Time]{style="float:right"}
+#### [Thirty-Third Sunday in Ordinary Time]{style="float:right"} November 15, 2026
 
 [**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
 
@@ -181,7 +72,7 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 
 \needspace{3\baselineskip}
 
-#### November 22, 2026 [Christ the King]{style="float:right"}
+#### [Christ the King]{style="float:right"} November 22, 2026
 
 [**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
 
@@ -204,7 +95,7 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 
 \needspace{3\baselineskip}
 
-#### November 26, 2026 [Thanksgiving]{style="float:right"}
+#### [Thanksgiving]{style="float:right"} November 26, 2026
 
 [**Mass Setting:** [Mass of St. Dymphna](#mass-of-st-dymphna)]{style="float:right"}
 
@@ -226,6 +117,259 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 \needspace{3\baselineskip}
 
 
+#### [First Sunday in Advent]{style="float:right"} November 29, 2026
+
+[**Mass Setting:** [Missa Emmanuel](#missa-emmanuel)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 562 - [Come Now, Almighty King](https://www.youtube.com/watch?v=mgzRB4gEPf4)              |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 4](https://www.youtube.com/watch?v=ycibmDJteeU)                                   |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 5](https://www.youtube.com/watch?v=cJiIfxLffZM)                                   |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 404 - [When the King Shall Come Again](https://www.youtube.com/watch?v=0YO0bCK_y_E)       |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 728 - [Eye Has Not Seen](https://www.youtube.com/watch?v=wq6wAdmUuyU)                     |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 659 - [I Lift My Soul to You](https://www.youtube.com/watch?v=pBF0V9VMdKY)                |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 423 - [Awake! Awake, and Greet the New Morn](https://www.youtube.com/watch?v=Op9Yyh_M4dk) |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### [Second Sunday in Advent]{style="float:right"} December 6, 2026
+
+[**Mass Setting:** [Missa Emmanuel](#missa-emmanuel)]{style="float:right"}
+
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 418 - [On Jordan's Bank](https://www.youtube.com/watch?v=YvvEQkspJxY)              |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 6](https://www.youtube.com/watch?v=WNNuagmWJBQ)                            |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 7](https://www.youtube.com/watch?v=itnCqqqSONc)                            |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 413 - [Comfort, Comfort, O My People](https://www.youtube.com/watch?v=GGURM_EVT8M) |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 396 - [Comfort, My People](https://www.youtube.com/watch?v=kABseMpDs1c)            |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 402 - [Like a Shepherd](https://www.youtube.com/watch?v=4cGCBehpN3o)               |
++--------+-------------------------+------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 863 - [O Holy City, Seen of John](https://www.youtube.com/watch?v=z6qIvVjgY3s)     |
++--------+-------------------------+------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### [Immaculate Conception]{style="float:right"} December 8, 2026
+
+[**Mass Setting:** [Missa Emmanuel](#missa-emmanuel)]{style="float:right"}
+
++--------+-------------------------+----------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 886 - [Immaculate Mary](https://www.youtube.com/watch?v=7fascMNAJCc)             |
++--------+-------------------------+----------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 8](https://www.youtube.com/watch?v=vD4-Qg_7JH4)                          |
++--------+-------------------------+----------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 9](https://www.youtube.com/watch?v=ai0eezhXgI0)                          |
++--------+-------------------------+----------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 875 - [Praise We the Lord This Day](https://www.youtube.com/watch?v=hvaDKdZ20bo) |
++--------+-------------------------+----------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 101 - [Luke 1:46-55: Magníficat](https://www.youtube.com/watch?v=bpRRvYN3z0I)    |
++--------+-------------------------+----------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 889 - [Hail Mary: Gentle Woman](https://www.youtube.com/watch?v=OUey6ytEXqY)     |
++--------+-------------------------+----------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 458 - [I Sing a Maid](https://www.youtube.com/watch?v=CIyxIu9Wkbk)               |
++--------+-------------------------+----------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### [Third Sunday in Advent]{style="float:right"} December 13, 2026
+
+[**Mass Setting:** [Missa Emmanuel](#missa-emmanuel)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 395 - [O Come, O Come, Emmanuel](https://www.youtube.com/watch?v=wZdPSU98tmQ)             |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 12](https://www.youtube.com/watch?v=PfVcjA55BSw)                                  |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 13](https://www.youtube.com/watch?v=VjFTzz-mDfE)                                  |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 421 - [Savior of the Nations, Come](https://www.youtube.com/watch?v=ldb56S3ZQ7M)          |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 101 - [Luke 1:46-55: Magníficat](https://www.youtube.com/watch?v=bpRRvYN3z0I)             |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 416 - [A Voice Cries Out](https://www.youtube.com/watch?v=vqvpcQJQDYY)                    |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 423 - [Awake! Awake, and Greet the New Morn](https://www.youtube.com/watch?v=Op9Yyh_M4dk) |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### [Fourth Sunday in Advent]{style="float:right"} December 20, 2026
+
+[**Mass Setting:** [Missa Emmanuel](#missa-emmanuel)]{style="float:right"}
+
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 401 - [O Come, Divine Messiah!](https://www.youtube.com/watch?v=RT1qMElAzas)                |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 14](https://www.youtube.com/watch?v=-DRg-mQdAKs)                                    |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 15](https://www.youtube.com/watch?v=2wTtGE6GVQQ)                                    |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 395 - [O Come, O Come, Emmanuel](https://www.youtube.com/watch?v=wZdPSU98tmQ)               |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 414 - [The King Shall Come When Morning Dawns](https://www.youtube.com/watch?v=7ngF1C3FSfc) |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 415 - [My Soul in Stillness Waits](https://www.youtube.com/watch?v=lIHxYEmTDCA)             |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 409 - [People, Look East](https://www.youtube.com/watch?v=YGjPQ5yitcM)                      |
++--------+-------------------------+---------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+
+#### [Christmas Day]{style="float:right"} December 25, 2026
+
+[**Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass)]{style="float:right"}
+
++--------+-------------------------+-----------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 439 - [O Come, All Ye Faithful](https://www.youtube.com/watch?v=epvG0Q2-D6E)            |
++--------+-------------------------+-----------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | 70 - [Psalm 98: All the Ends of the Earth](https://www.youtube.com/watch?v=YUDFGKBAzUc) |
++--------+-------------------------+-----------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 23](https://www.youtube.com/watch?v=x3DUemdtbPU)                                |
++--------+-------------------------+-----------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 440 - [Good Christian Friends, Rejoice](https://www.youtube.com/watch?v=1UAL2WUVAo0)    |
++--------+-------------------------+-----------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 432 - [Nativity Carol](https://www.youtube.com/watch?v=Jtk_r62xLzU)                     |
++--------+-------------------------+-----------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 427 - [Of the Father's Love Begotten](https://www.youtube.com/watch?v=FxYF0KX3btU)      |
++--------+-------------------------+-----------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 437 - [Joy to the World](https://www.youtube.com/watch?v=pzfCMZr9pZo)                   |
++--------+-------------------------+-----------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### [Christmas Midnight]{style="float:right"} December 25, 2026
+
+[**Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 439 - [O Come, All Ye Faithful](https://www.youtube.com/watch?v=epvG0Q2-D6E)                    |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | 68 - [Psalm 96: Today Is Born Our Savior (Hughes)](https://www.youtube.com/watch?v=9p8tLG64ci8) |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 19](https://www.youtube.com/watch?v=R25nFKQcXaI)                                        |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 446 - [O Little Town of Bethlehem](https://www.youtube.com/watch?v=WqGc2KMkRKo)                 |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 432 - [Nativity Carol](https://www.youtube.com/watch?v=Jtk_r62xLzU)                             |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 441 - [Silent Night](https://www.youtube.com/watch?v=Jd2C3j8pRls)                               |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 424 - [Hark! The Herald Angels Sing](https://www.youtube.com/watch?v=crzMO3MI-4s)               |
++--------+-------------------------+-------------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### [Holy Family]{style="float:right"} December 27, 2026
+
+[**Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass)]{style="float:right"}
+
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 438 - [Angels, from the Realms of Glory](https://www.youtube.com/watch?v=MQHKpSyWN78) |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 24](https://www.youtube.com/watch?v=sulJaBGa8QM)                              |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 25](https://www.youtube.com/watch?v=IXEjiJ08D7A)                              |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 445 - [Infant Holy, Infant Lowly](https://www.youtube.com/watch?v=IaqoeCl_jR0)        |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 455 - [Once in Royal David's City](https://www.youtube.com/watch?v=TT3cfXd3Shk)       |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 424 - [Hark! The Herald Angels Sing](https://www.youtube.com/watch?v=crzMO3MI-4s)     |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### [Mary, Mother of God]{style="float:right"} January 1, 2027
+
+[**Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass)]{style="float:right"}
+
++--------+-------------------------+-----------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 458 - [I Sing a Maid](https://www.youtube.com/watch?v=CIyxIu9Wkbk)                |
++--------+-------------------------+-----------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 26](https://www.youtube.com/watch?v=Fe3I2rYENX0)                          |
++--------+-------------------------+-----------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 27](https://www.youtube.com/watch?v=F4vkryeZyUE)                          |
++--------+-------------------------+-----------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 448 - [Away in a Manger](https://www.youtube.com/watch?v=0h1-vpX8790)             |
++--------+-------------------------+-----------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 466 - [What Child Is This](https://www.youtube.com/watch?v=Cckt76a5FOE)           |
++--------+-------------------------+-----------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 451 - [Lo, How a Rose E'er Blooming](https://www.youtube.com/watch?v=h_RRlNtAlKg) |
++--------+-------------------------+-----------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 829 - [Let There Be Peace on Earth](https://www.youtube.com/watch?v=rnw-zI0gJI0)  |
++--------+-------------------------+-----------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### [Epiphany of the Lord]{style="float:right"} January 3, 2027
+
+[**Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass)]{style="float:right"}
+
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 459 - [Songs of Thankfulness and Praise](https://www.youtube.com/watch?v=I4cg0aOczWo) |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 28](https://www.youtube.com/watch?v=CeTCQ8ipfPM)                              |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 29](https://www.youtube.com/watch?v=6sXPdxkoNNc)                              |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 463 - [We Three Kings of Orient Are](https://www.youtube.com/watch?v=_c1RfmfVBL8)     |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 462 - [Epiphany Carol](https://www.youtube.com/watch?v=5OjslOODRFI)                   |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 465 - [As with Gladness Men of Old](https://www.youtube.com/watch?v=3oaaw_dUUig)      |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 461 - [What Star Is This](https://www.youtube.com/watch?v=1_ifsk8loik)                |
++--------+-------------------------+---------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+#### [Baptism of the Lord]{style="float:right"} January 10, 2027
+
+[**Mass Setting:** [Christmas Carol Mass](#christmas-carol-mass)]{style="float:right"}
+
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Processional:**       | 596 - [Praise to You, O Christ, Our Savior](https://www.youtube.com/watch?v=cNRzJVpYmeQ)  |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Responsorial Psalm:** | [R&A p. 30](https://www.youtube.com/watch?v=TUJed3eyh5I)                                  |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Gospel Acclamation:** | [R&A p. 31](https://www.youtube.com/watch?v=G5x7w9VuH2Y)                                  |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Offertory:**          | 440 - [Good Christian Friends, Rejoice](https://www.youtube.com/watch?v=1UAL2WUVAo0)      |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Communion:**          | 467 - [When John Baptized by Jordan's River](https://www.youtube.com/watch?v=CUZwA0zgN9A) |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Meditation:**         | 939 - [Behold the Lamb](https://www.youtube.com/watch?v=FP8oOvGed-8)                      |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+| &emsp; | **Recessional:**        | 428 - [Go Tell It on the Mountain](https://www.youtube.com/watch?v=FmHd96ZA6gY)           |
++--------+-------------------------+-------------------------------------------------------------------------------------------+
+: {.hover .normal tbl-colwidths="[2, 25, 73]"}
+
+\needspace{3\baselineskip}
+
+
 ::: {.titlered}
 ### &nbsp;&#x2720; Mass Parts
 :::
@@ -237,4 +381,20 @@ All hymns are taken from the blue *Gather* hymnal unless otherwise noted. “R&A
 - (Handout) - [Mass of St. Dymphna: Memorial Acclamation A](https://musicministry.github.io/stegbert/stdymphna.html)
 - (Handout) - [Mass of St. Dymphna: Amen](https://musicministry.github.io/stegbert/stdymphna.html)
 - (Handout) - [Mass of St. Dymphna: Lamb of God](https://musicministry.github.io/stegbert/stdymphna.html)
+
+#### Missa Emmanuel {#missa-emmanuel}
+
+- *Gloria omitted during Advent*
+- 358 - [Missa Emmanuel: Holy](https://www.youtube.com/watch?v=WfWjmrnMEeU)
+- (Handout) - [Missa Emmanuel: Memorial Acclamation B](https://www.youtube.com/watch?v=Q-RQUqJKb4U)
+- 360 - [Missa Emmanuel: Amen](https://youtu.be/oiqqBD4bqKo)
+- (Handout) - [Missa Emmanuel: Lamb of God](https://youtu.be/iZw5bAd2YYA)
+
+#### Christmas Carol Mass {#christmas-carol-mass}
+
+- (Handout) - [Christmas Carol Mass: Gloria](https://youtu.be/iYYPSiyZO1I?t=82)
+- (Handout) - [Christmas Carol Mass: Holy](https://youtu.be/iYYPSiyZO1I?t=423)
+- (Handout) - [Christmas Carol Mass: Memorial Acclamation B](https://youtu.be/iYYPSiyZO1I?t=485)
+- (Handout) - [Christmas Carol Mass: Amen](https://youtu.be/iYYPSiyZO1I?t=557)
+- (Handout) - [Christmas Carol Mass: Lamb of God](https://youtu.be/iYYPSiyZO1I?t=601)
 
