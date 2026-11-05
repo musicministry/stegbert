@@ -5,7 +5,7 @@
 # This script extracts hymn selections from the music planning book repo for
 # all of the weeks between `start` and `end`, inclusive, for year `year`;
 # re-formats them into more consolidated dictionaries, one per feast; and
-# writes these to a single `.py` file to be processed by `upcomping.py`.
+# writes these to a single `.py` file to be processed by `upcoming.py`.
 # Optionally exclude lower priority feasts by passing the number of the
 # lowest-desired celebration priority to `-p, --priority`:
 #     -> 2 for Sundays and holy days of obligation
@@ -84,7 +84,7 @@ def parse_args():
     parser.add_argument('--hymnal', type=str, default='gather',
                         help='Hymnal for indexing, either "gather" or "bb". Defaults to "gather".')
     parser.add_argument('-p', '--priority', type=int, default=0,
-                        help='Interger [0,2] indicating the lowest priority celebration to extract. Default to 0 to extract everything.')
+                        help='Integer [0,2] indicating the lowest priority celebration to extract. Default to 0 to extract everything.')
     parser.add_argument('-o', '--outfile', nargs='?', type=str, 
                         default='next-lists.py',
                         help='Name and directory of csv file to write. Default to "[pwd]/[yearDir]/next-lists.py"')
