@@ -1,0 +1,79 @@
+date,weekday,feast,season,name,priority,year,month,day,dayofweek,filename
+2026-11-29,Sun,advent01,advent,First Sunday in Advent,2,2026,11,29,6,advent/advent01.qmd
+2026-12-06,Sun,advent02,advent,Second Sunday in Advent,2,2026,12,6,6,advent/advent02.qmd
+2026-12-08,Tues,immaculate-conception,advent,Immaculate Conception,2,2026,12,8,1,feasts/dec08-immaculate-conception.qmd
+2026-12-13,Sun,advent03,advent,Third Sunday in Advent,2,2026,12,13,6,advent/advent03.qmd
+2026-12-20,Sun,advent04,advent,Fourth Sunday in Advent,2,2026,12,20,6,advent/advent04.qmd
+2026-12-24,Thurs,christmas-vigil,christmas,Christmas Vigil,2,2026,12,24,3,christmas/christmas-vigil.qmd
+2026-12-25,Fri,christmas-day,christmas,Christmas Day,2,2026,12,25,4,christmas/christmas-day.qmd
+2026-12-25,Fri,christmas-dawn,christmas,Christmas Dawn,2,2026,12,25,4,christmas/christmas-dawn.qmd
+2026-12-25,Fri,christmas-midnight,christmas,Christmas Midnight,2,2026,12,25,4,christmas/christmas-midnight.qmd
+2026-12-27,Sun,holy-family,christmas,Holy Family,2,2026,12,27,6,christmas/holy-family.qmd
+2027-01-01,Fri,mary-mother-of-god,christmas,"Mary, Mother of God",2,2027,1,1,4,christmas/mary-mother-of-god.qmd
+2027-01-03,Sun,epiphany,christmas,Epiphany of the Lord,2,2027,1,3,6,christmas/epiphany.qmd
+2027-01-10,Sun,baptism,christmas,Baptism of the Lord,2,2027,1,10,6,christmas/baptism.qmd
+2027-01-17,Sun,ot02,ordinary-time,Second Sunday in Ordinary Time,2,2027,1,17,6,ordinary-time/ot02.qmd
+2027-01-24,Sun,ot03,ordinary-time,Third Sunday in Ordinary Time,2,2027,1,24,6,ordinary-time/ot03.qmd
+2027-01-31,Sun,ot04,ordinary-time,Fourth Sunday in Ordinary Time,2,2027,1,31,6,ordinary-time/ot04.qmd
+2027-02-02,Tues,presentation,ordinary-time,Presentation of the Lord,0,2027,2,2,1,feasts/feb02-presentation.qmd
+2027-02-07,Sun,ot05,ordinary-time,Fifth Sunday in Ordinary Time,2,2027,2,7,6,ordinary-time/ot05.qmd
+2027-02-10,Wed,ash-wednesday,lent,Ash Wednesday,1,2027,2,10,2,lent/ash-wednesday.qmd
+2027-02-14,Sun,lent01,lent,First Sunday in Lent,2,2027,2,14,6,lent/lent01.qmd
+2027-02-21,Sun,lent02,lent,Second Sunday in Lent,2,2027,2,21,6,lent/lent02.qmd
+2027-02-28,Sun,lent03,lent,Third Sunday in Lent,2,2027,2,28,6,lent/lent03.qmd
+2027-03-07,Sun,lent04,lent,Fourth Sunday in Lent,2,2027,3,7,6,lent/lent04.qmd
+2027-03-14,Sun,lent05,lent,Fifth Sunday in Lent,2,2027,3,14,6,lent/lent05.qmd
+2027-03-19,Fri,stjoseph,lent,Saint Joseph,0,2027,3,19,4,feasts/mar19-stjoseph.qmd
+2027-03-21,Sun,palm-sunday,holy-week,Palm Sunday,2,2027,3,21,6,holy-week/palm-sunday.qmd
+2027-03-25,Thurs,annunciation,holy-week,Annunciation of the Lord,0,2027,3,25,3,feasts/mar25-annunciation.qmd
+2027-03-26,Fri,good-friday,holy-week,Good Friday,1,2027,3,26,4,holy-week/good-friday.qmd
+2027-03-27,Sat,easter-vigil,holy-week,Easter Vigil,1,2027,3,27,5,holy-week/easter-vigil.qmd
+2027-03-28,Sun,easter01,easter,First Sunday in Easter,2,2027,3,28,6,easter/easter01.qmd
+2027-04-04,Sun,easter02,easter,Second Sunday in Easter,2,2027,4,4,6,easter/easter02.qmd
+2027-04-11,Sun,easter03,easter,Third Sunday in Easter,2,2027,4,11,6,easter/easter03.qmd
+2027-04-18,Sun,easter04,easter,Fourth Sunday in Easter,2,2027,4,18,6,easter/easter04.qmd
+2027-04-25,Sun,easter05,easter,Fifth Sunday in Easter,2,2027,4,25,6,easter/easter05.qmd
+2027-05-02,Sun,easter06,easter,Sixth Sunday in Easter,2,2027,5,2,6,easter/easter06.qmd
+2027-05-09,Sun,ascension,easter,Ascension of the Lord,2,2027,5,9,6,easter/ascension.qmd
+2027-05-15,Sat,pentecost-vigil,easter,Pentecost Vigil,0,2027,5,15,5,easter/pentecost-vigil.qmd
+2027-05-15,Sat,pentecost-vigil-extended-form,easter,Pentecost Vigil Extended Form,0,2027,5,15,5,easter/pentecost-vigil-extended.qmd
+2027-05-16,Sun,pentecost,easter,Pentecost,2,2027,5,16,6,easter/pentecost.qmd
+2027-05-23,Sun,holy-trinity,ordinary-time,Holy Trinity,2,2027,5,23,6,feasts/holy-trinity.qmd
+2027-05-30,Sun,corpus-christi,ordinary-time,Corpus Christi,2,2027,5,30,6,feasts/corpus-christi.qmd
+2027-06-04,Fri,sacred-heart,ordinary-time,Sacred Heart of Jesus,0,2027,6,4,4,feasts/sacred-heart.qmd
+2027-06-06,Sun,ot10,ordinary-time,Tenth Sunday in Ordinary Time,2,2027,6,6,6,ordinary-time/ot10.qmd
+2027-06-13,Sun,ot11,ordinary-time,Eleventh Sunday in Ordinary Time,2,2027,6,13,6,ordinary-time/ot11.qmd
+2027-06-20,Sun,ot12,ordinary-time,Twelfth Sunday in Ordinary Time,2,2027,6,20,6,ordinary-time/ot12.qmd
+2027-06-23,Wed,nativity-john-baptist-vigil,ordinary-time,Nativity of John Baptist Vigil,0,2027,6,23,2,feasts/jun23-nativity-john-baptist-vigil.qmd
+2027-06-24,Thurs,nativity-john-baptist,ordinary-time,Nativity of John Baptist,0,2027,6,24,3,feasts/jun24-nativity-john-baptist.qmd
+2027-06-27,Sun,ot13,ordinary-time,Thirteenth Sunday in Ordinary Time,2,2027,6,27,6,ordinary-time/ot13.qmd
+2027-06-28,Mon,peter-paul-vigil,ordinary-time,Peter Paul Vigil,0,2027,6,28,0,feasts/jun28-peter-paul-vigil.qmd
+2027-06-29,Tues,peter-paul,ordinary-time,Saints Peter and Paul,0,2027,6,29,1,feasts/jun29-peter-paul.qmd
+2027-07-04,Sun,ot14,ordinary-time,Fourteenth Sunday in Ordinary Time,2,2027,7,4,6,ordinary-time/ot14.qmd
+2027-07-11,Sun,ot15,ordinary-time,Fifteenth Sunday in Ordinary Time,2,2027,7,11,6,ordinary-time/ot15.qmd
+2027-07-18,Sun,ot16,ordinary-time,Sixteenth Sunday in Ordinary Time,2,2027,7,18,6,ordinary-time/ot16.qmd
+2027-07-25,Sun,ot17,ordinary-time,Seventeenth Sunday in Ordinary Time,2,2027,7,25,6,ordinary-time/ot17.qmd
+2027-08-01,Sun,ot18,ordinary-time,Eighteenth Sunday in Ordinary Time,2,2027,8,1,6,ordinary-time/ot18.qmd
+2027-08-06,Fri,transfiguration,ordinary-time,Transfiguration of the Lord,0,2027,8,6,4,feasts/aug06-transfiguration.qmd
+2027-08-08,Sun,ot19,ordinary-time,Nineteenth Sunday in Ordinary Time,2,2027,8,8,6,ordinary-time/ot19.qmd
+2027-08-14,Sat,assumption-vigil,ordinary-time,Assumption Vigil,2,2027,8,14,5,feasts/aug14-assumption-vigil.qmd
+2027-08-15,Sun,assumption,ordinary-time,Assumption,2,2027,8,15,6,feasts/aug15-assumption.qmd
+2027-08-22,Sun,ot21,ordinary-time,Twenty-First Sunday in Ordinary Time,2,2027,8,22,6,ordinary-time/ot21.qmd
+2027-08-29,Sun,ot22,ordinary-time,Twenty-Second Sunday in Ordinary Time,2,2027,8,29,6,ordinary-time/ot22.qmd
+2027-09-05,Sun,ot23,ordinary-time,Twenty-Third Sunday in Ordinary Time,2,2027,9,5,6,ordinary-time/ot23.qmd
+2027-09-12,Sun,ot24,ordinary-time,Twenty-Fourth Sunday in Ordinary Time,2,2027,9,12,6,ordinary-time/ot24.qmd
+2027-09-14,Tues,holy-cross,ordinary-time,Exaltation of the Holy Cross,0,2027,9,14,1,feasts/sep14-holy-cross.qmd
+2027-09-19,Sun,ot25,ordinary-time,Twenty-Fifth Sunday in Ordinary Time,2,2027,9,19,6,ordinary-time/ot25.qmd
+2027-09-26,Sun,ot26,ordinary-time,Twenty-Sixth Sunday in Ordinary Time,2,2027,9,26,6,ordinary-time/ot26.qmd
+2027-10-03,Sun,ot27,ordinary-time,Twenty-Seventh Sunday in Ordinary Time,2,2027,10,3,6,ordinary-time/ot27.qmd
+2027-10-10,Sun,ot28,ordinary-time,Twenty-Eighth Sunday in Ordinary Time,2,2027,10,10,6,ordinary-time/ot28.qmd
+2027-10-17,Sun,ot29,ordinary-time,Twenty-Ninth Sunday in Ordinary Time,2,2027,10,17,6,ordinary-time/ot29.qmd
+2027-10-24,Sun,ot30,ordinary-time,Thirtieth Sunday in Ordinary Time,2,2027,10,24,6,ordinary-time/ot30.qmd
+2027-10-31,Sun,ot31,ordinary-time,Thirty-First Sunday in Ordinary Time,2,2027,10,31,6,ordinary-time/ot31.qmd
+2027-11-01,Mon,all-saints,ordinary-time,All Saints,2,2027,11,1,0,feasts/nov01-all-saints.qmd
+2027-11-02,Tues,all-souls,ordinary-time,All Souls,1,2027,11,2,1,feasts/nov02-all-souls.qmd
+2027-11-07,Sun,ot32,ordinary-time,Thirty-Second Sunday in Ordinary Time,2,2027,11,7,6,ordinary-time/ot32.qmd
+2027-11-09,Tues,john-lateran,ordinary-time,Dedication of the Lateran Basilica,0,2027,11,9,1,feasts/nov09-john-lateran.qmd
+2027-11-14,Sun,ot33,ordinary-time,Thirty-Third Sunday in Ordinary Time,2,2027,11,14,6,ordinary-time/ot33.qmd
+2027-11-21,Sun,christ-the-king,ordinary-time,Christ the King,2,2027,11,21,6,ordinary-time/christ-the-king-before-thanksgiving.qmd
+2027-11-25,Thurs,thanksgiving,ordinary-time,Thanksgiving,1,2027,11,25,3,ordinary-time/thanksgiving.qmd
