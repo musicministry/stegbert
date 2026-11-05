@@ -492,6 +492,8 @@ def format_hymn_options(song_data, priority_order, is_gospel=False):
         name = hymn['name']
         if 'composer' in hymn.keys():
             name = f"{name} ({hymn['composer']})"
+        elif 'tune' in hymn.keys():
+            name = f"{name} ({hymn['tune'].upper()})"
         priority = hymn.get('priority', 'optional')
         
         # Find entry in hymnal index using closest match
@@ -509,6 +511,8 @@ def format_hymn_options(song_data, priority_order, is_gospel=False):
             name = hymn['name']
             if 'composer' in hymn.keys():
                 name = f"{name} ({hymn['composer']})"
+            elif 'tune' in hymn.keys():
+                name = f"{name} ({hymn['tune'].upper()})"
             priority = hymn.get('priority', 'optional')
 
             # Find entry in hymnal index using closest match
@@ -627,6 +631,10 @@ def format_psalm_options(song_data, priority_order, date, celebration, is_gospel
                 # Find entry in hymnal index using closest match
                 name = entry['name']
                 numflag = False
+                if 'composer' in entry.keys():
+                    name = f"{name} ({entry['composer']})"
+                elif 'tune' in entry.keys():
+                    name = f"{name} ({entry['tune']})"
                 display_name, number = fuzzy_index_lookup(name, verbose=False)
                 if number is None:
                     numflag = True
