@@ -1,23 +1,25 @@
 # =============================================================================
 # Load required packages
-from rapidfuzz import process, fuzz
-from functools import lru_cache
-from titlecase import titlecase
-from tabulate import tabulate
-from numbr import Cast as num
-from pathlib import Path
 import datetime as dt
-import pandas as pd
-import numpy as np
+from functools import lru_cache
 import importlib
-import requests
-import warnings
-import time
-import yaml
+import importlib.util
 import json
-import sys
-import re
 import os
+from pathlib import Path
+import re
+import requests
+import sys
+import time
+import warnings
+
+from numbr import Cast as num
+import numpy as np
+import pandas as pd
+from rapidfuzz import process, fuzz
+from tabulate import tabulate
+from titlecase import titlecase
+import yaml
 
 # -----------------------------------------------------------------------------
 # Load video YAMLs from GitHub
@@ -336,10 +338,6 @@ def get_hymn_list(file_path, lit_year):
             return results[key]['abc']
         except KeyError:
             return results[key][lit_year.lower()]
-        # try:
-        #     return results[key][lit_year.lower()]
-        # except KeyError:
-        #     return results[key]['abc']
     return None
 
 def process_week_range(start, end, df, lit_year, hymnal):
@@ -781,12 +779,27 @@ def load_env_file():
                     key, value = line.strip().split('=', 1)
                     os.environ[key] = value
 
-def load_hymn_schedules(file_name):
-    """Get all hymn list dictionary objects from Python (*.py) `file_name`."""
-    if file_name in sys.modules:
-        del sys.modules[file_name]
-    hymns = importlib.import_module(file_name)
-    
+def load_hymn_schedules(file_name, folder=None):
+    """Get all hymn list dictionary objects from Python (*.py) `file_name`.
+
+    If `folder` is given, load `<folder>/<file_name>.py` directly from that
+    path. This lets same-named files in different year folders coexist.
+    Without `folder`, fall back to the old behavior: import by name from
+    sys.path.
+    """
+    if folder is None:
+        if file_name in sys.modules:
+            del sys.modules[file_name]
+        hymns = importlib.import_module(file_name)
+    else:
+        path = Path(folder) / f'{file_name}.py'
+        # Unique module name per folder so nothing is cached under a shared name
+        spec = importlib.util.spec_from_file_location(
+            f'{file_name}__{Path(folder).name}', path
+        )
+        hymns = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(hymns)
+
     dicts = {}
     for name in dir(hymns):
         # Skip private/magic attributes
@@ -795,7 +808,7 @@ def load_hymn_schedules(file_name):
             # Check if it's a dictionary
             if isinstance(obj, dict):
                 dicts[name] = obj
-    
+
     return clean_tags(dicts)
 
 def clean_tags(data):

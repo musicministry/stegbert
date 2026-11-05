@@ -64,20 +64,50 @@ def parse_args():
         description='Function control parameters.',
         prog='upcoming',
         usage='%(prog)s [arguments]')
-    parser.add_argument('year', metavar='year', type=int,
-                        help='Four-digit year to process')
-    parser.add_argument('start', type=str,
-                        help='First date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to process')
-    parser.add_argument('end', type=str,
-                        help='Last date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to process')
-    parser.add_argument('-o', '--outfile', nargs='?', type=str, 
-                        default='upcoming.qmd',
-                        help='Name and directory of csv file to write. Default to "[pwd]/upcoming.qmd"')
-    parser.add_argument('-c', '--callout', nargs='?', type=str,
-                         help='Optional text to include in a callout at the top of the page')
+    parser.add_argument(
+        'year', metavar='year', type=int, help='Four-digit year to process'
+        )
+    parser.add_argument(
+        '--end-year', type=int, default=None,
+        help='Liturgical year of `end` when it differs from `year` (needed if `end` is a feast name)'
+        )
+    parser.add_argument(
+        'start', type=str,
+        help='First date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to process'
+        )
+    parser.add_argument(
+        'end', type=str,
+        help='Last date (str: "YYYY-MM-DD") or feast (e.g., "advent01") to process'
+        )
+    parser.add_argument(
+        '-o', '--outfile', nargs='?', type=str, default='upcoming.qmd',
+        help='Name and directory of csv file to write. Default to "[pwd]/upcoming.qmd"'
+        )
+    parser.add_argument(
+        '-c', '--callout', nargs='?', type=str,
+        help='Optional text to include in a callout at the top of the page'
+        )
     return parser.parse_args()
 
 args = parse_args()
+
+# -----------------------------------------------------------------------------
+# Helper functions
+
+def load_calendar(root, year):
+    cycle = u.lit_year(year)
+    folder = Path(root) / f'{year}-{cycle}'
+    cal = pd.read_csv(folder / f'{year}-year{cycle.upper()}-liturgical-calendar.csv',
+                      parse_dates=['date'], index_col='date')
+    cal['lit_year'] = year
+    return cal, folder
+
+def resolve(token, cal, year):
+    """Turn a 'YYYY-MM-DD' string or a feast name into a date."""
+    try:
+        return dt.datetime.strptime(token, '%Y-%m-%d')
+    except ValueError:
+        return cal.loc[(cal['feast'] == token) & (cal['lit_year'] == year)].index[0]
 
 # -----------------------------------------------------------------------------
 # Main program
@@ -89,38 +119,34 @@ def main():
     # GitHub token
     u.load_env_file()
     token = os.environ.get('GITHUB_TOKEN')
-    
-    # Load hymn lists
-    cycle = u.lityear(args.year)
-    process_dir = os.path.join(PROJECT_ROOT, f'{args.year}-{cycle}')
-    sys.path.append(os.path.join(process_dir))
 
-    lit_calendar = f'{args.year}-year{cycle.upper()}-liturgical-calendar.csv'
-    cal = pd.read_csv(os.path.join(process_dir, lit_calendar),
-                    parse_dates=['date'], index_col='date')
-
-    # Start date and feast
     start = args.start.lower()
     end = args.end.lower()
-    try:
-        start_date = dt.datetime.strptime(start, '%Y-%m-%d')
-        start = cal.loc[start_date,'feast']
-    except ValueError:
-        start_date = cal.loc[cal['feast']==start].index[0]
 
-    # End date and feast
-    try:
-        end_date = dt.datetime.strptime(end, '%Y-%m-%d')
-        end = cal.loc[end_date,'feast']
-    except ValueError:
-        end_date = cal.loc[cal['feast']==end].index[0]
+    # Liturgical years covered by the range. A date for `end` identifies its
+    # own year; a feast name needs --end-year.
+    end_year = args.end_year
+    if end_year is None:
+        try:
+            end_year = u.lit_cal_year(dt.datetime.strptime(end, '%Y-%m-%d'))
+        except ValueError:
+            end_year = args.year
+    if end_year < args.year:
+        raise ValueError('The end of the range cannot fall in an earlier liturgical year than the start.')
 
-    # Subset calendar
+    # One calendar (and one folder) per liturgical year, concatenated
+    loaded = {y: load_calendar(PROJECT_ROOT, y) for y in range(args.year, end_year + 1)}
+    cal = pd.concat([c for c, _ in loaded.values()]).sort_index(kind='stable')
+    folders = {y: f for y, (_, f) in loaded.items()}
+
+    # Resolve start/end and subset the calendar
+    start_date = resolve(start, cal, args.year)
+    end_date = resolve(end, cal, end_year)
     df = cal[start_date:end_date]
 
     # Create a qmd file
-    first_feast = df.loc[df['feast']==start, "name"].iloc[0]
-    last_feast = df.loc[df['feast']==end, "name"].iloc[0]
+    first_feast = df.iloc[0]['name']
+    last_feast = df.iloc[-1]['name']
     first_date = u.fmtdate(start_date)
     last_date = u.fmtdate(end_date)
 
@@ -175,12 +201,9 @@ def main():
         ra_linkcheck = {}
 
         # Loop through the seasons that are encompassed in the `start`-`end` range
-        for season in list(df['season'].unique()):
-            # Subset the dataframe
-            ss = df[df['season']==season]
-
+        for (ly, season), ss in df.groupby(['lit_year', 'season'], sort=False):
             # Load the schedules and fix the keys
-            hymn_lists = u.load_hymn_schedules(season)
+            hymn_lists = u.load_hymn_schedules(season, folder=folders[ly])
             hymn_lists = {k.replace('_', '-'): v for k,v in hymn_lists.items()}
             hymn_lists = {k:v for k,v in hymn_lists.items() if k in ss['feast'].to_list()}
 
