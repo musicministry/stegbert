@@ -51,7 +51,7 @@ christmas_midnight = {
     "Offertory": "[required] 446 - O Little Town of Bethlehem",
     "Communion": "[required] 432 - Nativity Carol",
     "Meditation": "[required] 441 - Silent Night",
-    "Recessional": "[required] 424 - Hark! The Herald Angels Sing"
+    "Recessional": "[required] 437 - Joy to the World"
 }
 
 christmas_day = {
@@ -69,9 +69,9 @@ christmas_day = {
     "Responsorial Psalm": "[preferred] 70 - Psalm 98: All the Ends of the Earth",
     "Gospel Acclamation": "[required] R&A p. 23 - https://www.youtube.com/watch?v=x3DUemdtbPU",
 
-    "Offertory": "[required] 440 - Good Christian Friends, Rejoice",
+    "Offertory": "[required] 446 - O Little Town of Bethlehem",
     "Communion": "[required] 432 - Nativity Carol",
-    "Meditation": "[required] 427 - Of the Father's Love Begotten",
+    "Meditation": "[required] 441 - Silent Night",
     "Recessional": "[required] 437 - Joy to the World"
 }
 

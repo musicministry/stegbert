@@ -12,7 +12,7 @@
 #
 #     seasonNN = {
 #         "Mass": "Mass setting",
-#         "parts": ["Gloria", "Holy", "Memorial Acclamation A", "Amen",
+#         "parts": ["Gloria", "Holy", "Memorial Acclamation B", "Amen",
 #                   "Lamb of God"],
 #
 #         "Processional":         "NNN - Song Title",
@@ -37,7 +37,7 @@ advent01 = {
     "Mass": "Missa Emmanuel",
     "parts": [
         "Holy: Missa Emmanuel",
-        "Memorial Acclamation A: Missa Emmanuel",
+        "Memorial Acclamation B: Missa Emmanuel",
         "Amen: Missa Emmanuel",
         "Lamb of God: Missa Emmanuel"
     ],
@@ -57,7 +57,7 @@ advent02 = {
     "Mass": "Missa Emmanuel",
     "parts": [
         "Holy: Missa Emmanuel",
-        "Memorial Acclamation A: Missa Emmanuel",
+        "Memorial Acclamation B: Missa Emmanuel",
         "Amen: Missa Emmanuel",
         "Lamb of God: Missa Emmanuel"
     ],
@@ -77,7 +77,7 @@ immaculate_conception = {
     "Mass": "Missa Emmanuel",
     "parts": [
         "Holy: Missa Emmanuel",
-        "Memorial Acclamation A: Missa Emmanuel",
+        "Memorial Acclamation B: Missa Emmanuel",
         "Amen: Missa Emmanuel",
         "Lamb of God: Missa Emmanuel"
     ],
@@ -97,7 +97,7 @@ advent03 = {
     "Mass": "Missa Emmanuel",
     "parts": [
         "Holy: Missa Emmanuel",
-        "Memorial Acclamation A: Missa Emmanuel",
+        "Memorial Acclamation B: Missa Emmanuel",
         "Amen: Missa Emmanuel",
         "Lamb of God: Missa Emmanuel"
     ],
@@ -117,7 +117,7 @@ advent04 = {
     "Mass": "Missa Emmanuel",
     "parts": [
         "Holy: Missa Emmanuel",
-        "Memorial Acclamation A: Missa Emmanuel",
+        "Memorial Acclamation B: Missa Emmanuel",
         "Amen: Missa Emmanuel",
         "Lamb of God: Missa Emmanuel"
     ],
