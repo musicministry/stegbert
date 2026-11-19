@@ -2,7 +2,6 @@ name: Render and deploy quarto files
 on:
   push:
     branches: quarto
-  pull_request:
 
 jobs:
   quarto-render-and-deploy:
@@ -38,6 +37,7 @@ jobs:
         # uncomment below and fill to pin a version
         # version: 0.9.600
       env:
+        GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Publish to GitHub Pages (and render)
