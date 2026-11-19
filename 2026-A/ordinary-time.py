@@ -640,7 +640,7 @@ christ_the_king = {
         "Lamb of God: Mass of St. Dymphna"
     ],
 
-    "Processional": "571 - Christ Is the King!",
+    "Processional": "573 - To Jesus Christ, Our Sovereign King",
 
     "Responsorial Psalm": "R&A p. 150 - https://www.youtube.com/watch?v=S9N5FNuPS4o",
     "Gospel Acclamation": "R&A p. 151 - https://www.youtube.com/watch?v=nLPLBhM8Dnw",
