@@ -49,7 +49,6 @@ advent01 = {
 
     "Offertory": "[required] 404 - When the King Shall Come Again",
     "Communion": "[required] 728 - Eye Has Not Seen",
-    "Meditation": "[flexible] 659 - I Lift My Soul to You",
     "Recessional": "[preferred] 423 - Awake! Awake, and Greet the New Morn"
 }
 
@@ -69,28 +68,7 @@ advent02 = {
 
     "Offertory": "[required] 413 - Comfort, Comfort, O My People",
     "Communion": "[required] 396 - Comfort, My People",
-    "Meditation": "[required] 402 - Like a Shepherd",
     "Recessional": "[flexible] 863 - O Holy City, Seen of John"
-}
-
-immaculate_conception = {
-    "Mass": "Missa Emmanuel",
-    "parts": [
-        "Holy: Missa Emmanuel",
-        "Memorial Acclamation B: Missa Emmanuel",
-        "Amen: Missa Emmanuel",
-        "Lamb of God: Missa Emmanuel"
-    ],
-
-    "Processional": "[required] 886 - Immaculate Mary",
-
-    "Responsorial Psalm": "[required] R&A p. 8 - https://www.youtube.com/watch?v=vD4-Qg_7JH4",
-    "Gospel Acclamation": "[required] R&A p. 9 - https://www.youtube.com/watch?v=ai0eezhXgI0",
-
-    "Offertory": "[preferred] 875 - Praise We the Lord This Day",
-    "Communion": "[preferred] 101 - Luke 1:46-55: Magníficat",
-    "Meditation": "[required] 889 - Hail Mary: Gentle Woman",
-    "Recessional": "[required] 458 - I Sing a Maid"
 }
 
 advent03 = {
@@ -109,7 +87,6 @@ advent03 = {
 
     "Offertory": "[required] 421 - Savior of the Nations, Come",
     "Communion": "[optional] 101 - Luke 1:46-55: Magníficat",
-    "Meditation": "[required] 416 - A Voice Cries Out",
     "Recessional": "[required] 423 - Awake! Awake, and Greet the New Morn"
 }
 
